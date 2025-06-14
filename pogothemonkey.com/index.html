@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pogo The Monkey</title>
+    <script>
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.RufflePlayer.config = {
+            "autoplay": "on",
+            "unmuteOverlay": "hidden"
+        };
+    </script>
+    <script type="text/javascript" src="../js/ruffle.js"></script>
+    <style>
+        body {
+            background-color: #3B709B;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        object {
+            width: 600px;
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+    <object
+        classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+        width="600"
+        height="600"
+    >
+        <param name="movie" value="pogo_1.swf">
+        <param name="quality" value="high">
+        <param name="bgcolor" value="#3B709B">
+        <embed 
+            src="pogo.swf" 
+            quality="high"  
+            width="600" 
+            height="600" 
+            type="application/x-shockwave-flash"
+        >
+    </object>
+</body>
+</html>
