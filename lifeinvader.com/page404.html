@@ -1,0 +1,164 @@
+<!--
+replace images and texts and stuff.
+-->
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html
+    class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths gecko win js"
+    lang="en-US"><!--<![endif]-->
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script id="onetrust-sdk-stub" src="../page/otSDKStub.js" type="text/javascript" charset="UTF-8"
+        data-document-language="true" data-domain-script="7312aad9-7731-41d1-a96d-59fe216fed7e"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Lifeinvader</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="page/li.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="page/favicon.ico">
+
+    <meta property="og:title" content="LifeInvader">
+    <meta property="og:description" content="LifeInvader in real life!">
+    <meta property="og:url" content="https://redsoupdev.github.io/lifeinvader.com/index.html">
+    <meta property="og:image" content="page/custom/banner.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="400">
+    <meta property="og:image:height" content="300">
+    <meta property="og:image:alt" content="LifeInvader">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="LifeInvader">
+
+
+    <script src="page/runtime.js"></script>
+    <script src="page/shared.js"></script>
+
+    <script src="page/common.js"></script>
+    <script src="page/li.js"></script>
+    <script src="page/jquery.js"></script>
+    <script type="text/javascript">
+        var headerSettings = {
+            headerUrl: '/Registration/GetLoginHeader',
+            sidePanelUrl: '/Home/GetSidePanel',
+            fetchHeader: true,
+            fetchSidePanel: true
+        };
+    </script>
+    <script src="page/main.js"></script>
+
+    <script type="text/javascript">
+        var profileSettings = {
+            feedUrl: '/Home/ProfileFeed',
+            profileItems: '/Home/ProfileItems',
+            itemid: 'alanmcclean'
+        };
+        var PageSettings = {};
+    </script>
+    <script src="page/profile.js"></script>
+
+
+
+    <script src="page/otBannerSdk.js" async="" type="text/javascript"></script>
+
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+    <![endif]-->
+    <input name="__RequestVerificationToken" type="hidden"
+        value="PIc64v7Txglk3hlxat-nICaeaaAiM-gdo8BEGR83uXnnF1euCTZAkPkRs32SoU_6HwW9f-qhVPRzylMGkJAp7-HYJe2mH5nVjC780xr_OnuQwkyDmVrEP5Z0q2R4r-lui1-BDQ2">
+    <div id="loginHeader">
+        <script type="text/javascript">
+            window.siteMaster.loggedInUser = { "IsLoggedIn": false, "Nickname": "Default", "RockstarId": 0, "AvatarUrl": "user.webp", "MemberProfileUrl": "https://socialclub.rockstargames.com/member/default", "LogoutUrl": "../logoff.html" };
+        </script>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <h1><a class="brand" href="index.html">LifeInvader</a>
+                    </h1>
+
+                    <!-- Logged in -->
+
+                    <h3 id="tinyText">Excite Your Life Online</h3>
+                    <script>
+                        document.getElementById('tinyText').innerHTML = randomTinyText();
+
+                    </script>
+
+                    <div id="li-nav-logged-in" class="pull-right">
+                        <div id="loggedInDiv" class="pull-right">
+                            <a id="userPfpALink" href="page/default.png" alt="Default Avatar Icon" width=" 32"
+                                height="32">
+                                <img id="userIcon" src="page/default.png" alt="Default Avatar Icon" width=" 32"
+                                    height="32" srcset="">
+                            </a>
+                            <a id="userText" href="member/defaultUser.htm" class="nav-user">Default User</a><a
+                                href="logoff.html" data-rockstarid="15130174" class="nav-signout" id="signOut">sign
+                                out</a>
+                        </div>
+                        <div id="loggedOffDiv" class="pull-right">
+                            <a href="login.html" data-rockstarid="15130174" class="nav-signout" style="color: white;"
+                                id="signOut">sign in</a>
+                        </div>
+                        <script>
+                            document.getElementById('userText').innerHTML = localStorage.getItem('currUsername') + "";
+                            if (localStorage.getItem('currUsername') + "" !== "null") {
+                                let loggedOff =
+                                    document.getElementById("loggedOffDiv");
+                                loggedOff.parentNode.removeChild(loggedOff);
+
+                                document.getElementById("userIcon").src = "../" + localStorage.getItem('curPfp');
+                                document.getElementById("userText").href = localStorage.getItem('curRockstarUser');
+                                document.getElementById("userPfpALink").href = localStorage.getItem('curRockstarUser');
+                            } else {
+                                let loggedIn =
+                                    document.getElementById("loggedInDiv");
+                                loggedIn.parentNode.removeChild(loggedIn);
+
+                            }
+                        </script>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="errorLanding">
+            <div class="errorMessage">
+                <div class="messageContent">
+                    <h3>404. Something went wrong</h3>
+                    <p>The requested URL was not found.</p>
+                    <p>
+                            You can <a href="index.html">Return home</a>
+                    </p>                               
+                </div>
+            </div>    
+        </div>
+        
+        <hr>
+        <footer>
+            <span>© Rockstar <span id="worldYear"></span></span>
+            <script>
+                document.getElementById("worldYear").innerHTML = new Date().getFullYear();
+            </script>
+            <span class="footer-dot">·</span><a href="https://www.rockstargames.com/privacy">Privacy Policy</a>
+            <span class="footer-dot">·</span><a href="https://www.rockstargames.com/legal">Legal</a>
+
+            <span class="footer-dot">·</span><a href="https://www.rockstargames.com/ccpa">Do Not Sell My Personal
+                Information</a>
+        </footer>
+    </div>
+
+
+
+</body>
+
+</html>

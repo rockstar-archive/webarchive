@@ -1,0 +1,151 @@
+body {
+	background-color: #FFE7E5;
+	font: normal 12px/16px Verdana, san-serif;
+}
+
+td {
+	color: #000000;
+	font: normal 12px/16px Verdana, san-serif;
+}
+
+img {
+	border: 1px groove #0066ff;
+}
+
+img.noborder { border: 1px; }
+
+.mainContent {
+	width: 85%;
+	position: absolute;
+	left: 20px;
+	top: 0px;
+	color: #000000;
+	font: normal 12px/16px Verdana, san-serif;
+}
+
+.mainContent a {
+	color: #CC00FF;
+	font: normal 12px/16px Verdana, san-serif;
+	text-decoration: underline;
+}
+
+.mainContent a:hover {
+	background-color: #FF66FF;
+	color: #FFFF99;
+	text-decoration: none;
+}
+
+font.purple18 {
+	color: #9933FF;
+	font: bold 18px/21px Verdana, san-serif;
+}
+
+font.purple12 {
+	color: #9933FF;
+	font: bold 12px/16px Verdana, san-serif;
+}
+
+font.purpleBlink12 {
+	color: #9933FF;
+	font: bold 12px/16px Verdana, san-serif;
+	text-decoration: blink;
+}
+
+font.blue18 {
+	color: #0066FF;
+	font: bold 18px/21px Verdana, san-serif;
+}
+
+font.blue12 {
+	color: #0066FF;
+	font: normal 12px/16px Verdana, san-serif;
+}
+
+a.blue12 {
+	color: #0066FF;
+	font: normal 12px/16px Verdana, san-serif;
+	text-decoration: underline;
+}
+
+a.blue12:hover {
+	background-color: #0066FF;
+	color: #FFFF99;
+	text-decoration: none;
+}
+
+font.pink12 {
+	color: #FF00FF;
+	font: normal 12px/16px Verdana, san-serif;
+}
+
+font.pink18 {
+	color: #FF00FF;
+	font: bold 18px/21px Verdana, san-serif;
+}
+
+font.green12 {
+	color: #009900;
+	font: normal 12px/16px Verdana, san-serif;
+}
+
+font.green18 {
+	color: #009900;
+	font: bold 18px/21px Verdana, san-serif;
+}
+
+font.orange18 {
+	color: #FF6633;
+	font: bold 18px/21px Verdana, san-serif;
+}
+
+a.orange18 {
+
+}
+
+font.orange12 {
+	color: #FF6633;
+	font: normal 12px/16px Verdana, san-serif;
+}
+
+font.orangeBold12 {
+	color: #FF6633;
+	font: bold 12px/16px Verdana, san-serif;
+}
+
+font.boilerplate {
+	color: #333333;
+	font: italic 10px/14px Verdana, san-serif;
+}
+
+a.boilerplate {
+	color: #333333;
+	font: italic 10px/14px Verdana, san-serif;
+	text-decoration: underline;
+}
+
+a.boilerplate:hover {
+	color: #C5FCBC;
+	font: italic 10px/14px Verdana, san-serif;
+	text-decoration: underline;
+	background-color: #000000;
+}
+/*
+     FILE ARCHIVED ON 02:56:17 Aug 10, 2004 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 17:33:34 May 27, 2025.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.742
+  exclusion.robots: 0.028
+  exclusion.robots.policy: 0.012
+  esindex: 0.014
+  cdx.remote: 31.813
+  LoadShardBlock: 349.502 (3)
+  PetaboxLoader3.datanode: 217.318 (4)
+  PetaboxLoader3.resolve: 224.179 (2)
+  load_resource: 220.359
+*/

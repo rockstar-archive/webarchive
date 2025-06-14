@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html
+    class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths gecko win js"
+    lang="en-US"><!--<![endif]-->
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script id="onetrust-sdk-stub" src="../page/otSDKStub.js" type="text/javascript" charset="UTF-8"
+        data-document-language="true" data-domain-script="7312aad9-7731-41d1-a96d-59fe216fed7e"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Lifeinvader</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="../page/li.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="../page/favicon.ico">
+
+    <meta property="og:title" content="LifeInvader">
+    <meta property="og:description" content="LifeInvader in real life!">
+    <meta property="og:url" content="https://redsoupdev.github.io/lifeinvader.com/index.html">
+    <meta property="og:image" content="page/custom/banner.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="400">
+    <meta property="og:image:height" content="300">
+    <meta property="og:image:alt" content="LifeInvader">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="LifeInvader">
+
+
+    <script src="../page/runtime.js"></script>
+    <script src="../page/shared.js"></script>
+
+    <script src="../page/common.js"></script>
+    <script src="../page/li.js"></script>
+    <script src="../page/jquery.js"></script>
+    <script type="text/javascript">
+        var headerSettings = {
+            headerUrl: '/Registration/GetLoginHeader',
+            sidePanelUrl: '/Home/GetSidePanel',
+            fetchHeader: true,
+            fetchSidePanel: true
+        };
+    </script>
+    <script src="../page/main.js"></script>
+
+    <script type="text/javascript">
+        var profileSettings = {
+            feedUrl: '/Home/ProfileFeed',
+            profileItems: '/Home/ProfileItems',
+            itemid: 'herr_kutz'
+        };
+        var PageSettings = {};
+    </script>
+    <script src="../page/profile.js"></script>
+
+
+
+    <script src="../page/otBannerSdk.js" async="" type="text/javascript"></script>
+
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+    <![endif]-->
+    <input name="__RequestVerificationToken" type="hidden"
+        value="f2x7kyahv56k1ObOV1DpqJuLk7QDgsiYLBI0iTatn5Z5wD-fJf04Ir_Bv4dUfJ2kCEXoAoctUv5Z2UxalfZ1x9wuaz5iew6QBIV16xK68j0D7bg3Gqh7OA9C56iIU0pgbSTGQg2">
+    <div id="loginHeader">
+        <script type="text/javascript">
+            window.siteMaster.loggedInUser = { "IsLoggedIn": false, "Nickname": "Default", "RockstarId": 0, "AvatarUrl": "default.png", "MemberProfileUrl": "https://socialclub.rockstargames.com/member/default", "LogoutUrl": "../logoff.html" };
+        </script>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <h1><a class="brand" href="../index.html">LifeInvader</a>
+                    </h1>
+
+                    <!-- Logged in -->
+
+                    <h3 id="tinyText">Excite Your Life Online</h3>
+                    <script>
+                        document.getElementById('tinyText').innerHTML = randomTinyText();
+
+                    </script>
+
+                    <div id="li-nav-logged-in" class="pull-right">
+                        <div id="loggedInDiv" class="pull-right">
+                            <a id="userPfpALink" href="page/default.png" alt="Default Avatar Icon" width=" 32"
+                                height="32">
+                                <img id="userIcon" src="page/default.png" alt="Default Avatar Icon" width=" 32"
+                                    height="32" srcset="">
+                            </a>
+                            <a id="userText" href="../member/defaultUser.htm" class="nav-user">Default User</a><a
+                                href="../logoff.html" data-rockstarid="15130174" class="nav-signout" id="signOut">sign
+                                out</a>
+                        </div>
+                        <div id="loggedOffDiv" class="pull-right">
+                            <a href="../login.html" data-rockstarid="15130174" class="nav-signout" style="color: white;"
+                                id="signOut">sign in</a>
+                        </div>
+                        <script>
+                            document.getElementById('userText').innerHTML = localStorage.getItem('currUsername') + "";
+                            if (localStorage.getItem('currUsername') + "" !== "null") {
+                                let loggedOff =
+                                    document.getElementById("loggedOffDiv");
+                                loggedOff.parentNode.removeChild(loggedOff);
+
+                                document.getElementById("userIcon").src = "../" + localStorage.getItem('curPfp');
+                                document.getElementById("userText").href = localStorage.getItem('curRockstarUser');
+                                document.getElementById("userPfpALink").href = localStorage.getItem('curRockstarUser');
+                            } else {
+                                let loggedIn =
+                                    document.getElementById("loggedInDiv");
+                                loggedIn.parentNode.removeChild(loggedIn);
+
+                            }
+                        </script>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="row temp-grid">
+            <div class="span9">
+
+                <div class="row temp-grid">
+                    <div class="span9">
+                        <div id="li-header" class="clearfix">
+                            <div class="img">
+                                <img src="herr_kutz/herr_kutz_002.jpeg" alt="Herr Kutz Barber" width="172" height="172">
+                            </div>
+                            <div class="info">
+                                <h1>
+                                    <span>Herr Kutz Barber</span>
+                                </h1>
+                                <div id="divStlk" aria-live="polite"><button class="btn btn-small btn-li" id="stlkBtn"
+                                        data-stalk="true" onclick="stalkedBtns()" data-profile="alanmcclean"><i
+                                            class="fa fa-plus"></i>
+                                        Stalk</button>
+                                    <button class="btn btn-small btn-stlk-li" id="stlkedBtn" data-stalk="true"
+                                        onclick="stalkedBtns()" data-profile="alanmcclean">&#10004;
+                                        Stalking</button>
+                                </div>
+                                <script>
+                                    var tag = "herr_kutzStlk";
+                                    if (localStorage.getItem(tag) + "" != "null") {
+                                        let stlk =
+                                            document.getElementById("stlkBtn");
+                                        stlk.parentNode.removeChild(stlk);
+                                    } else {
+                                        let stlked =
+                                            document.getElementById("stlkedBtn");
+                                        stlked.parentNode.removeChild(stlked);
+                                    }
+                                    if (localStorage.getItem('currUsername') + "" === "null") {
+                                        let divStlk =
+                                            document.getElementById("divStlk");
+                                        divStlk.parentNode.removeChild(divStlk);
+                                    }
+                                    function stalkedBtns() {
+                                        stalk(tag)
+                                        if (localStorage.getItem(tag) + "" != "null") {
+                                            let stlk =
+                                                document.getElementById("stlkBtn");
+
+                                            const newButton = document.createElement('button');
+                                            newButton.textContent = '✔ Stalking';
+                                            newButton.className = "btn btn-small btn-stlk-li";
+                                            newButton.onclick = function () { stalkedBtns(vars) };
+                                            newButton.id = "stlkedBtn";
+
+                                            stlk.parentNode.appendChild(newButton);
+                                            stlk.parentNode.removeChild(stlk);
+
+                                        } else {
+                                            let stlked =
+                                                document.getElementById("stlkedBtn");
+
+                                            const newButton = document.createElement('button');
+                                            newButton.innerHTML = '<i class="fa fa-plus"></i> Stalk';
+                                            newButton.className = "btn btn-small btn-li";
+                                            newButton.onclick = function () { stalkedBtns(vars) };
+                                            newButton.id = "stlkBtn";
+
+                                            stlked.parentNode.appendChild(newButton);
+                                            stlked.parentNode.removeChild(stlked);
+                                        }
+                                    }
+                                </script>
+                                <p class="info-band">
+                                    Hair Studio<br>
+                                    Comb on Over - We Never Close <span class="info-likes">1528629 Stalkers</span>
+                                </p>
+                                <div class="info-thumbs clearfix">
+                                    <p>
+
+                                        <button class="resetButton modal-media" data-modalcontent="photos">
+                                            <img src="herr_kutz/468x263.jpg" alt="Photos" width="132" height="74">
+                                        </button>
+                                        <br>
+                                        <button class="resetButton modal-tg modal-media" data-modalcontent="photos"
+                                            enabled="false">Photos</button> <span id="photoCount">3</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row temp-grid">
+                    <div id="li-info-col" class="span3">
+                        <div id="li-sidebar">
+
+                            <div class="info">
+                                <table class="data">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <span><strong>About</strong></span><br>
+                                                For the old school barber shop experience at modern prices, come to Herr
+                                                Kutz.<br><br> Cornrows, lineups, ironic mullets, non-ironic mullets, and
+                                                more.<br><br> Stalk us on Lifeinvader and your first cut is on us!
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="light" class="postPreviewBox">
+                        <img id="postPreviewImg" class="postPreviewPicture" src="../page/custom/loadingPlaceholder.jpg"
+                            alt="" srcset="">
+                        <div class="previewInformationBoxBg">
+                            <div class="postPreviewUser">
+                                <div class="previewAvatar">
+                                    <table>
+                                        <tr>
+                                            <td><img src="herr_kutz/herr_kutz_002.jpeg" alt="Herr Kutz avatar"
+                                                    width="64" height="64"></td>
+                                            <td><strong id="postPreviewUsername" class="previewUserText">example
+                                                    guy</strong>
+                                                <p class="previewDateText" id="postPreviewDateText">420 days ago</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="postPreviewText" id="postPreviewTextBox">
+                                previewtext
+                            </div>
+                            <div name="socialBoxDiv" class="add-post-comment">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <img id="commentPfpPreview" src="example_site/default.png"
+                                                alt="Example Site avatar" width="32" height="32"
+                                                style="padding-right: 3px;"></img>
+                                        </td>
+                                        <td>
+                                            <input type="text" class="inputPostCommentBox"
+                                                placeholder="Write a comment..."></input>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <a href="javascript:void(0)"
+                                onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"
+                                class="closePreviewIcon"><i class="fa fa-times fa-lg" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="fade" class="black_overlay"></div>
+
+
+                    <div id="li-feed">
+                        <div id="post05" class="post">
+                            <div class="type clearfix">
+                                <div class="avatar">
+                                    <img src="herr_kutz/herr_kutz.jpeg" alt="Herr Kutz Barber avatar" width="32"
+                                        height="32">
+                                </div>
+                                <div class="type-info">
+                                    <strong>Herr Kutz Barber</strong>
+                                    shared an image
+                                    <div class="date" id="dateTextDays1">
+                                        <script>document.getElementById("dateTextDays1").innerHTML = getNumberOfDaysSinceUpload("09/09/2013");</script>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <button class="resetButton modal-media" data-modalcontent="single"
+                                    data-contentid="xujd8RjMBUGmX71XRn2YcA" data-mediacaption=""
+                                    onclick="postPreviewSet('09/09/2013','herr_kutz/468x263.jpg','Herr Kutz','Before and after. Another satisfied customer!')">
+                                    <img class="image" src="herr_kutz/468x263.jpg" alt="Another satisfied customer!"
+                                        width="468" height="263">
+                                </button>
+                                <div class="annotation">Before and after. Another satisfied customer!</div>
+                                <div name="socialBoxDiv">
+                                    <div class="meta"><a href="">Stalk</a> - <a href="">Comment</a> - <a
+                                            id="shareBtnpost05" onclick="sharePostToClipboard('post05')">Share</a>
+                                    </div>
+                                    <!--<div class="meta">No one are stalking this</div>-->
+                                    <div id="addCommentBox" class="add-comment">
+                                        <div class="avatar"> <img name="commentPfp" src="example_site/default.png"
+                                                alt="Example Site avatar" width="32" height="32"></img></div>
+
+                                        <input type="text" class="inputCommentBox"
+                                            placeholder="Write a comment..."></input>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="post04" class="post">
+                            <div class="type clearfix">
+                                <div class="avatar">
+                                    <img src="herr_kutz/herr_kutz.jpeg" alt="Herr Kutz Barber avatar" width="32"
+                                        height="32">
+                                </div>
+                                <div class="type-info">
+                                    <strong>Herr Kutz Barber</strong>
+                                    posted a status update
+                                    <div class="date" id="dateTextDays2">
+                                        <script>document.getElementById("dateTextDays2").innerHTML = getNumberOfDaysSinceUpload("09/09/2013");</script>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text">Only 3 puncture wounds this month. It’s a step in the right direction.
+                                Come in today, currently no wait.</div>
+                            <div name="socialBoxDiv">
+                                <div class="meta"><a href="">Stalk</a> - <a href="">Comment</a> - <a id="shareBtnpost04"
+                                        onclick="sharePostToClipboard('post04')">Share</a>
+                                </div>
+                                <!--<div class="meta">No one are stalking this</div>-->
+                                <div id="addCommentBox" class="add-comment">
+                                    <div class="avatar"> <img name="commentPfp" src="example_site/default.png"
+                                            alt="Example Site avatar" width="32" height="32"></img></div>
+
+                                    <input type="text" class="inputCommentBox" placeholder="Write a comment..."></input>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div id="post03" class="post">
+                            <div class="type clearfix">
+                                <div class="avatar">
+
+                                    <img src="herr_kutz/herr_kutz.jpeg" alt="Herr Kutz Barber avatar" width="32"
+                                        height="32">
+                                </div>
+                                <div class="type-info">
+                                    <strong>Herr Kutz Barber</strong>
+                                    shared a promotion
+                                    <div class="date" id="dateTextDays3">
+                                        <script>document.getElementById("dateTextDays3").innerHTML = getNumberOfDaysSinceUpload("09/11/2013");</script>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <button class="resetButton modal-media" data-modalcontent="single"
+                                    data-contentid="xujd8RjMBUGmX71XRn2YcA" data-mediacaption=""
+                                    onclick="postPreviewSet('09/09/2013','herr_kutz/468x263_002.jpg','Herr Kutz','Get your first cut free! Click STALK on our page above.')">
+                                    <img class="image" src="herr_kutz/468x263_002.jpg" alt="Get your first cut free!"
+                                        width="468" height="263">
+                                    <div id="claimDiver" class="stalkClaim" aria-live="polite">
+                                        <table>
+                                            <tr>
+                                                <td><button class="btn btn-small btn-li" id="claimTxt" data-stalk="true"
+                                                        data-profile="warstock_cache_n_carry"><i class="fa fa-plus"></i>
+                                                        Stalk</button>
+                                                </td>
+                                                <td>
+                                                    <p class="stlkAnnotation">Stalk <a href="">Herr Kutz Barber</a> to
+                                                        claim this discount!</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </button>
+                                <div class="annotation">Get your first cut free! Click STALK on our page above.</div>
+                                <div name="socialBoxDiv">
+                                    <div class="meta"><a href="">Stalk</a> - <a href="">Comment</a> - <a
+                                            id="shareBtnpost03" onclick="sharePostToClipboard('post03')">Share</a>
+                                    </div>
+                                    <!--<div class="meta">No one are stalking this</div>-->
+                                    <div id="addCommentBox" class="add-comment">
+                                        <div class="avatar"> <img name="commentPfp" src="example_site/default.png"
+                                                alt="Example Site avatar" width="32" height="32"></img></div>
+
+                                        <input type="text" class="inputCommentBox"
+                                            placeholder="Write a comment..."></input>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="post02" class="post">
+                            <div class="type clearfix">
+                                <div class="avatar">
+                                    <img src="herr_kutz/herr_kutz.jpeg" alt="Herr Kutz Barber avatar" width="32"
+                                        height="32">
+                                </div>
+                                <div class="type-info">
+                                    <strong>Herr Kutz Barber</strong>
+                                    shared an image
+                                    <div class="date" id="dateTextDays4">
+                                        <script>document.getElementById("dateTextDays4").innerHTML = getNumberOfDaysSinceUpload("09/11/2013");</script>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <button class="resetButton modal-media" data-modalcontent="single"
+                                    data-contentid="SPdie2RCIU6OUPgoF0uVPA" data-mediacaption=""
+                                    onclick="postPreviewSet('09/09/2013','herr_kutz/468x263.png','Herr Kutz','A trip to Herr Kutz is like stepping back in time. We’d modernize but then the hipsters would stop coming in.')">
+                                    <img class="image" src="herr_kutz/468x263.png"
+                                        alt="A trip to Herr Kutz is like stepping back in time" width="468"
+                                        height="263">
+                                </button>
+                                <div class="annotation">A trip to Herr Kutz is like stepping back in time. We’d
+                                    modernize but then the hipsters would stop coming in.</div>
+                                <div name="socialBoxDiv">
+                                    <div class="meta"><a href="">Stalk</a> - <a href="">Comment</a> - <a
+                                            id="shareBtnpost02" onclick="sharePostToClipboard('post02')">Share</a>
+                                    </div>
+                                    <!--<div class="meta">No one are stalking this</div>-->
+                                    <div id="addCommentBox" class="add-comment">
+                                        <div class="avatar"> <img name="commentPfp" src="example_site/default.png"
+                                                alt="Example Site avatar" width="32" height="32"></img></div>
+
+                                        <input type="text" class="inputCommentBox"
+                                            placeholder="Write a comment..."></input>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="post01" class="post">
+                            <div class="type clearfix">
+                                <div class="avatar">
+                                    <img src="herr_kutz/herr_kutz.jpeg" alt="Herr Kutz Barber avatar" width="32"
+                                        height="32">
+                                </div>
+                                <div class="type-info">
+                                    <strong>Herr Kutz Barber</strong>
+                                    shared an image
+                                    <div class="date" id="dateTextDays5">
+                                        <script>document.getElementById("dateTextDays5").innerHTML = getNumberOfDaysSinceUpload("09/08/2013");</script>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <button class="resetButton modal-media" data-modalcontent="single"
+                                    data-contentid="fi5Hi0iNFki-XA0fKDfRew" data-mediacaption=""
+                                    onclick="postPreviewSet('09/08/2013','herr_kutz/468x263_003.jpg','Herr Kutz','Tramlines? Shutters? Berms? Whatever you need, our barber Donna will hook you up. She can’t see very well but she’s fast!')">
+                                    <img class="image" src="herr_kutz/468x263_003.jpg" alt="Tramlines? Shutters? Berm"
+                                        width="468" height="263">
+                                </button>
+                                <div class="annotation">Tramlines? Shutters? Berms? Whatever you need, our barber Donna
+                                    will hook you up. She can’t see very well but she’s fast!</div>
+                                <div name="socialBoxDiv">
+                                    <div class="meta"><a href="">Stalk</a> - <a href="">Comment</a> - <a
+                                            id="shareBtnpost01" onclick="sharePostToClipboard('post01')">Share</a>
+                                    </div>
+                                    <!--<div class="meta">No one are stalking this</div>-->
+                                    <div id="addCommentBox" class="add-comment">
+                                        <div class="avatar"> <img name="commentPfp" src="example_site/default.png"
+                                                alt="Example Site avatar" width="32" height="32"></img></div>
+
+                                        <input type="text" class="inputCommentBox"
+                                            placeholder="Write a comment..."></input>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="loadPosts"></div>
+                        <script>
+                            function postPreviewSet(date, img, username, text) {
+                                document.getElementById('light').style.display = 'block';
+                                document.getElementById('fade').style.display = 'block';
+
+                                document.getElementById("postPreviewDateText").innerHTML = getNumberOfDaysSinceUpload(date);
+                                document.getElementById("postPreviewImg").src = "../page/custom/loadingPlaceholder.jpg";
+                                document.getElementById("postPreviewImg").src = img;
+                                document.getElementById("postPreviewUsername").innerHTML = username;
+                                document.getElementById("postPreviewTextBox").innerHTML = text;
+                            }
+                            if (localStorage.getItem('currUsername') + "" === "null") {
+                                var socialBoxes = document.getElementsByName("socialBoxDiv");
+                                document.getElementById("claimTxt").disabled = true;
+                                console.log("user not loged in, " + socialBoxes.length + " posts");
+                                for (let i = socialBoxes.length - 1; i > -1; i--) {
+                                    console.log("page thinged " + i);
+                                    socialBoxes[i].parentNode.removeChild(socialBoxes[i]);
+                                }
+                            } else {
+                                var commentPfps = document.getElementsByName("commentPfp");
+                                console.log("user loged in, " + commentPfps.length + " posts");
+                                document.getElementById("commentPfpPreview").src = "../" + localStorage.getItem('curPfp');
+                                for (let i = commentPfps.length - 1; i > -1; i--) {
+
+                                    console.log("page thinged " + i);
+                                    commentPfps[i].src = "../" + localStorage.getItem('curPfp');
+                                }
+                            }
+                            var timeout;
+                            function sharePostToClipboard(url) {
+                                console.log(window.location.href + "#" + url)
+                                navigator.clipboard.writeText(window.location.href.split('#')[0] + "#" + url);
+                                document.getElementById("shareBtn" + url).innerHTML = "Link Copied!";
+                                clearTimeout(timeout);
+                                timeout = setTimeout(function () {
+                                    document.getElementById("shareBtn" + url).innerHTML = "Share";
+                                }, 1200);
+                            }
+                        </script>
+                    </div>
+                </div>
+
+            </div>
+            <!-- ads bar -->
+            <div id="ads-col" class="span3">
+                <div id="li-adsbar">
+                    <h3>
+                        Sponsored
+                    </h3>
+                    <div class="ad">
+                        <h5>
+                            <a id="ad1" href="profile/elitas_travel.htm">Elitas
+                                Travel</a>
+                        </h5>
+                        <a id="adLink1" href="profile/elitas_travel.htm">
+                            <img id="adImg1" src="../page/ads/elitas.jpg" alt="Herr Kuts" width="220" height="110">
+                        </a>
+                        <p id="desc1">
+                            10% off your next purchase.
+                        </p>
+                        <p id="stalkT1" class="meta">
+                            1811265 are stalking Herr Kuts
+                        </p>
+                    </div>
+                    <hr>
+                    <div class="ad">
+                        <h5>
+                            <a id="ad2" href="profile/redwood_cigarettes.htm">Redwood
+                                Cigarettes</a>
+                        </h5>
+                        <a id="adLink2" href="profile/redwood_cigarettes.htm">
+                            <img id="adImg2" src="../page/ads/redwood.png" alt="Redwood Cigarettes" width="220"
+                                height="110">
+                        </a>
+                        <p id="desc2">
+                            10% discount on your first hospital visit
+                        </p>
+                        <p id="stalkT2" class="meta">
+                            1357089 are stalking Redwood Cigarettes
+                        </p>
+                    </div>
+                    <hr>
+                    <div class="ad">
+                        <h5>
+                            <a id="ad3" href="profile/los_santos_customs.htm">Los
+                                Santos Customs</a>
+                        </h5>
+                        <a id="adLink3" href="profile/los_santos_customs.htm">
+                            <img id="adImg3" src="../page/ads/lsc.png" alt="Los Santos Customs" width="220"
+                                height="110">
+                        </a>
+                        <p id="desc3">
+                            Get a free spray paint job.
+                        </p>
+                        <p id="stalkT3" class="meta">
+                            2178062 are stalking Los Santos Customs
+                        </p>
+                    </div>
+                    <hr>
+                    <div class="ad">
+                        <h5>
+                            <a id="ad4" href="profile/herr_kutz.htm">Herr
+                                Kutz
+                                Barber</a>
+                        </h5>
+                        <a id="adLink4" href="profile/herr_kutz.htm">
+                            <img id="adImg4" src="../page/ads/herr_kutz.png" alt="Herr Kutz Barber" width="220"
+                                height="110">
+                        </a>
+                        <p id="desc4">
+                            First haircut free.
+                        </p>
+                        <p id="stalkT4" class="meta">
+                            1528629 are stalking Herr Kutz Barber
+                        </p>
+                    </div>
+                    <hr>
+                    <script>
+                        let arr = [0, 1, 2, 3, 4, 5, 6, 7]; // an array with 5 elements
+
+
+
+                        var i = Math.floor(Math.random() * (0 - arr.length)) + arr.length;
+                        document.getElementById('desc1').innerHTML = getDescText(arr[i]);
+                        document.getElementById('ad1').innerHTML = getAdText(arr[i]);
+                        document.getElementById('stalkT1').innerHTML = getStalkText(arr[i]);
+                        document.getElementById("adImg1").src = getAdImg(arr[i]);
+                        document.getElementById('ad1').href = getAdLink(arr[i]);
+                        document.getElementById('adLink1').href = getAdLink(arr[i]);
+                        arr.splice(i, 1); // remove 1 element at index 2 (value: 3)
+
+                        var i = Math.floor(Math.random() * (0 - arr.length)) + arr.length;
+                        document.getElementById('desc2').innerHTML = getDescText(arr[i]);
+                        document.getElementById('ad2').innerHTML = getAdText(arr[i]);
+                        document.getElementById('stalkT2').innerHTML = getStalkText(arr[i]);
+                        document.getElementById("adImg2").src = getAdImg(arr[i]);
+                        document.getElementById('ad2').href = getAdLink(arr[i]);
+                        document.getElementById('adLink2').href = getAdLink(arr[i]);
+                        arr.splice(i, 1); // remove 1 element at index 2 (value: 3)
+
+                        var i = Math.floor(Math.random() * (0 - arr.length)) + arr.length;
+                        document.getElementById('desc3').innerHTML = getDescText(arr[i]);
+                        document.getElementById('ad3').innerHTML = getAdText(arr[i]);
+                        document.getElementById('stalkT3').innerHTML = getStalkText(arr[i]);
+                        document.getElementById("adImg3").src = getAdImg(arr[i]);
+                        document.getElementById('ad3').href = getAdLink(arr[i]);
+                        document.getElementById('adLink3').href = getAdLink(arr[i]);
+                        arr.splice(i, 1); // remove 1 element at index 2 (value: 3)
+
+                        var i = Math.floor(Math.random() * (0 - arr.length)) + arr.length;
+                        document.getElementById('desc4').innerHTML = getDescText(arr[i]);
+                        document.getElementById('ad4').innerHTML = getAdText(arr[i]);
+                        document.getElementById('stalkT4').innerHTML = getStalkText(arr[i]);
+                        document.getElementById("adImg4").src = getAdImg(arr[i]);
+                        document.getElementById('ad4').href = getAdLink(arr[i]);
+                        document.getElementById('adLink4').href = getAdLink(arr[i]);
+                        arr.splice(i, 1); // remove 1 element at index 2 (value: 3)
+                    </script>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <footer>
+            <span>© Rockstar <span id="worldYear"></span></span>
+            <script>
+                document.getElementById("worldYear").innerHTML = new Date().getFullYear();
+            </script>
+            <span class="footer-dot">·</span><a href="https://www.rockstargames.com/privacy">Privacy Policy</a>
+            <span class="footer-dot">·</span><a href="https://www.rockstargames.com/legal">Legal</a>
+
+            <span class="footer-dot">·</span><a href="https://www.rockstargames.com/ccpa">Do Not Sell My Personal
+                Information</a>
+        </footer>
+    </div>
+
+
+
+</body>
+
+</html>

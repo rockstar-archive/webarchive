@@ -1,0 +1,104 @@
+
+<!--created by Oyster Partners Limited-->
+<!--www.oyster.co.uk -->
+<!-- [July] 1999 -->
+<!--Production:  by [C.P], [July] 1999 -->
+<!--Design:  by [J.P], [July] 1999 -->
+<!--Programming: by [C.P - J.L], [July] 1999 -->
+<!--Flash engineering:  by [R.R.], [July] 1999 -->
+
+<html>
+<head>
+		
+	<title>intro navigation</title>
+	
+<META NAME="description" CONTENT="The official GTA2 Web site - check it out for all the latest info. and downloads for GTA2">
+
+<META NAME="keywords" CONTENT="GTA2, Rockstar Games, Rockstar Games NYC, Rockstargames, Rockstar, Take2 Games, Video Games, Playstation, PC, Grand Theft Auto, GTA:London 1969, GTA2, Nintendo 64, cool, fun, gta, grandtheftauto, games, gaming, demos, downloads, tips, tricks, cheats, console, Oyster, Oyster Partners, PSX, online, news, press releases, crime, car crime, violence, gang warfare, homicide, hit and run, dangerous, missions, ganglands,Russian Mafia, Zaibatsu, Red necks, Scientists, Yakuza, Hari Krishnas, Take 2 Interactive, Take two interactive, grandtheftauto, grand theft auto, grandtheftauto2, grand theft auto 2, Zaibatsu Corporation, zaibatsu, Zoom Zoom, zoom zoom, Play Drugs, playdrugs, BPQC, Hollow Kost, The President, The Doctor, The Cure, Trey Welsh, Noxxa, Petula Shoe, The Chemist, Schizo, Speed, Uno Carbine, One Gun, Caymen, Ulrika Afrique, Gel, Naplam, SMART, The man with no name, Red Valdez, Android, Ladykiller, The Shrink, Mega Corp">
+
+<script language="JavaScript">
+
+<!--
+
+clicked = null
+
+ if(document.images) dynamic = "YES"
+ 
+backoff = new Image(); 
+backoff.src = "../../img/learn/nav/roll_off.gif";
+backon = new Image(); 
+backon.src = "../../img/learn/nav/back_on.gif";
+
+nextoff = new Image(); 
+nextoff.src = "../../img/learn/nav/roll_off.gif";
+nexton = new Image(); 
+nexton.src = "../../img/learn/nav/next_on.gif";
+
+homeoff = new Image(); 
+homeoff.src = "../../img/learn/nav/roll_off.gif";
+homeon = new Image(); 
+homeon.src = "../../img/learn/nav/home_on.gif";
+
+pageone = new Image(); 
+pageone.src =  "../../img/learn/nav/pageintro.gif";
+pagetwo = new Image(); 
+pagetwo.src = "../../img/learn/nav/page2.gif";
+
+function imgInact(imgName) {
+    if (clicked != imgName){
+      if (dynamic== "YES") {
+      document[imgName].src = "../../img/learn/nav/roll_off.gif";
+	  document["page"].src = "../../img/learn/nav/pageintro.gif";
+      }
+    }
+}
+
+function imgAct(imgTarget, imgName, pageName) {
+    if (clicked != imgName){
+      if (dynamic== "YES") {
+      document[imgTarget].src = eval(imgName + "on.src");
+      document["page"].src = eval(pageName + ".src");
+
+	  }
+    }
+}
+
+
+// -->
+
+</script>
+	
+
+</head>
+
+<body bgcolor="#000000">
+
+				
+<table cellpadding=0 cellspacing=0 border=0>
+
+<tr>
+<td align=left valign=top colspan=6><img src="../../img/learn/nav/one.gif" width=640 height=14 alt="" border="0"></td>
+</tr>
+
+<tr>
+<td align=left valign=top rowspan=2><img src="../../img/learn/nav/two.gif" width=10 height=43 alt="" border="0"></td>
+<td align=left valign=top><img name="roll" src="../../img/learn/nav/roll_off.gif" width=60 height=15 alt="" border="0"></td>
+<td align=left valign=top><a href="../learn.html" target="main" onMouseOver="imgAct('roll', 'back', 'pageone');" onMouseOut="imgInact('roll', 'back', 'pageone');"><img src="../../img/learn/nav/leftarrow.gif" width=48 height=15 alt="" border="0"></a></td>
+<td align=left valign=top rowspan=2><img name="page" src="../../img/learn/nav/pageintro.gif" width=106 height=43 alt="" border="0"></td>
+<td align=left valign=top rowspan=2><img src="../../img/learn/nav/three.gif" width=226 height=43 alt="" border="0"></td>
+<td align=left valign=top rowspan=2><img src="../../img/learn/nav/four.gif" width=190 height=43 alt="" border="0"></td>
+</tr>
+
+<tr>
+<td align=left valign=top><a href="../learn.html" target="main" onMouseOver="imgAct('roll', 'home', 'pageone');" onMouseOut="imgInact('roll', 'home');"><img src="../../img/learn/nav/car.gif" width=60 height=28 alt="" border="0"></a></td>
+<td align=left valign=top><a href="../pagetwo/missionframe.html" target="main" onMouseOver="imgAct('roll', 'next', 'pagetwo');" onMouseOut="imgInact('roll', 'next');"><img src="../../img/learn/nav/rightarrow.gif" width=48 height=28 alt="" border="0"></a></td>
+</tr>
+
+<tr>
+<td align=left valign=top colspan=6><img src="../../img/learn/nav/five.gif" width=640 height=13 alt="" border="0"></td>
+</tr>
+
+</table>
+
+</body>
+</html>

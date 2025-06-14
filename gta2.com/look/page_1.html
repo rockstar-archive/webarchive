@@ -1,0 +1,272 @@
+
+<!--created by Oyster Partners Limited-->
+<!--www.oyster.co.uk -->
+<!-- [June] 1999 -->
+<!--Production:  by [C.P], [June] 1999 -->
+<!--Design:  by [J.P], [June] 1999 -->
+<!--Programming: by [C.P - J.L], [June] 1999 -->
+<!--Flash engineering:  by [R.R.], [June] 1999 -->
+
+<html>
+
+<head>
+
+	<title>GTA2 - Page one</title>
+	
+<META NAME="description" CONTENT="The official GTA2 Web site - check it out for all the latest info. and downloads for GTA2">
+
+<META NAME="keywords" CONTENT="GTA2, Rockstar Games, Rockstar Games NYC, Rockstargames, Rockstar, Take2 Games, Video Games, Playstation, PC, Grand Theft Auto, GTA:London 1969, GTA2, Nintendo 64, cool, fun, gta, grandtheftauto, games, gaming, demos, downloads, tips, tricks, cheats, console, Oyster, Oyster Partners, PSX, online, news, press releases, crime, car crime, violence, gang warfare, homicide, hit and run, dangerous, missions, ganglands,Russian Mafia, Zaibatsu, Red necks, Scientists, Yakuza, Hari Krishnas, Take 2 Interactive, Take two interactive, grandtheftauto, grand theft auto, grandtheftauto2, grand theft auto 2, Zaibatsu Corporation, zaibatsu, Zoom Zoom, zoom zoom, Play Drugs, playdrugs, BPQC, Hollow Kost, The President, The Doctor, The Cure, Trey Welsh, Noxxa, Petula Shoe, The Chemist, Schizo, Speed, Uno Carbine, One Gun, Caymen, Ulrika Afrique, Gel, Naplam, SMART, The man with no name, Red Valdez, Android, Ladykiller, The Shrink, Mega Corp">
+	
+<script language="JavaScript">
+
+<!--
+
+clicked = null
+
+ if(document.images) dynamic = "YES"
+ 
+backoff = new Image(); 
+backoff.src = "../img/look/pageone/rollover_off.gif";
+backon = new Image(); 
+backon.src = "../img/look/pageone/back_on.gif";
+
+nextoff = new Image(); 
+nextoff.src = "../img/look/pageone/rollover_off.gif";
+nexton = new Image(); 
+nexton.src = "../img/look/pageone/next_on.gif";
+
+homeoff = new Image(); 
+homeoff.src = "../img/look/pageone/rollover_off.gif";
+homeon = new Image(); 
+homeon.src = "../img/look/pageone/home_on.gif";
+
+pageone = new Image(); 
+pageone.src = "../img/look/pageone/p_one.gif";
+pagetwo = new Image(); 
+pagetwo.src = "../img/look/pagetwo/p_two.gif";
+
+function imgInact(imgName) {
+    if (clicked != imgName){
+      if (dynamic== "YES") {
+      document[imgName].src = "../img/look/pageone/rollover_off.gif";
+	  document["page"].src = "../img/look/pageone/p_one.gif";
+      }
+    }
+}
+
+function imgAct(imgTarget, imgName, pageName) {
+    if (clicked != imgName){
+      if (dynamic== "YES") {
+      document[imgTarget].src = eval(imgName + "on.src");
+      document["page"].src = eval(pageName + ".src");
+
+	  }
+    }
+}
+
+
+// -->
+
+</script>
+		
+	
+	
+<!-- Header Analytics (UA-15984839-3) 
+			<script type="text/javascript">
+				var _gaq = _gaq || [];
+				_gaq.push(["_setAccount", "UA-15984839-3"]);
+				_gaq.push(["_trackPageview"]);
+				(function() {
+					var ga = document.createElement("script"); ga.type = "text/javascript"; ga.async = true;
+					ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+					var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);
+				})();
+				
+				(function(window) {
+					var domReady = function($) {
+						var filetypes = /\.(zip|exe|dmg|pdf|doc*|xls*|ppt*|mp3|jpg|themepack|wmv|mp4|mov|flv)$/i;
+						$("a").filter(function() { return !$(this).data("notrack"); }).each(function() {
+							var href = $(this).attr("href");
+							if(!href)
+								return;
+							if(href.substr(0, 4) == "aim:") {
+								$(this).click(function() {
+									var url = href.replace("aim:", "");
+									_gaq.push(["_trackEvent", "Download", "Click-aim", url]);
+								});
+								return;		
+							}
+
+							if(href.substr(0, 7) == "mailto:") {
+								$(this).click(function() {
+									var emailAddr = href.replace("mailto:", "");
+									_gaq.push(["_trackEvent", "Email", "Click", emailAddr]);
+								});
+								return;
+							}
+
+							if(!href.match(/^https?\:/))
+								return;
+
+							if(href.match(filetypes)) {
+								$(this).click(function() {
+									var extParts = href.split(".");
+									var ext = extParts[extParts.length - 1];
+									_gaq.push(["_trackEvent", "Download", "Click-" + ext, href]);
+
+									if($(this).attr("target") == "_blank")
+										return;
+									setTimeout(function() { location.href = href }, 250);
+									return false;
+								});
+								return;
+							}
+							
+							if(href.indexOf(document.domain) >= 0)
+								return;
+
+							$(this).click(function() {
+								var link = href.replace(/^https?\:\/\//, "");
+								_gaq.push(["_trackEvent", "External", "Click", link]);
+								if($(this).attr("target") == "_blank")
+									return;
+								setTimeout(function() { location.href = href }, 250);
+								return false;
+							});
+						});
+					};
+
+					if(!window.jQuery || typeof(window.jQuery) != "function") {
+						(function() {
+							var jq = document.createElement("script"); jq.type = "text/javascript";
+							jq.src = "http://media.rockstargames.com/js/jquery/jquery-1.4.4.min.js";
+							var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(jq, s);
+						})();
+						
+						var ljq;
+						var _ljqi = 0;
+						(ljq = function() {
+							if(_ljqi > 20)
+								return;
+							if(window.jQuery && typeof(window.jQuery) == "function")
+								return window.jQuery(document).ready(domReady);
+							_ljqi++;
+							setTimeout(ljq, 250);
+						})();
+					} else {
+						window.jQuery(document).ready(domReady);
+					}
+				})(window);
+			</script>
+<!-- End Header Analytics (UA-15984839-3) -->
+</head>
+
+<body bgcolor=#000000 leftmargin=0 topmargin=0>
+
+				<!--
+				Start of DoubleClick Floodlight Tag: Please do not remove
+				Activity name of this tag: Rockstar Games Homepage
+				URL of the webpage where the tag is expected to be placed: http://www.rockstargames.com/
+				This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+				Creation Date: 02/01/2011
+
+
+				<script type="text/javascript">
+					var axel = Math.random() + "";
+					var a = axel * 10000000000000;
+					document.write('<iframe style="position:absolute;left:-10000px;top:-10000px" src="http://fls.doubleclick.net/activityi;src=3055121;type=rocks806;cat=rocks465;ord=' + a + '?" width="1" height="1" frameborder="0"></iframe>');
+				</script>
+				<noscript>
+					<iframe style="position:absolute;left:-10000px;top:-10000px" src="http://fls.doubleclick.net/activityi;src=3055121;type=rocks806;cat=rocks465;ord=1?" width="1" height="1" frameborder="0"></iframe>
+				</noscript>
+				<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+<table cellpadding=0 cellspacing=0 border=0>
+
+<tr>
+<td align=left valign=top>
+
+<!-- table containing main body -->
+<table cellpadding=0 cellspacing=0 border=0 width=475>
+
+<tr>
+<td align=left valign=top><img src="../img/blank.gif" width=114 height=163 alt="" border="0"></td>
+<td align=left valign=top colspan=3>
+<font size=2 color="#ffffff" face="arial, helvetica, sans-serif">
+
+<br><br>
+
+<p align=justify>
+A futuristic urban nightmare. The international city that we are all terrified is only a few years away, is yours for the taking. Modeled on the apocalyptic visions of the future from the 1970s and 1980s, the city for GTA 2 is a fully dysfunctional urban hell. Like all cities, it has a fully international flavor and each different group in the city wants to control something.
+</font>
+
+</td>
+</tr>
+
+
+<tr>
+<td align=left valign=top><img src="../img/look/pageone/photo_1.gif" width=114 height=94 alt="" border="0"></td>
+<td align=left valign=top><img src="../img/look/pageone/photo_2.gif" width=110 height=94 alt="" border="0"></td>
+<td align=left valign=top><img src="../img/look/pageone/photo_3.gif" width=107 height=94 alt="" border="0"></td>
+<td align=left valign=top><img src="../img/blank.gif" width=144 height=94 alt="" border="0"></td>
+</tr>
+
+<tr>
+<td align=left valign=top><img src="../img/blank.gif" width=114 height=171 alt="" border="0"></td>
+<td align=left valign=top colspan=3>
+<font size=2 color="#ffffff" face="arial, helvetica, sans-serif">
+
+<br><br>
+
+<p align=justify>
+Russian and Japanese immigrants, hillbilly scumbags and religious extremists, lunatics and genetically modified automatons, all want to control the city, all dominate areas of the landscape and parts of the cities sundry illicit activities, each with their own agendas and ambitions, each with their own enemies and feuds, each with their own psychotic leaders desperate to grab anything they can get their hands on.
+</font>
+
+</td>
+</tr>
+
+</table>
+<!-- end table containing main body -->
+
+</td>
+<td align=left valign=top>
+
+<!-- table containing left navigation -->
+<table cellpadding=0 cellspacing=0 border=0>
+
+<tr>
+<td align=left valign=top><img src="../img/look/pageone/nav_one.gif" width=94 height=287 alt="" border="0"></td>
+<td align=left valign=top><img src="../img/look/pageone/nav_two.gif" width=51 height=287 alt="" border="0"></td>
+</tr>
+
+<tr>
+<td align=left valign=top rowspan=5><img src="../img/look/pageone/nav_three.gif" width=94 height=173 alt="" border="0"></td>
+<td align=left valign=top><img name="page" src="../img/look/pageone/p_one.gif" width=51 height=46 alt="" border="0"></td>
+</tr>
+
+<tr>
+<td align=left valign=top><a href="look_1.html" target="main" onMouseOver="imgAct('roll', 'back', 'pageone');" onMouseOut="imgInact('roll', 'back');"><img src="../img/look/pageone/leftarrow.gif" width=51 height=25 alt="" border="0"></a></td>
+</tr>
+
+<tr>
+<td align=left valign=top><a href="page_2.html" target="main" onMouseOver="imgAct('roll', 'next', 'pagetwo');" onMouseOut="imgInact('roll', 'next');"><img src="../img/look/pageone/rightarrow.gif" width=51 height=25 alt="" border="0"></a></td>
+</tr>
+
+<tr>
+<td align=left valign=top><a href="../present.html" target="main" onMouseOver="imgAct('roll', 'home', 'pageone');" onMouseOut="imgInact('roll', 'home');"><img src="../img/look/pageone/car.gif" width=51 height=45 alt="" border="0"></a></td>
+</tr>
+
+<tr>
+<td align=left valign=top><img name="roll" src="../img/look/pageone/rollover_off.gif" width=51 height=32 alt="" border="0"></td>
+</tr>
+
+</table>
+<!-- end of  table containing left navigation -->
+
+</td>
+</tr>
+
+</table>
+
+
+</body>
+</html>

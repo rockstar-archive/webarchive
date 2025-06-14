@@ -1,0 +1,121 @@
+
+<!--created by Oyster Partners Limited-->
+<!--www.oyster.co.uk -->
+<!-- [June] 1999 -->
+<!--Production:  by [C.P], [June] 1999 -->
+<!--Design:  by [J.P], [June] 1999 -->
+<!--Programming: by [C.P - J.L], [June] 1999 -->
+<!--Flash engineering:  by [R.R.], [June] 1999 -->
+
+
+<html>
+
+<head>
+
+	<title>GTA2 - Movies</title>
+	
+<script language="JavaScript">
+browser = navigator.appName;
+version = parseInt(navigator.appVersion);
+    if ((browser == "Netscape" && version >= 3) || 
+        (browser == "Microsoft Internet Explorer" && version >= 4)) dynamic = "YES";
+    else dynamic = "NO";
+
+    if (dynamic== "YES") 
+    {
+		
+		backoff = new Image();
+        backoff.src = "../img/movie/three_off.gif";     
+        backon = new Image();
+        backon.src = "../img/movie/three_on.gif"; 
+							
+    }
+
+function imgInact(imgName) 
+{
+    if (dynamic== "YES") 
+    {
+        document[imgName].src = eval(imgName + "off.src");
+    }
+}
+
+function imgAct(imgName) 
+{
+    if (dynamic== "YES") 
+    {
+        document[imgName].src = eval(imgName + "on.src");
+    }
+}
+
+</script>	
+
+</head>
+
+<body bgcolor=#000000>
+
+
+<center>
+<table cellpadding=0 cellspacing=0 border=0>
+
+<tr>
+<td align=left valign=top><img src="../img/movie/one.gif" width=216 height=130 alt="" border="0"></td>
+<td align=left valign=top><img  usemap="#map1" src="../img/movie/two.gif" width=314 height=130 alt="" border="0"></td>
+</tr>
+
+<tr>
+<td align=left valign=top rowspan=8><a href="downloads.html"  target="main" onMouseOver="imgAct('back')" onMouseOut="imgInact('back')"><img name="back"  src="../img/movie/three_off.gif" width=216 height=120 alt="" border="0"></a></td>
+<td align=left valign=top><a href="../download/pursuit.zip"><img src="../img/movie/four.gif" width=314 height=15  alt="Pursuit and escape" border="0"></a></td>
+</tr>
+
+<tr>
+<td align=left valign=top><a href="../download/assass1.zip"><img src="../img/movie/five.gif" width=314 height=15  alt="The Assassin is Activated" border="0"></a></td>
+</tr>
+
+<tr>
+<td align=left valign=top><a href="../download/cops.zip"><img src="../img/movie/six.gif" width=314 height=15  alt="Cop chase" border="0"></a></td>
+</tr>
+
+<tr>
+<td align=left valign=top><a href="../download/boss.zip"><img src="../img/movie/seven.gif" width=314 height=15 alt="Meet the boss" border="0"></a></td>
+</tr>
+
+<tr>
+<td align=left valign=top><a href="../download/base.zip"><img src="../img/movie/eight.gif" width=314 height=15 alt="Basement Baseball" border="0"></a></td>
+</tr>
+
+<tr>
+<td align=left valign=top><a href="../download/shoot.zip"><img src="../img/movie/nine.gif" width=314 height=15 alt="Shoot him when he's down" border="0"></a></td>
+</tr>
+
+<tr>
+<td align=left valign=top><a href="../download/elvis.zip"><img src="../img/movie/ten.gif" width=314 height=15 alt="Elvis"  border="0"></a></td>
+</tr>
+
+<tr>
+<td align=left valign=top><a href="../download/assass2.zip"><img src="../img/movie/eleven.gif" width=314 height=15 alt="Crime Does Not Pay" border="0"></a></td>
+</tr>
+
+<tr>
+<td align=left valign=top><img src="../img/blank.gif" width=216 height=180  border="0"></td>
+<td align=left valign=top><img usemap="#map2" src="../img/movie/twelwe.gif" width=314 height=180 alt="" border="0"></td>
+</tr>
+
+<tr>
+<td align=left valign=top><img src="../img/blank.gif" width=216 height=15  border="0"></td>
+<td align=left valign=top><a href="../download/Gta2.zip"><img src="../img/movie/thirteen.gif" width=314 height=15 alt="" border="0"></a></td>
+</tr>
+
+</table>
+</center>
+
+<map name="map1">
+  <area shape="rect" coords="18,101,52,126" href="http://quicktime.apple.com/" target="_new" alt="Download Quick Time">  
+</map> 
+
+<map name="map2">
+  <area shape="rect" coords="20,132,55,162" href="http://www.real.com/products/player/" target="_new" alt="Download Real Player">  
+</map>
+
+
+</body>
+</html>

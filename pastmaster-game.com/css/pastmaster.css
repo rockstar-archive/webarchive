@@ -1,0 +1,35 @@
+BODY {
+	margin-top: 0px;
+	margin-left: 0px;
+}
+
+.contentTable {
+	background-color: #fff;
+	border: 1px solid #996;
+}
+
+.contentText {
+	font: normal 12px/17px Arial, san-serif;
+	padding: 10px;
+	text-align: center;
+}
+
+.sidebarBackground {
+	background-color: #996;
+}
+
+.sidebarText {
+	font: normal 10px/13px Arial, san-serif;
+	padding: 10px;
+	text-align: center;
+}
+
+.copyrightText {
+	font: normal 10px/15px Arial, san-serif;
+	padding: 10px;
+	color: #996;
+}
+
+LI {
+	text-align:center;
+}

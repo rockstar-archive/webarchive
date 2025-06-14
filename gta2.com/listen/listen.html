@@ -1,0 +1,99 @@
+<!--created by Oyster Partners Limited-->
+<!--www.oyster.co.uk / www.kbw.co.uk-->
+<!-- [November] 1999 -->
+<!--Production:  by [C.P], [November] 1999 -->
+<!--Design:  by [J.P], [November] 1999 -->
+<!--Programming: by [C.P], [November] 1999 -->
+
+<html>
+<head>
+
+	<title>Listen</title>
+
+<script language="JavaScript">
+<!--
+browser = navigator.appName;
+version = parseInt(navigator.appVersion);
+    if ((browser == "Netscape" && version >= 3) || 
+        (browser == "Microsoft Internet Explorer" && version >= 4)) dynamic = "YES";
+    else dynamic = "NO";
+
+    if (dynamic== "YES") 
+    {
+	
+        previewoff = new Image();
+        previewoff.src = "../img/listen/preview_off.gif";     
+        previewon = new Image();
+        previewon.src = "../img/listen/preview_on.gif"; 
+        previewtext = new Image();
+        previewtext.src = "../img/listen/preview_text.gif"; 
+		
+		audiooff = new Image();
+        audiooff.src = "../img/listen/audio_off.gif";     
+        audioon = new Image();
+        audioon.src = "../img/listen/preview_on.gif"; // THERGARCHIVE EDIT: "audio_on.gif" file is lost forever.
+        audiotext = new Image();
+        audiotext.src = "../img/listen/audio_text.gif"; 
+
+		backoff = new Image();
+        backoff.src = "../img/listen/back_off.gif";     
+        backon = new Image();
+        backon.src = "../img/listen/back_on.gif"; // THERGARCHIVE EDIT: "back_on.gif" file is lost forever.
+	    backtext = new Image();
+        backtext.src = "../img/listen/back_text.gif"; // THERGARCHIVE EDIT: "back_text.gif" file is lost forever.
+    }
+
+function imgInact(imgName) 
+{
+    if (dynamic== "YES") 
+    {
+        document.images[imgName].src = eval(imgName + "off.src");
+        document.images["text"].src = "../img/listen/text.gif";
+    }
+}
+
+function imgAct(imgName) 
+{
+    if (dynamic== "YES") 
+    {
+        document.images[imgName].src = eval(imgName + "on.src");
+        document.images["text"].src = eval(imgName + "text.src");
+    }
+}
+
+// -->
+</script>	
+
+</head>
+<body bgcolor="#000000">
+
+<center>
+<table cellpadding=0 cellspacing=0 border=0>
+
+<tr>
+<td align=left valign=top colspan=10><img src="../img/listen/one.gif" width=600 height=220 alt="" border="0"></td>
+</tr>
+
+<tr>
+<td align=left valign=top><img src="../img/listen/two.gif" width=59 height=20 alt="" border="0"></td>
+<td align=left valign=top><img src="../img/listen/back_off.gif" width=40 height=20 alt="" border="0" name="back"></td>
+<td align=left valign=top><img src="../img/listen/listen.gif" width=201 height=20 alt="" border="0"></td>
+<td align=left valign=top><img src="../img/listen/three.gif" width=20 height=20 alt="" border="0"></td>
+<td align=left valign=top><a href="preview.html" target="main" onMouseOver="imgAct('preview');" onMouseOut="imgInact('preview');"><img src="../img/listen/preview_off.gif" width=20 height=20 alt="" border="0" name="preview"></a></td>
+<td align=left valign=top><a href="audioframe.html" target="main" onMouseOver="imgAct('audio');" onMouseOut="imgInact('audio');"><img src="../img/listen/audio_off.gif" width=20 height=20 alt="" border="0" name="audio"></a></td>
+<td align=left valign=top><img src="../img/listen/four.gif" width=20 height=20 alt="" border="0"></td>
+<td align=left valign=top><img src="../img/listen/text.gif" width=98 height=20 alt="" border="0" name="text"></td>
+<td align=left valign=top><a href="../present.html" target="main" onMouseOver="imgAct('back');" onMouseOut="imgInact('back');"><img src="../img/listen/arrow.gif" width=30 height=20 alt="" border="0"></a></td>
+<td align=left valign=top><img src="../img/listen/five.gif" width=92 height=20 alt="" border="0"></td>
+</tr>
+
+<tr>
+<td align=left valign=top colspan=10><img src="../img/listen/six.gif" width=600 height=200 alt="" border="0"></td>
+</tr>
+
+</table>
+</center>
+
+
+</body>
+</html>

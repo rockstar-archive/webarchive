@@ -1,0 +1,104 @@
+<!--created by Oyster Partners Limited-->
+<!--www.oyster.co.uk / www.kbw.co.uk-->
+<!-- [November] 1999 -->
+<!--Production:  by [C.P], [November] 1999 -->
+<!--Design:  by [J.P], [November] 1999 -->
+<!--Programming: by [C.P], [November] 1999 -->
+
+<html>
+<head>
+
+	<title>Preview</title>
+
+	
+<script language="JavaScript">
+<!--
+browser = navigator.appName;
+version = parseInt(navigator.appVersion);
+    if ((browser == "Netscape" && version >= 3) || 
+        (browser == "Microsoft Internet Explorer" && version >= 4)) dynamic = "YES";
+    else dynamic = "NO";
+
+    if (dynamic== "YES") 
+    {
+
+		backoff = new Image();
+        backoff.src = "../img/listen/preview/back_off.gif";     
+        backon = new Image();
+        backon.src = "../img/listen/preview/back_on.gif"; 
+		
+		caroff = new Image();
+        caroff.src = "../img/listen/preview/car_off.gif";     
+        caron = new Image();
+        caron.src = "../img/listen/preview/car_on.gif"; 
+							
+    }
+
+function imgInact(imgName) 
+{
+    if (dynamic== "YES") 
+    {
+        document[imgName].src = eval(imgName + "off.src");
+    }
+}
+
+function imgAct(imgName) 
+{
+    if (dynamic== "YES") 
+    {
+        document[imgName].src = eval(imgName + "on.src");
+    }
+}
+
+// -->
+</script>
+
+
+</head>
+<body bgcolor="#000000">
+ 
+
+<br><br>
+
+<center>
+<table cellpadding="0" cellspacing="0" border="0">
+
+<tr>
+<td align="left" valign="top"><img src="../img/listen/preview/topleft.gif" width="270" height="60" alt="" border="0"></td>
+<td align="left" valign="top">
+
+<table cellpadding="0" cellspacing="0" border="0">
+
+<tr>
+<td align="left" valign="top" rowspan="3"><img src="../img/listen/preview/animation.gif" width="12" height="60" alt="" border="0"></td>
+<td align="left" valign="top" rowspan="2"><img src="../img/listen/preview/one.gif" width="6" height="50" alt="" border="0"></td>
+<td align="left" valign="top" rowspan="2"><a href="../download/Chart.zip"><img src="../img/listen/preview/zip.gif" width="46" height="50" alt="download" border="0"></a></td>
+<td align="left" valign="top"><a href="../present.html" target="main" onmouseover="imgAct('car')" onmouseout="imgInact('car')"><img src="../img/listen/preview/car_off.gif" width="47" height="26" alt="return to present page" border="0" name="car"></a></td>
+<td align="left" valign="top" rowspan="2"><img src="../img/listen/preview/previewtitle.gif" width="246" height="50" alt="" border="0"></td>
+</tr>
+
+<tr>
+<td align="left" valign="top"><a href="listen.html" target="main" onmouseover="imgAct('back')" onmouseout="imgInact('back')"><img src="../img/listen/preview/back_off.gif" width="47" height="24" alt="back to listen page" border="0" name="back"></a></td>
+</tr>
+
+<tr>
+<td align="left" valign="top" colspan="4"><img src="../img/listen/preview/bottomblank.gif" width="345" height="10" alt="" border="0"></td>
+</tr>
+
+</table>
+
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">&nbsp;</td>
+<td align="left" valign="top"><img src="../img/listen/preview/maintext.gif" width="357" height="158" alt="" border="0"></td>
+</tr>
+
+</table>
+
+</center>
+
+
+</body>
+</html>
