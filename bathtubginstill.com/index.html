@@ -1,73 +1,58 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-
+    <meta charset="UTF-8">
     <title>Old Horsey: The Original Bathtub Gin Still</title>
+
+    <!-- Load Ruffle -->
+    <script type="text/javascript" src="js/ruffle.js"></script>
 
     <script>
         window.RufflePlayer = window.RufflePlayer || {};
         window.RufflePlayer.config = {
-            // Options affecting the whole page
-            "publicPath": undefined,
-            "polyfills": true,
-
-            // Options affecting files only
-            "autoplay": "on",
-            "unmuteOverlay": "hidden",
-            "backgroundColor": null,
-            "wmode": "window",
-            "letterbox": "fullscreen",
-            "warnOnUnsupportedContent": false,
-            "contextMenu": true,
-            "showSwfDownload": true,
-            "upgradeToHttps": window.location.protocol === "https:",
-            "logLevel": "debug",
-            "base": null,
-            "menu": true,
-            "salign": "",
-            "scale": "showAll",
-            "forceScale": false,
-            "quality": "high",
-            "splashScreen": false,
+            autoplay: "on",
+            unmuteOverlay: "hidden",
+            backgroundColor: null,
+            wmode: "window",
+            letterbox: "fullscreen",
+            warnOnUnsupportedContent: false,
+            contextMenu: true,
+            showSwfDownload: true,
+            upgradeToHttps: window.location.protocol === "https:",
+            logLevel: "debug",
+            scale: "showAll",
+            quality: "high"
         };
     </script>
-    <script type="text/javascript" src="js/ruffle.js"></script>
 
-    <style type="text/css">
-        BODY {
-            margin-top: 0px;
-            margin-left: 0px;
+    <style>
+        body {
+            margin: 0;
+            background: url('images/bathtub_HTMLbackground.gif');
         }
 
-        #flash {
+        #flash-container {
             position: absolute;
-            top: 0px;
+            top: 0;
             left: 100px;
         }
     </style>
-
-
 </head>
 
-<body background="images/bathtub_HTMLbackground.gif">
+<body>
+    <div id="flash-container"></div>
 
-
-    <div id="flash">
-        <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
-            codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="800"
-            height="840" id="bathtub" align="middle">
-            <param name="allowScriptAccess" value="sameDomain">
-            <param name="movie" value="bathtub.swf">
-            <param name="quality" value="high">
-            <param name="bgcolor" value="#ffffff">
-            <embed src="bathtub.swf" quality="high" bgcolor="#ffffff" width="800" height="840" name="bathtub"
-                align="middle" allowscriptaccess="sameDomain" type="application/x-shockwave-flash"
-                pluginspage="http://www.macromedia.com/go/getflashplayer">
-        </object>
-    </div>
-
-
+    <script>
+        window.addEventListener("load", () => {
+            const ruffle = window.RufflePlayer.newest();
+            const player = ruffle.createPlayer();
+            player.style.width = "800px";
+            player.style.height = "840px";
+            document.getElementById("flash-container").appendChild(player);
+            player.load("bathtub.swf");
+        });
+    </script>
 </body>
 
 </html>
