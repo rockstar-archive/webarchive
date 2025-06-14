@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <title>Rockstar Games GTA</title>
+</head>
+<body style="height:100vh; overflow:hidden; margin:0; display:flex; flex-flow:column nowrap; align-items:stretch;">
+  <iframe id="playback" src="./gta/areyou18.html" frameborder="0" style="flex:1 0"></iframe>
+  <script>
+    if (window.location.hash) {
+      document.getElementById("playback").src += window.location.hash;
+    }
+  </script>
+</body>
+</html>

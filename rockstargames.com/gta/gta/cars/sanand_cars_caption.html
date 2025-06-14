@@ -1,0 +1,172 @@
+<title>BMG</title>
+<!-- Header Analytics (UA-15984839-3) -->
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(["_setAccount", "UA-15984839-3"]);
+			_gaq.push(["_trackPageview"]);
+			(function() {
+				var ga = document.createElement("script"); ga.type = "text/javascript"; ga.async = true;
+				ga.src = ("https:" == document.location.protocol ? "https://" : "http://") + "stats.g.doubleclick.net/dc.js";
+				var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);
+			})();
+			
+			(function(window) {
+				var domReady = function($) {
+					var filetypes = /\.(zip|exe|dmg|pdf|doc*|xls*|ppt*|mp3|jpg|themepack|wmv|mp4|mov|flv)$/i;
+					$("a").filter(function() { return !$(this).data("notrack"); }).each(function() {
+						var href = $(this).attr("href");
+						if(!href)
+							return;
+						if(href.substr(0, 4) == "aim:") {
+							$(this).click(function() {
+								var url = href.replace("aim:", "");
+								_gaq.push(["_trackEvent", "Download", "Click-aim", url]);
+							});
+							return;		
+						}
+
+						if(href.substr(0, 7) == "mailto:") {
+							$(this).click(function() {
+								var emailAddr = href.replace("mailto:", "");
+								_gaq.push(["_trackEvent", "Email", "Click", emailAddr]);
+							});
+							return;
+						}
+
+						if(!href.match(/^https?\:/))
+							return;
+
+						if(href.match(filetypes)) {
+							$(this).click(function() {
+								var extParts = href.split(".");
+								var ext = extParts[extParts.length - 1];
+								_gaq.push(["_trackEvent", "Download", "Click-" + ext, href]);
+
+								if($(this).attr("target") == "_blank")
+									return;
+								setTimeout(function() { location.href = href }, 250);
+								return false;
+							});
+							return;
+						}
+						
+						if(href.indexOf(document.domain) >= 0)
+							return;
+
+						$(this).click(function() {
+							var link = href.replace(/^https?\:\/\//, "");
+							_gaq.push(["_trackEvent", "External", "Click", link]);
+							if($(this).attr("target") == "_blank")
+								return;
+							setTimeout(function() { location.href = href }, 250);
+							return false;
+						});
+					});
+				};
+			})(window);
+		</script>
+<!-- End Header Analytics (UA-15984839-3) -->
+<!-- Header Analytics (UA-15984839-3) -->
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(["_setAccount", "UA-15984839-3"]);
+			_gaq.push(["_trackPageview"]);
+			(function() {
+				var ga = document.createElement("script"); ga.type = "text/javascript"; ga.async = true;
+				ga.src = ("https:" == document.location.protocol ? "https://" : "http://") + "stats.g.doubleclick.net/dc.js";
+				var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);
+			})();
+			
+			(function(window) {
+				var domReady = function($) {
+					var filetypes = /\.(zip|exe|dmg|pdf|doc*|xls*|ppt*|mp3|jpg|themepack|wmv|mp4|mov|flv)$/i;
+					$("a").filter(function() { return !$(this).data("notrack"); }).each(function() {
+						var href = $(this).attr("href");
+						if(!href)
+							return;
+						if(href.substr(0, 4) == "aim:") {
+							$(this).click(function() {
+								var url = href.replace("aim:", "");
+								_gaq.push(["_trackEvent", "Download", "Click-aim", url]);
+							});
+							return;		
+						}
+
+						if(href.substr(0, 7) == "mailto:") {
+							$(this).click(function() {
+								var emailAddr = href.replace("mailto:", "");
+								_gaq.push(["_trackEvent", "Email", "Click", emailAddr]);
+							});
+							return;
+						}
+
+						if(!href.match(/^https?\:/))
+							return;
+
+						if(href.match(filetypes)) {
+							$(this).click(function() {
+								var extParts = href.split(".");
+								var ext = extParts[extParts.length - 1];
+								_gaq.push(["_trackEvent", "Download", "Click-" + ext, href]);
+
+								if($(this).attr("target") == "_blank")
+									return;
+								setTimeout(function() { location.href = href }, 250);
+								return false;
+							});
+							return;
+						}
+						
+						if(href.indexOf(document.domain) >= 0)
+							return;
+
+						$(this).click(function() {
+							var link = href.replace(/^https?\:\/\//, "");
+							_gaq.push(["_trackEvent", "External", "Click", link]);
+							if($(this).attr("target") == "_blank")
+								return;
+							setTimeout(function() { location.href = href }, 250);
+							return false;
+						});
+					});
+				};
+			})(window);
+		</script>
+<!-- End Header Analytics (UA-15984839-3) -->
+</head>
+
+
+<body bgcolor="#000000" marginwidth="0" marginheight="0">
+
+			<!--
+			Start of DoubleClick Floodlight Tag: Please do not remove
+			Activity name of this tag: Rockstar Games Homepage
+			URL of the webpage where the tag is expected to be placed: http://www.rockstargames.com/
+			This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+			Creation Date: 02/01/2011
+			-->
+			<script type="text/javascript">
+				var axel = Math.random() + "";
+				var a = axel * 10000000000000;
+				document.write('<iframe style="position:absolute;left:-10000px;top:-10000px" src="https://web.archive.org/web/20141022050824/http://fls.doubleclick.net/activityi;src=3055121;type=rocks806;cat=rocks465;ord=' + a + '?" width="1" height="1" frameborder="0"></iframe>');
+			</script><iframe style="position:absolute;left:-10000px;top:-10000px" src="./activityi.html" width="1" height="1" frameborder="0" data-ruffle-polyfilled=""></iframe>
+			<noscript>
+				<iframe style="position:absolute;left:-10000px;top:-10000px" src="https://web.archive.org/web/20141022050824if_/http://fls.doubleclick.net/activityi;src=3055121;type=rocks806;cat=rocks465;ord=1" width="1" height="1" frameborder="0"></iframe>
+			</noscript>
+			<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+			<!--
+			Start of DoubleClick Floodlight Tag: Please do not remove
+			Activity name of this tag: Rockstar Games Homepage
+			URL of the webpage where the tag is expected to be placed: http://www.rockstargames.com/
+			This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+			Creation Date: 02/01/2011
+			-->
+			<script type="text/javascript">
+				var axel = Math.random() + "";
+				var a = axel * 10000000000000;
+				document.write('<iframe style="position:absolute;left:-10000px;top:-10000px" src="https://web.archive.org/web/20141022050824/http://fls.doubleclick.net/activityi;src=3055121;type=rocks806;cat=rocks465;ord=' + a + '?" width="1" height="1" frameborder="0"></iframe>');
+			</script><iframe style="position:absolute;left:-10000px;top:-10000px" src="./activityi(1).html" width="1" height="1" frameborder="0" data-ruffle-polyfilled=""></iframe>
+			<noscript>
+				<iframe style="position:absolute;left:-10000px;top:-10000px" src="https://web.archive.org/web/20141022050824if_/http://fls.doubleclick.net/activityi;src=3055121;type=rocks806;cat=rocks465;ord=1" width="1" height="1" frameborder="0"></iframe>
+			</noscript>
+			<!-- End of DoubleClick Floodlight Tag: Please do not remove --><img src="./sanandgarage.gif" width="288" height="40" border="0">

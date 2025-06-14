@@ -1,0 +1,281 @@
+	<title>GTA</title>
+<script language="JavaScript">
+<!--
+ver = "xx";
+bName = navigator.appName;
+bVer = parseInt(navigator.appVersion);
+        if (bName == "Netscape" && bVer == 3) ver = "n3";
+        else if (bName == "Netscape" && bVer == 2) ver = "n2";
+        else if (bName == "Netscape" && bVer >= 4) ver = "n4";
+        else if (bName == "Microsoft Internet Explorer" && bVer == 2) ver = "e3";
+        else if (bName == "Microsoft Internet Explorer" && bVer > 2) ver = "e4";
+
+if (navigator.appVersion.indexOf("Mac") != -1) ver+="m";
+if (navigator.appVersion.indexOf("X11") != -1) ver+="u";
+
+// appologise to those who can't play the game
+if (ver.indexOf("m")!=-1) self.location.href="sorry_but.html";
+if (ver.indexOf("n2")!=-1) self.location.href="sorry_but.html";
+if ((ver.indexOf("n3")!=-1) && (ver.indexOf("u")==-1)) self.location.href="sorry_but.html";
+
+
+function fixSep(what)
+// escapes any semicolons you might have in your data
+{
+     n=0
+     while ( n >= 0 )
+          {
+               n = what.indexOf(';',n)
+               if (n < 0) return what     
+               else
+                    {
+                         what = what.substring(0,n) + escape(';') + what.substring(n+1,what.length)
+                         n++
+                    }          
+          }
+     return what
+}
+
+function toCookie()
+{
+     document.cookie = '';
+     nform = document.data;
+     for (i=0 ; i<2; i++)
+          {
+               expr =makeYearExpDate(1);
+               astr = fixSep(nform.elements[i].value);
+               //astr = nform.elements[i].value;
+               astr= nform.elements[i].name + '=' + astr + ';expires=' + expr + ';path=/';
+               document.cookie=astr;
+          }
+}
+
+function makeYearExpDate(yr)
+{
+     var expire = new Date ();
+     expire.setTime (expire.getTime() + ((yr *365) *24 * 60 * 60 * 1000));
+     expire = expire.toGMTString();
+     return expire;
+}
+
+function getCookieAt(n)
+{
+  e = document.cookie.indexOf (";", n);
+     if (e == -1)
+          e = document.cookie.length;
+     rstr= unescape(document.cookie.substring(n,e));
+     return rstr;
+}
+
+function fromCookie()
+//restores summary fields from cookie
+{
+     nform = document.data;
+     astr = document.cookie;
+     alert(astr);
+     cl = astr.length;
+     counter=0;
+     for (i = 0 ; i < nform.length ; i++)
+     {
+           nstr = nform.elements[i].name + '=';
+           ll = nstr.length;
+           jx  = 0;
+           while (jx < cl) 
+           {
+                 k = jx + ll; 
+                 xstr = astr.substring(jx,k);
+                 if (xstr == nstr)
+                 {
+                        nform.elements[i].value = getCookieAt(k)
+                        break;
+                 }
+                 jx = document.cookie.indexOf(" ", jx) + 1;
+                 if (jx == 0) break ;
+           }
+               
+     }
+
+}
+
+function arrayFromCookie()
+// fills global array from cookie
+{
+     astr = document.cookie
+     cl = astr.length
+     k=0
+     jx  = 0;
+     for (i = 0 ; i < 6 ; i++)
+          {
+                    
+              jx=astr.indexOf(' ',jx)
+              k = astr.indexOf('=',jx);
+              xstr = astr.substring(jx+1,k);
+              parms[i]=xstr;
+              parms[parms[i]] = getCookieAt(k+1);
+              jx = astr.indexOf(";", jx) + 1;
+              if (jx <= 0 || i > 10) break ;
+          }
+}
+
+var parms=new Array();
+
+//document.cookie="fred=george";
+function setValues() {
+	if (!self.parent.frameThere)
+		self.location.href="index.html";
+	else
+	{
+		arrayFromCookie();
+		if (parms["user_name"]) document.data.user_name.value=parms["user_name"];
+		if (parms["email"]) document.data.email.value=parms["email"];
+	}
+}
+
+//alert(document.cookie);
+
+// alert(parms["email"]);
+
+function validEmail(test) {
+	if (test=="") return false;
+	if (test.indexOf("@")==-1) return false;
+	if (test.indexOf(".")==-1) return false;
+	if (test.indexOf(" ")!=-1) return false;
+	if (test.indexOf("|")!=-1) return false;
+	return true;
+}
+
+function playSection(section) {
+
+	if (document.data.user_name.value=="")
+	{
+		alert("Please enter a name");
+		return;
+	}
+
+	if (document.data.user_name.value.indexOf("|")!=-1) {
+		alert("Sorry you can not you the | character");
+		return;
+	}
+
+	if (!validEmail(document.data.email.value)) {
+		alert("Please enter a valid email address");
+		return;
+	}
+
+	toCookie();
+
+
+	if (section==1) window.location.href="race_extras.html";
+	if (section==2) window.location.href="race_gangstas.html";
+	if (section==3) window.location.href="race_bands.html";
+	if (section==4) window.location.href="race_cities.html";
+	if (section==5) window.location.href="race_cars.html";
+}
+
+//-->
+</script>
+
+</head>
+
+<body bgcolor="Black" text="#FFCC00" onload="setValues()" link="#0099cc" vlink="#0099cc" alink="#FFCC00" marginwidth="0" marginheight="0">
+
+<table cellspacing="0" width="100%" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top" align="left"><img src="./headerpic_01.gif" width="364" height="59" border="0"></td>
+<td valign="top" align="right"><img src="./gtalogosm.gif" width="169" height="59" border="0"></td>
+</tr>
+</tbody></table>
+
+<table cellspacing="0" width="100%" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top" align="left"><img src="./headerpic_02.gif" width="76" height="196" border="0"></td>
+<td bgcolor="#000000" colspan="2" valign="top" align="center">&nbsp;<p><table cellspacing="0" width="453" cellpadding="0" border="0">
+<tbody><tr>
+<td width="453" colspan="5"><img src="./bigbox_top.gif" width="453" height="41" border="0"></td>
+</tr>
+<tr>
+<td width="1" bgcolor="#ffcc00"><img src="./null.gif" width="1" height="1" border="0"></td>
+<td width="25"><img src="./null.gif" width="25" height="1" border="0"></td>
+<td width="401"><img src="./null.gif" width="401" height="1" border="0"><br>
+<center><img src="./sitemap.gif" width="295" height="200" border="0" usemap="#sitemap"><br>
+
+<!--map created by Shawnee Sequeira with MapEdit on 28/11/97-->
+<map name="sitemap">
+<area shape="rect" coords="39,29,81,68" href="javascript:playSection(1)">
+<area shape="rect" coords="206,10,242,48" href="javascript:playSection(2)">
+<area shape="rect" coords="20,111,66,149" href="javascript:playSection(3)">
+<area shape="rect" coords="113,121,151,157" href="javascript:playSection(4)">
+<area shape="rect" coords="204,83,240,121" href="javascript:playSection(5)">
+<area shape="default" nohref="">
+</map>
+<!--end-->
+
+</center><p>
+</p><form name="data">
+
+<font face="Arial, Helvetica" size="3">
+<input size="20" name="user_name" value=""> - name
+<br>
+<input size="20" name="email" value=""> - email address
+<br>
+<img src="./update.gif" width="79" height="79" border="0" align="LEFT" alt="Update" hspace="5">Oh my. We've got a bit of gta controversy going on. Go ahead, make our
+day...
+<p>
+It looks like the GTA points fairy thinks some of you little weasles have
+been cheating just an itsy bitsy bit. Now we're all for tactical playing
+and if you can outlogic us on our own game play, then you must be a GTA god.
+</p><p>
+However, the GTA points fairy and BMG Interactive reserve the right to boot
+you and your score off the scoreboard if they suspect you of cheating (for
+example, trying to submit scores not generated by the game). 
+</p><p>
+<b><a href="disclaimer.html">DISCLAIMER</a></b>
+</p><p>
+You heard it from da man, da boss, da big cojones.
+</p><p>
+play on.
+
+</p><p>Enter the Challenge and prove that you're the best.
+All you have to do is play the game and get the <a href="highscores.cgi">high score</a>. For the remaining 4 weeks, if you're the numero uno player at the end of the day (5:00 PM GMT) on any Friday then you could win one of three customised GTA Playstations being given away by BMG Interactive.
+</p><p>
+Think you're good enough. We'll see . . .
+</p></font></form><p><font face="Arial, Helvetica" size="3">
+To play, enter your name and email address above and click on
+a mission of your choice. Successfully complete a mission and your score
+will be entered onto the high score table. Rack up points by playing all
+the missions and by crashing into cars and pedestrians. You can re-play
+any mission to better your final score. Or you can be a spineless worm and
+quit now. 
+
+</font></p><p>
+</p></td>
+<td width="25"><img src="./null.gif" width="25" height="1" border="0"></td>
+<td width="1" bgcolor="#ffcc00"><img src="./null.gif" width="1" height="1" border="0"></td>
+</tr>
+<tr>
+<td width="454" colspan="5"><img src="./bigbox_bot.gif" width="453" height="17" border="0"></td>
+</tr>
+</tbody></table></p><p>
+<a href="../extras/demos.html"><img src="./game_site_button.gif" width="455" height="38" border="0"></a></p></td>
+<td width="5%">&nbsp;</td>
+</tr>
+</tbody></table>
+
+<table cellspacing="0" width="100%" cellpadding="0" border="0">
+<tbody><tr><td align="CENTER"><br><a href="https://www.rockstargames.com/privacy" target="_blank"><img border="0" src="./privacy.jpg"></a></td></tr>
+</tbody></table>
+
+<table cellspacing="0" width="100%" cellpadding="0" border="0">
+<tbody><tr>
+<td width="100%" bgcolor="#000000" align="CENTER"><img src="./txtr_bottom.jpg" usemap="#txtr_bottom" border="0" width="600" height="189"></td></tr>
+</tbody></table>
+<!-- Start of Client Side Image Map information -->
+<map name="txtr_bottom">
+<!-- #$-:Created by LiveImage available at http://www.mediatec.com -->
+<!-- #$-:Unregistered copy (chrisj) -->
+<!-- #$VERSION:1.27b -->
+<!-- #$DATE:Fri Nov 14 16:50:43 1997 -->
+<!-- #$GIF:txtr_bottom.jpg -->
+<area shape="RECT" coords="532,117,584,176" href="javascript:self.top.killGTA()" alt="Close this window to return to the main BMG Interactive site">
+</map>
+</body></html>
