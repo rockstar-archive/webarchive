@@ -1,0 +1,176 @@
+<html style="--wm-toolbar-height: 68px;">
+
+<head>
+
+
+
+	<title>Liberty City College</title>
+	<link rel="stylesheet" type="text/css">
+	<style>
+		FONT.myText {
+			color: #000000;
+			font: normal 10px/15px Verdana, Arial, Helvetica, san-serif;
+		}
+	</style>
+
+	<script language="JavaScript1.2">
+
+
+
+		function newImage(arg) {
+			if (document.images) {
+				rslt = new Image();
+				rslt.src = arg;
+				return rslt;
+			}
+		}
+
+		function changeImages() {
+			if (document.images && (preloadFlag == true)) {
+				for (var i = 0; i < changeImages.arguments.length; i += 2) {
+					document[changeImages.arguments[i]].src = changeImages.arguments[i + 1];
+				}
+			}
+		}
+
+		var preloadFlag = false;
+		function preloadImages() {
+			if (document.images) {
+				students_over = newImage("graphics/students-over.gif");
+				faculty_over = newImage("graphics/faculty-over.gif");
+				alumni_over = newImage("graphics/alumni-over.gif");
+				administration_over = newImage("graphics/administration-over.gif");
+				contact_over = newImage("graphics/contact-over.gif");
+				admissions_over = newImage("graphics/admissions-over.gif");
+				staff_over = newImage("graphics/staff-over.gif");
+				departments_over = newImage("graphics/departments-over.gif");
+				site_over = newImage("graphics/site-over.gif");
+				preloadFlag = true;
+			}
+		}
+
+
+	</script>
+	<script type="text/javascript" src="graphics/fixHeadlessAudio.js"></script>
+</head>
+
+<body background="graphics/background.gif" marginheight="0" marginwidth="0" leftmargin="0" topmargin="0"
+	onload="preloadImages();">
+
+
+
+
+	<table border="0" cellpadding="0" cellspacing="0" width="600">
+		<tbody>
+			<tr valign="TOP">
+				<td><img src="graphics/lccLogo.gif" alt="" width="180" height="60"></td>
+				<td><img src="graphics/1.gif" alt="" width="120" height="1"></td>
+				<td width="300"><img src="graphics/libertyCityTitle.gif" alt="" width="300" height="60"></td>
+			</tr>
+			<tr>
+				<td><img src="graphics/idiot.jpg" alt="" width="180" height="180"></td>
+				<td>&nbsp;</td>
+				<td valign="BOTTOM"><img src="graphics/whoCares.gif" alt="" width="360" height="80"></td>
+			</tr>
+			<tr valign="TOP">
+				<td>
+					<table border="0" cellpadding="0" cellspacing="0">
+						<tbody>
+							<tr>
+								<td><a href="#"
+										onmouseover="changeImages('students', 'graphics/students-over.gif'); return true;"
+										onmouseout="changeImages('students', 'graphics/students.gif'); return true;"><img
+											name="students" src="graphics/students.gif" width="180" height="20"
+											border="0"></a></td>
+							</tr>
+							<tr>
+								<td><a href="#"
+										onmouseover="changeImages('admissions', 'graphics/admissions-over.gif'); return true;"
+										onmouseout="changeImages('admissions', 'graphics/admissions.gif'); return true;"><img
+											name="admissions" src="graphics/admissions.gif" width="180" height="20"
+											border="0"></a></td>
+							</tr>
+							<tr>
+								<td><a href="#"
+										onmouseover="changeImages('faculty', 'graphics/faculty-over.gif'); return true;"
+										onmouseout="changeImages('faculty', 'graphics/faculty.gif'); return true;"><img
+											name="faculty" src="graphics/faculty.gif" width="180" height="20"
+											border="0"></a></td>
+							</tr>
+							<tr>
+								<td><a href="#"
+										onmouseover="changeImages('staff', 'graphics/staff-over.gif'); return true;"
+										onmouseout="changeImages('staff', 'graphics/staff.gif'); return true;"><img
+											name="staff" src="graphics/staff.gif" width="180" height="20"
+											border="0"></a></td>
+							</tr>
+							<tr>
+								<td><a href="#"
+										onmouseover="changeImages('alumni', 'graphics/alumni-over.gif'); return true;"
+										onmouseout="changeImages('alumni', 'graphics/alumni.gif'); return true;"><img
+											name="alumni" src="graphics/alumni.gif" width="180" height="20"
+											border="0"></a></td>
+							</tr>
+							<tr>
+								<td><a href="#"
+										onmouseover="changeImages('departments', 'graphics/departments-over.gif'); return true;"
+										onmouseout="changeImages('departments', 'graphics/departments.gif'); return true;"><img
+											name="departments" src="graphics/departments.gif" width="180" height="20"
+											border="0"></a></td>
+							</tr>
+							<tr>
+								<td><a href="#"
+										onmouseover="changeImages('administration', 'graphics/administration-over.gif'); return true;"
+										onmouseout="changeImages('administration', 'graphics/administration.gif'); return true;"><img
+											name="administration" src="graphics/administration.gif" width="180"
+											height="20" border="0"></a></td>
+							</tr>
+							<tr>
+								<td><a href="#"
+										onmouseover="changeImages('site', 'graphics/site-over.gif'); return true;"
+										onmouseout="changeImages('site', 'graphics/site.gif'); return true;"><img
+											name="site" src="graphics/site.gif" width="180" height="20" border="0"></a>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="#"
+										onmouseover="changeImages('contact', 'graphics/contact-over.gif'); return true;"
+										onmouseout="changeImages('contact', 'graphics/contact.gif'); return true;"><img
+											name="contact" src="graphics/contact.gif" width="180" height="20"
+											border="0"></a></td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+				<td>&nbsp;</td>
+				<td><br>
+					<font class="myText">Do you like to work standing in one place
+						for hours at a time? Do you enjoy warmer than normal environments? Are
+						you good with your hands and like putting things together over and over
+						again? Then call Liberty City Community College. We can train you for a
+						new career. At Liberty City Community College, you can get a degree and
+						be fully trained for a new career in any of the following fields:<br>
+						<br>
+						<b>Street Cleaning<br>
+							Processed Agriculture Rotation<br>
+							Grill Management<br>
+							Floor Cleaning<br>
+							Restroom Administration<br>
+							Coatroom Management<br>
+							Automobile Ignition Circumvention<br>
+							Pharmaceutical Baking</b><br>
+						<br>
+						If you don't see the field of study that you've been searching for, call
+						our admissions office to define your own major, or set up an
+						appointment by calling 1-800-EDU-KATE.<br><br><br><i>Copyright 2001, Liberty City College. All
+							Rights Reserved</i><br><br><br>
+					</font>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+
+</body>
+
+</html>

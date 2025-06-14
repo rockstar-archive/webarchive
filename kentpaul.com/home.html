@@ -1,0 +1,437 @@
+<link rel="stylesheet" type="text/css">
+<link rel="STYLESHEET" href="./martin.css" type="text/css">
+<script>
+	window.RufflePlayer = window.RufflePlayer || {};
+	window.RufflePlayer.config = {
+		"autoplay": "on",
+		"unmuteOverlay": "hidden"
+	};
+</script>
+<script type="text/javascript" src="js/ruffle.js"></script>
+
+<script language="javascript">
+
+	// Cookie life
+	DaysToLive = 2;
+	
+	function GetCookie(name) {
+		var cookiecontent = '0';
+		if(document.cookie.length > 0) {
+			var cookiename = name + '=';
+			var cookiebegin = document.cookie.indexOf(cookiename);
+			var cookieend = 0;
+			if(cookiebegin > -1) {
+				cookiebegin += cookiename.length;
+				cookieend = document.cookie.indexOf(";",cookiebegin);
+				if(cookieend < cookiebegin) { cookieend = document.cookie.length; }
+				cookiecontent = document.cookie.substring(cookiebegin,cookieend);
+			}
+		}
+		var value = parseInt(cookiecontent);
+		PutCookie(name,value);
+		return value;
+	}
+	
+	function PutCookie(n,v) {
+		var exp = '';
+		if(DaysToLive > 0) {
+			var now = new Date();
+			then = now.getTime() + (DaysToLive * 24 * 60 * 60 * 1000);
+			now.setTime(then);
+			exp = '; expires=' +
+			now.toGMTString();
+		}
+		document.cookie = n + "=" + v + '; path=/' + exp;
+	}
+	
+	// Has user been here recently?  check cookie
+	cookieexists = GetCookie("hitnumber");
+	
+	// If cookie exists and lives in range, increment by 1 and output (see below else statement)
+	if ((cookieexists > 0) && (cookieexists < 37)) {
+		rnumb = cookieexists + 1;
+	} 
+	
+	// Else generate random hit count
+	else {
+	
+		// Initialize
+		var rnumb = 0;
+		var lower = 27;
+	
+		// Loop until greater than 3, since range is 13 -> 29
+		while (rnumb < lower) {
+			rnumb = Math.floor(Math.random()*37);
+		}
+	
+	}
+	
+	/* If the number generated is less than 10, append 0 to it for proper filename.
+		if (rnumb < 10) {
+			rnumb = '0' + rnumb;
+		}*/
+
+	img = rnumb;
+
+	// Set new cookie
+	PutCookie("hitnumber", img);
+
+
+	function fromCheck() {
+		if (document.postcard.form_from.value == "") {
+			return false;
+		}
+		else { return true; }
+	}
+
+	function popUp(myFile, myWidth, myHeight) {
+		var image = window.open(myFile + ".html", myFile, "width=" + myWidth + ",height=" + myHeight + ",status=no,toolbar=no,directories=no,scrollbars=no,location=no,resizable=no,menubar=no")
+	}
+
+</script>
+<div class="mainContent">
+	  <object
+        classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+        >
+        <param name="quality" value="high">
+		<param name="wmode" value="transparent">
+        <param name="bgcolor" value="#FFE7E5">
+        <embed 
+            src="flash/homeTitle.swf" 
+            quality="high"
+            width="300" 
+            height="50" 
+			bgcolor="#FFE7E5"
+            type="application/x-shockwave-flash"
+        >
+    </object>
+
+	<br>
+	<font class="purple18">I used to have a mullet, but I'm okay now.</font><br>
+	<br>
+	<font class="orange18">October 1, 2002</font><br>
+	<br>
+	<font class="blue12"><b>Hello, everybody. How are we all? Having a wonderful time of it?</b></font><br>
+	Enjoying an amusing sojourn on the world-wide information super-highway web? I do hope so. You've stumbled across
+	Kent Paul's 80's Nostalgia Zone, possibly the best site on the internet.<br>
+	<br>
+	Just to clarify, like the banner says, <b>the name is Paul, but I'm from Kent.</b> Rather than being called Kent,
+	like some idiot septic with a brother named Troy or whatever. Currently, I am spending time at an after care
+	programme, having recently left primary, but I will VERY soon be back on my feet and out in the big bad world
+	causing some serious trouble once more. I know I appear to be unfeasibly cheerful this month - this is because my
+	doctor, a certain Dr. Perkins, has said <font class="pink12"><b>if I can manage to be cheerful and not create what
+			he calls an aura of insecurity and rage and inadequacy about myself and not insult anyone at all or lie for
+			a whole month, then I can walk. </b></font> I ain't turning soft or nothing, but I got to get back on the
+	streets. The thing about Perkins is he's not bad for a screw, but I've done a lot of bird, because I'm very
+	dangerous, and I once beat up a blind man in Dungeness High Street in Kent (still, he deserved it, 'cause he was
+	staring at my bird's chest and anyway, I imagine he ain't reading this.). The other thing about Perkins is he is an
+	absolute wanker and a little bit of a perv. Keeps asking me if I have feelings for my mum! <font class="orange12">
+		<b>I love my mum, but not like that.</b></font> The other thing about Perkins is his wife looks like a moose
+	having a bad hair day.<br>
+	<br>
+	<font class="purple18">Anyways, I've done a lot of work on the memory banks this month.</font><br>Thinking about
+	things. After all nostalgia's not what is was (I said this first) apart from where I'm concerned. But the 80's were
+	definitely better than today. Look at the facts - <b>I was on the top of my game. Now, I'm in a half way house.</b>
+	People knew how to dress - now they think wearing green smocks and straight jackets is the way to go, at least round
+	my way. <font class="green12">Back then, you knew what people was all about - money.</font> Now, all people talk
+	about is feelings and rubbish like that. All gets very confusing, whichever way you look at it.<br>
+	<br>
+	<font class="orange18">When I left Kent for <a href="http://www.vicecity.com/" target="_blank" class="orange18">Vice
+			City</a>, I was a nobody.</font><br>A snotty little kid with a cheeky grin and a nasty line in tracksuits.
+	By the time I left, I'd made it real big. I was a player. How did this happen? It was inevitable. You take an acne
+	ridden compulsive liar from the Medway towns and drop him anywhere in America and he will come up smelling of roses.
+	I knew everyone. I discovered most of the <a href="music.html" target="_self">bands</a> popular in the 1980's, but
+	never got the credit. You see, I wasn't too interested in contracts. I was all about the music. It was like a
+	passion for me. That and birds and drugs. They was my passions. Very original I was, I invented all of that
+	crap.<br>
+	<br>
+	<img src="graphics/degenatronHome.jpg" border="0" align="right" hspace="5" vspace="5">What's more, is I just got sent <a
+		href="https://the-rg-archive.github.io/degenatron.com/" target="_blank">THIS LINK</a> by some moron because I
+	mentioned the Degenatron thing last month. <font class="blue12">The bloke who wrote me is a right mug, clearly, and
+		looks like he hasn't had so much as a hand shandy since 1987,</font> so we've got that it common, I guess. But,
+	please, bear in mind, now I spend all my time on computers, 'cause there ain't nothing else to do apart from try to
+	watch the nurses getting changed, but in the 80's, I was a bit more interested with giving it very large portions.
+	<br>
+	<br>
+	<font class="blue18">Two new cards</font><br>
+	<br>
+	<table border="0" cellpadding="0" cellspacing="0">
+		<tbody>
+			<tr>
+				<td><a href="javascript:popUp(&#39;postcardSkater&#39;,520,600)"><img class="noborder"
+							src="graphics/postcardSkater_site.jpg" border="0"></a></td>
+				<td>&nbsp;&nbsp;</td>
+				<td align="left" valign="top"><a href="javascript:popUp(&#39;postcardSkater&#39;,520,600)">Send
+						Rollerskater Vice City Postcard</a><br>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<hr>
+	<table border="0" cellpadding="0" cellspacing="0">
+		<tbody>
+			<tr>
+				<td><a href="javascript:popUp(&#39;postcardShopper&#39;,520,600)"><img class="noborder"
+							src="graphics/postcardShopper_site.jpg" border="0"></a></td>
+				<td>&nbsp;&nbsp;</td>
+				<td align="left" valign="top"><a href="javascript:popUp(&#39;postcardShopper&#39;,520,600)">Send Shopper
+						Vice City Postcard</a><br>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
+
+	<hr>
+	<font class="blue18">September 4, 2002</font><br>
+	<font class="pink12"><b>My memories are priceless! Only I have to pay for them!</b></font><br>
+	<font class="pink12"><b>Popular from Dungeness to Missouri*</b></font><br>
+	<br>
+	Quite a poetical introduction, and that's because I'm in quite a poetical mood. Well, I have to be honest, first up,
+	I've got to apologise to Mrs. Perkins. She's not a dog at all. She's really quite attractive if you like the larger
+	lady, and I also have to admit I was joking when I said that I had had her. I never had her. In fact, right, I think
+	her husband, the esteemed and caring Dr. Perkins is right when he says his wife has never been unfaithful to him
+	during a successful 30 year marriage and they have raised five lovely children and that is exactly the kind of thing
+	you can get too, if you play by the rules.<br>
+	<br>
+	<font class="orange12"><b>Only, let's be honest, playing by the rules was never Paulo's style.</b></font> I was a
+	player. Not a referee. Seriously, I'm sorry for any offence I caused and everything, but do me a favour? I mean,
+	Paul, from Kent, aka Kent Paul. <b>I was the main man back then and when I get back on my feet, I'll be the main man
+		again,</b> and not writing apologies to shrinks or their fat wives, who I definitely could have had. But, well,
+	back to me.<br>
+	<br>
+	Not the best month for Paulo. Not too good at all, in fact. Got a bit of a knock back on this night club I was going
+	to run. The 80's are back. You don't need me to tell you that, and I was going to be running this very fashionable
+	little exclusive discotheque down in the Isle of Thanet, but the funding fell through. Stupid pillock. So, I've
+	decided to spend an extra month in the after care. Face up to a few things. That demon grandiosity, Perkins calls
+	it. I call it ambition, mate. The thing that made this country great. Gave us an empire. <font class="purple12">
+		After all, we invented football, but we never win the bloody world cup, do we?</font><br>
+	<br>
+	So, anyway, back to memories. I had a right funny hair cut back then. Looked like a proper pillock. But what you
+	going to do? <font class="blue12"><b>I don't make the rules, I only break them!</b></font> And it seems you people
+	are loving Kent Paul's Nostalgia Zone.<br>
+	<br>
+	A lot of people came here last month, and not just family. (Hi mum!) I even got a letter last week.<br>
+	<br>
+	From a certain <a href="mailto:JeffJohnson234@hotmail.com">JeffJohnson234@hotmail.com</a><br>
+	<br>
+	<i>
+		Dear Kent,<br>
+		<br>
+		I'm a big 80s fan. Loved your website. I live in Missouri. Where is Kent? We have a lot of corn here and we all
+		drive cars. Do they have cars in Kent? Will you be my friend? I'm very lonely. I've got a big knife and I want
+		to cut myself. I love goth music. And old televsion shows. Anyways, I was watching cable all last week, and I
+		noticed you made a couple of errors. First - the family was called the Chesterfields, not the Dawkins. And then,
+		you say the little kid was 35, but in fact he was 42. That's why he kept saying "but I'm 42." Because he was. He
+		didn't say "I'm 35." I mean, I think he might have, but only when he was. Also, he was an investment banker not
+		a bond trader as you have it on your website, which is wrong. I don't think you can really call yourself a fan
+		of Five of Us. I've been to lots of conventions. And I still have a lunchbox. Please write back. <br>
+		<br>
+		Keep on trucking!<br>
+		<br>
+		Jeff.<br></i>
+	<br>
+	Well, thanks Jeff. You prat. First up, I'm called Paul. I'm from Kent, near London. Second's, I don't care. <a
+		href="tvShows.html" target="_self">That show</a> was crap. Third's, no, you can't be my friend. Fourth's I hope
+	you are in prison or something. Am I making myself clear? <br>
+	<br>
+	As you can see, I'm the talk of the internet! Wonder how many people went to see <a
+		href="https://the-rg-archive.github.io/darrenwebb.com/" target="_blank">Darren's ponce site</a>? Wonder how many
+	debates he sparked up? Not many. For your information, Darren's doses have been upped and he's back in the padded
+	cell. Revenge, I call it. Don't mess with the beast, as my old boy used to say. <br>
+	<br>
+	So, anyway, I was remembering, right, how things was and stuff. And they were really pretty good. Had a lot of fun.
+	I was in <a href="http://www.vicecity.com/" target="_blank">Vice City</a> as a major player in the record business,
+	working with all of the top acts as an uncredited executive producer and creative influence, <b>but I fell in with
+		the wrong crowd. Myself.</b> Know what I mean? <br>
+	<br>
+	In <a href="http://www.vicecity.com/" target="_blank">Vice City</a>, we had the lot, nightclubs, muggers, psychos,
+	lunatics, self help gurus, porno stars.<br>
+	<br>
+	But maybe you know about that already. It was a fabulous place. Real smart and all that fancy architecture. But
+	there was a nasty side. Some very dodgy characters. Villains I call them, although Perkins calls them sociopaths or
+	people with low self-esteem and a lot of weaponry. Make your own mind up. Times were easier back then, because we
+	all knew what was going on. Make a load of money. Use it to borrow a load more money. Buy a lot of really expensive
+	stuff on the never never, then go bankrupt. A simple life, much better than this crap, Perkins.
+	<br>
+	<br>
+	<font class="blue18">This month's postcards.</font><br>2 more photos I found... If you're a real man, you only
+	travel by helicopter.<br>
+	<br>
+	<table border="0" cellpadding="0" cellspacing="0">
+		<tbody>
+			<tr>
+				<td><a href="javascript:popUp(&#39;postcardHelicopter&#39;,520,600)"><img class="noborder"
+							src="graphics/postcardHelicopter_site.jpg" border="0"></a></td>
+				<td>&nbsp;&nbsp;</td>
+				<td align="left" valign="top"><a href="javascript:popUp(&#39;postcardHelicopter&#39;,520,600)">Send
+						Helicopter Vice City Postcard</a><br>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<hr>
+	<table border="0" cellpadding="0" cellspacing="0">
+		<tbody>
+			<tr>
+				<td><a href="javascript:popUp(&#39;postcardReflection&#39;,520,600)"><img class="noborder"
+							src="graphics/postcardReflection_site.jpg" border="0"></a></td>
+				<td>&nbsp;&nbsp;</td>
+				<td align="left" valign="top"><a href="javascript:popUp(&#39;postcardReflection&#39;,520,600)">Send Vice
+						City Postcard</a><br>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
+	<hr>
+	<font class="blue18">August 1, 2002</font><br>
+	<font class="orange12"><b>More from the 80s as they really were</b></font><br>
+	<font class="orange12"><b>(officially rated the most popular site on the internet in East Kent and Dungeness)</b>
+	</font><br>
+	<br>
+	<font class="purple18">Ha ha—stick that in your pipe and smoke it.</font><br>They said I had a five minute attention
+	span, but they were wrong. Kent Paul is back with more of my exciting and amusing remin, remini, well, my memories
+	of the 1980s. The decade of decadence. A time when entertainment wasn't watching a <a href="tvShows.html">TV
+		show</a> or going to the <a href="movies.html">movies</a>*, but was manipulating a plastic cube until all of the
+	colours were in the same place. <br>
+	<br>
+	Well, to those who enjoyed <a href="home.html#july1">last month's website</a>**, I can assure you it's only going to
+	get a lot better. For starters, I'm getting the hang of this HTML lark, and for seconds, <b>now that the
+		tranquilizers have worn off</b>, my memory is flooding back. Some of them ain't too happy, and all. But most of
+	them are funny as anything. Especially for me.<br>
+	<br>
+	<font class="orange18">But it's not just about me, it's also about the 1980s.</font><br>
+	And that's what this site is all about. The 1980s and me. When I was in <a href="http://www.vicecity.com/"
+		target="_blank">Vice City</a> I showed the yanks a thing or two about being a geezer. <font class="blue12"><b>A
+			proper geezer from Kent, not some idiot from Essex.</b></font> Down at the Malibu every night, I would hold
+	court like a man with a court in his hand and I also knew lots of powerful people. Including some really nasty ones,
+	because I'd be lying if I pretended I kept my nose entirely clean. That was never my style, I was too smart for
+	that, even though it did all end up with me making a website for 13 people to enjoy while I do the loast of my time
+	in my aftercare programme, which is great and everything and to be honest, all them times were about lies and the
+	person I lied to most was myself and I really have to apologise to someone I care about a lot—me, for wasting
+	everything and throwing it all away and looking for the easy way out and so on and so forth, but well, I promise
+	you, I knew a few people and had a right laugh, I can promise you that.<br>
+	<br>
+	<font class="purple12">Anyway, <a href="http://www.vicecity.com/" target="_blank">Vice City</a> is still going
+		strong, if you like beaches and inane half-wits and guys called Geraldo,</font> but it ain't what it was. Centre
+	of the known universe back then and a right laugh. From the Malibu to Prawn Island and back again. From fancy
+	parties to even fancier hotels, I was everywhere and you tell me I'm making it up? You tell me I'm deceiving myself?
+	You tell me I never amounted to nothing? <b>I tell you to stick it, Doctor Perkins. I was a player.</b> Not some
+	pillock in a white coat handing out pills to a bunch of burnouts. You're a loser, mate. A loser and your wife is a
+	dog. And I've had her. <br>
+	<br>
+	<br>
+	<font class="boilerplate">
+		* = Before you write in and complain, I'm speaking metaphorically. I know movies and TV were popular in the
+		1980s. <br>
+		<br>
+		** = Last month, 13 people visited KentPaul.com, and I only knew 6 of you. So that means I didn't come bottom of
+		the after care programme. That was that pillock Darren with his stupid drawing. To check out what a wally Darren
+		is <a href="darren.html" target="_blank" class="boilerplate">click here.</a>
+	</font><br>
+	<br>
+	<font class="blue18">Here's 2 more postcards.</font><br>The lot of you people seemed to like the last one, so I made
+	more.<br>
+	<br>
+	<table border="0" cellpadding="0" cellspacing="0">
+		<tbody>
+			<tr>
+				<td><a href="javascript:popUp(&#39;postcardDowntown&#39;,520,600)"><img class="noborder"
+							src="graphics/postcardDowntown_site.jpg" border="0"></a></td>
+				<td>&nbsp;&nbsp;</td>
+				<td align="left" valign="top"><a href="javascript:popUp(&#39;postcardDowntown&#39;,520,600)">Send
+						Downtown Vice City Postcard</a><br>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<hr>
+	<table border="0" cellpadding="0" cellspacing="0">
+		<tbody>
+			<tr>
+				<td><a href="javascript:popUp(&#39;postcardRollerskater&#39;,520,600)"><img class="noborder"
+							src="graphics/postcardRollerskater_site.jpg" border="0"></a></td>
+				<td>&nbsp;&nbsp;</td>
+				<td align="left" valign="top"><a href="javascript:popUp(&#39;postcardRollerskater&#39;,520,600)">Send
+						Rollerskater Vice City Postcard</a><br>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+
+	<hr>
+	<a name="july1"></a>
+	<font class="blue18">July 1, 2002</font><br>
+	<br>
+	<font class="purple12">"Remembering the time when a dollar was a dollar, a song was a song and foreign policy meant
+		invade first, ask questions later."</font><br>
+	<br>
+	<font class="blue18">I don't know about you, but I just love the 1980s.</font> <br>Always have done. Well, at least
+	since 1990. And I don't think I'm alone. I mean, I am alone now, which is why <b>I've got time to make this website
+		as part of my therapy,</b> but, well, isn't the internet great? That's one thing we didn't have back in the 80s.
+	there's loads of other things we didn't have, too, like a sense of concern for our fellow man, or sports utility
+	vehicles. But to find out more about that, you'll have to wait for my <a href="cars.html" class="blue12">car
+		section</a>, which will come as soon as I figure out how to do the HTML. But seriously, if you'd told me that
+	I'd learn how to use a computer. Well, in 1986 I didn't even know what a computer was. Or I did, but I thought
+	computers were for squares. <img src="graphics/vic20.jpg" alt="" width="150" height="64" align="left" hspace="5"
+		vspace="5">And they were, because if you were hip, you were in a club, like the Malibu. You weren't spending
+	your time in an after care program, learning skills to suit you in the new economy. I mean, this is great and I'm
+	really positive and everything, but, I'll be honest with you, things were better in the 80s. You knew where you
+	were. <font class="blue12">It was a great time, a time when <b>'bribe'</b> and <b>'corruption'</b> and <b>'man made
+			fibers'</b> weren't dirty words.</font> Great times. And great memories. Memories we can all share. Apart
+	from really young people. Or dweebs! Or people who forget everything, like I tried to. Well, not forgotten and
+	certainly not forgiven. That's what they told me in court and that's my message to you. We won't forget you and we
+	won't forgive you, for making us all victims. Fashion victims!<br>
+	<br>
+	<font class="orange18">I was maybe the worst fashion victim in town,</font><br>
+	and I was in a town full of them. Probably the most hip, happening and certainly hot place in the whole of the
+	1980s. <a href="http://www.vicecity.com/" target="_blank">Vice City.</a> Oh, I know <a
+		href="http://www.vicecity.com/" target="_blank">Vice City</a> is still around today and having something a
+	revival as corruption and depravity come back into fashion, but in the 80s it was something else. <b>The place was
+		on fire.</b> Sometimes literally. When I first arrived there it was a thriving metropolis, and despite my best
+	efforts, it still stands. I don't think I could ever claim to have been king of the city, (my therapist complains a
+	lot about my grandiosity, whatever that means) but certainly I was the crown prince and for a while, I was also the
+	court jester.<br>
+	<br>
+	<font class="purple18">Anyway, enough about me. And back to the 80s.</font><br> And tell all your friends about this
+	site. If enough people visit, I'll win a <font class="purpleBlink12">prize</font> from my guidance counselor. <br>
+	<br>
+
+	<font class="blue18">Oh, and here's a little e-postcard that I just learned how to make.</font><br>Send it to your
+	friends, if they're into this sort of thing.
+	<br>
+	<br>
+	<table border="0" cellpadding="0" cellspacing="0">
+		<tbody>
+			<tr>
+				<td><a href="home.html#"></a><a href="javascript:popUp(&#39;postcardHighway&#39;,520,600)"><img
+							class="noborder" src="graphics/postcardHighway_site.jpg" border="0"></a></td>
+				<td>&nbsp;&nbsp;</td>
+				<td align="left" valign="top"><a href="javascript:popUp(&#39;postcardHighway&#39;,520,600)">Send Vice
+						City Postcard</a><br>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<br>
+	<i>You are visitor number</i><br>
+	<script language="javascript">
+	</script><img src="graphics/000.gif" class="noborder" width="45" height="20"><img src="graphics/34.gif" class="noborder" width="30"
+		height="20">
+	<p>&nbsp;</p>
+	<a href="http://www.rockstargames.com/esrb/" target="_blank">ESRB PRIVACY ONLINE CERTIFIED PRIVACY STATEMENT</a>
+</div>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html
+    class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths gecko win js"
+    lang="en-US"><!--<![endif]-->
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script id="onetrust-sdk-stub" src="page/otSDKStub.js" type="text/javascript" charset="UTF-8"
+        data-document-language="true" data-domain-script="7312aad9-7731-41d1-a96d-59fe216fed7e"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Lifeinvader</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="page/li.css">
+    <link rel="stylesheet" href="page/custom/index.css">
+
+    <meta property="og:title" content="Lifeinvader">
+    <meta property="og:description" content="Lifeinvader in real life!">
+    <meta property="og:url" content="https://redsoupdev.github.io/lifeinvader.com/index.html">
+    <meta property="og:image" content="page/custom/banner.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="400">
+    <meta property="og:image:height" content="300">
+    <meta property="og:image:alt" content="Lifeinvader">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Lifeinvader">
+
+
+    <link rel="shortcut icon" href="page/favicon.ico">
+
+    <script src="page/runtime.js"></script>
+    <script src="page/shared.js"></script>
+
+    <script src="page/common.js"></script>
+    <script src="page/li.js"></script>
+    <script src="page/jquery.js"></script>
+    <script type="text/javascript">
+        var headerSettings = {
+            headerUrl: '/Registration/GetLoginHeader',
+            sidePanelUrl: '/Home/GetSidePanel',
+            fetchHeader: true,
+            fetchSidePanel: true
+        };
+    </script>
+    <script src="page/main.js"></script>
+
+    <script type="text/javascript">
+        var profileSettings = {
+            feedUrl: '/Home/ProfileFeed',
+            profileItems: '/Home/ProfileItems',
+            itemid: 'inkinc'
+        };
+        var PageSettings = {};
+    </script>
+    <script src="page/profile.js"></script>
+
+
+
+    <script src="page/otBannerSdk.js" async="" type="text/javascript"></script>
+  
+</head>
+
+<body onload="changeMainBg()">
+  
+
+
+    <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+    <![endif]-->
+    <input name="__RequestVerificationToken" type="hidden"
+        value="CLMyaMz-Be1ATwmPHN4NDMvO8JuneRAX0D1tUSb4snE0hubIBufSmZF4xjs2rXYcmgoN_J3540qVSZ4gDY00bRA0n5PfNpbG-YLOBHinMU0-zASomgAigv7CdFX1y4ZnQkPv-A2">
+    <div id="loginHeader">
+        <script type="text/javascript">
+            window.siteMaster.loggedInUser = { "IsLoggedIn": false, "Nickname": "Default", "RockstarId": 0, "AvatarUrl": "default.png", "MemberProfileUrl": "https://socialclub.rockstargames.com/member/default", "LogoutUrl": "logoff.html" };
+        </script>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <h1><a class="brand" href="index.html">LifeInvader</a>
+                    </h1>
+
+                    <!-- Logged in -->
+
+                    <h3 id="tinyText">Making The Private Public</h3>
+
+                    <div id="li-nav-logged-in" class="pull-right">
+                        <div id="loggedInDiv" class="pull-right">
+                            <a id="userPfpALink" href="page/default.png" alt="Default Avatar Icon" width=" 32"
+                                height="32">
+                                <img id="userIcon" src="page/default.png" alt="Default Avatar Icon" width=" 32"
+                                    height="32" srcset="">
+                            </a>
+                            <a id="userText" href="/member/defaultUser.htm" class="nav-user">Default User</a><a
+                                href="logoff.html" data-rockstarid="15130174" class="nav-signout" id="signOut">sign
+                                out</a>
+                        </div>
+                        <div id="loggedOffDiv" class="pull-right">
+                            <a href="login.html" data-rockstarid="15130174" class="nav-signout" style="color: white;"
+                                id="signOut">sign in</a>
+                        </div>
+                        <script>
+                            document.getElementById('userText').innerHTML = localStorage.getItem('currUsername') + "";
+                            if (localStorage.getItem('currUsername') + "" !== "null") {
+                                let loggedOff =
+                                    document.getElementById("loggedOffDiv");
+                                loggedOff.parentNode.removeChild(loggedOff);
+
+                                document.getElementById("userIcon").src = localStorage.getItem('curPfp');
+                                document.getElementById("userText").href = localStorage.getItem('curRockstarUser');
+                                document.getElementById("userPfpALink").href = localStorage.getItem('curRockstarUser');
+                            } else {
+                                let loggedIn =
+                                    document.getElementById("loggedInDiv");
+                                loggedIn.parentNode.removeChild(loggedIn);
+
+                            }
+                        </script>
+                    </div>
+
+
+                </div>
+
+
+                <script>
+                    document.getElementById('tinyText').innerHTML = randomTinyText();
+
+                </script>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <center>
+
+        <div id="indexBg" class="indexBg">
+            <center>
+                <br><br><br><br>
+                <img src="page/custom/hdlogo.png" class="lfLogo" alt="LifeInvader Logo" width="630px">
+                <br>
+
+                <h1 style="font-family: 'Segoe UI'; font-size: 30px;">Welcome to
+                    <a href="https://gta.fandom.com/wiki/Lifeinvader"
+                        style="color: red; font-family:Verdana, Geneva, Tahoma, sans-serif;">LifeInvader</a>!
+                </h1>
+
+                <table>
+                    <tr>
+                        <td style="padding-right: 30px;">
+                            <center>
+                                <p>This is a recreation of the whoole site made with love by a tiny team.</p>
+                                <button onclick="randomPage()">Start life invading!</button>
+                                <br>
+                                <br>
+                                <br>
+
+                            </center>
+                        </td>
+
+                        <td>
+                            <div id="ads-col" class="span3">
+                                <div id="li-adsbar">
+                                    <h3>
+                                        News
+                                    </h3>
+                                    <div class="ad">
+                                        <h5>
+                                            <a id="ad1" href="">(25/01/2025) Website is being improved!</a>
+                                        </h5>
+                                        <p id="desc1">
+                                            All the original content has been added and finished..<br>We are just fixing bugs and adding missing features now.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <p style="color:gray; font-family:'Courier New', Courier, monospace;">Made by <a
+                        href="https://greensoupdeveloper.github.io/greensoupdev/">greensoupdev</a> and
+                    franklin_clinton!
+                </p>
+
+            </center>
+
+        </div>
+
+
+    </center>
+
+
+</body>
+
+</html>

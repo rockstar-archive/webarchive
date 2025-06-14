@@ -1,0 +1,57 @@
+
+<!--created by Oyster Partners Limited-->
+<!--www.oyster.co.uk -->
+<!-- [June] 1999 -->
+<!--Production:  by [C.P], [June] 1999 -->
+<!--Design:  by [J.P], [June] 1999 -->
+<!--Programming: by [C.P - J.L], [June] 1999 -->
+<!--Flash engineering:  by [R.R.], [June] 1999 -->
+
+<HTML>
+<HEAD>
+<script src="/rmLoader.js"></script>
+<TITLE>Flash Detection In Progress...</TITLE>
+
+<META NAME="description" CONTENT="The official GTA2 Web site - check it out for all the latest info. and downloads for GTA2">
+
+<META NAME="keywords" CONTENT="GTA2, Rockstar Games, Rockstar Games NYC, Rockstargames, Rockstar, Take2 Games, Video Games, Playstation, PC, Grand Theft Auto, GTA:London 1969, GTA2, Nintendo 64, cool, fun, gta, grandtheftauto, games, gaming, demos, downloads, tips, tricks, cheats, console, Oyster, Oyster Partners, PSX, online, news, press releases, crime, car crime, violence, gang warfare, homicide, hit and run, dangerous, missions, ganglands,Russian Mafia, Zaibatsu, Red necks, Scientists, Yakuza, Hari Krishnas, Take 2 Interactive, Take two interactive, grandtheftauto, grand theft auto, grandtheftauto2, grand theft auto 2, Zaibatsu Corporation, zaibatsu, Zoom Zoom, zoom zoom, Play Drugs, playdrugs, BPQC, Hollow Kost, The President, The Doctor, The Cure, Trey Welsh, Noxxa, Petula Shoe, The Chemist, Schizo, Speed, Uno Carbine, One Gun, Caymen, Ulrika Afrique, Gel, Naplam, SMART, The man with no name, Red Valdez, Android, Ladykiller, The Shrink, Mega Corp">
+
+<META HTTP-EQUIV="Refresh" CONTENT="10;URL=nonflash.html">
+<!-- <script type="text/javascript" src="http://www.rockstargames.com/js/webtrends.js"></script> -->
+
+<script language="javascript" src="flashdetection.js"></script>
+<SCRIPT language="JavaScript1.2">
+
+
+var flashDetection = new FlashDetection();
+var page = "";
+
+if (!flashDetection.isMinimumVersion(4)) {
+	var userResult = window.confirm('Viewing this site requires the Flash 4 plugin or higher. Which we haven\'t detected on your system. Click on OK to get it.');
+	if (userResult == true) {
+			location.href ("http://www.macromedia.com/go/getflashplayer/");
+	}
+	else {
+		page = "nonflash.html";
+	}
+}
+else {
+	page = "intro.html";
+}
+
+document.writeln("<frameset rows=100% frameborder=no border=0 framespacing=0>");
+document.writeln("<frameset cols=100% frameborder=NO border=0 framespacing=0>");
+document.writeln("<frame src="+page+" scrolling=auto noresize marginwidth=0 marginheight=0>");
+document.writeln("</frameset>");
+document.writeln("</frameset>");
+
+</script>
+
+</head>
+
+
+<noscript>
+<body bgcolor="#FFC9D9" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<font face="verdana, arial" size="2"><p align="center">Viewing this site requires a Javascript-enabled browser.<br>Which we haven't detected on your system.<br></p></font>
+
+</body></HTML>

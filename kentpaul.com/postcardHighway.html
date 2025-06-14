@@ -1,0 +1,41 @@
+<title>Greetings from Vice City</title>
+<link rel="stylesheet" type="text/css">
+<link rel="STYLESHEET" href="martin.css" type="text/css">
+<script language="javascript">
+<!--
+
+function fromCheck() {
+	if (document.postcard.form_from.value == "") {
+		return false;
+	}
+	else { return true; }
+}
+
+-->
+</script>
+</head>
+<body bgcolor="#C5FCBC" marginheight="0" marginwidth="5" leftmargin="5" topmargin="0">
+<center>
+<img class="noborder" src="graphics/postcardHighway_siteLarge.jpg" border="0" width="505" height="365"><br>
+<br>
+
+<form name="postcard" action="http://www.take2games.com/rockstar/kentpaul/v2/mail_postcard.php" method="get" onsubmit="return fromCheck()">
+
+Your email address:<br>
+<input type="text" name="form_from"><br>
+<br>
+Your friend's email address:<br>
+<input type="text" name="form_to"><br>
+<br>
+Your age: <input type="text" name="form_age" size="3"><br>
+
+<br>
+<input type="hidden" name="postcard" value="true">
+<input type="hidden" name="postcardName" value="Highway">
+<input type="submit" value="Send Postcard!"><input type="reset" value="Reset">
+</form>
+<a class="esrb" href="http://www.rockstargames.com/esrb/" target="_blank">ESRB PRIVACY ONLINE CERTIFIED PRIVACY STATEMENT</a>
+<p>
+
+
+</p></center></body></html>

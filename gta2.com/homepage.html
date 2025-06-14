@@ -1,0 +1,177 @@
+
+<!--created by Oyster Partners Limited-->
+<!--www.oyster.co.uk -->
+<!-- [June] 1999 -->
+<!--Production:  by [C.P], [June] 1999 -->
+<!--Design:  by [J.P], [June] 1999 -->
+<!--Programming: by [C.P - J.L], [June] 1999 -->
+<!--Flash engineering:  by [R.R.], [June] 1999 -->
+
+<html>
+
+<head>
+<script src="/rmLoader.js"></script>
+	<title>GTA2 - Homepage</title>
+	<script>
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.RufflePlayer.config = {
+            "autoplay": "on",
+            "unmuteOverlay": "hidden"
+        };
+    </script>
+    <script type="text/javascript" src="js/ruffle.js"></script>
+	
+<META NAME="description" CONTENT="The official GTA2 Web site - check it out for all the latest info. and downloads for GTA2">
+
+<META NAME="keywords" CONTENT="GTA2, Rockstar Games, Rockstar Games NYC, Rockstargames, Rockstar, Take2 Games, Video Games, Playstation, PC, Grand Theft Auto, GTA:London 1969, GTA2, Nintendo 64, cool, fun, gta, grandtheftauto, games, gaming, demos, downloads, tips, tricks, cheats, console, Oyster, Oyster Partners, PSX, online, news, press releases, crime, car crime, violence, gang warfare, homicide, hit and run, dangerous, missions, ganglands,Russian Mafia, Zaibatsu, Red necks, Scientists, Yakuza, Hari Krishnas, Take 2 Interactive, Take two interactive">
+	<script src="iefix.js" type="text/javascript"></script>
+<script language="JavaScript">
+var iveGotFlash = false;
+
+
+
+			if (navigator.appName.toLowerCase().indexOf ("netscape") >= 0)
+			{
+				if (navigator.plugins["Shockwave Flash"] || navigator.plugins["Shockwave Flash 3"]) 
+					iveGotFlash = true;
+			} 
+			else 
+			{
+				if (document.images) 
+					iveGotFlash = true;
+			}
+			
+
+</script>	
+
+<!-- function to output a graphical date -->
+
+<script>	
+
+function outputClockDate(d, altTag)
+{
+	var date10s = Math.floor(d.getDate()/10);
+	var date1s = d.getDate()%10;
+
+	var month = d.getMonth();
+
+	var year = d.getYear();
+	if (year < 100)
+		year += 1900;	// apply correction for this century only
+	//NB might be better as a four year date
+	var year10s = Math.floor(d.getYear()/10)%10;
+	var year1s = d.getYear()%10;
+
+	document.write("<nobr>");
+
+	if (date10s == 0)
+		// we don't want a leading 0 => simply make the spacer wider
+		document.write("<img border=0 src=img/clockparts/sp.gif with=21 height=24 alt=\"" + altTag + "\">");
+	else
+	{
+		document.write("<img border=0 src=img/clockparts/sp.gif with=10 height=24 alt=\"" + altTag + "\">");
+		document.write("<img border=0 src=img/clockparts/dig" + date10s + ".gif width=11 height=24 alt=\"" + altTag + "\">");
+	}
+
+	document.write("<img border=0 src=img/clockparts/dig" + date1s + ".gif width=11 height=24 alt=\"" + altTag + "\">");
+
+	document.write("<img border=0 src=img/clockparts/mon" + month + ".gif width=61 height=24 alt=\"" + altTag + "\">");
+
+	document.write("<img border=0 src=img/clockparts/dig" + year10s + ".gif width=11 height=24 alt=\"" + altTag + "\">");
+	document.write("<img border=0 src=img/clockparts/dig" + year1s + ".gif width=11 height=24 alt=\"" + altTag + "\">");
+
+	document.write("<img border=0 src=img/clockparts/sp.gif width=24 height=24 alt=\"" + altTag + "\">");
+
+	document.write("</nobr>");
+}
+
+</script>	
+
+</head>
+
+<body bgcolor="#000000">
+<br><br><br>
+
+<center><table cellpadding=0 cellspacing=0 border=0 align="center">
+
+<tr>
+<td align=center valign=top>
+
+<script>
+document.writeln(" <table cellpadding=0 cellspacing=0 border=0> ");
+document.writeln(" <tr> ");
+
+document.writeln(" <td align=left valign=top colspan=2><a href=\"present.html\" target=\"main\"><!-- insert graphics for today's date --> ");
+
+var today = new Date();
+
+outputClockDate(today, "Present");
+
+document.writeln(" </a></td> ");
+
+document.writeln(" </tr> ");
+
+document.writeln(" <tr> ");
+document.writeln(" <td align=left valign=top><a href=\"present.html\" target=\"main\"><img  src=\"img/clocks/pres_clock_hm.gif\" width=99 height=36 alt=Present border=0></a></td> ");
+document.writeln(" <td align=left valign=top><img  src=\"img/clocks/seconds_anim.gif\" width=41 height=36 alt=Present border=0></td> ");
+document.writeln(" </tr> ");
+document.writeln(" </table> ");
+</script>
+
+</td>
+</tr>
+
+<tr>
+<td align=center valign=top>
+<script>
+
+	if (iveGotFlash)
+	{
+        theDudeAbides();
+	}
+	else
+	{
+		document.writeln(" <img border=0 src=\"img/gta.jpg\" width=480 height=220  border=0>");
+		
+	}	
+	
+</script>	
+
+</td>
+</tr>
+
+<tr>
+<td align=center valign=top>
+
+<script>
+document.writeln(" <table cellpadding=0 cellspacing=0 border=0>");
+
+document.writeln(" <tr>");
+document.writeln(" <td align=left valign=top><a href=\"future.html\" target=\"main\"><img  src=\"img/clocks/future_clock_hm.gif\" width=99 height=36 alt=Future border=0></a></td>");
+document.writeln(" <td align=left valign=top><img  src=\"img/clocks/seconds_anim.gif\" width=41 height=36 alt=Future border=0 ></td>");
+document.writeln(" </tr>");
+
+document.writeln(" <tr>");
+
+document.writeln(" <td align=left valign=top colspan=2><a href=\"future.html\" target=\"main\"><!-- Insert graphics for a date in three weeks' time -->");
+
+var threeWeeksTime = new Date(Date.parse(today.toLocaleString()) + 21 * 24*60*60*1000);	// add on three weeks' worth of milliseconds
+
+outputClockDate(threeWeeksTime, "Future");
+
+document.writeln(" </a></td>");
+
+document.writeln(" </tr>");
+
+document.writeln(" </table>");
+</script>
+
+</td>
+</tr>
+
+</table></center>
+
+
+</body>
+</html>
+

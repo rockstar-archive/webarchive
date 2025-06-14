@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html
+    class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths gecko win js"
+    lang="en-US"><!--<![endif]-->
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script id="onetrust-sdk-stub" src="page/otSDKStub.js" type="text/javascript" charset="UTF-8"
+        data-document-language="true" data-domain-script="7312aad9-7731-41d1-a96d-59fe216fed7e"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Lifeinvader</title>
+
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="page/li.css">
+    <link rel="stylesheet" href="page/custom/index.css">
+
+    <meta property="og:title" content="LifeInvader">
+    <meta property="og:description" content="LifeInvader in real life!">
+    <meta property="og:url" content="https://redsoupdev.github.io/lifeinvader.com/index.html">
+    <meta property="og:image" content="page/custom/banner.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="400">
+    <meta property="og:image:height" content="300">
+    <meta property="og:image:alt" content="LifeInvader">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="LifeInvader">
+
+
+    <link rel="shortcut icon" href="page/favicon.ico">
+
+    <script src="page/runtime.js"></script>
+    <script src="page/shared.js"></script>
+
+    <script src="page/common.js"></script>
+    <script src="page/li.js"></script>
+    <script src="page/jquery.js"></script>
+    <script type="text/javascript">
+        var headerSettings = {
+            headerUrl: '/Registration/GetLoginHeader',
+            sidePanelUrl: '/Home/GetSidePanel',
+            fetchHeader: true,
+            fetchSidePanel: true
+        };
+    </script>
+    <script src="page/main.js"></script>
+
+    <script type="text/javascript">
+        var profileSettings = {
+            feedUrl: '/Home/ProfileFeed',
+            profileItems: '/Home/ProfileItems',
+            itemid: 'inkinc'
+        };
+        var PageSettings = {};
+    </script>
+    <script src="page/profile.js"></script>
+
+
+
+    <script src="page/otBannerSdk.js" async="" type="text/javascript"></script>
+  
+</head>
+
+<body onload="changeMainBg()">
+
+
+    <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+    <![endif]-->
+    <input name="__RequestVerificationToken" type="hidden"
+        value="CLMyaMz-Be1ATwmPHN4NDMvO8JuneRAX0D1tUSb4snE0hubIBufSmZF4xjs2rXYcmgoN_J3540qVSZ4gDY00bRA0n5PfNpbG-YLOBHinMU0-zASomgAigv7CdFX1y4ZnQkPv-A2">
+    <div id="loginHeader">
+        <script type="text/javascript">
+            window.siteMaster.loggedInUser = { "IsLoggedIn": false, "Nickname": "Default", "RockstarId": 0, "AvatarUrl": "default.png", "MemberProfileUrl": "https://socialclub.rockstargames.com/member/default", "LogoutUrl": "logoff.html" };
+        </script>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <h1><a class="brand" href="index.html">LifeInvader</a>
+                    </h1>
+
+                    <!-- Logged in -->
+
+                    <h3 id="tinyText">Making The Private Public</h3>
+
+                   
+                    <script>
+                        document.getElementById('tinyText').innerHTML = randomTinyText();
+
+                    </script>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <center>
+
+
+        <div id="indexBg" class="indexBg">
+            <center>
+
+
+                <br><br>
+                <h1 id="loggingoff" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Logging off..
+                </h1>
+                <p>Logging off your account..</p>
+                <br>
+                <script>
+                    document.getElementById('loggingoff').innerHTML =  "Logging off '"+localStorage.getItem('currUsername') + "'...";
+                    localStorage.clear();
+                   window.location.href = "index.html";
+                </script>
+              
+
+
+
+            </center>
+
+        </div>
+        </div>
+    </center>
+
+
+</body>
+
+</html>
