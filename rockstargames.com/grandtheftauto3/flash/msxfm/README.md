@@ -1,2 +1,4 @@
 # msxfm
-## Website: https://the-rg-archive.github.io/msxfm/
+## Website: https://the-rg-archive.github.io/webarchive/rockstargames.com/grandtheftauto3/flash/msxfm
+
+## Download: download-directory.github.io?url=https://github.com/The-RG-Archive/webarchive/tree/main/rockstargames.com/grandtheftauto3/flash/msxfm

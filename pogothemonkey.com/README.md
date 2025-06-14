@@ -1,6 +1,7 @@
 # pogothemonkey.com
-This website runs on ruffle to play the flash game.
-The js folder only contains ruffle and no code from the original website.
-## Website: https://the-rg-archive.github.io/pogothemonkey.com/
+
+## Website: https://the-rg-archive.github.io/webarchive/pogothemonkey.com
+
+## Download: download-directory.github.io?url=https://github.com/The-RG-Archive/webarchive/tree/main/pogothemonkey.com
 
 All rights to these pages belong to Rockstar Games and Take-Two Interactive.
