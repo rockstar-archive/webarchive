@@ -1,0 +1,122 @@
+@charset "utf-8";
+/* CSS Document */
+.txt
+{	font-size:13px;
+	padding:0 15px;
+}
+.txt-bold
+{	font-size:13px;
+	padding-left:5px;
+	font-weight:bold;
+}
+.txt-thread, .txt, .txt-bold
+{
+	color:#fff;
+	font-family:Arial, Helvetica, sans-serif;
+	
+}
+.txt-yellow
+{
+	color:#ffde00;
+	font-size:12px;
+	font-weight:bold;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.txt-thread
+{
+	font-size:12px;
+	font-weight:bold;
+	font-family:Arial, Helvetica, sans-serif;
+	padding-left:5px;
+}
+a
+{
+ color:#FFF;	
+}
+
+#foot
+{
+	padding-left:5px;
+	color:#fff;	
+	font:Arial, Helvetica, sans-serif;
+	font-size:11px;
+}
+
+ .right-3
+{
+	width:30px;
+}
+.left-3
+{
+	width:29px;	
+}
+.mid-3
+{
+	width:860px;	
+}
+#thread-1
+{
+	width:28px; 
+	height:40px; 
+}
+#thread-2
+{
+	padding-left:5px;
+	width:320px;
+}
+#thread-3
+{
+	width:175px;
+}
+#thread-4
+{
+	padding-left:5px; 
+	width:150px;
+}
+#thread-5
+{
+	width:40px;
+	padding-left:5px;
+}
+#thread-6
+{
+	width:40px;
+	padding-left:5px;
+}
+#thread-7
+{
+	width:40px;
+	padding-left:5px;
+}
+#thread-8
+{
+	
+}
+#promo
+{
+	float: right;
+	padding:0 25px 50px 0;
+	border:none;
+}
+
+
+/*
+     FILE ARCHIVED ON 18:11:42 Sep 14, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 23:48:01 Jun 13, 2025.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.603
+  exclusion.robots: 0.068
+  exclusion.robots.policy: 0.011
+  esindex: 0.01
+  cdx.remote: 20.061
+  LoadShardBlock: 400.692 (3)
+  PetaboxLoader3.datanode: 307.291 (4)
+  PetaboxLoader3.resolve: 201.353 (2)
+  load_resource: 184.877
+*/

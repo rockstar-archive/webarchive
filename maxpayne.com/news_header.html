@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Max Payne</title>
+<script type="text/javascript" src="cookieCheck.js"></script>
+
+<SCRIPT LANGUAGE = "JavaScript">
+
+<!--
+
+if (document.images != null)
+{
+        faqon = new Image();
+        faqon.src = "./images/title_faq_on.gif";
+        newson = new Image();
+        newson.src = "./images/title_news_on.gif";
+}
+
+function img_roll(name,state)
+{   
+        if (document.images)
+        {
+                document.images[name].src = "./images/" + name + "_"+ state + ".gif";
+        }
+}
+
+// -->
+
+</SCRIPT>
+
+
+</HEAD>
+
+<BODY onload="javascript:cookieCheck();" BGCOLOR=#000000 LEFTMARGIN=0 TOPMARGIN=0 MARGINWIDTH=0 MARGINHEIGHT=0 TEXT=#FFFFFF ALINK=#FFFFFF VLINK=#FFFFFF LINK=#FFFFFF>
+
+<TABLE BORDER=0 WIDTH=400 CELLPADDING=0 CELLSPACING=0>
+<TR><TD VALIGN=TOP ALIGHN=LEFT>
+<img src="images/title.gif" alt="" width="400" height="83" border="0"><BR>
+<img src="images/title_navleft.gif" alt="" width="190" height="28" border="0"><a href="faq.html" target="_top" onMouseOver="img_roll('title_faq','on');return true" onMouseOut="img_roll('title_faq','off')" ><img name="title_faq" src="images/title_faq_off.gif" alt="" width="78" height="28" border="0"></A><img name="title_news" src="images/title_news_on.gif" alt="" width="132" height="28" border="0"></TD></TR>
+</TABLE>
+
+</body>
+</html>
+

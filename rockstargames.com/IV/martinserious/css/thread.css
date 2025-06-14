@@ -1,0 +1,150 @@
+@charset "utf-8";
+/* CSS Document */
+
+.txt, .quote
+{	font-size:13px;
+
+}
+.txt-bold
+{	font-size:13px;
+	padding-left:5px;
+	font-weight:bold;
+}
+.txt-thread, .txt, .txt-bold, .post, .user, .sig, .quote, #txt-poll
+{
+	color:#fff;
+	font-family:Arial, Helvetica, sans-serif;
+	
+}
+.txt-yellow
+{
+	color:#ffde00;
+	font-size:12px;
+	font-weight:bold;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.txt-thread
+{
+
+	font-size:12px;
+	font-weight:bold;
+	font-family:Arial, Helvetica, sans-serif;
+	padding-left:5px;
+}
+
+.post
+{
+	font-size:10px;
+}
+.user, #txt-poll
+{
+	font-size:12px;
+	font-weight:bold;
+}
+.sig
+{
+	font-size:11px;
+	font-style:italic;
+}
+a
+{
+ color:#6da8d6;	
+ font-size:10px;
+ padding-right:5px;
+}
+
+.link{
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#FFF;
+}
+
+#foot
+{
+	padding-left:5px;
+	color:#fff;	
+	font:Arial, Helvetica, sans-serif;
+	font-size:11px;
+}
+
+ .right-3
+{
+	width:30px;
+}
+.left-3
+{
+	width:29px;	
+}
+.indent, .quote{
+	margin-left:30px;
+}
+.quote
+{
+	
+	border:1px solid #e0e0e0;
+	padding:8px 10px;
+	margin-top:5px;
+	background:#454343;
+}
+.thread-1
+{
+	padding-top:15px;
+	width:160px; 
+	padding-left:33px;	
+}
+.thread-2
+{
+	width:709px; 
+	padding:10px 12PX 0 12px;
+}
+#promo
+{
+	float: right;
+	padding:0 25px 50px 0;
+	border:none;
+	
+}
+#poll
+{
+	float:right;	
+}
+#txt-poll
+{
+	padding-top:7px;
+	float:left;	
+	line-height:17px;
+}
+.avatar
+{
+	padding: 5px 0;	
+}
+.txt-wrapper, .quote
+{
+	padding:0 15px;
+}
+.smilie
+{
+	padding-left:10px;
+	style="margin-bottom:-3px;
+
+}
+/*
+     FILE ARCHIVED ON 18:17:19 Aug 14, 2016 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 00:02:53 Jun 14, 2025.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.607
+  exclusion.robots: 0.061
+  exclusion.robots.policy: 0.05
+  esindex: 0.013
+  cdx.remote: 43.474
+  LoadShardBlock: 364.658 (3)
+  PetaboxLoader3.datanode: 457.395 (4)
+  load_resource: 340.847
+  PetaboxLoader3.resolve: 210.561
+*/

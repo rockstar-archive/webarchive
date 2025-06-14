@@ -1,0 +1,87 @@
+	<title>Rockstar Classics - Free Downloads</title>
+<style>
+<!--
+p { font-family:verdana,tahoma; font-size:9px; text-align:left; color:#B67F2E; margin:11}
+li { font-family:verdana,tahoma; font-size:9px; text-align:left; color:#B67F2E; margin:11}
+a { font-family:verdana,tahoma; font-size:9px; text-align:left; color:#B67F2E;}
+.form { font-family:verdana,tahoma; font-size:9px; text-align:left; color:#B67F2E;}
+-->
+</style>
+<script language="javascript">
+<!--
+
+
+function checkEmail() {
+	result = true;
+	//check email
+	str=document.main.email.value;
+	strLen=str.length;
+				
+	//check if @ and . exist
+	if((str.indexOf(".") < 3) || (str.indexOf("@") < 2) || (str.indexOf(".")+1 >= strLen)) {
+		result = false;
+		alert('Please enter a valid email address.');
+	}
+	//if @ and . exist check if anything else exists
+	else {
+		if(strLen<6) {
+			result = false;
+			alert('Please enter a valid email address.');
+		}
+	}
+}
+
+
+function checkFields() {
+	failure = false;
+	if (document.main.fname.value == "")	failure = true;
+	if (document.main.lname.value == "") failure = true;
+	if (document.main.age.value == "") 	failure = true;
+	if (document.main.email.value == "") failure = true;
+	if (document.main.address.value == "") failure = true;
+	if (document.main.city.value == "") 	failure = true;
+	if (document.main.state.value == "") failure = true;
+	if (document.main.zip.value == "") 	failure = true;							
+	if (document.main.country.value == "") failure = true;
+
+	if (failure) {
+		alert("Please fill out all the required fields.");
+		return false;
+	} else {
+		checkEmail();
+		if (!result) return false;
+	}
+	if (!failure&&result) return true;
+}
+-->
+</script>
+</head>
+
+<body marginleft="0" marginright="0" leftmargin="0" topmargin="0" bgcolor="#000000" background="images/tile.jpg">
+ 
+<center>
+<br><br>
+<img src="images/title.gif" alt="" width="411" height="93" border="0">
+<br><br>
+<table width="800" height="1350" cellpadding="0" cellspacing="0" border="0">
+<tbody><tr><td align="center" valign="top">
+	<table width="740" height="1234" cellpadding="0" cellspacing="0" border="0" style="background-image: url('images/green_bg.gif');">
+	<tbody><tr><td align="center" valign="top" height="297"><img src="images/games.jpg" alt="" width="671" height="267" border="0" vspace="20" usemap="#games">
+	<div style="width:650px;"><p style="font-size:14px;" align="center"><br><br><br><br><br><br>
+	Thank you, for your interest in the Rockstar Classics Free Download Series. 
+	<br><br>
+	Unfortunately, we are experiencing a high volume of downloads now and your information has not be collected.
+	<br><br>
+	Please try back another time.
+	</p></div>
+</td></tr></tbody></table>
+</td></tr>
+</tbody></table>
+
+</center>
+<br><br>
+
+
+
+
+</body></html>

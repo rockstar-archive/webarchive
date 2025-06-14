@@ -1,0 +1,108 @@
+	<title>Loonies</title>
+
+<script language="JavaScript">
+<!--
+browser = navigator.appName;
+version = parseInt(navigator.appVersion);
+    if ((browser == "Netscape" && version >= 3) || 
+        (browser == "Microsoft Internet Explorer" && version >= 4)) dynamic = "YES";
+    else dynamic = "NO";
+
+    if (dynamic== "YES") 
+    {
+	
+        sevenoff = new Image();
+        sevenoff.src = "img/loonies/seven_off.gif";     
+        sevenon = new Image();
+        sevenon.src = "img/loonies/seven_on.gif"; 
+		
+	    eightoff = new Image();
+        eightoff.src = "img/loonies/eight_off.gif";     
+        eighton = new Image();
+        eighton.src = "img/loonies/eight_on.gif"; 
+		
+		elevenoff = new Image();
+        elevenoff.src = "img/loonies/eleven_off.gif";     
+        elevenon = new Image();
+        elevenon.src = "img/loonies/eleven_on.gif"; 
+		
+		twelweoff = new Image();
+        twelweoff.src = "img/loonies/twelwe_off.gif";     
+        twelweon = new Image();
+        twelweon.src = "img/loonies/twelwe_on.gif"; 
+		
+		thirteenoff = new Image();
+        thirteenoff.src = "img/loonies/thirteen_off.gif";     
+        thirteenon = new Image();
+        thirteenon.src = "img/loonies/thirteen_on.gif"; 
+							
+    }
+
+function imgInact(imgName) 
+{
+    if (dynamic== "YES") 
+    {
+        document[imgName].src = eval(imgName + "off.src");
+    }
+}
+
+function imgAct(imgName) 
+{
+    if (dynamic== "YES") 
+    {
+        document[imgName].src = eval(imgName + "on.src");
+    }
+}
+
+// -->
+</script>		
+	
+</head>
+
+<body bgcolor="#000000">
+
+<center>
+<table cellpadding="0" cellspacing="0" border="0">
+
+<tbody><tr>
+	<td align="left" valign="top"><img src="img/loonies/one.gif" width="40" height="250" alt="" border="0"></td>
+	<td align="left" valign="top"><img src="img/loonies/two.gif" width="160" height="250" alt="" border="0"></td>
+	<td align="left" valign="top"><img src="img/loonies/three.gif" width="100" height="250" alt="" border="0"></td>
+	<td align="left" valign="top"><img src="img/loonies/four.gif" width="265" height="250" alt="" border="0"></td>
+	<td align="left" valign="top"><img src="img/loonies/five.gif" width="75" height="250" alt="" border="0"></td>
+</tr>
+
+<tr>
+	<td align="left" valign="top"><img src="img/loonies/six.gif" width="40" height="70" alt="" border="0"></td>
+	<td align="left" valign="top" colspan="2"><a href="loonies.html" onmouseover="imgAct(&#39;seven&#39;)" onmouseout="imgInact(&#39;seven&#39;)"><img name="seven" src="img/loonies/seven_off.gif" width="260" height="70" alt="" border="0"></a></td>
+	<td align="left" valign="top"><a href="loonies.html" onmouseover="imgAct(&#39;eight&#39;)" onmouseout="imgInact(&#39;eight&#39;)"><img name="eight" src="img/loonies/eight_off.gif" width="265" height="70" alt="" border="0"></a></td>
+	<td align="left" valign="top"><img src="img/loonies/nine.gif" width="75" height="70" alt="" border="0"></td>
+</tr>
+
+<tr>
+	<td align="left" valign="top"><img src="img/loonies/ten.gif" width="40" height="110" alt="" border="0"></td>
+	<td align="left" valign="top"><a href="loonies.html" onmouseover="imgAct(&#39;eleven&#39;)" onmouseout="imgInact(&#39;eleven&#39;)"><img name="eleven" src="img/loonies/eleven_off.gif" width="160" height="110" alt="" border="0"></a></td>
+	<td align="left" valign="top"><a href="loonies.html" onmouseover="imgAct(&#39;twelwe&#39;)" onmouseout="imgInact(&#39;twelwe&#39;)"><img name="twelwe" src="img/loonies/twelwe_off.gif" width="100" height="110" alt="" border="0"></a></td>
+	<td align="left" valign="top" rowspan="2"><a href="loonies.html" onmouseover="imgAct(&#39;thirteen&#39;)" onmouseout="imgInact(&#39;thirteen&#39;)"><img name="thirteen" src="img/loonies/thirteen_off.gif" width="265" height="140" alt="" border="0"></a></td>
+	<td align="left" valign="top" rowspan="2"><img src="img/loonies/fourteen.gif" width="75" height="140" alt="" border="0"></td>
+</tr>
+
+<tr>
+	<td align="left" valign="top"><img src="img/loonies/fifteen.gif" width="40" height="30" alt="" border="0"></td>
+	<td align="left" valign="top"><img src="img/loonies/sixteen.gif" width="160" height="30" alt="" border="0"></td>
+	<td align="left" valign="top"><img src="img/loonies/seventeen.gif" width="100" height="30" alt="" border="0"></td>
+</tr> 
+
+</tbody></table>
+
+</center>
+
+
+
+
+
+
+
+
+
+</body></html>

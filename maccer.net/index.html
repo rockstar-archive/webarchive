@@ -1,0 +1,50 @@
+
+<html>
+<head>
+<title>maccer</title>
+<script language="javascript"> 
+function setPage(page) {
+	document.getElementById('content').src=page;
+}
+</script> 
+
+</head>
+
+<body bgcolor="#222222" topmargin="0" margintop="0" leftmargin="0" marginleft="0">
+<center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="738" bgcolor="#000000">
+	<tr>
+		<td colspan="3"><img src="images/maccerHeader.jpg" width="738" height="148" border="0" usemap="#maccerHeader_Map"></td>
+	</tr>
+	<tr>
+		<td width="270"><img src="images/maccerBodyLeft.jpg" width="270" height="289"></td>
+		<td width="440"> 
+		
+		<!-- scrolling frame goes here -->
+		<iframe style="background-color:#000000" id="content" src="home.html" height="289" width="460" title="maccer" scrolling="auto" frameborder="0" bgcolor="#000000">
+		</iframe>
+		</td>
+		<td width="18"></td>
+	</tr>
+	<tr>
+		<td colspan="3"><img src="images/maccerFooter.jpg" width="738" height="101" border="0" usemap="#maccerFooter_Map"></td>
+	</tr>
+</table>
+
+<map name="maccerHeader_Map">
+<area shape="rect" alt="" coords="490,118,610,147" href="javascript:setPage('personalMessage.html');">
+<area shape="rect" alt="" coords="387,118,490,147" href="javascript:setPage('comeBackTour.html');">
+<area shape="rect" alt="" coords="245,118,387,147" href="javascript:setPage('personalQuotes.html');">
+<area shape="rect" alt="" coords="199,118,245,147" href="javascript:setPage('music.html');">
+<area shape="rect" alt="" coords="134,118,199,147" href="javascript:setPage('rumours.html');">
+<area shape="rect" alt="" coords="65,118,134,147" href="javascript:setPage('biography.html');">
+<area shape="rect" alt="" coords="23,118,65,147" href="javascript:setPage('home.html');">
+</map>
+
+<map name="maccerFooter_Map">
+<area shape="rect" alt="" coords="21,52,127,84" href="mailto:maccer@maccer.net&amp;subject=Contact%20Maccer">
+</map>
+
+</body>
+</html>
