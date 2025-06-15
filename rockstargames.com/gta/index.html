@@ -1,15 +1,53 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-  <title>Rockstar Games GTA</title>
-</head>
-<body style="height:100vh; overflow:hidden; margin:0; display:flex; flex-flow:column nowrap; align-items:stretch;">
-  <iframe id="playback" src="./gta/areyou18.html" frameborder="0" style="flex:1 0"></iframe>
-  <script>
-    if (window.location.hash) {
-      document.getElementById("playback").src += window.location.hash;
-    }
-  </script>
-</body>
-</html>
+<!DOCTYPE HTML PUBLIC  " - //W3C//DTD HTML 3.2 Draft//EN">
+
+<HTML>
+
+<HEAD>
+	<TITLE>Grand Theft Auto</TITLE>
+<SCRIPT Language="JavaScript">
+
+var theyCameFromBehind=true;
+var frameThere=true;
+
+function killGTA() {
+	if (theyCameFromBehind) window.top.location.href="/";
+	else self.close();
+}
+
+//////////////
+// Chris Jordan - OnlineMagic - chrisj@onlinemagic.com
+// A not very definitive plugin detection method - but works enough for now
+
+function haveGotPlugin(plugin)
+{
+	if (navigator.appName == "Microsoft Internet Explorer")
+		return true;
+	else
+	{
+		if (navigator.plugins)
+		{
+			if (navigator.plugins[plugin] != null)
+				return true;
+			else
+				return false;
+		}
+	}
+	return false;  // should never get here but just in case we'll return false
+}
+
+// Just add more of these for new plugins
+
+var hasShockwaveFlash2=haveGotPlugin("Shockwave Flash 2.0");
+var hasQuickTime=haveGotPlugin("QuickTime Plug-In");
+var hasCosmoPlayer1=haveGotPlugin("Cosmo Player 1.0");
+var hasShockwave=haveGotPlugin("Shockwave/Director");
+
+</SCRIPT>
+</HEAD>
+
+<FRAMESET ROWS="100%,1" BORDER="0" FRAMESPACING="0" FRAMEBORDER="no">
+	<FRAME SRC="areyou18.html" NAME="gta_content" SCROLLING=AUTO NORESIZE FRAMESPACING="0" MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" BORDER="0">
+	<FRAME SRC="black.html" SCROLLING=NO NORESIZE FRAMESPACING="0" MARGINWIDTH="0" MARGINHEIGHT="0" FRAMEBORDER="0" BORDER="0">
+</FRAMESET>
+
+</HTML>
