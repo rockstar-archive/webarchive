@@ -1,0 +1,228 @@
+<html><!--Dynamic Drive DHTML Scripts, examples, and tutorials. Copyrighted © 1998--><head>
+<meta name="description" content="Live Background Previewer Script">
+<meta name="keywords" content="background previewer, thumbnail viewer, ">
+<title>eXsorbeo</title>
+<!-- Header Analytics (UA-15984839-3) 
+			<script type="text/javascript">
+				var _gaq = _gaq || [];
+				_gaq.push(["_setAccount", "UA-15984839-3"]);
+				_gaq.push(["_trackPageview"]);
+				(function() {
+					var ga = document.createElement("script"); ga.type = "text/javascript"; ga.async = true;
+					ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+					var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);
+				})();
+				
+				(function(window) {
+					var domReady = function($) {
+						var filetypes = /\.(zip|exe|dmg|pdf|doc*|xls*|ppt*|mp3|jpg|themepack|wmv|mp4|mov|flv)$/i;
+						$("a").filter(function() { return !$(this).data("notrack"); }).each(function() {
+							var href = $(this).attr("href");
+							if(!href)
+								return;
+							if(href.substr(0, 4) == "aim:") {
+								$(this).click(function() {
+									var url = href.replace("aim:", "");
+									_gaq.push(["_trackEvent", "Download", "Click-aim", url]);
+								});
+								return;		
+							}
+
+							if(href.substr(0, 7) == "mailto:") {
+								$(this).click(function() {
+									var emailAddr = href.replace("mailto:", "");
+									_gaq.push(["_trackEvent", "Email", "Click", emailAddr]);
+								});
+								return;
+							}
+
+							if(!href.match(/^https?\:/))
+								return;
+
+							if(href.match(filetypes)) {
+								$(this).click(function() {
+									var extParts = href.split(".");
+									var ext = extParts[extParts.length - 1];
+									_gaq.push(["_trackEvent", "Download", "Click-" + ext, href]);
+
+									if($(this).attr("target") == "_blank")
+										return;
+									setTimeout(function() { location.href = href }, 250);
+									return false;
+								});
+								return;
+							}
+							
+							if(href.indexOf(document.domain) >= 0)
+								return;
+
+							$(this).click(function() {
+								var link = href.replace(/^https?\:\/\//, "");
+								_gaq.push(["_trackEvent", "External", "Click", link]);
+								if($(this).attr("target") == "_blank")
+									return;
+								setTimeout(function() { location.href = href }, 250);
+								return false;
+							});
+						});
+					};
+
+					if(!window.jQuery || typeof(window.jQuery) != "function") {
+						(function() {
+							var jq = document.createElement("script"); jq.type = "text/javascript";
+							jq.src = "http://media.rockstargames.com/js/jquery/jquery-1.4.4.min.js";
+							var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(jq, s);
+						})();
+						
+						var ljq;
+						var _ljqi = 0;
+						(ljq = function() {
+							if(_ljqi > 20)
+								return;
+							if(window.jQuery && typeof(window.jQuery) == "function")
+								return window.jQuery(document).ready(domReady);
+							_ljqi++;
+							setTimeout(ljq, 250);
+						})();
+					} else {
+						window.jQuery(document).ready(domReady);
+					}
+				})(window);
+			</script>
+<!-- End Header Analytics (UA-15984839-3) -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"></head>
+
+<body leftmargin="0" topmargin="0" rightmargin="0" bottommargin="0" marginwidth="0" marginheight="0" bgcolor="#000000" text="#FFFFFF" link="#FFFF00" vlink="#00FF00" alink="#008000">
+
+				<!--
+				Start of DoubleClick Floodlight Tag: Please do not remove.*?--
+				<script type="text/javascript">
+					var axel = Math.random() + "";
+					var a = axel * 10000000000000;
+					document.write('<iframe style="position:absolute;left:-10000px;top:-10000px" src="http://fls.doubleclick.net/activityi;src=3055121;type=rocks806;cat=rocks465;ord=' + a + '?" width="1" height="1" frameborder="0"></iframe>');
+				</script>
+				<noscript>
+					<iframe style="position:absolute;left:-10000px;top:-10000px" src="http://fls.doubleclick.net/activityi;src=3055121;type=rocks806;cat=rocks465;ord=1?" width="1" height="1" frameborder="0"></iframe>
+				</noscript>
+				<!-- End of DoubleClick Floodlight Tag: Please do not remove --><div align="center">
+<table width="100%" height="100%" border="0" cellpadding="3" cellspacing="0">
+  <tbody><tr>
+    <td valign="middle" align="center"> 
+      <table width="750" border="0" cellspacing="0" cellpadding="0">
+        <tbody><tr>
+          <td height="594" align="center" valign="top"><img src="images/blindness.jpg" width="750" height="575" border="0" usemap="#Map2"> 
+          </td>
+        </tr>
+      </tbody></table>
+      <p align="left"><font face="Verdana"> 
+
+	          <layer name="a1" left="10" top="10" visibility="SHOW" bgcolor="#FFFF00" clip="0,0,3,3"></layer>
+        <script language="JavaScript">
+<!-- 
+
+if (document.all){
+document.write('<div id="starsDiv" style="position:absolute;top:0px;left:0px">')
+for (xy=0;xy<7;xy++)
+document.write('<div style="position:relative;width:3px;height:3px;background:#5D3400;font-size:2px;visibility:visible"></div>')
+document.write('</div>')
+}
+
+if (document.layers)
+{window.captureEvents(Event.MOUSEMOVE);}
+var yBase = 200;
+var xBase = 200;
+var yAmpl = 10;
+var yMax = 40;
+var step = .2;
+var ystep = .5;
+var currStep = 0;
+var tAmpl=1;
+var Xpos = 1;
+var Ypos = 1;
+var i = 0;
+var j = 0;
+
+if (document.all)
+{
+  function MoveHandler(){
+  Xpos = document.body.scrollLeft+event.x;
+  Ypos = document.body.scrollTop+event.y;
+  }
+  document.onmousemove = MoveHandler; 
+}
+
+else if (document.layers)
+{
+  function xMoveHandler(evnt){
+  Xpos = evnt.pageX;
+  Ypos = evnt.pageY;
+  }
+  window.onMouseMove = xMoveHandler;
+}
+
+
+
+function animateLogo() {
+if (document.all)
+{
+ yBase = window.document.body.offsetHeight/4;
+ xBase = window.document.body.offsetWidth/4;
+}
+else if (document.layers)
+{
+ yBase = window.innerHeight/4 ;
+ xBase = window.innerWidth/4;
+}
+
+if (document.all)
+{
+var totaldivs=document.all.starsDiv.all.length
+ for ( i = 0 ; i < totaldivs ; i++ )
+ {
+var tempdiv=document.all.starsDiv.all[i].style
+  tempdiv.top = Ypos + Math.cos((20*Math.sin(currStep/20))+i*70)*yBase*(Math.sin(10+currStep/10)+0.2)*Math.cos((currStep + i*25)/10);
+  tempdiv.left = Xpos + Math.sin((20*Math.sin(currStep/20))+i*70)*xBase*(Math.sin(10+currStep/10)+0.2)*Math.cos((currStep + i*25)/10);
+ }
+}
+
+else if (document.layers)
+{
+ for ( j = 0 ; j < 7 ; j++ ) 
+ {
+var templayer="a"+j
+  document.layers[templayer].top = Ypos + Math.cos((20*Math.sin(currStep/20))+j*70)*yBase*(Math.sin(10+currStep/10)+0.2)*Math.cos((currStep + j*25)/10);
+  document.layers[templayer].left =Xpos + Math.sin((20*Math.sin(currStep/20))+j*70)*xBase*(Math.sin(10+currStep/10)+0.2)*Math.cos((currStep + j*25)/10);
+ }
+}
+currStep += step;
+setTimeout("animateLogo()", 15);
+}
+animateLogo();
+// -->
+        </script>
+        <!--webbot bot="HTMLMarkup" endspan -->
+	  
+	  
+        </font></p>
+    <p align="left"><font face="Verdana"><small></small></font></p>
+    <p align="left"><font face="Verdana"><br>
+    </font></p>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+<map name="Map">
+  <area shape="rect" coords="437,26,491,80" href="#">
+  <area shape="rect" coords="493,27,548,82" href="games.htm">
+  <area shape="rect" coords="552,27,607,83" href="blindness.htm">
+  <area shape="rect" coords="387,26,432,79" href="index.htm">
+</map>
+<map name="Map2">
+  <area shape="rect" coords="384,26,432,77" href="index.htm">
+  <area shape="rect" coords="438,27,491,80" href="emulator.htm">
+  <area shape="rect" coords="493,25,548,80" href="games.htm">
+  <area shape="rect" coords="269,256,719,547" href="downloads/brown.jpg" target="_blank">
+</map>
+
+
+</body></html>
