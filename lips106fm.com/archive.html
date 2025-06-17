@@ -1,0 +1,370 @@
+<html><head>
+<meta charset="utf-8">
+<title>LIPS106FM.COM: THE OFFICIAL SITE OF LIPS106FM.COM</title>
+
+<style type="text/css">
+body { 
+  	background-color: #000000;
+  	margin-top: 0px;
+}
+
+.lyric {
+	text-indent: 10px;
+	text-decoration: italics;
+}
+
+.topBanner {
+	background-color: #FFFFFF;
+	height: 20px;
+	font: normal 11px Arial;
+	color: #216DCD;
+	text-align: center;
+}
+
+.sidebar {
+	background-color: #CECECE;
+	font: normal 10px Arial;
+	color: #216DCD;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.archivedButton {
+	background-color: #CECECE;
+	font: normal 10px Arial;
+	color: #216DCD;
+	text-align: left;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+
+.sidebar a{
+	color: #0033CC;
+}
+
+.sidebar a:hover{
+	color: #FF0000;
+}
+
+.archiveIntro {
+	background-color: #CECECE;
+	font: normal 12px Arial;
+	color: #000000;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 200px;
+}
+
+.relaunch {
+	font: normal 14px Arial;
+	color: #FFFFFF;
+	text-align: center;
+}
+
+.titleBar {
+	background-color: #FFFFFF;
+}
+
+.finePrint {
+	text-align: center;
+	color: #FFFFFF;
+	font: normal 10px Arial;
+}
+	
+</style>
+
+
+			<script language="JavaScript">
+<!--
+function WM_preloadImages() { // Loads images into the browser's cache for later use
+
+  if (document.images) { 
+    if (typeof(document.WM) == 'undefined'){
+      document.WM = new Object();
+    }
+    document.WM.loadedImages = new Array();
+    // Loop through all the arguments.
+    var argLength = WM_preloadImages.arguments.length;
+    for(arg=0;arg<argLength;arg++) {
+      // For each arg, create a new image.
+      document.WM.loadedImages[arg] = new Image();
+      // Then set the source of that image to the current argument.
+      document.WM.loadedImages[arg].src = WM_preloadImages.arguments[arg];
+    }
+  }
+}
+// -->
+			</script>
+			<script language="JavaScript">
+<!--
+
+function WM_imageSwap(daImage, daSrc){ // Changes the source of an image
+  var objStr,obj;
+  // Check to make sure that images are supported in the DOM.
+  if(document.images){
+    // Check to see whether you are using a name, number, or object
+    if (typeof(daImage) == 'string') {
+      // This whole objStr nonesense is here solely to gain compatability
+      // with ie3 for the mac.
+      objStr = 'document.' + daImage;
+      obj = eval(objStr);
+      obj.src = daSrc;
+    } else if ((typeof(daImage) == 'object') && daImage && daImage.src) {
+      daImage.src = daSrc;
+    }
+  }
+}
+/*
+function getRandomSong() {
+	var ran_number=Math.round(Math.random()*2); 
+//	alert(ran_number);
+	document.write('<EMBED src="lips106_id'+ran_number+'.mp3" autostart=true hidden=true>');
+}
+
+getRandomSong();
+*/
+
+// -->
+
+			</script>
+
+<!-- Header Analytics (UA-15984839-3) 
+			<script type="text/javascript">
+				var _gaq = _gaq || [];
+				_gaq.push(["_setAccount", "UA-15984839-3"]);
+				_gaq.push(["_trackPageview"]);
+				(function() {
+					var ga = document.createElement("script"); ga.type = "text/javascript"; ga.async = true;
+					ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+					var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);
+				})();
+				
+				(function(window) {
+					var domReady = function($) {
+						var filetypes = /\.(zip|exe|dmg|pdf|doc*|xls*|ppt*|mp3|jpg|themepack|wmv|mp4|mov|flv)$/i;
+						$("a").filter(function() { return !$(this).data("notrack"); }).each(function() {
+							var href = $(this).attr("href");
+							if(!href)
+								return;
+							if(href.substr(0, 4) == "aim:") {
+								$(this).click(function() {
+									var url = href.replace("aim:", "");
+									_gaq.push(["_trackEvent", "Download", "Click-aim", url]);
+								});
+								return;		
+							}
+
+							if(href.substr(0, 7) == "mailto:") {
+								$(this).click(function() {
+									var emailAddr = href.replace("mailto:", "");
+									_gaq.push(["_trackEvent", "Email", "Click", emailAddr]);
+								});
+								return;
+							}
+
+							if(!href.match(/^https?\:/))
+								return;
+
+							if(href.match(filetypes)) {
+								$(this).click(function() {
+									var extParts = href.split(".");
+									var ext = extParts[extParts.length - 1];
+									_gaq.push(["_trackEvent", "Download", "Click-" + ext, href]);
+
+									if($(this).attr("target") == "_blank")
+										return;
+									setTimeout(function() { location.href = href }, 250);
+									return false;
+								});
+								return;
+							}
+							
+							if(href.indexOf(document.domain) >= 0)
+								return;
+
+							$(this).click(function() {
+								var link = href.replace(/^https?\:\/\//, "");
+								_gaq.push(["_trackEvent", "External", "Click", link]);
+								if($(this).attr("target") == "_blank")
+									return;
+								setTimeout(function() { location.href = href }, 250);
+								return false;
+							});
+						});
+					};
+
+					if(!window.jQuery || typeof(window.jQuery) != "function") {
+						(function() {
+							var jq = document.createElement("script"); jq.type = "text/javascript";
+							jq.src = "http://media.rockstargames.com/js/jquery/jquery-1.4.4.min.js";
+							var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(jq, s);
+						})();
+						
+						var ljq;
+						var _ljqi = 0;
+						(ljq = function() {
+							if(_ljqi > 20)
+								return;
+							if(window.jQuery && typeof(window.jQuery) == "function")
+								return window.jQuery(document).ready(domReady);
+							_ljqi++;
+							setTimeout(ljq, 250);
+						})();
+					} else {
+						window.jQuery(document).ready(domReady);
+					}
+				})(window);
+			</script>
+<!-- End Header Analytics (UA-15984839-3) -->
+</head>
+
+<body onload="WM_preloadImages('images/archivedButton_on.gif')">
+
+				<!--
+				Start of DoubleClick Floodlight Tag: Please do not remove.*?--
+				<script type="text/javascript">
+					var axel = Math.random() + "";
+					var a = axel * 10000000000000;
+					document.write('<iframe style="position:absolute;left:-10000px;top:-10000px" src="http://fls.doubleclick.net/activityi;src=3055121;type=rocks806;cat=rocks465;ord=' + a + '?" width="1" height="1" frameborder="0"></iframe>');
+				</script>
+				<noscript>
+					<iframe style="position:absolute;left:-10000px;top:-10000px" src="http://fls.doubleclick.net/activityi;src=3055121;type=rocks806;cat=rocks465;ord=1?" width="1" height="1" frameborder="0"></iframe>
+				</noscript>
+				<!-- End of DoubleClick Floodlight Tag: Please do not remove --><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="1" height="1" id="lips106fm" align="middle">
+<param name="allowScriptAccess" value="sameDomain">
+<param name="movie" value="lips106fm.swf">
+<param name="quality" value="high">
+<param name="bgcolor" value="#000000">
+<embed src="lips106fm.swf" quality="high" bgcolor="#000000" width="1" height="1" name="lips106fm" align="middle" allowscriptaccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">
+</object>
+<center>
+<table width="800" border="0" cellpadding="0" cellspacing="0">
+	<tbody><tr>
+		<td class="topBanner"><b>WWW.LIPS106FM.COM:</b> THE OFFICIAL SITE OF LIPS106: MAKING SURE AMERICAN RADIO SOUNDS AWFUL...ONE SONG AT A TIME</td>
+	</tr>
+</tbody></table>
+<br>
+<table width="800" border="0" cellpadding="0" cellspacing="0">
+	<tbody><tr>
+		<td valign="top">
+			<table border="0" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+					<td><img src="images/sidebar_pops.gif" width="160" height="305" border="0"></td>
+				</tr>
+				<tr>
+					<td><img src="images/1.gif" width="1" height="20"></td>
+				</tr>
+				<tr>
+					<td><img src="images/sidebar_goodieBag.gif" width="160" height="20" border="0"></td>
+				</tr>
+				<tr>
+					<td class="sidebar"><a href="#">Team LIPS Email Bag</a><a><br>
+					<br>
+					</a><a href="#">Funnyman Doug<br>
+					Said What?!!!</a><br>
+					<br>
+					<a href="#">CommunityConnect</a><br>
+					<br>
+					<a href="#">School Closings</a><br>
+					<br>
+					<a href="#">LIPS Traffic Tyme</a><br>
+					<br>
+					<a href="#">Get LIPS106 Street Gear!</a><br>
+					<br>
+					<b><a href="#">Win $106 Every Hour!</a></b>
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+		<td><img src="images/1.gif" width="20" height="1" border="0"></td>
+		<td width="620" valign="top">
+			<table width="100%" border="0" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+					<td>
+						<table border="0" cellpadding="0" cellspacing="0">
+							<tbody><tr>
+								<td><a href="index.html"><img src="images/lips106_logo_small.gif" width="106" height="107" border="0"></a></td>
+								<td><img src="images/1.gif" width="20" height="1" border="0"></td>
+							</tr>
+						</tbody></table>
+					</td>
+				</tr>
+				<tr>
+					<td><img src="images/1.gif" width="1" height="20" border="0"></td>
+				</tr>
+				<tr>
+					<td>
+						<table width="100%" border="0" cellpadding="0" cellspacing="0">
+							<tbody><tr>
+								<td class="titleBar"><img src="images/audioArchive.gif" width="171" height="20" border="0"></td>
+							</tr>
+							<tr>
+								<td class="archiveIntro"><b>LIPS 106 ARCHIVED RADIO STREAM</b>
+								</td>
+							</tr>
+							<tr>
+								<td class="archivedButton" align="left"><a href="webLIPS.ram" onmouseover="WM_imageSwap('archivedButton1', 'images/archivedButton_on.gif');" onmouseout="WM_imageSwap('archivedButton1', 'images/archivedButton_off.gif');"><img src="images/archivedButton_off.gif" width="195" height="35" border="0" name="archivedButton1"></a></td>
+							</tr>
+						</tbody></table>
+					</td>
+				</tr>
+				<tr>
+					<td><img src="images/1.gif" width="1" height="20" border="0"></td>
+				</tr>
+					<tr><td>
+						<table width="100%" border="0" cellpadding="0" cellspacing="0">
+							<tbody><tr>
+								<td class="titleBar"><img src="images/hotTraxx.gif" width="432" height="20" border="0"></td>
+							</tr>
+							<tr>
+								<td class="archiveIntro"><b>Bassmatic</b><br>by Nina Barry<br>
+								<br>
+Backed by a robo-electro smash track that's sure to light up club floors everywhere in the LC, <b>Nina Barry</b> explores the political-economic deterioration of inner-city lifestyles at the benefit of suburban expansion. With lyrics that identify our society's most critical issues with frightening clarity, Ms. Barry elevates the human literary capacity to heights unseen since the 19th century masters of Realism.<br>
+<br>
+<i>"Night time's like a jungle / Shouldn't make a sound / Living life / In the wrong part of town"</i><br>
+								<br>
+								"This important pop composition adds significantly to our critical and theoretical understanding of urban and suburban spaces...adding political, sociological, and key cultural insights to thinking about what we mean by 'inner city', and how Nina Barry's contribution to this debate extends the fundamental perception of urban existence."<br>
+								- <i>Stephen Grossman, Music Journal Weekly</i>
+								</td>
+							</tr>
+							<tr>
+<!--								<td class="archivedButton" align="left"><a href="http://63.236.94.167/uploads/lips106/Nina%20Barry%20-%20Bassmati
+c.asx" onmouseover="WM_imageSwap('archivedButton0', 'images/archivedButton_on.gif');" onmouseout="WM_imageSwap('archivedButton0', 'images/archivedButton_off.gif');"><img src="images/archivedButton_off.gif" width="195" height="35" border="0" name="archivedButton0"></a></td> -->
+
+<td class="archivedButton" align="left"><a href="NinaBarry_BASSMATIC.ram" onmouseover="WM_imageSwap('archivedButton0', 'images/archivedButton_on.gif');" onmouseout="WM_imageSwap('archivedButton0', 'images/archivedButton_off.gif');"><img src="images/archivedButton_off.gif" width="195" height="35" border="0" name="archivedButton0"></a></td>
+
+							</tr>
+							<tr>
+								<td><img src="images/1.gif" width="1" height="1" border="0"></td>
+							</tr>
+							<tr>
+								<td class="archiveIntro"><b>Mine Until Monday</b><br>by Sunshine Shine<br>
+								<br>
+								Satisfy your boy band fix with this addictive pop concoction that will be flaming up the charts. Picture the perfect male pop star in a tight white tank top, baggy mechanic's jeans, just a touch of eyeshadow, and hair that's been teased for a half hour with the manly hands of their stylist. Now multiply that by five and you've got <b>Sunshine Shine</b>, the band that's been singing together making beautiful harmonies since they first met each other in the juvenile home's showers. Moving up the charts faster than a snake can find a hole in the ground, "Mine Until Monday" is one of LIPS106's "Pops Hit" favorites.
+								</td>
+							</tr>
+							<tr>
+								<td class="archivedButton" align="left"><a href="SunshineShine_MINEuntilMONDAY.ram" onmouseover="WM_imageSwap('archivedButton2', 'images/archivedButton_on.gif');" onmouseout="WM_imageSwap('archivedButton2', 'images/archivedButton_off.gif');"><img src="images/archivedButton_off.gif" width="195" height="35" border="0" name="archivedButton2"></a></td>
+							</tr>
+						</tbody></table>
+					</td>
+				</tr>
+				<tr>
+					<td><img src="images/1.gif" width="1" height="20" border="0"></td>
+				</tr>
+				<tr>
+					<td align="center"><img src="images/loveMedia_logo.gif" width="36" height="30" border="0"><br><br></td>
+				</tr>
+				<tr>
+					<td class="finePrint" align="center">LIPS 106: A Love Media Company<br>
+					<a href="#">Terms of Use</a> | <a href="#">Privacy Statement</a> | <a href="#">Copyright and Trademark Notice</a></td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+
+</center></body></html>

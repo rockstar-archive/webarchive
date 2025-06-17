@@ -1,0 +1,414 @@
+<html><head>
+<meta charset="utf-8">
+<!-- Start Added by RockstarMuseum -->
+<script src="js/rmLoader.js"></script>
+<!-- End Added by RockstarMuseum -->
+<title>LIPS106FM.COM: THE OFFICIAL SITE OF LIPS106FM.COM</title>
+
+<style type="text/css">
+body { 
+  	background-color: #000000;
+  	margin-top: 0px;
+}
+
+.lyric {
+	text-indent: 10px;
+	text-decoration: italics;
+}
+
+.topBanner {
+	background-color: #FFFFFF;
+	height: 20px;
+	font: normal 11px Arial;
+	color: #216DCD;
+	text-align: center;
+}
+
+.grayBackground {
+	background-color: #CECECE;
+}
+
+.darkGrayBackground {
+	background-color: #666666;
+}
+
+.sidebar {
+	background-color: #CECECE;
+	font: normal 10px Arial;
+	color: #216DCD;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.archivedButton {
+	background-color: #CECECE;
+	font: normal 10px Arial;
+	color: #216DCD;
+	text-align: left;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+
+.sidebar a{
+	color: #0033CC;
+}
+
+.sidebar a:hover{
+	color: #FF0000;
+}
+
+.archiveIntro {
+	background-color: #CECECE;
+	font: normal 12px Arial;
+	color: #000000;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 200px;
+}
+
+.relaunch {
+	font: normal 14px Arial;
+	color: #FFFFFF;
+	text-align: center;
+}
+
+.titleBar {
+	background-color: #FFFFFF;
+}
+
+.finePrint {
+	text-align: center;
+	color: #FFFFFF;
+	font: normal 10px Arial;
+}
+	
+</style>
+
+
+			<script language="JavaScript">
+<!--
+function WM_preloadImages() { // Loads images into the browser's cache for later use
+
+  if (document.images) { 
+    if (typeof(document.WM) == 'undefined'){
+      document.WM = new Object();
+    }
+    document.WM.loadedImages = new Array();
+    // Loop through all the arguments.
+    var argLength = WM_preloadImages.arguments.length;
+    for(arg=0;arg<argLength;arg++) {
+      // For each arg, create a new image.
+      document.WM.loadedImages[arg] = new Image();
+      // Then set the source of that image to the current argument.
+      document.WM.loadedImages[arg].src = WM_preloadImages.arguments[arg];
+    }
+  }
+}
+// -->
+			</script>
+			<script language="JavaScript">
+<!--
+
+function WM_imageSwap(daImage, daSrc){ // Changes the source of an image
+  var objStr,obj;
+  // Check to make sure that images are supported in the DOM.
+  if(document.images){
+    // Check to see whether you are using a name, number, or object
+    if (typeof(daImage) == 'string') {
+      // This whole objStr nonesense is here solely to gain compatability
+      // with ie3 for the mac.
+      objStr = 'document.' + daImage;
+      obj = eval(objStr);
+      obj.src = daSrc;
+    } else if ((typeof(daImage) == 'object') && daImage && daImage.src) {
+      daImage.src = daSrc;
+    }
+  }
+}
+/*
+function getRandomSong() {
+	var ran_number=Math.round(Math.random()*2); 
+//	alert(ran_number);
+	document.write('<EMBED src="lips106_id'+ran_number+'.mp3" autostart=true hidden=true>');
+}
+
+getRandomSong();
+*/
+
+// -->
+
+			</script>
+
+<!-- Header Analytics (UA-15984839-3) 
+			<script type="text/javascript">
+				var _gaq = _gaq || [];
+				_gaq.push(["_setAccount", "UA-15984839-3"]);
+				_gaq.push(["_trackPageview"]);
+				(function() {
+					var ga = document.createElement("script"); ga.type = "text/javascript"; ga.async = true;
+					ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+					var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);
+				})();
+				
+				(function(window) {
+					var domReady = function($) {
+						var filetypes = /\.(zip|exe|dmg|pdf|doc*|xls*|ppt*|mp3|jpg|themepack|wmv|mp4|mov|flv)$/i;
+						$("a").filter(function() { return !$(this).data("notrack"); }).each(function() {
+							var href = $(this).attr("href");
+							if(!href)
+								return;
+							if(href.substr(0, 4) == "aim:") {
+								$(this).click(function() {
+									var url = href.replace("aim:", "");
+									_gaq.push(["_trackEvent", "Download", "Click-aim", url]);
+								});
+								return;		
+							}
+
+							if(href.substr(0, 7) == "mailto:") {
+								$(this).click(function() {
+									var emailAddr = href.replace("mailto:", "");
+									_gaq.push(["_trackEvent", "Email", "Click", emailAddr]);
+								});
+								return;
+							}
+
+							if(!href.match(/^https?\:/))
+								return;
+
+							if(href.match(filetypes)) {
+								$(this).click(function() {
+									var extParts = href.split(".");
+									var ext = extParts[extParts.length - 1];
+									_gaq.push(["_trackEvent", "Download", "Click-" + ext, href]);
+
+									if($(this).attr("target") == "_blank")
+										return;
+									setTimeout(function() { location.href = href }, 250);
+									return false;
+								});
+								return;
+							}
+							
+							if(href.indexOf(document.domain) >= 0)
+								return;
+
+							$(this).click(function() {
+								var link = href.replace(/^https?\:\/\//, "");
+								_gaq.push(["_trackEvent", "External", "Click", link]);
+								if($(this).attr("target") == "_blank")
+									return;
+								setTimeout(function() { location.href = href }, 250);
+								return false;
+							});
+						});
+					};
+
+					if(!window.jQuery || typeof(window.jQuery) != "function") {
+						(function() {
+							var jq = document.createElement("script"); jq.type = "text/javascript";
+							jq.src = "http://media.rockstargames.com/js/jquery/jquery-1.4.4.min.js";
+							var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(jq, s);
+						})();
+						
+						var ljq;
+						var _ljqi = 0;
+						(ljq = function() {
+							if(_ljqi > 20)
+								return;
+							if(window.jQuery && typeof(window.jQuery) == "function")
+								return window.jQuery(document).ready(domReady);
+							_ljqi++;
+							setTimeout(ljq, 250);
+						})();
+					} else {
+						window.jQuery(document).ready(domReady);
+					}
+				})(window);
+			</script>
+<!-- End Header Analytics (UA-15984839-3) -->
+</head>
+
+<body onload="WM_preloadImages('images/streamButton_on.gif')">
+
+				<!--
+				Start of DoubleClick Floodlight Tag: Please do not remove.*?--
+				<script type="text/javascript">
+					var axel = Math.random() + "";
+					var a = axel * 10000000000000;
+					document.write('<iframe style="position:absolute;left:-10000px;top:-10000px" src="http://fls.doubleclick.net/activityi;src=3055121;type=rocks806;cat=rocks465;ord=' + a + '?" width="1" height="1" frameborder="0"></iframe>');
+				</script>
+				<noscript>
+					<iframe style="position:absolute;left:-10000px;top:-10000px" src="http://fls.doubleclick.net/activityi;src=3055121;type=rocks806;cat=rocks465;ord=1?" width="1" height="1" frameborder="0"></iframe>
+				</noscript>
+				<!-- End of DoubleClick Floodlight Tag: Please do not remove --><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="1" height="1" id="lips106fm" align="middle">
+<param name="allowScriptAccess" value="sameDomain">
+<param name="movie" value="lips106fm.swf">
+<param name="quality" value="high">
+<param name="bgcolor" value="#000000">
+<embed src="lips106fm.swf" quality="high" bgcolor="#000000" width="1" height="1" name="lips106fm" align="middle" allowscriptaccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">
+</object>
+<center>
+<table width="800" border="0" cellpadding="0" cellspacing="0">
+	<tbody><tr>
+		<td class="topBanner"><b>WWW.LIPS106FM.COM:</b> THE OFFICIAL SITE OF LIPS106: MAKING SURE AMERICAN RADIO SOUNDS AWFUL...ONE SONG AT A TIME</td>
+	</tr>
+</tbody></table>
+<br>
+<table width="800" border="0" cellpadding="0" cellspacing="0">
+	<tbody><tr>
+		<td valign="top">
+			<table border="0" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+					<td><img src="images/sidebar_pops.gif" width="160" height="305" border="0"></td>
+				</tr>
+				<tr>
+					<td><img src="images/1.gif" width="1" height="20"></td>
+				</tr>
+				<tr>
+					<td><img src="images/sidebar_goodieBag.gif" width="160" height="20" border="0"></td>
+				</tr>
+				<tr>
+					<td class="sidebar"><a href="#">Team LIPS Email Bag</a><a><br>
+					<br>
+					</a><a href="#">Funnyman Doug<br>
+					Said What?!!!</a><br>
+					<br>
+					<a href="#">CommunityConnect</a><br>
+					<br>
+					<a href="#">School Closings</a><br>
+					<br>
+					<a href="#">LIPS Traffic Tyme</a><br>
+					<br>
+					<a href="#">Get LIPS106 Street Gear!</a><br>
+					<br>
+					<b><a href="#">Win $106 Every Hour!</a></b>
+					</td>
+				</tr>
+			</tbody></table>
+		</td>
+		<td><img src="images/1.gif" width="20" height="1" border="0"></td>
+		<td width="620">
+			<table width="100%" border="0" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+					<td>
+						<table border="0" cellpadding="0" cellspacing="0">
+							<tbody><tr>
+								<td><img src="images/lips106_logo.gif" width="239" height="243" border="0"></td>
+								<td><img src="images/1.gif" width="20" height="1" border="0"></td>
+								<td class="relaunch"><img src="images/relaunch.gif" width="179" height="84" border="0"><br>
+								<br>
+								Stay tuned in to LIPS106 for the latest news<br>
+								about our exciting site relaunch!!!</td>
+							</tr>
+						</tbody></table>
+					</td>
+				</tr>
+				<tr>
+					<td><img src="images/1.gif" width="1" height="20" border="0"></td>
+				</tr>
+				<tr>
+					<td>
+						<table width="100%" border="0" cellpadding="0" cellspacing="0">
+							<tbody><tr>
+								<td class="titleBar"><img src="images/sidebar_linkboard.gif" width="135" height="20" border="0"></td>
+							</tr>
+							<tr>
+								<td class="sidebar"><img src="images/cliffAndAndie.gif" width="400" height="145" border="0"></td>
+							</tr>
+						</tbody></table>
+					</td>
+				</tr>
+				<tr>
+					<td><img src="images/1.gif" width="1" height="20" border="0"></td>
+				</tr>
+				<tr>
+					<td>
+						<table width="100%" border="0" cellpadding="0" cellspacing="0">
+							<tbody><tr>
+								<td colspan="3" class="titleBar"><img src="images/coolGoodies.gif" width="300" height="20" border="0"></td>
+							</tr>
+							<tr>
+								<td class="darkGrayBackground"><img src="images/1.gif" width="20" height="1" border="0"></td>
+								<td>
+									<table border="0" cellspacing="0" cellpadding="0">
+										<tbody><tr>
+											<td class="darkGrayBackground"><img src="images/1.gif" width="1" height="20" border="0"></td>
+										</tr>
+										<tr>
+											<td class="titleBar"><img src="images/audioArchive.gif" width="171" height="20" border="0"></td>
+										</tr>
+										<tr>
+											<td class="sidebar"><a href="archive.html" onmouseover="WM_imageSwap('streamButton', 'images/streamButton_on.gif');" onmouseout="WM_imageSwap('streamButton', 'images/streamButton_off2.gif');"><img src="images/streamButton_off2.gif" width="380" height="67" border="0" name="streamButton"></a></td>
+										</tr>
+										<tr>
+											<td class="darkGrayBackground"><img src="images/1.gif" width="1" height="20" border="0"></td>
+										</tr>
+										<tr>
+											<td class="titleBar"><img src="images/messageFromCliff.gif" width="233" height="20" border="0"></td>
+										</tr>
+										<tr>
+											<td class="archiveIntro"><b>Hey pipettes,</b><br>
+											<br>
+											Welcome to the information super highway to hell!  Yes, Lips 106, your
+											favorite pop station of the nation (well of one city at least!) has
+											finally joined the twentieth century and launched a website.  Fab!  
+											But I've got some bad news, munchkins.  Those squares, my bosses
+											upstairs at Lips, have insisted I get a co- host, because "I'm too old
+											to connect with the kids."  Trust me when I say nothing could be further
+											from the truth.  I connect with kids all the time!  Through websites, at
+											truck stops, and sometimes thanks to my "Cliff Lane Make me a Star
+											Program" (remember, girls, all you need to do to apply to the "Cliff
+											Lane Make me a Star Program" is <a href="/cdn-cgi/l/email-protection#82e1eeebe4e4c2eeebf2f1b3b2b4e4eface1edef">send me a series of photographs of yourself</a>, ideally locker room shots or images of you and your friends rubbing lotion on each other at the beach, because these are EXACTLY the
+											kind of images my important friends at MAJOR record labels across the
+											country will want to see to tell if you've got STAR quality.  If you
+											REALLY want to make it in show business, then a nude photo will do
+											wonders for your career!  Several of today's biggest artists got their
+											first break by sending pictures to me FIRST!) But, no. The nerds
+											upstairs made me get a co-host, to connect with the kids.  And what did
+											they give me?  A 20-something year old who is starting to sag something
+											awful!  Andee!  They might as well have gotten my grandmother in the
+											station.  Mutton dressed as lamb! Give me a break.  What was wrong with
+											the girl I found?  She was young enough to get away with those crop tops
+											and looked great in a bikini sitting on my lap!  Listeners would have
+											loved it!  But no!<br>
+											<br>
+											Aah well.  Don't say I didn't warn you.  Nothing's ever as it seems in
+											this great big bad world of entertainment.  Remember that, and keep
+											sending me those pictures, and those items of clothing. 
+											Party on, pop pickers! <br>
+											<br>
+											<img src="images/cliffSig.gif" width="119" height="76" border="0"><br>
+											Cliff<br>
+											<a href="/cdn-cgi/l/email-protection#1f7c737679795f73766f6c2e2f297972317c7072"><span class="__cf_email__" data-cfemail="accfc0c5cacaecc0c5dcdf9d9c9acac182cfc3c1">[email protected]</span></a></td>
+										</tr>
+										<tr>
+											<td class="darkGrayBackground"><img src="images/1.gif" width="1" height="20" border="0"></td>
+										</tr>
+									</tbody></table>
+								</td>
+								<td class="darkGrayBackground"><img src="images/1.gif" width="20" height="1" border="0"></td>
+							</tr>
+						</tbody></table>
+					</td>
+				</tr>
+				<tr>
+					<td><img src="images/1.gif" width="1" height="20" border="0"></td>
+				</tr>
+				<tr>
+					<td align="center"><img src="images/loveMedia_logo.gif" width="36" height="30" border="0"><br><br></td>
+				</tr>
+				
+				<tr>
+					<td class="finePrint" align="center">LIPS 106: A Love Media Company<br>
+					<a href="#">Terms of Use</a> | <a href="#">Privacy Statement</a> | <a href="#">Copyright and Trademark Notice</a></td>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+<script data-cfasync="false" src="js/email-decode.min.js"></script>
+</center></body></html>
