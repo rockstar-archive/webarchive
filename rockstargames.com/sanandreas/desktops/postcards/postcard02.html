@@ -1,0 +1,122 @@
+<title>WELCOME TO LOS SANTOS</title>
+<meta http-equiv="Content-Type" content="text/html;"><style type="text/css">
+<!--
+body {
+	background-color: #431312;
+}
+td { color: #FFFFFF; font-family:tahoma; font-size:10px; }
+a { color: #999999; font-family:tahoma; font-size:10px; }
+TEXTAREA {
+  color : #000000;
+  background-color : #FFFFFF;
+  overflow:hidden;
+  font-family:tahoma; 
+  font-size:10pt;
+}
+INPUT {
+  color : #000000;
+  background-color : #FFFFFF;
+  overflow:hidden;
+  font-family:tahoma; 
+  font-size:10pt;
+}
+
+-->
+</style>
+<script language="JavaScript">
+var testresults
+function checkemail() {
+	var str=document.main.from.value
+	var str2=document.main.to.value
+	var filter=/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i
+	if (filter.test(str)) strresults=true
+	else{
+		alert("Please input a valid email address in the from field!")
+		strresults=false
+	}
+	
+	if (strresults) 
+		if (filter.test(str2)) str2results=true
+	else{
+		alert("Please input a valid email address in the to field!")
+		str2results=false
+	}
+	if (strresults==false||str2results==false) return (false);
+	else return (true);
+}
+
+
+function LimitText(fieldObj,maxChars)
+{
+  var result = true;
+  if (fieldObj.value.length >= maxChars)
+    result = false;
+  
+  if (window.event)
+    window.event.returnValue = result;
+  return result;
+}
+
+function checkFields() {
+	error = false;
+
+	if (document.main.to.value == 0) {
+		error = true;
+		alert("Please fill out all the fields.");
+	}
+	else if (document.main.from.value == 0) {
+		error = true;
+		alert("Please fill out all the fields.");
+	}
+
+	else if (document.main.age.value < 13) {
+		location.href="esrb_pp.html";
+		error=true;
+	}
+	else if (document.main.age.value >= 13 && document.main.age.value <= 16) {
+		location.href="esrb_pp_13.html";
+		error=true;
+	}
+	if (error) {
+
+		return false;
+	}
+	else {
+		return checkemail();
+	}
+}
+</script>
+  
+</head>
+
+<body topmargin="10" leftmargin="10">
+ 
+<form name="main" action="http://63.236.94.8/rockstar/sanandreas/mail_postcard.php" method="post" onsubmit="return checkFields()">
+<table width="685" height="380" border="0" cellpadding="0" cellspacing="0" background="postcard02.jpg">
+  <tbody><tr height="80" valign="top">
+    <td width="460"></td><td>&nbsp;</td>
+  </tr>
+  <tr height="45" valign="top">
+    <td width="443"></td><td><img src="to.gif" alt="" width="21" height="6" border="0"><br><input type="text" name="to" size="29"></td>
+  </tr>
+   <tr height="45" valign="top">
+    <td width="443"></td><td><img src="from.gif" alt="" width="42" height="6" border="0"><br><input type="text" name="from" size="29"></td>
+  </tr>
+  <tr height="90" valign="top">
+    <td width="443"></td><td><img src="message.gif" alt="" width="70" height="6" border="0"><br><textarea rows="4" cols="32" name="message" scrolling="no" style="width:195px;height:64px;" onkeypress="LimitText(this,108)"></textarea>
+	</td>
+  </tr>
+  <tr height="100" valign="top">
+    <td width="443"></td><td><img src="age.gif" alt="" width="31" height="6" border="0"><br><input type="text" name="age" size="29">
+	<br><input type="image" name="submit" src="send.gif" width="54" height="18" alt="send"></td>
+  </tr>  
+</tbody></table>
+<table width="685" border="0" cellpadding="0" cellspacing="0">
+<tbody><tr><td align="center"><a href="http://www.rockstargames.com/esrb/" target="_blank">ESRB PRIVACY ONLINE CERTIFIED PRIVACY STATEMENT</a></td></tr></tbody></table>
+<input type="hidden" name="postcardName" value="postcard02">
+<input type="hidden" name="subject_line" value="WELCOME TO LOS SANTOS">
+</form>
+
+
+
+</body></html>
