@@ -1,0 +1,293 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<title>CLOSE THIS WINDOW AND LOG OFF NOW</title>
+<style type="text/css">
+<!--
+.style16 {font-size: 12px}
+-->
+</style>
+
+<style type="text/css">
+<!--
+body {
+	background-color: #990000;
+}
+.style1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 36px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+body,td,th {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+a {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #0033CC;
+}
+a:visited {
+	color: #FFFFFF;
+}
+.style2 {font-size: 30px}
+.style3 {font-size: 18}
+.style8 {font-size: 34px}
+.style11 {font-size: 16px}
+.style14 {font-size: 9px}
+.style15 {font-size: 10px}
+.style17 {font-size: 24px}
+.style18 {font-size: 36px}
+.style19 {font-size: 38px}
+.style20 {font-size: 17px}
+.style22 {font-size: 9}
+.style24 {font-size: 60px}
+a:link {
+	color: #FFFFFF;
+}
+a:hover {
+	color: #FF0000;
+}
+a:active {
+	color: #FFFFFF;
+}
+.style25 {font-size: 70px}
+-->
+</style>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+function doBlink() {
+	var blink = document.all.tags("BLINK")
+	for (var i=0; i<blink.length; i++)
+		blink[i].style.visibility = blink[i].style.visibility == "" ? "hidden" : "" 
+}
+
+function startBlink() {
+	if (document.all)
+		setInterval("doBlink()",100)
+}
+
+startBlink();
+
+// -->
+</script>
+<!-- Header Analytics (UA-15984839-3) 
+			<script type="text/javascript">
+				var _gaq = _gaq || [];
+				_gaq.push(["_setAccount", "UA-15984839-3"]);
+				_gaq.push(["_trackPageview"]);
+				(function() {
+					var ga = document.createElement("script"); ga.type = "text/javascript"; ga.async = true;
+					ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+					var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);
+				})();
+				
+				(function(window) {
+					var domReady = function($) {
+						var filetypes = /\.(zip|exe|dmg|pdf|doc*|xls*|ppt*|mp3|jpg|themepack|wmv|mp4|mov|flv)$/i;
+						$("a").filter(function() { return !$(this).data("notrack"); }).each(function() {
+							var href = $(this).attr("href");
+							if(!href)
+								return;
+							if(href.substr(0, 4) == "aim:") {
+								$(this).click(function() {
+									var url = href.replace("aim:", "");
+									_gaq.push(["_trackEvent", "Download", "Click-aim", url]);
+								});
+								return;		
+							}
+
+							if(href.substr(0, 7) == "mailto:") {
+								$(this).click(function() {
+									var emailAddr = href.replace("mailto:", "");
+									_gaq.push(["_trackEvent", "Email", "Click", emailAddr]);
+								});
+								return;
+							}
+
+							if(!href.match(/^https?\:/))
+								return;
+
+							if(href.match(filetypes)) {
+								$(this).click(function() {
+									var extParts = href.split(".");
+									var ext = extParts[extParts.length - 1];
+									_gaq.push(["_trackEvent", "Download", "Click-" + ext, href]);
+
+									if($(this).attr("target") == "_blank")
+										return;
+									setTimeout(function() { location.href = href }, 250);
+									return false;
+								});
+								return;
+							}
+							
+							if(href.indexOf(document.domain) >= 0)
+								return;
+
+							$(this).click(function() {
+								var link = href.replace(/^https?\:\/\//, "");
+								_gaq.push(["_trackEvent", "External", "Click", link]);
+								if($(this).attr("target") == "_blank")
+									return;
+								setTimeout(function() { location.href = href }, 250);
+								return false;
+							});
+						});
+					};
+
+					if(!window.jQuery || typeof(window.jQuery) != "function") {
+						(function() {
+							var jq = document.createElement("script"); jq.type = "text/javascript";
+							jq.src = "http://media.rockstargames.com/js/jquery/jquery-1.4.4.min.js";
+							var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(jq, s);
+						})();
+						
+						var ljq;
+						var _ljqi = 0;
+						(ljq = function() {
+							if(_ljqi > 20)
+								return;
+							if(window.jQuery && typeof(window.jQuery) == "function")
+								return window.jQuery(document).ready(domReady);
+							_ljqi++;
+							setTimeout(ljq, 250);
+						})();
+					} else {
+						window.jQuery(document).ready(domReady);
+					}
+				})(window);
+			</script>
+<!-- End Header Analytics (UA-15984839-3) -->
+</head>
+
+
+<body onload="MM_preloadImages(&#39;imgs/homeDown.gif&#39;,&#39;imgs/killurkeyboard_on.gif&#39;)">
+
+				<table width="575" border="0" cellspacing="0" cellpadding="1">
+  <tbody><tr>
+    <td><div align="center">The Internet Is Unambiguous Evil!<br>
+      <br>
+    </div></td>
+  </tr>
+</tbody></table>
+<table width="600" border="0" cellpadding="10" cellspacing="6">
+  <tbody><tr>
+    <td height="84" align="left" valign="middle" bgcolor="#CC0000"><div align="center"><span class="style1">
+
+	<img src="imgs/warning.gif" width="83" height="69"> 
+	<blink><span class="style8">KEEP OFF THE INTERNET!!!</span></blink></span></div></td>
+  </tr>
+  <tr>
+    <td height="84" align="left" valign="middle" bgcolor="#CC0000"><div align="left" class="style2">
+      <div align="center" class="style18"><span class="MsoNormal"><span class="325135217-29082005 style24"><o:p><span class="style25">TESTIMONIALS</span></o:p></span><span class="325135217-29082005 style25"></span><span class="325135217-29082005 style22"><br>
+<o:p></o:p></span></span></div>
+    </div></td>
+  </tr>
+  <tr>
+    <td align="left" valign="top" bgcolor="#CC0000"><p class="style3"><a href="testimonials.htm#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;keyboard&#39;,&#39;&#39;,&#39;imgs/killurkeyboard_on.gif&#39;,1)"><img src="imgs/killurkeyboard_off.gif" name="keyboard" width="565" height="196" border="0"></a><span class="MsoNormal"><span class="325135217-29082005 style22"><o:p></o:p></span></span><span class="MsoNormal"><span class="325135217-29082005 style22"><br>
+      <br>
+    </span><span class="325135217-29082005 style22"><o:p></o:p></span><font size="+0"><span class="325135217-29082005"></span></font></span></p>      
+    <div align="center"></div></td>
+  </tr>
+  <tr>
+    <td align="left" valign="top" bgcolor="#990000"><br>
+    <br></td>
+  </tr>
+  <tr>
+    <td align="left" valign="top" bgcolor="#CC0000"><img src="imgs/warning.gif" width="34" height="29"><br>
+      <span class="325135217-29082005"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><span class="style16"><font size="+0"><span class="719492803-02092005"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Arial">�I was a happily married man � two kids, a wife, a mistress and an almost unnatural interest in strippers. Then, I got hooked on the internet. Now, I have no time or energy for infidelity, as all of my time is taken up planning family vacations and helping my kids learn about history using the enormous resources of the web.&nbsp; It has certainly ruined my fun.�&nbsp;<br>
+      <br>
+- Marcel Crayon, <st1:place w:st="on"><st1:placename w:st="on">Carcer</st1:placename> <st1:placetype w:st="on">City</st1:placetype></st1:place><o:p></o:p></span></span></font><br>
+    </span></span></span></td>
+  </tr>
+  <tr>
+    <td align="left" valign="top" bgcolor="#CC0000"><img src="imgs/warning.gif" width="34" height="29"> <font size="+0"><span class="325135217-29082005"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><br>
+      </span></span></font><span class="325135217-29082005" style16=""><span style="FONT-FAMILY: Arial">      <font size="+0"><span class="719492803-02092005"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Arial">�Before, when I would buy drugs, I would have no idea what to do with them, so they used to sit, untaken on my side board.&nbsp; After years of buying drugs, but being unable to take them due to ignorance, I had pounds of crack, heroin and reefer stashed in my house.&nbsp; Then, thanks to the internet, I learned how to take them, using a vacuum cleaner, a car battery and a small dog.&nbsp; I am literally out of my mind all of the time and my life has turned to sh*t. Thanks a lot, internet! I say, �turn it off!� �<br>
+      <br>
+- Jeremy Fagin, Los Santos, San Andreas<o:p></o:p></span></span></font></span></span><font size="+0"><span class="325135217-29082005"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><br>
+      </span></span></font></td>
+  </tr>
+  <tr>
+    <td align="left" valign="top" bgcolor="#CC0000"><img src="imgs/warning.gif" width="34" height="29"><br>
+    <span class="325135217-29082005"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><span class="style16"><font size="+0"><span class="719492803-02092005"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Arial">�Growing up in a strict religious house hold, I did not know what a penis or a vagina was. Then I got hooked on the internet. Now, I am&nbsp;ashamed to admit I have both.�<br>
+    <br>
+- Name withheld<o:p></o:p></span></span></font><br>
+    </span></span></span></td>
+  </tr>
+  <tr>
+    <td align="left" valign="top" bgcolor="#CC0000"><img src="imgs/warning.gif" width="34" height="29"><br>
+      <span class="325135217-29082005" style16=""><span style="FONT-FAMILY: Arial"><font size="+0"><span class="719492803-02092005"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Arial">�I never believed the government lied to us, or wasted tax on frivolities like unnecessary wars or government perks.&nbsp; Now, thanks to the horrors of the internet, I have discovered the truth.&nbsp; I hate the web. &nbsp;I preferred living in ignorance.�<br>
+      <br>
+- Name withheld<br>
+    </span></span></font></span></span></td>
+  </tr>
+  <tr>
+    <td align="left" valign="top" bgcolor="#CC0000"><img src="imgs/warning.gif" width="34" height="29"><br>
+      <span class="325135217-29082005" style16=""><span style="FONT-FAMILY: Arial"><font size="+0"><span class="719492803-02092005"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Arial">�I am a mentally unstable sociopath and pedophile who liked to prey on unsuspecting children.&nbsp; Now, because of the internet, everyone is only too aware of the dangers posed by creepy men befriending young children. &nbsp;It's quite simply ruined my life.�<br>
+      <br>
+- Derrick Hale, <st1:city w:st="on"><st1:place w:st="on">St. Paul</st1:place></st1:city>�s High Security Mental Asylum.<o:p></o:p></span></span></font><br>
+    </span></span></td>
+  </tr>
+  <tr>
+    <td align="left" valign="top" bgcolor="#CC0000"><img src="imgs/warning.gif" width="34" height="29"><br>
+      <span class="325135217-29082005" style21=""><span style="FONT-FAMILY: Arial"><font size="+0"><span class="719492803-02092005"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"> “I’ve always had a healthy sexual appetite.&nbsp; Around the time I hit puberty, I became sexually fixated&nbsp;with my grandmother. &nbsp;I could not get her out of my mind. &nbsp;People told me it was wrong, but I honestly believed that they were lying.&nbsp; If it feels so right, how can it be wrong, right?&nbsp; Wrong!&nbsp; I heard about the interweb. &nbsp;I went online expecting to discover a whole secret society of people JUST like me who loved much elder relatives, and hoped that for the first time since I gave up fantasizing about my sister, I could feel normal.&nbsp; How wrong I was.&nbsp; No one is obsessed&nbsp;with their&nbsp;grandma&nbsp;aside from me. &nbsp;I am a complete freak, and completely alone. &nbsp;The internet has ruined EVERYTHING.&nbsp; The worst of it is I STILL LOVE HER!“<br>
+      <br>
+- Brain Baylor, Shady Pines<br>
+      </span></span></font></span></span><font size="+0">&nbsp;</font></td>
+  </tr>
+  <tr>
+    <td align="left" valign="top" bgcolor="#CC0000"><a href="index.htm" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage(&#39;home&#39;,&#39;&#39;,&#39;imgs/homeDown.gif&#39;,1)"><img src="imgs/homeUp.gif" alt="home" name="home" width="565" height="60" border="0"></a></td>
+  </tr>
+  <tr>
+    <td align="center" valign="middle" bgcolor="#990000"><div align="left" class="style15">
+      <div align="center" class="style16"><blink><br>
+        <img src="imgs/logo.gif" width="100" height="96" border="1"> </blink><blink></blink></div>
+    </div>      
+    </td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" bgcolor="#990000"><div align="center" class="style14">
+      <p class="MsoNormal" align="center"><span class="325135217-29082005 style22"><o:p>CITIZENS<br>
+        UNITED<br>
+        NEGATING<br>
+        TECHNOLOGY<br>
+        FOR<br>
+        LIFE<br>
+        AND<br>
+        PEOPLE'S</o:p><br>
+        SAFETY
+      </span><span class="325135217-29082005 style22"><br>
+        </span><span class="325135217-29082005 style22"><o:p></o:p></span><font size="+0"><span class="325135217-29082005"><br>
+          <br>
+          </span></font><span class="style15"><br>
+        1998�</span></p>
+      </div></td>
+  </tr>
+</tbody></table>
+
+
+</body></html>
