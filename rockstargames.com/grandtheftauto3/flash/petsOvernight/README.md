@@ -1,7 +1,6 @@
-# petsovernight.com
-## Website: https://the-rg-archive.github.io/webarchive/rockstargames.com/grandtheftauto3/flash/petsovernight
+# rockstargames.com\grandtheftauto3\flash\petsOvernight
 
-## Download: https://download-directory.github.io?url=https://github.com/The-RG-Archive/webarchive/tree/main/rockstargames.com/grandtheftauto3/flash/petsovernight
+THIS IS A REDIRECT TO THE REAL REPO
+## Website: https://the-rg-archive.github.io/webarchive/petsovernight.com
 
-
-All rights to these pages belong to Rockstar Games and Take-Two Interactive.
+## Download: https://download-directory.github.io?url=https://github.com/The-RG-Archive/webarchive/tree/main/petsovernight.com
