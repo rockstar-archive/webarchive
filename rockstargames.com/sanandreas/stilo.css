@@ -1,0 +1,115 @@
+/* san andreas shteez */
+
+/* styles */
+body {
+	background-color: #000000;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+a{
+	font-family:Arial, Helvetica, sans-serif;
+
+/*	text-decoration:none;
+	font-weight:bold;
+	font-size:32px; */
+	color:#ffffff;
+}
+
+/* layers */
+#flyr{
+	position:absolute; 
+	top:0px;
+	left:0px;
+	width:450px;
+	height:368px;
+	z-index:1;
+	visibility:hidden;
+	border:1px solid #ff0099;
+}
+
+#skip{
+	position:absolute; 
+	top:0px;
+	left:0px;
+	width:40px;
+	height:20px;
+	z-index:1;
+	visibility:visible;
+	border:1px solid aqua;
+}
+
+#fl{
+position:absolute; 
+top:65px;
+left:194px;
+z-index:1;
+visibility:visible;
+/*border:1px solid aqua;*/
+}
+
+#navs{
+position:absolute; 
+top:0px;
+left:0px;
+z-index:1;
+visibility:hidden;
+/*border:1px solid aqua;*/
+}
+
+#info, #news, #screens, #movies, #sound, #buy{
+position:absolute; 
+top:65px;
+left:194px;
+background-color:#000000;
+width:800px;
+height:600px;
+z-index:100;
+visibility:hidden;
+
+}
+
+#allLogos{
+position:absolute; 
+top:795px;
+left:265px;
+z-index:1;
+visibility:hidden;
+}
+
+#platforms{
+position:absolute; 
+top:685px;
+left:395px;
+z-index:1;
+visibility:hidden;
+}
+
+#rockstarLogo{
+/*position:absolute; 
+top:700px;
+left:810px;*/
+z-index:1;
+visibility:hidden;
+}
+
+.copy {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFFFFF;
+}
+
+.newscopy {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+}
+
+.movietext {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight:bold;
+	color: #333333;
+}

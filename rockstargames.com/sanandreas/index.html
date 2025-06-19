@@ -1,0 +1,743 @@
+<html><head>
+<!-- Start Added by RockstarMuseum -->
+<script src="js/rmLoader.js"></script>
+<!-- End Added by RockstarMuseum -->
+<title>Rockstar Games: Grand Theft Auto San Andreas</title>
+<meta name="DESCRIPTION" content="Rockstar Games Presents Grand Theft Auto: San Andreas for Sony PlayStation 2">
+<meta name="KEYWORDS" content="rockstar, games, Grand Theft Auto, Grand, Theft, Auto, GTA, SA, San, Andreas, San Andreas, 1990's, 90's, Playstation, Playstation2, 2, PS2, PC, videogame, videogames, video, game">
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<link rel="STYLESHEET" type="text/css" href="stilo.css">
+    <!-- <script type="text/javascript" src="http://www.rockstargames.com/js/webtrends.js"></script> -->
+
+	<script src="js/sniff.js" type="text/javascript"></script>
+	<script src="js/api.js" type="text/javascript"></script>
+	<script src="js/api_flash.js" type="text/javascript"></script>
+	<script language="javascript" src="js/parseurl.js"></script>	
+	
+<script language="javascript">
+<!--
+	bypass = "false";
+	function setURLParameters()
+	{
+		if (window.location)
+		{
+			var parseURL = new ParseURL();
+			parseURL.parseURLString(window.location.search);
+			var parseURLArray = parseURL.getParameterArray();
+			var parseURLArrayLength = parseURL.getParameterArrayCount();
+			if ((parseURLArrayLength > 0) && (parseURLArray[0][0] == "page"))
+			{
+//				alert("bypass");
+				bypass =  "true";
+			}
+//			else { bypass = false; }
+		}
+
+	}
+	
+	setURLParameters();
+-->
+</script>	
+
+<div id="navs">
+	<!-- TOP NAV -->
+	<map name="mapNav">
+		<area alt="Info" coords="19,0,201,65" href="javascript:togNav('1','info');">
+		<area alt="News" coords="211,0,294,65" href="javascript:togNav('2','news');">
+		<area alt="Screens" coords="306,0,433,65" href="javascript:togNav('3','screens');">
+		<area alt="Movies" coords="445,0,547,65" href="javascript:togNav('4','movies');">
+		<area alt="Soundtrack" coords="559,0,743,65" href="javascript:togNav('5','sound');">
+		<area alt="Buy Now" coords="760,0,878,65" href="javascript:togNav('6','buy');">
+	</map>
+	<img src="images/nav_text_only.gif" width="1000" height="65" id="dasNav" name="dasNav" alt="" border="0" usemap="#mapNav"><br>
+	
+	<!-- LOGO -->
+	<img src="images/sa_logo.gif" width="194" height="185" alt="" border="0"><br>
+	
+	<div id="t" align="left" style="width:1px;height:135px;"> </div>
+	
+	<!-- LEFT NAV -->
+	<map name="mapLNav">
+		<area alt="html" coords="6,15,188,56" href="javascript:togLeft('1','1');togPgs('info',olPg);">
+		<area alt="flash" coords="6,84,187,129" href="javascript:togLeft('2','0');flOn();">
+	</map>
+	<img src="images/nav_flash.gif" id="dasLNav" name="dasLNav" alt="" border="0" usemap="#mapLNav">
+</div>
+
+
+
+<!-- FLASH LAYER -->
+<div id="fl"><!-- pc: ie/nn/moz -->
+<script src="js/iefix.js" type="text/javascript"></script>
+</div>
+
+
+<div id="info">
+<table width="755" height="530" border="0" cellpadding="55" cellspacing="0">
+  <tbody><tr>
+    <td valign="middle"><table width="290" border="0" cellspacing="0" cellpadding="0">
+      <tbody><tr>
+        <td colspan="3"><img src="images/info_title.gif" width="290" height="33"></td>
+      </tr>
+      <tr>
+        <td colspan="3"><img src="images/spacer.gif" width="10" height="10"></td>
+      </tr>
+      <tr>
+        <td width="10"><img src="images/spacer.gif" width="10" height="300"></td>
+        <td width="270" valign="top" class="copy">
+		<p>Five years ago Carl Johnson escaped from the pressures of life in Los Santos, San Andreas... a city tearing itself apart with gang trouble, drugs and corruption. Where filmstars and millionaires do their best to avoid the dealers and gangbangers.</p>
+        <p>Now, it's the early 90s. Carl's got to go home. His mother has been murdered, his family has fallen apart and his childhood friends are all heading towards disaster.</p>
+        <p>On his return to the neighborhood, a couple of corrupt cops frame him for homicide. CJ is forced on a journey that takes him across the entire state of San Andreas, to save his family and to take control of the streets.</p>
+		Liberty City. Vice City. Now San Andreas, a new chapter in the legendary series.<br>
+		Grand Theft Auto: San Andreas is available now for PlayStation®2, Xbox® and PC.
+		<br><br>
+		</td>
+        <td width="10"><img src="images/spacer.gif" width="10" height="10"></td>
+      </tr>
+      <tr>
+   <!--     <td colspan="3"><img src="image/info_up.gif" width="85" height="30"><img src="image/info_middle.gif" width="120" height="30"><img src="image/info_down.gif" width="85" height="30"></td> -->
+         <td colspan="3"><img src="images/bottom.gif" width="281" height="28"></td>
+        </tr>
+    </tbody></table>    </td>
+  </tr>
+</tbody></table>
+</div>
+
+<div id="news">
+<table width="755" height="500" border="0" cellpadding="50" cellspacing="0">
+  <tbody><tr>
+    <td align="right" valign="top">
+	<img src="images/news_title.gif" width="280" height="38">
+	</td>
+  </tr>
+</tbody></table>
+    
+
+	  
+<div id="divUpNewsControl" style="position:absolute; width:22; left:480; top:434; z-index:3;"> <a href="javascript:;" onmouseover="PerformScroll(-7)" onmouseout="CeaseScroll()"><img src="images/scroll_up.jpg" width="22" height="16" border="0"></a></div>
+<div id="divMidNewsControl" style="position:absolute; left:430; top:427; z-index:1;"><img src="images/news_bottom.gif" width="270" height="33"></div>
+<div id="divDownNewsControl" style="position:absolute; width:22; left:640; top:434; z-index:3;"> <a href="javascript:;" onmouseover="PerformScroll(7)" onmouseout="CeaseScroll()"><img src="images/scroll_down.jpg" width="22" height="16" border="0"></a></div>
+
+<div id="divNewsContainer" style="position:absolute; width:330; height:330; overflow:hidden; top:95; left:405; clip:rect(0,320,330,0); visibility:hidden"> 
+  <div id="divNewsContent" style="position:absolute; top:0; left:0;">	  
+	<table border="0" cellspacing="10" cellpadding="1">
+      <tbody><tr>
+        <td width="10"><img src="images/spacer.gif" width="10" height="300"></td>
+        <td width="260" valign="top" class="newscopy">
+
+<p><strong>November 12, 2010</strong></p>
+
+<p>The critically acclaimed Grand Theft Auto Trilogy of Grand Theft Auto III, Grand Theft Auto: Vice City and Grand Theft Auto: San Andreas officially arrives for the Macintosh today.</p>
+
+<p>These incomparable classics are now available together on the Mac for the first time, exclusively via TransGamingâ€™s <a class="newscopy" href="http://gametreeonline.com/" target="_blank">GameTreeOnline.com</a> Mac gaming portal for 30 days, with additional retailers to follow across North America and Europe.</p>
+
+
+<p><strong>September 23, 2005</strong></p>
+
+<p>Rockstar Games is pleased to announce that Grand Theft Auto: The Trilogy is coming to the XBox® in October. The compilation features Grand Theft Auto 3, Grand Theft Auto: Vice City, and  Grand Theft Auto: San Andreas together for the first time as a complete trilogy. Grand Theft Auto: The Trilogy is set to hit shelves in North America on October 18, 2005.</p>
+
+<p>Additional information about Grand Theft Auto 3, Grand Theft Auto: Vice City and Grand Theft Auto: San Andreas is available at: <a href="http://www.rockstargames.com/grandtheftauto" target="_blank" class="newscopy">www.rockstargames.com/grandtheftauto</a>.</p> 
+
+
+
+<p><strong>September 23, 2005</strong></p>
+
+<p>Rockstar Games is pleased to announce Grand Theft Auto: San Andreas Special Edition for the PlayStation®2 computer entertainment system, which will include on DVD "The Introduction" and Rockstar's debut documentary film, "Sunday Driver".  Grand Theft Auto: San Andreas Special Edition will be in stores on October 18, 2005.</p>
+
+<p>Highlighting the action in the days before the story in Grand Theft Auto: San Andreas begins, The Introduction is told from various characters' viewpoints, which are intertwined together to reveal the network of organized crime forces operating throughout the state of San Andreas. Tension builds as threats are carried out, stakes are raised and communication breaks down. In Los Santos, a drive-by shooting in Grove Street Family's territory ignites a series of events to be further explored in the game.</p>
+
+<p>Sunday Driver is an all-access documentary film chronicling the Compton/Watts chapter of California's low rider car club, The Majestics. A cutting edge and uncompromising film, Sunday Driver is an evolution of the Rockstar brand into film. Directed by Carol Strong, the documentary offers an incredible portrait of a community working together to build the ultimate customized vehicles while struggling to legitimize their lifestyle under close scrutiny by the authorities. With an upfront look at the men behind the chrome, Sunday Driver explores the origins of the Majestics' car club and, by using first person interviews, explains what it means to be a Majestic. Dedicated to creating the definitive modified automobile, The Majestics come together to help each other realize their dreams. Sunday Driver will also be released separately on UMD, a format used by the PSP(TM) (PlayStation® Portable) system.  For more information on Sunday Driver, including the official trailer, clips, stills and more, check out 
+the official Sunday Driver website at <a href="http://www.rockstargames.com/sundaydriver" target="_blank" class="newscopy">www.rockstargames.com/sundaydriver</a>.</p>  
+
+<p>The Special Edition is the complete Grand Theft Auto: San Andreas experience.</p>
+
+		
+
+<p><b>June 7, 2005</b></p>
+
+<p>Grand Theft Auto: San Andreas is out now for Xbox® and PC. To celebrate, new screenshots and movie clips have been added to the official minisites. Click <a class="newscopy" href="http://www.rockstargames.com/sanandreas/xbox" target="_blank">here</a> for the Xbox minisite and <a class="newscopy" href="http://www.rockstargames.com/sanandreas/pc" target="_blank">here</a> for the PC minisite.</p>
+
+
+<p><b>April 29, 2005</b></p>
+
+<p>Check out the latest issues of Official Xbox Magazine and PC Gamer for some of the first previews of Grand Theft Auto: San Andreas on Xbox and PC, respectively.</p>
+
+<p>"If you have been waiting all this time to play it on Xbox, you won't want to let it pass by; San Andreas is a must-play videogame experience." - Official Xbox Magazine, June 2005</p>
+
+<p>"San Andreas PC offers beautiful hi-res visuals.  
+Forget the real world: I want to revisit Los Santos the next chance I get.  June can't come soon enough." - PC Gamer, June 2005</p>
+
+
+<p><b>April 29, 2005</b></p>
+
+<p>Grand Theft Auto: San Andreas is coming to Xbox and PC on June 7th. The official minisites, featuring screens, specs and more, are now live: <a class="newscopy" href="http://www.rockstargames.com/sanandreas/xbox" target="_blank">Xbox Site</a> - <a class="newscopy" href="http://www.rockstargames.com/sanandreas/pc" target="_blank">PC Site</a></p>
+
+<p>Make sure you're on one of the mailing<br>
+lists below to receive the first word on<br>
+further updates.</p>
+
+
+<p><b>December 16, 2004</b></p>
+
+<p>Rockstar Games is pleased to announce that Grand Theft Auto: San Andreas is making its way to the Xbox® and PC this June. Both versions will be in stores in North America on June 7th, 2005 and in Europe on June 10th, 2005.</p>
+
+<p>Check back soon for more info and media...</p>
+
+		
+<p><b>November 17, 2004</b></p>
+
+<p>Check out the SOUNDTRACK section of the site for all new details on the Grand Theft Auto: San Andreas Box Set Soundtrack</p>
+
+<p>Scheduled for release on December 7th, 2004 in North America and December 6th, 2004 throughout Europe - The Grand Theft Auto: San Andreas 8-CD box set will be one of the most dynamic selections of music ever assembled, spanning the entire San Andreas radio dial.</p>
+
+<p>The San Andreas soundtrack Double CD hits stores this Tuesday, November 23rd, exclusively including the DVD, "The Introduction" - the cinematic prologue to Grand Theft Auto: San Andreas.</p>
+<br>
+
+
+<p><b>November 17, 2004</b></p>
+
+<p>Visit the Rockstar Warehouse at <a class="newscopy" href="http://www.rockstargames.com/warehouse" target="_blank">www.rockstargames.com/warehouse</a> for exclusive access to San Andreas gear - including men's and ladies' tees, baseball caps, board shorts, and more.</p>
+
+<p>Also check out the Official Desktops Series page at <a class="newscopy" target="_blank" href="http://www.rockstargames.com/sanandreas/desktops/">www.rockstargames.com/sanandreas/desktops</a> for some all new wallpapers & postcards just added.</p>
+<br>
+
+
+<p><b>November 17, 2004</b></p>
+
+<p>As the vast many of you are making your way through an epic adventure across Los Santos, San Fierro, Las Venturas, and all points in between... The critical word streams in...</p>
+
+<p>IGN.COM: "I'm not going to beat around the bush. Grand Theft Auto: San Andreas is the single best PlayStation 2 title I have ever played... it has a production value that's second to none, boasts a faithfulness to '90s source material with an eerie accuracy... In short, it's a terrific unending masterpiece of a game -- and one that will never fall victim to an over-exaggeration of its lofty status. It's the defining piece of software for Sony's successful sophomore system, and it's almost impossible to imagine a PlayStation 2 library without it. 
+San Andreas is... a world that can offer different people different things... Live the life you want to live; do the things you want to do, it's entirely up to you. But however you choose to do it, do it now. Drop everything and do it right now. This is the best PlayStation 2 game ever made. Period."</p>
+
+<p>OFFICIAL PLAYSTATION MAGAZINE: "The term 'big' really doesn't do it justice. It's huge, massive, colossal, stupendous, and somewhat humbling in its enormity. No matter what expectations you've developed based on the information that has dribbled out over the course of the past six months, you are wrong. If you're expecting Vice City, only set in the 90's and with some RPG bits, you are wrong. If you believe that they can't possibly push it as much as they have before, that it can't really be that good, you are wrong... the truth is it's spectacular... The game promises just about everything and somehow manages to deliver even more than you expected."</p>
+
+<p>CHIGAGO TRIBUNE: "San Andreas moves toward the next generation of consoles and the kinds of evolving human tales waiting to unfold."</p>
+
+<p>TIME MAGAZINE: "An extraordinary experiment in interactive storytelling... San Andreas combines the richness of art with the freedom of real life to create something entirely new, totally unclassifiable and really, really cool."</p>
+
+<p>NEWSDAY: "A masterpiece."</p>
+
+<p>GAMESPY: "This is precisely the kind of experience that reminds why, exactly, we play games: to be liberated from the constraints of reality, and explore living, breathing worlds."</p>
+
+<p>THE GUARDIAN (UK): "Elaborate, extravagant... a truly epic videogame... the ultimate digital playground."</p>
+
+<p>BBC (UK): "...it builds and expands almost immeasurably upon the last two games... it is hard to envisage anything topping this barnstorming instant classic."</p>
+
+<p>PSW (UK): "The most complete, enchanting, immense and rewarding experience ever seen in gaming... What's been done here is nothing short of magnificent... San Andreas truly redefines gaming for a new generation"</p>
+<br>		
+		
+<p><b>October 26, 2004</b></p>
+
+<p>The ultimate chapter in the Grand Theft Auto trilogy is here.  Grand Theft Auto: San Andreas is in stores now.</p>
+
+<p>"I'm not going to beat around the bush.  Grand Theft Auto: San Andreas is the single best PlayStation 2 title I have ever played." - <a class="newscopy" href="http://ps2.ign.com/articles/559/559560p1.html" target="_blank">IGN.com</a></p>
+<br>
+		
+<p><b>October 19, 2004</b></p>
+
+<p>It's Venturas, baby.  The eagerly anticipated Las Venturas update to the Flash section is here.</p>
+
+<p>Also check out the MOVIES section for the world premiere of "Homecoming": Official Trailer #3.</p>
+
+<p>Just one week until game release.  Visit the BUY NOW section for last minute preorder information!</p>
+<br>
+
+<p><b>October 19, 2004</b></p>
+
+<p>Check out the SOUNDTRACK section for updated information and audio.  
+Including the first word on the "The Introduction" DVD - the cinematic prologue to Grand Theft Auto: San Andreas, exclusively available with the official soundtrack double CD.  
+The double CD tracklist, as well as all-new, extended radio station clips in the soundtrack player await you.		</p>
+<br>
+<p><b>October 1, 2004</b></p>
+
+<p>The Official Grand Theft Auto: San Andreas Desktops Series page has been updated with a newly released set of San Andreas postcards, featuring the cities of Los Santos and San Fierro.</p>
+<p>Visit <a class="newscopy" href="http://www.rockstargames.com/sanandreas/desktops" target="_blank"><u>www.rockstargames.com/sanandreas/desktops</u></a> for desktops, screensavers and postcards.</p>
+<br>
+		
+<p><b>September 25, 2004</b></p>
+
+<p>Site update. The city of San Fierro is now unlocked in the Flash section of the site.</p>
+<p>And in the MOVIES section, the debut of the Grand Theft Auto: San Andreas Official Trailer.</p>
+<br>
+
+<p><b>September 8, 2004</b></p>
+
+<p>By popular demand - the first set of Grand Theft Auto: San Andreas official desktops have just been released.
+Check out <a class="newscopy" href="http://www.rockstargames.com/sanandreas/desktops" target="sadesktops">www.rockstargames.com/sanandreas/desktops</a> for a selection of wallpapers and screensavers in all common screen resolutions.  More to come!</p>
+<br>
+<p><b>September 3, 2004</b></p>
+
+<p>Rockstar Games and Interscope Records Announce Partnership for Grand Theft Auto: San Andreas Soundtrack.</p>
+
+<p>Rockstar Games and Interscope Records proudly announce a joint venture for the soundtrack to Grand Theft Auto: San Andreas.  The details surrounding the artists and track listings on the soundtrack will be kept tightly under wraps until the weeks leading up to the game's launch this October.  Stay tuned for more information.</p>
+<br>
+		<p><b>August 20, 2004</b></p>
+
+		<p>Welcome to the launch of the official Grand Theft Auto: San Andreas website.
+Welcome to Los Santos.</p>
+
+Featuring the debut of the very first San Andreas trailer.<br>
+<p>In grand Grand Theft Auto fashion, much more is always to come.  For the first word on all web updates and other announcements, make sure you're on either the Grand Theft Auto or the Rockstar mailing list at the links provided below.</p>
+
+<p>Grand Theft Auto: San Andreas will be released for the PlayStation®2 computer entertainment system this October.  Preorder now to avoid disappointment.</p>
+<br>
+
+		</td>
+        <td width="10"><img src="images/spacer.gif" width="10" height="10"></td>
+      </tr>
+	  <tr><td width="10" colspan="3"><img src="images/spacer.gif" width="10" height="10"></td></tr>
+</tbody></table>
+</div>
+</div>
+
+<div class="newscopy" style="position:absolute; width:280; left:530; top:473; z-index:3;">
+<a class="newscopy" href="http://www.rockstargames.com/subscribe">Subscribe to our mailing list</a>
+</div>
+</div>
+
+<div id="screens">
+<table width="755" height="60" border="0" cellpadding="55" cellspacing="0">
+  <tbody><tr>
+    <td align="right" valign="middle">
+	<img src="images/screenshots_title.gif" width="180" height="44">
+	</td>
+  </tr>
+</tbody></table>
+<div id="divUpScreensControl" style="position:absolute; width:22; left:555; top:437; z-index:3;"> <a href="javascript:;" onmouseover="PerformScroll(-7)" onmouseout="CeaseScroll()"><img src="images/scroll_up.jpg" width="22" height="16" border="0"></a></div>
+<div id="divMidScreensControl" style="position:absolute; left:530; top:432; z-index:1;"><img src="images/screen_bottom.gif" width="161" height="24"></div>
+<div id="divDownScreensControl" style="position:absolute; width:22; left:650; top:437; z-index:3;"> <a href="javascript:;" onmouseover="PerformScroll(7)" onmouseout="CeaseScroll()"><img src="images/scroll_down.jpg" width="22" height="16" border="0"></a></div>
+
+<div id="divScreensContainer" style="position:absolute; width:320; height:330; overflow:hidden; top:95; left:520; clip:rect(0,320,330,0); visibility:hidden"> 
+  <div id="divScreensContent" style="position:absolute; top:0; left:0;">
+	<table border="0" cellspacing="10" cellpadding="1">
+          <tbody><tr>
+            <td width="78" bgcolor="#FFFFFF"><a href="javascript:resizeWin('screens/screen17.html','screens','640','480');"><img src="images/screen17_thumb.jpg" width="78" height="54" border="0"></a></td>
+            <td width="78" bgcolor="#FFFFFF"><a href="javascript:resizeWin('screens/screen18.html','screens','640','480');"><img src="images/screen18_thumb.jpg" width="78" height="54" border="0"></a></td>
+          </tr>
+		  <tr>
+            <td width="78" bgcolor="#FFFFFF"><a href="javascript:resizeWin('screens/screen19.html','screens','640','480');"><img src="images/screen19_thumb.jpg" width="78" height="54" border="0"></a></td>
+            <td width="78" bgcolor="#FFFFFF"><a href="javascript:resizeWin('screens/screen11.html','screens','640','480');"><img src="images/screen11_thumb.jpg" width="78" height="54" border="0"></a></td>			
+          </tr>	
+          <tr>
+            <td width="78" bgcolor="#FFFFFF"><a href="javascript:resizeWin('screens/screen12.html','screens','640','480');"><img src="images/screen12_thumb.jpg" width="78" height="54" border="0"></a></td>
+            <td width="78" bgcolor="#FFFFFF"><a href="javascript:resizeWin('screens/screen13.html','screens','640','480');"><img src="images/screen13_thumb.jpg" width="78" height="54" border="0"></a></td>			
+          </tr>
+		  <tr>
+            <td width="78" bgcolor="#FFFFFF"><a href="javascript:resizeWin('screens/screen14.html','screens','640','480');"><img src="images/screen14_thumb.jpg" width="78" height="54" border="0"></a></td>
+            <td width="78" bgcolor="#FFFFFF"><a href="javascript:resizeWin('screens/screen15.html','screens','640','480');"><img src="images/screen15_thumb.jpg" width="78" height="54" border="0"></a></td>			
+          </tr>
+		  <tr>
+            <td width="78" bgcolor="#FFFFFF"><a href="javascript:resizeWin('screens/screen16.html','screens','640','480');"><img src="images/screen16_thumb.jpg" width="78" height="54" border="0"></a></td>
+            <td width="78" bgcolor="#FFFFFF"><a href="javascript:resizeWin('screens/screen01.html','screens','640','480');"><img src="images/screen01_thumb.jpg" width="78" height="54" border="0"></a></td>			
+          </tr>	
+          <tr>
+            <td width="78" bgcolor="#FFFFFF"><a href="javascript:resizeWin('screens/screen02.html','screens','640','480');"><img src="images/screen02_thumb.jpg" width="78" height="54" border="0"></a></td>
+            <td width="78" bgcolor="#FFFFFF"><a href="javascript:resizeWin('screens/screen03.html','screens','640','480');"><img src="images/screen03_thumb.jpg" width="78" height="54" border="0"></a></td>
+          </tr>
+		  <tr>
+            <td width="78" bgcolor="#FFFFFF"><a href="javascript:resizeWin('screens/screen04.html','screens','640','480');"><img src="images/screen04_thumb.jpg" width="78" height="54" border="0"></a></td>
+            <td width="78" bgcolor="#FFFFFF"><a href="javascript:resizeWin('screens/screen05.html','screens','640','480');"><img src="images/screen05_thumb.jpg" width="78" height="54" border="0"></a></td>			
+          </tr>
+		  <tr>
+            <td width="78" bgcolor="#FFFFFF"><a href="javascript:resizeWin('screens/screen06.html','screens','640','480');"><img src="images/screen06_thumb.jpg" width="78" height="54" border="0"></a></td>
+            <td width="78" bgcolor="#FFFFFF"><a href="javascript:resizeWin('screens/screen07.html','screens','640','480');"><img src="images/screen07_thumb.jpg" width="78" height="54" border="0"></a></td>			
+          </tr>
+		  <tr>
+	        <td width="78" bgcolor="#FFFFFF"><a href="javascript:resizeWin('screens/screen08.html','screens','640','480');"><img src="images/screen08_thumb.jpg" width="78" height="54" border="0"></a></td>
+			<td width="78" bgcolor="#FFFFFF"><a href="javascript:resizeWin('screens/screen09.html','screens','640','480');"><img src="images/screen09_thumb.jpg" width="78" height="54" border="0"></a></td>			 
+          </tr>
+		  <tr>
+            <td width="78" bgcolor="#FFFFFF"><a href="javascript:resizeWin('screens/screen10.html','screens','640','480');"><img src="images/screen10_thumb.jpg" width="78" height="54" border="0"></a></td>
+			<td></td>
+          </tr>
+        </tbody></table>
+</div></div>
+</div>
+
+<div id="movies">
+
+	<div class="movietext" style="position:absolute; top:171; left:65">
+	WINDOWS MEDIA PLAYER 9<br>
+	<a style="color:#000000" href="javascript:resizeWin('trailers/age_gate3_wmv.html', 'trailer_large', '480', '380');">480x360 (large)</a>  9.5MB<br>
+	<br>
+	QUICKTIME<br>
+	<a style="color:#000000" href="javascript:resizeWin('trailers/age_gate3_small.html', 'trailer_small', '320', '260');">320x240 (regular)</a> 34.7MB | <a style="color:#000000" href="javascript:resizeWin('trailers/age_gate3_large.html', 'trailer_large', '480', '380');">480x360 (large)</a> 68.4MB
+	</div>
+	
+	<div class="movietext" style="position:absolute; top:293; left:65">
+	WINDOWS MEDIA PLAYER 9<br>
+	<a style="color:#000000" href="javascript:resizeWin('trailers/age_gate2_wmv.html', 'trailer2_large', '480', '380');">480x360 (large)</a>  8.4MB<br>
+	<br>
+	QUICKTIME<br>
+	<a style="color:#000000" href="javascript:resizeWin('trailers/age_gate2_small.html', 'trailer2_small', '320', '260');">320x240 (regular)</a> 39MB | <a style="color:#000000" href="javascript:resizeWin('trailers/age_gate2_large.html', 'trailer2_large', '480', '380');">480x360 (large)</a> 81.2MB
+	</div>
+	
+	<div class="movietext" style="position:absolute; top:408; left:65">
+	WINDOWS MEDIA PLAYER 9<br>
+	<a style="color:#000000" href="javascript:resizeWin('trailers/age_gate_small_wmv.html', 'trailer_small', '320', '260');">320x240 (regular)</a>  8.4MB | <a style="color:#000000" href="javascript:resizeWin('trailers/age_gate_wmv.html', 'trailer_large', '640', '500');">640x480 (extra large)</a>  9MB
+	<br><br>
+	QUICKTIME<br>
+	<a style="color:#000000" href="javascript:resizeWin('trailers/age_gate_small.html', 'trailer_small', '320', '260');">320x240 (regular)</a> 31MB |	<a style="color:#000000" href="javascript:resizeWin('trailers/age_gate_large.html', 'trailer_large', '640', '500');">640x480 (extra large)</a> 107MB	
+	</div>	
+
+	<div class="movietext" style="position:absolute; top:378; left:422; width:280">
+	WINDOWS MEDIA PLAYER 9<br>
+	<a style="color:#000000" href="javascript:resizeWin('trailers/age_gateintro_wmv.html', 'trailerintrolarge', '480', '380');">480x360 (large)</a>  4.3MB<br>
+	<br>
+	QUICKTIME<br>
+	<a style="color:#000000" href="javascript:resizeWin('trailers/age_gateintro_small.html', 'trailerintrosmall', '320', '260');">320x240 (regular)</a> 9.4MB | <a style="color:#000000" href="javascript:resizeWin('trailers/age_gateintro_large.html', 'trailerintrolarge', '480', '380');">480x360 (large)</a> 18.5MB<br><br>
+	* "The Introduction" DVD is exclusively available with purchase of the San Andreas Official Soundtrack Double CD.  Visit the SOUNDTRACK	section for more details...
+	</div>	
+
+</div>
+
+<div id="sound">
+
+<div id="divUpBuyControl" style="position:absolute; width:22; left:97; top:355; z-index:3;"> <a href="javascript:;" onmouseover="PerformScroll(-7)" onmouseout="CeaseScroll()"><img src="images/scroll_up.jpg" width="22" height="16" border="0"></a></div>
+<div id="divDownBuyControl" style="position:absolute; width:22; left:267; top:350; z-index:3;"> <a href="javascript:;" onmouseover="PerformScroll(7)" onmouseout="CeaseScroll()"><img src="images/scroll_down.jpg" width="22" height="16" border="0"></a></div>
+
+<div id="divSoundContainer" style="position:absolute; width:280; height:200; overflow:hidden; top:120; left:80; clip:rect(0,320,210,0); visibility:hidden"> 
+<div id="divSoundContent" class="copy" style="position:absolute; top:140; left: 80; width:280">
+<p>Rockstar Games and Interscope Records Announce Box Set Soundtrack Details For Grand Theft Auto: San Andreas</p>
+
+<p>8-CD Box Set Follows the November 22nd European and November 23rd North American releases of the Grand Theft Auto: San Andreas Double CD featuring the bonus DVD, 'The Introduction'</p>
+
+<p>New York, NY - November 16, 2004 - Rockstar Games, the world-renowned publishing label of Take-Two Interactive Software, Inc. (NASDAQ: TTWO), and Interscope Records, a part of Universal Music Group, proudly announce the details of the 8-CD box set soundtrack to Grand Theft Auto: San Andreas, the latest installment in the best-selling Grand Theft Auto franchise. The box set is scheduled for release on December 7th, 2004 in North America and December 6th, 2004 throughout Europe.</p>
+
+<p>With the game set in the early 1990's, the Grand Theft Auto: San Andreas soundtrack features one of the most dynamic selections of music ever assembled. The music spans the entire FM radio dial of the West Coast during this particularly influential period in American music and culture. The 8-CD box set will feature over 80 music tracks as well as some of the satirical commercials and witty DJ dialogue emblematic of the Grand Theft Auto franchise. Each disc of the box set will feature a style of music available in Grand Theft Auto: San Andreas' many in-game radio stations - from Willie Nelson to Public Enemy, Rick James to Humble Pie, Soundgarden to James Brown, En Vogue to Black Uhuru - making this one of the most diverse and powerful collections in music history.</p>
+
+The complete track listing for the 8-CD box set is as follows:<p>
+CD1 - Bounce FM<br>1. Bounce FM Intro<br>2. Kool & The Gang - Hollywood Swingin'<br>3. Rick James - Cold Blooded<br>4. The Gap Band - You Dropped A Bomb On Me<br>5. Cameo - Candy<br>6. Ronnie Hudson - West Coast Poplock<br>7. You're On Bounce FM<br>8. Zapp - I Can Make You Dance<br>9. Dazz Band - Let It Whip<br>10. Roy Ayers - Running Away<br>11. Ohio Players - Funky Worm<br>12. Maze - Twilight<br>13. That Was Bounce FM<br>14. Glory Hole Theme Park: Fun With Strangers<br>15. Eris Pump Up Shoes</p><p>
+CD2 - Radio Los Santos / Playback FM<br>1. Playback FM Intro<br>2. Public Enemy - Rebel Without A Pause<br>3. Brand Nubian - Brand Nubian<br>4. Slick Rick - Children's Story<br>5. You're On Playback FM<br>6. Eric B. & Rakim - I Know You Got Soul<br>7. Rob Base & DJ EZ Rock - It Takes Two<br>8. That Was Playback FM<br>9. Kid Frost - La Raza<br>10. The D.O.C. - It's Funky Enough<br>11. Da Lench Mob - Guerillas In Tha Mist<br>12. Compton's Most Wanted - Hood Took Me Under<br>13. Cypress Hill - How I Could Just Kill A Man<br>14. 2 Pac - I Don't Give A Fuck<br>15. Ice Diamonds<br>16. Commando Pest Eradication</p><p>
+CD3 - Mastersounds 98.3<br>1. Mastersounds 98.3 Intro<br>2. James Brown - The Payback<br>3. The Chakachas - Jungle Fever<br>4. Lyn Collins - Think About It<br>5. Bobby Byrd - I Know You Got Soul<br>6. Charles Wright - Express Yourself<br>7. Maceo & The Macks - Cross The Tracks (We Better Go Back)<br>8. You're On Mastersounds 98.3<br>9. Sir Joe Quarterman & Free Soul - (I Got) So Much Trouble In My Mind <br>10. The J.B.'s - Grunt<br>11. Harlem Underground Band - Smokin' Cheeba Cheeba<br>12. James Brown - Funky President<br>13. Booker T & The MG's - Green Onions<br>14. That Was Mastersounds 98.3<br>15. Cluckin' Bell<br>16. Zebra Bar: Fun To Try</p><p>
+CD4 - K-ROSE<br>1. K-Rose Intro<br>2. Willie Nelson - Crazy<br>3. Hank Williams - Hey Good Lookin'<br>4. Conway Twitty & Loretta Lynn - Louisiana Woman, Mississippi Man<br>5. Statler Brothers - Bed of Roses<br>6. You're On K-Rose<br>7. Jerry Reed - Amos Moses<br>8. Eddie Rabbit - I Love A Rainy Night<br>9. Whitey Shafer - All My Ex's Live In Texas<br>10. Ed Bruce - Mammas Don't Let Your Babies Grow Up To Be Cowboys<br>11.Merle Haggard - Always Wanting You<br>12. Patsy Cline - Three Cigarettes In The Ashtray<br>13. That Was K-Rose<br>14. Logger<br>15. Starfish Resort And Casino</p><p>
+CD5 - CSR 103:9<br>1. CSR 103:9 Intro<br>2. Guy - Groove Me<br>3. Today - I Got The Feeling<br>4. Bobby Brown - Don't Be Cruel<br>5. En Vogue - My Lovin' (Never Gonna Get It)<br>6. Wrecks-N-Effect - New Jack Swing<br>7. Boyz II Men - Motownphilly<br>8. You're On CSR 103:9<br>9. Bell Biv DeVoe - Poison<br>10. Samuelle - So You Like What You See<br>11. SWV - I'm So Into You<br>12. Aaron Hall - Don't Be Afraid<br>13. Ralph Tresvant - Sensitivity<br>14. That Was CSR 103:9<br>15. Renegade Cologne<br>16. The Epsilon Program: Covet</p><p>
+CD6 - K-JAH West<br>1. K-Jah Intro<br>2. Max Romeo & The Upsetters - Chase The Devil<br>3. Barrington Levy - Here I Come<br>4. Black Uhuru - Great Train Robbery<br>5. Blood Sisters - Ring My Bell<br>6. Toots & The Maytals - Funky Kingston<br>7. Augustus Pablo - King Tubby Meets The Rockers Uptown<br>8. You're On K-Jah<br>9. Pliers - Bam Bam<br>10. Dillinger - Cocaine in My Brain<br>11. Black Harmony - Don't Let It go To Your Head<br>12. Reggie Stepper - Drum Pan Sound<br>13. The Maytals - Pressure Drop<br>14. That Was K-Jah<br>15. Sooth Cough Medicine<br>16. Wrestling On Weazel</p><p>
+CD7 - K-DST <br>1. K-DST Intro<br>2. Heart - Barracuda<br>3. Kiss - Strutter<br>4. Boston - Smokin'<br>5. Grand Funk Railroad - Some Kind of Wonderful<br>6. Joe Cocker - Woman To Woman<br>7. Humble Pie - Get Down To It<br>8. You're On K-Dst<br>9. America- A Horse With No Name<br>10. The Who - Eminence Front<br>11. Lynyrd Skynyrd - Free Bird<br>12. Eddie Money - Two Tickets To Paradise<br>13. Rod Stewart - Young Turks<br>14. That Was K-DST<br>15. Midlife Crisis Center<br>16. San Andreas Telephone: New Father</p><p>
+CD8 - Radio X<br>1. Radio X Intro<br>2. Soundgarden - Rusty Cage<br>3. Helmet - Unsung <br>4. Faith No More - Midlife Crisis<br>5. Stone Temple Pilots - Plush<br>6. Rage Against The Machine - Killing In The Name<br>7. You're On Radio X<br>8. Living Colour - Cult Of Personality<br>9. Danzig - Mother<br>10. Depeche Mode - Personal Jesus<br>11. Jane's Addiction - Been Caught Stealing<br>12. L7 - Pretend We're Dead<br>13. That Was Radio X<br>14. My Five Uncles<br>15. Exsorbeo Handheld Gaming System</p><p>
+
+</p><p align="center">******************************************</p>
+
+<p>Rockstar Games and Interscope Records Reveal Grand Theft Auto: San Andreas Soundtrack Details</p>
+
+<p>Grand Theft Auto: San Andreas Double CD and 8 CD Box Soundtrack Set available in November</p>
+
+<p>New York, NY Â– October 18, 2004 - Rockstar Games, the world-renowned publishing label of Take-Two Interactive Software, Inc. (NASDAQ: TTWO), and Interscope Records, a part of Universal Music Group, proudly announce the release of a double CD soundtrack as well as an 8 CD box set soundtrack to the highly-anticipated videogame Grand Theft Auto: San Andreas, the next installment in the best-selling Grand Theft Auto franchise. The double CD and box set are scheduled for release on November 23rd, 2004 in the US and November 22nd, 2004 throughout Europe.</p>
+
+<p>As a bonus the official soundtrack double CD will feature a separate stand-alone DVD containing 'The Introduction', the cinematic prologue to Grand Theft Auto: San Andreas.  Â‘The Introduction' tells the full story of the events leading up to CJs return to San Andreas. Why was he forced to come back? What is he leaving behind and what is he really walking into? This exclusive prequel is not available anywhere else and has been crafted with the highest production standards Rockstar is famous for. Look for some familiar faces making a surprise return.
+With the game set in the early 1990's, the Grand Theft Auto: San Andreas soundtrack will feature a large variety of tracks spanning the FM radio dial of the West Coast during this particularly influential period in American music and culture. The double CD will feature a mix of select tracks from Grand Theft Auto: San Andreas' many in-game radio stations while each album of the 8 CD box set will replicate a music station from the game featuring a broader selection of tracks ranging from contemporary west coast and classic east coast hip-hop, funk, rare groove, new jack swing and contemporary soul, alternative rock, classic rock, reggae and country. </p>
+
+<p>In-game radio stations have become one of the signature aspects of the Grand Theft Auto franchise, delivering a realistic radio experience by allowing players to tune the radio station in the huge selection of vehicles in the game to any station they like, complete with hours of satirical commercials and DJ banter that cleverly parodies a wide mix of radio formats. The radio stations in Grand Theft Auto: San Andreas will feature the most staggering selection of music ever assembled for a video game with over one-hundred and fifty tracks from artists including James Brown, Willie Nelson, 2 Pac, and Rage Against the Machine plus many, many more that encompass a great deal of the radio spectrum of the early 90's
+The double CD also includes as a bonus track an exclusive cover of the Nine Inch Nails early 90s industrial staple "Head Like A Hole" by Northern Californian punk band AFI, who formed in 1991. The track has been recorded by AFI specifically for the Grand Theft Auto: San Andreas soundtrack album and as a tribute to this unique era in music.</p>
+
+<p>The complete track listing for the double CD is as follows:</p>
+
+<b>CD 1</b><br>
+1. The Theme From San Andreas<br>
+2. Rage Against The Machine - Killing In The Name<br>
+3. 2 Pac - I Don't Give A Fuck<br>
+4. James Brown - The Payback<br>
+5. Ronnie Hudson - West Coast Poplock<br>
+6. Guy - Groove Me<br>
+7. Eddie Money - Two Tickets To Paradise <br>
+8. Cypress Hill - How I Could Just Kill A Man<br>
+9. The Maytals - Pressure Drop<br>
+10. Slick Rick - Children's Story<br>
+11. Rick James - Cold Blooded<br>
+12. Raze - Break 4 Love
+<p><b>CD 2</b><br>
+1. Ohio Players - Funky Worm<br>
+2. Heart - Barracuda<br>
+3. Compton's Most Wanted - Hood Took Me Under <br>
+4. Lyn Collins - Think About It<br>
+5. Public Enemy - Rebel Without A Pause<br>
+6. Faith No More - Midlife Crisis<br>
+7. Bell Biv Devoe - Poison <br>
+8. Max Romeo & The Upsetters - Chase The Devil<br>
+9. Eric B & Rakim - I Know You Got Soul<br>
+10. Willie Nelson - Crazy
+</p><p><b>Bonus Track:</b></p>
+11. AFI - Head Like A Hole<br>
+</div>
+</div>
+
+
+<div class="copy" style="position:absolute; top:386; left: 180; width:60">
+<a href="http://www.interscope.com" target="_blank"><img src="images/trans.gif" height="80" width="60" border="0"></a>
+</div>
+
+<div class="copy" style="position:absolute; top:31; left: 446; width:255">
+<a href="javascript:resizeWin('soundtrack/player2.htm','player','646','487');" ;=""><img src="images/trans.gif" height="157" width="255" border="0"></a>
+</div>
+
+<div class="copy" style="position:absolute; top:411; left: 406; width:285">
+<a href="javascript:resizeWin('introduction_pop.html','player','350','200');" ;=""><img src="images/trans.gif" height="97" width="285" border="0"></a>
+</div>
+
+</div>
+
+<div id="buy">
+<div id="buyps2" style="visibility:hidden; position:absolute; left:0; top:0;">
+<table width="755" height="530" border="0" cellpadding="55" cellspacing="0" background="image/bg_buynow.jpg">
+  <tbody><tr>
+    <td align="left" valign="middle"><table width="600" border="0" cellspacing="0" cellpadding="0">
+      <tbody><tr>
+        <td><img src="images/buynow_title.gif" width="271" height="42"></td>
+        <td><img src="images/buynow_ps2_on.gif" width="146" height="42"></td>
+        <td><a href="javascript:togBuy('buyxbox');"><img src="images/buynow_xbox_off.gif" width="104" height="42" border="0"></a></td>
+        <td><a href="javascript:togBuy('buypc');"><img src="images/buynow_pc_off.gif" width="120" height="42" border="0"></a></td>
+      </tr>
+      <tr>
+        <td colspan="4"><img src="images/spacer.gif" width="10" height="15"></td>
+      </tr>
+      <tr>
+        <td colspan="4"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tbody><tr>
+            <td rowspan="5"><img src="images/spacer.gif" width="15" height="1"></td>
+            <td rowspan="5" width="200"><img src="images/FOB_ps2.jpg" width="200" height="285"></td>
+            <td rowspan="5"><img src="images/spacer.gif" width="15" height="1"></td>
+            <td><img src="images/spacer.gif" width="1" height="10"></td>
+            </tr>
+          <tr>
+            <td><img src="images/buynow_text_ps2.gif" width="319" height="12"><br>
+              <img src="images/spacer.gif" width="1" height="8"></td>
+          </tr>
+          <tr>
+            <td><img src="images/line.gif" width="350" height="1"></td>
+          </tr>
+          <tr>
+            <td><img src="images/spacer.gif" width="1" height="10"></td>
+          </tr>
+          <tr>
+            <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="2">
+              <tbody><tr>
+                <td><a href="javascript:load_page('0');"><img src="images/buy_rockstarwarehouse.gif" width="160" height="15" border="0"></a></td>
+                <td><a href="javascript:load_page('8');"><img src="images/buy_alapagefr.gif" width="160" height="15" border="0"></a></td>
+              </tr>
+              <tr>
+                <td><a href="javascript:load_page('16');"><img src="images/buy_fye.gif" width="160" height="15" border="0"></a></td>
+                <td><a href="javascript:load_page('9');"><img src="images/buy_fnacfr.gif" width="160" height="15" border="0"></a></td>
+              </tr>
+              <tr>
+                <td><a href="javascript:load_page('17');"><img src="images/buy_coconuts.gif" width="160" height="15" border="0"></a></td>
+                <td><a href="javascript:load_page('10');"><img src="images/buy_gameswizardsau.gif" width="160" height="15" border="0"></a></td>
+              </tr>
+              <tr>
+                <td><a href="javascript:load_page('6');"><img src="images/buy_amazonuk.gif" width="160" height="15" border="0"></a></td>
+                <td><a href="javascript:load_page('11');"><img src="images/buy_gpstore.gif" width="160" height="15" border="0"></a></td>
+              </tr>
+              <tr>
+                <td><a href="javascript:load_page('14');"><img src="images/buy_amazonde.gif" width="160" height="15" border="0"></a></td>
+                <td><a href="javascript:load_page('12');"><img src="images/buy_dvdzonebe.gif" width="160" height="15" border="0"></a></td>
+              </tr>
+              <tr>
+                <td><a href="javascript:load_page('15');"><img src="images/buy_gamestationuk.gif" width="160" height="15" border="0"></a></td>
+                <td><a href="http://www.freerecordshop.nl/is-bin/INTERSHOP.enfinity/WFS/FreeRecordShop-FRS_B2C_NL-Site/nl_NL/-/EUR/ViewFas-Detail?fh_Params=fh_secondid%3D10217677%26fh_location%3D%252f%252ffrs%252fnl_NL%252f_shop%253e%257bfreerecordshop%257d%252fcategories%253c%257bfrs_03%257d%26fh_reftheme%3Ddetail&SubCat=03" target="_blank"><img src="images/buy_freerecordshopnl.gif" width="160" height="15" border="0"></a></td>
+              </tr>
+              <tr>
+                <td><a href="javascript:load_page('7');"><img src="images/buy_ebgamesde.gif" width="160" height="15" border="0"></a></td>
+                <td> </td>
+              </tr>
+            </tbody></table></td>
+            </tr>
+        </tbody></table>          
+          <p> </p>          <img src="images/spacer.gif" width="10" height="10"></td>
+        </tr>
+    </tbody></table>    </td>
+  </tr>
+</tbody></table>
+</div>
+
+<div id="buyxbox" style="visibility:hidden; position:absolute; left:0; top:0;">
+<table width="755" height="530" border="0" cellpadding="55" cellspacing="0" background="image/bg_buynow.jpg">
+  <tbody><tr>
+    <td align="left" valign="middle"><table width="600" border="0" cellspacing="0" cellpadding="0">
+      <tbody><tr>
+        <td><img src="images/buynow_title.gif" width="271" height="42"></td>
+        <td><a href="javascript:togBuy('buyps2');"><img src="images/buynow_ps2_off.gif" width="146" height="42" border="0"></a></td>
+        <td><img src="images/buynow_xbox_on.gif" width="104" height="42" border="0"></td>
+        <td><a href="javascript:togBuy('buypc');"><img src="images/buynow_pc_off.gif" width="120" height="42" border="0"></a></td>
+      </tr>
+      <tr>
+        <td colspan="4"><img src="images/spacer.gif" width="10" height="15"></td>
+      </tr>
+      <tr>
+        <td colspan="4"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tbody><tr>
+            <td rowspan="5"><img src="images/spacer.gif" width="15" height="1"></td>
+            <td rowspan="5" width="200"><img src="images/FOB_xbox.jpg" width="200" height="285"></td>
+            <td rowspan="5"><img src="images/spacer.gif" width="15" height="1"></td>
+            <td><img src="images/spacer.gif" width="1" height="2"></td>
+            </tr>
+          <tr>
+            <td><img src="images/buynow_text_ps2.gif" alt="" width="319" height="12" border="0"><br>
+              <img src="images/spacer.gif" width="1" height="2"></td>
+          </tr>
+          <tr>
+            <td><img src="images/line.gif" width="350" height="1"></td>
+          </tr>
+          <tr>
+            <td><img src="images/spacer.gif" width="1" height="2"></td>
+          </tr>
+          <tr>
+            <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="2">
+              <tbody><tr>
+                <td><a href="http://store.yahoo.com/rockstarwarehouse/grthausananx.html" target="_blank"><img src="images/buy_rockstarwarehouse.gif" width="160" height="15" border="0"></a></td>
+                <td><a href="http://www.ebgames.de/product_info.php/products_id/3433" target="_blank"><img src="images/buy_ebgamesde.gif" width="160" height="15" border="0"></a></td>
+              </tr>
+              <tr>
+                <td><a href="https://www.amazon.co.uk/exec/obidos/ASIN/B0007A5FWG/qid=1106790873/ref=sr_8_xs_ap_i1_xgl/202-4010362-5186268" target="_blank"><img src="images/buy_amazonuk.gif" width="160" height="15" border="0"></a></td>
+                <td><a href="http://www.gpstore.co.nz/Games/1469563.html" target="_blank"><img src="images/buy_gpstore.gif" width="160" height="15" border="0"></a></td>
+              </tr>
+              <tr>
+                <td><a href="https://www.amazon.de/exec/obidos/ASIN/B00076YSDW/qid=1106790988/ref=pd_ka_7/028-0817155-9794969" target="_blank"><img src="images/buy_amazonde.gif" alt="" width="160" height="15" border="0"></a></td>
+                <td><a href="http://www.freerecordshop.nl/pages/productview.asp?ProductID=701996" target="_blank"><img src="images/buy_freerecordshopnl.gif" width="160" height="15" border="0"></a></td>
+              </tr>
+            </tbody></table></td>
+            </tr>
+        </tbody></table>          
+          <p> </p><img src="images/spacer.gif" width="10" height="10"></td>
+        </tr>
+    </tbody></table>    </td>
+  </tr>
+</tbody></table>
+</div>
+
+<div id="buypc" style="visibility:hidden; position:absolute; left:0; top:0;">
+<table width="755" height="530" border="0" cellpadding="55" cellspacing="0" background="image/bg_buynow.jpg">
+  <tbody><tr>
+    <td align="left" valign="middle"><table width="600" border="0" cellspacing="0" cellpadding="0">
+      <tbody><tr>
+        <td><img src="images/buynow_title.gif" width="271" height="42"></td>
+        <td><a href="javascript:togBuy('buyps2');"><img src="images/buynow_ps2_off.gif" width="146" height="42" border="0"></a></td>
+        <td><a href="javascript:togBuy('buyxbox');"><img src="images/buynow_xbox_off.gif" width="104" height="42" border="0"></a></td>
+        <td><img src="images/buynow_pc_on.gif" width="120" height="42" border="0"></td>
+      </tr>
+      <tr>
+        <td colspan="4"><img src="images/spacer.gif" width="10" height="15"></td>
+      </tr>
+      <tr>
+        <td colspan="4"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tbody><tr>
+            <td rowspan="5"><img src="images/spacer.gif" width="15" height="1"></td>
+            <td rowspan="5" width="200"><img src="images/FOB_pc.jpg" width="200" height="285"></td>
+            <td rowspan="5"><img src="images/spacer.gif" width="15" height="1"></td>
+            <td><img src="images/spacer.gif" width="1" height="2"></td>
+            </tr>
+          <tr>
+            <td><img src="images/buynow_text_ps2.gif" alt="" width="319" height="12" border="0"><br>
+              <img src="images/spacer.gif" width="1" height="1"></td>
+          </tr>
+          <tr>
+            <td><img src="images/line.gif" width="350" height="1"></td>
+          </tr>
+          <tr>
+            <td><img src="images/spacer.gif" width="1" height="2"></td>
+          </tr>
+          <tr>
+            <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="2">
+              <tbody><tr>
+                <td><a href="http://store.yahoo.com/rockstarwarehouse/grthausananp1.html" target="_blank"><img src="images/buy_rockstarwarehouse.gif" width="160" height="15" border="0"></a></td>
+                <td><a href="http://www.ebgames.de/product_info.php/products_id/3432" target="_blank"><img src="images/buy_ebgamesde.gif" width="160" height="15" border="0"></a></td>
+              </tr>
+              <tr>
+                <td><a href="https://www.amazon.co.uk/exec/obidos/ASIN/B0007A5FWQ/qid=1106790873/ref=sr_8_xs_ap_i1_xgl/202-4010362-5186268" target="_blank"><img src="images/buy_amazonuk.gif" width="160" height="15" border="0"></a></td>
+                <td><a href="http://www.gpstore.co.nz/Games/1466945.html" target="_blank"><img src="images/buy_gpstore.gif" width="160" height="15" border="0"></a></td>
+              </tr>
+              <tr>
+                <td><a href="https://www.amazon.de/exec/obidos/ASIN/B00076YSDM/qid=1106790988/ref=pd_ka_1/028-0817155-9794969" target="_blank"><img src="images/buy_amazonde.gif" alt="" width="160" height="15" border="0"></a></td>
+                <td><a href="http://www.freerecordshop.nl/is-bin/INTERSHOP.enfinity/WFS/FreeRecordShop-FRS_B2C_NL-Site/nl_NL/-/EUR/ViewFas-Detail?fh_Params=fh_secondid%3D7340658%26fh_location%3D%252f%252ffrs%252fnl_NL%252f_shop%253e%257bfreerecordshop%257d%252fcategories%253c%257bfrs_03%257d%26fh_reftheme%3Ddetail&SubCat=03" target="_blank"><img src="images/buy_freerecordshopnl.gif" width="160" height="15" border="0"></a></td>
+              </tr>
+            </tbody></table></td>
+            </tr>
+        </tbody></table>          
+          <p> </p>          <img src="images/spacer.gif" width="10" height="10"></td>
+        </tr>
+    </tbody></table>    </td>
+  </tr>
+</tbody></table>
+</div>
+</div>
+
+        <div id="platforms">
+            <table border="0" cellspacing="0" cellpadding="0" width="588">
+                <tr>
+                    <td colspan="2" align="center">
+                        <img src="image/instores_shard.gif" width="588" height="32" border="0" alt="Coming to Xbox and PC">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <a href="pc/" target="_blank">
+                            <img src="image/pc_shard.gif" width="239" height="41" border="0" alt="PC Media">
+                        </a>
+                    </td>
+                    <td align="left">
+                        <a href="xbox/" target="_blank">
+                            <img src="image/xbox_shard.gif" width="250" height="38" border="0" alt="Xbox Media">
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="allLogos">
+            <table border="0" cellspacing="0" cellpadding="0" width="725">
+                <!--  <tr>
+      <td>&nbsp;</td>
+    </tr> -->
+                <tr>
+                    <td align="center" nowrap colspan="2">
+                        <a href="http://www.rockstarnorth.com/" target="_blank">
+                            <img src="image/logo_rstar_north.jpg" alt="" width="65" height="61" border="0" align="absmiddle">
+                        </a>
+                        &nbsp;&nbsp;
+                        <a href="http://www.playstation2.com/" target="_blank">
+                            <img src="image/logo_ps.jpg" alt="" width="65" height="61" border="0" align="absmiddle">
+                        </a>
+                        <a href="http://www.playstation2.com/" target="_blank">
+                            <img src="image/logo_ps2.jpg" alt="" width="114" height="61" border="0" align="absmiddle">
+                        </a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="http://www.xbox.com/" target="_blank">
+                            <img src="logo_xbox.gif" alt="" border="0" align="absmiddle">
+                        </a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image/logo_pc.gif" alt="" border="0" align="absmiddle">
+                        &nbsp;&nbsp;&nbsp;
+                        <a href="http://www.esrb.org/" target="_blank">
+                            <img src="image/M.gif" alt="" width="140" height="68" border="0" hspace="20" align="absmiddle">
+                        </a>
+                        <a href="http://www.rockstargames.com/" target="_blank">
+                            <img src="image/logo_rockstar.jpg" id="rockstarLogo" alt="" width="65" height="61" border="0" align="absmiddle">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="copy" align="middle" width="90%">
+                        <a style="color:#CCCCCC" href="http://www.rockstargames.com/legal/" target="_blank">
+                            <img src="image/legal.jpg" width="30" height="9" border="0">
+                        </a>
+                    </td>
+                    <td align="right" width="10%">
+                        <a href="javascript:resizeWin('sponsors.html','sponsors','500','371');">
+                            <img src="image/sponsors.gif" width="52" height="9" border="0">
+                        </a>
+                        &nbsp;&nbsp;
+                    </td>
+                </tr>
+            </table>
+            <!-- <div style="position:absolute; top:84; left:676;"></div> -->
+            <br>
+        </div>
+        <script>
+            newInit();
+            //call flash detect
+        </script>
+    </body>
+</html>
+
+
+
+</body></html>
