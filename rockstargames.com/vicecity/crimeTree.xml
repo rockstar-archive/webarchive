@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wddxPacket version="1.0">
+<header/>
+<data>
+<struct>
+<var name="registry">
+	<array length="39">
+		<string>averycarrington</string>
+		<string>bjsmith</string>
+		<string>donaldlove</string>
+		<string>ad</string>
+		<string>ae</string>
+		<string>af</string>
+		<string>stevescott</string>
+		<string>candysuxxx</string>
+		<string>alexshrub</string>
+		<string>aj</string>
+		<string>colonelcortez</string>
+		<string>gonzales</string>
+		<string>mercedescortez</string>
+		<string>frenchcourier</string>
+		<string>ricardodiaz</string>
+		<string>sonnyforelli</string>
+		<string>tommyvercetti</string>
+		<string>kenrosenberg</string>
+		<string>georgioforelli</string>
+		<string>lancevance</string>
+		<string>victorvance</string>
+		<string>auntiepoulet</string>
+		<string>swat</string>
+		<string>kentpaul</string>
+		<string>bigmitchbaker</string>
+		<string>az</string>
+		<string>mrblack</string>
+		<string>leoteal</string>
+		<string>albertorobina</string>
+		<string>umbertorobina</string>
+		<string>eugene</string>
+		<string>bf</string>
+		<string>moweesha</string>
+		<string>philcassidy</string>
+		<string>camjones</string>
+		<string>hilaryking</string>
+		<string>pedrogarcia</string>
+		<string>icecreamlady</string>
+		<string>pastorrichards</string>
+	</array>
+</var>
+<var name="averycarrington">
+	<array length="4">
+		<number>2</number>
+		<string>Avery Carrington</string>
+		<string>Texan property magnate and real estate developer. Likes to talk about his father. The good old days. Extreme Capitalist. Always wears cowboy hat. More in file...</string>
+	</array>
+</var>
+<var name="bjsmith">
+	<array length="4">
+		<number>2</number>
+		<string>BJ Smith</string>
+		<string>Former star Tight End for Vice City Mambas. Very successful career in pro football, but haunted by problems off the field. Famous for hurting opponents. More in file...</string>
+	</array>
+</var>
+<var name="donaldlove">
+	<array length="4">
+		<number>0</number>
+		<string>Donald Love</string>
+		<string/>
+	</array>
+</var>
+<var name="ad">
+	<array length="4">
+		<number>0</number>
+		<string/>
+		<string/>
+	</array>
+</var>
+<var name="ae">
+	<array length="4">
+		<number>0</number>
+		<string/>
+		<string/>
+	</array>
+</var>
+<var name="af">
+	<array length="4">
+		<number>0</number>
+		<string/>
+		<string/>
+	</array>
+</var>
+<var name="stevescott">
+	<array length="4">
+		<number>1</number>
+		<string>Steve Scott</string>
+		<string>Film director spotted at various parties where organized crime carries on. Thought to be seeking any money he can to finance his films. Shows an unnatural obsession with sharks and mountains of mashed potatoes.</string>
+	</array>
+</var>
+<var name="candysuxxx">
+	<array length="4">
+		<number>1</number>
+		<string>Candy Suxxx</string>
+		<string>Woman of extremely ill repute. Possible involvement in blackmailing of politicians. Never seems to get cold.</string>
+	</array>
+</var>
+<var name="alexshrub">
+	<array length="4">
+		<number>2</number>
+		<string>Congressman Alex Shrub</string>
+		<string>
+Extreme Right Wing congressman. Happily married. Known philanderer. Will do anything for votes. More in file...</string>
+	</array>
+</var>
+<var name="aj">
+	<array length="4">
+		<number>1</number>
+		<string/>
+		<string/>
+	</array>
+</var>
+<var name="colonelcortez">
+	<array length="4">
+		<number>2</number>
+		<string>Colonel Cortez</string>
+		<string>Has diplomatic immunity - bear this in mind when bugging his house. Has somehow survived up to 30 coups in his native country. Likes to eat endangered species. More in file...</string>
+	</array>
+</var>
+<var name="gonzales">
+	<array length="4">
+		<number>2</number>
+		<string>Gonzales</string>
+		<string>Works for Colonel Juan Garcia Cortez in various capacities. More in file...</string>
+	</array>
+</var>
+<var name="mercedescortez">
+	<array length="4">
+		<number>1</number>
+		<string>Mercedes Cortez</string>
+		<string>Daughter of Colonel Cortez.  Likes to party, this one.</string>
+	</array>
+</var>
+<var name="frenchcourier">
+	<array length="4">
+		<number>1</number>
+		<string/>
+		<string>French Secret Service Agent. Possibly involved in selling military hardware and secrets.</string>
+	</array>
+</var>
+<var name="ricardodiaz">
+	<array length="4">
+		<number>2</number>
+		<string>Ricardo Diaz</string>
+		<string>Extremely dangerous. Bribed INS for Green card in 1978. Entered country from Colombia. More in file...</string>
+	</array>
+</var>
+<var name="sonnyforelli">
+	<array length="4">
+		<number>2</number>
+		<string>Sonny Forelli</string>
+		<string>Head of Forelli Crime Family. Believed to have major influence in racketeering, gambling, union trouble, corruption and prostitution. More in file...</string>
+	</array>
+</var>
+<var name="tommyvercetti">
+	<array length="4">
+		<number>2</number>
+		<string>Tommy Vercetti</string>
+		<string>Who is this guy? I've got a call into the Parole Board in Liberty. Seems he was in prison up there. See file.
+</string>
+	</array>
+</var>
+<var name="kenrosenberg">
+	<array length="4">
+		<number>2</number>
+		<string>Ken Rosenberg</string>
+		<string>Partner at Rosenberg and Associates, legal firm. Suspected problem with narcotics and egomania. Believed to be developing contacts with Liberty City mob. More in file...</string>
+	</array>
+</var>
+<var name="georgioforelli">
+	<array length="4">
+		<number>1</number>
+		<string>Georgio Forelli</string>
+		<string>Italian-American criminal. Currently case is going to trial. Conviction thought to be certain. Related to Liberty City organized crime family. Cross dresser.</string>
+	</array>
+</var>
+<var name="lancevance">
+	<array length="4">
+		<number>2</number>
+		<string>Lance Vance</string>
+		<string>Recently arrived in town with his brother. Asks a lot of questions. Trained helicopter pilot Believed to be in narcotics trade. More in file...</string>
+	</array>
+</var>
+<var name="victorvance">
+	<array length="4">
+		<number>1</number>
+		<string/>
+		<string>Lance Vance's brother. Head of Vance crime family. Only two members.</string>
+	</array>
+</var>
+<var name="auntiepoulet">
+	<array length="4">
+		<number>2</number>
+		<string>Auntie Poulet</string>
+		<string>Elderly Haitian matriarch. Believed to be involved in long term feud with Cuban crime families for control of eastern and downtown Vice City. More in file...</string>
+	</array>
+</var>
+<var name="swat">
+	<array length="4">
+		<number>1</number>
+		<string>SWAT</string>
+		<string>We are currently investigating allegations of corruption within rogue SWAT units in Vice City. Bribery thought to be rife. Remember to make sure this is covered up effectively to avoid voter dissatisfaction.</string>
+	</array>
+</var>
+<var name="kentpaul">
+	<array length="4">
+		<number>2</number>
+		<string>Kent Paul</string>
+		<string>"Kent Paul" is believed to be an assumed name. Real name unknown... Also known as "KP", "Paulo" and "Kent" English youth. Claims to work in music business. More in file...
+</string>
+	</array>
+</var>
+<var name="bigmitchbaker">
+	<array length="4">
+		<number>2</number>
+		<string>Big Mitch Baker</string>
+		<string>Vietnam veteran, turned motorbike enthusiast. Won Purple Heart for killing a village full of Vietcong. More in file...</string>
+	</array>
+</var>
+<var name="az">
+	<array length="4">
+		<number>0</number>
+		<string/>
+		<string/>
+	</array>
+</var>
+<var name="mrblack">
+	<array length="4">
+		<number>1</number>
+		<string>Mr. Black</string>
+		<string>Nothing is known about this man. We are eager to find out more. Possible connection to money laundering thought to be unlikely. Believed to be involved in running hitman business. No further info available.</string>
+	</array>
+</var>
+<var name="leoteal">
+	<array length="4">
+		<number>2</number>
+		<string>Leo Teal</string>
+		<string>Possible connection with Mr. Black. Very complicated personal life. Works in restaurant business. More in file...</string>
+	</array>
+</var>
+<var name="albertorobina">
+	<array length="4">
+		<number>1</number>
+		<string>Alberto Robina</string>
+		<string>Father of Umberto Robina. Quiet cafe owner.</string>
+	</array>
+</var>
+<var name="umbertorobina">
+	<array length="4">
+		<number>2</number>
+		<string>Umberto Robina</string>
+		<string>Cuban warlord. Long term feud with Haitian criminals. Wants control of turf. Extreme macho man. More in file...</string>
+	</array>
+</var>
+<var name="eugene">
+	<array length="4">
+		<number>1</number>
+		<string>Eugene</string>
+		<string>Possible way to TEAL. TEAL's other lover. Interior designer and restaurant owner. Likes knives. Likes Thailand. Likes the beach.</string>
+	</array>
+</var>
+<var name="bf">
+	<array length="4">
+		<number>0</number>
+		<string/>
+		<string/>
+	</array>
+</var>
+<var name="moweesha">
+	<array length="4">
+		<number>1</number>
+		<string>Moweesha</string>
+		<string>Involved in dubious practices with TEAL and several other men. Thought to be paid company. Involved in bizarre practices with TEAL and a manatee.</string>
+	</array>
+</var>
+<var name="philcassidy">
+	<array length="4">
+		<number>2</number>
+		<string>Phil Cassidy</string>
+		<string>Redneck arms dealer. Believed to be involved in weapons trade. Gun enthusiast. Member of various second amendment organizations and Vice City gun clubs. More in file...</string>
+	</array>
+</var>
+<var name="camjones">
+	<array length="4">
+		<number>2</number>
+		<string>Cam Jones</string>
+		<string>Currently awaiting trial for attempted robbery.  Was caught running down street with safe he couldn't open.  Likely to get ten years. More in file...</string>
+	</array>
+</var>
+<var name="hilaryking">
+	<array length="4">
+		<number>2</number>
+		<string>Hilary King</string>
+		<string>Expert driver believed to have worked with Cam Jones and Phil Cassidy. Neurotic. Compulsive eater. More in file...</string>
+	</array>
+</var>
+<var name="pedrogarcia">
+	<array length="4">
+		<number>1</number>
+		<string>Pedro Garcia</string>
+		<string>Involved in violent gun-running. Buying weapons from out of state and selling them on the streets. Believed to be rival of Phil Cassidy.</string>
+	</array>
+</var>
+<var name="icecreamlady">
+	<array length="4">
+		<number>1</number>
+		<string>Ice Cream Lady</string>
+		<string>Psychotic distributor of soft ice cream. Business known to be a front. We are as yet unable to determine what it is fronting. Maude Hanson runs company. Believed to be a sociopath who once ran a children's home.</string>
+	</array>
+</var>
+<var name="pastorrichards">
+	<array length="4">
+		<number>2</number>
+		<string>Pastor Richards</string>
+		<string>Maniac firebrand preacher, obsessed with money. Has written several awful books. All completely fabricated.  Most given away. More in file...</string>
+	</array>
+</var>
+</struct></data><script/></wddxPacket>
