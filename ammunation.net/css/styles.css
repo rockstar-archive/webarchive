@@ -1,0 +1,62 @@
+a:link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: uppercase;
+	color: #0033FF;
+	text-decoration: underline;
+}
+a:visited {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: uppercase;
+	color: #0033FF;
+	text-decoration: underline;
+}
+a:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: uppercase;
+	color: #CC0000;
+	text-decoration: underline blink;
+}
+.bodyText {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000000;
+}
+.boldText {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: capitalize;
+	color: #000000;
+}
+a:active {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: uppercase;
+	color: #0033FF;
+	text-decoration: underline;
+}

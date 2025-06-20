@@ -1,0 +1,469 @@
+<!DOCTYPE html><html><head>
+<!-- Start Added by RockstarMuseum -->
+<script src="js/rmLoader.js"></script>
+<!-- End Added by RockstarMuseum -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>AMMUNATION.NET</title>
+<style type="text/css">
+<!--
+.style20 {	font-size: large;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+}
+.style29 {	font-size: small;
+	color: #FFFFFF;
+}
+.style3 {font-family: Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	font-style: italic;
+	font-weight: bold;
+}
+.style31 {font-family: Arial, Helvetica, sans-serif; font-size: large;}
+.style40 {font-size: 12px}
+.style44 {font-size: x-small}
+.style45 {color: #33CC33; font-style: italic;}
+.style47 {font-size: xx-small}
+.style49 {font-size: small; font-family: Arial, Helvetica, sans-serif; }
+.style50 {font-size: 14px; font-family: Arial, Helvetica, sans-serif; }
+.style52 {color: #3333FF; font-size: x-small; font-family: Arial, Helvetica, sans-serif; }
+.style53 {font-family: Arial, Helvetica, sans-serif}
+.style58 {color: #33CC33; font-style: italic; font-size: xx-small; }
+.style60 {font-family: Arial, Helvetica, sans-serif; font-size: xx-small; }
+-->
+</style>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+.style63 {
+	font-size: 26px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000000;
+}
+.style66 {
+	font-size: 26px;
+	font-weight: bold;
+	color: #FF0000;
+}
+.style51 {font-size: x-small; font-family: Arial, Helvetica, sans-serif; }
+.style46 {font-size: small}
+.style55 {color: #3333FF}
+.style57 {font-size: small; font-weight: bold; }
+.style22 {font-size: 16px}
+.style23 {font-family: Arial, Helvetica, sans-serif;
+	color: #999999;
+	font-weight: bold;
+	font-style: italic;
+	font-size: 9px;
+}
+.style67 {color: #000000}
+.style70 {
+	font-size: 18px;
+	font-style: italic;
+	color: #FF0000;
+}
+.style71 {color: #0033FF}
+.style72 {color: #FF0000}
+-->
+</style>
+<!-- Header Analytics (UA-15984839-3) 
+			<script type="text/javascript">
+				var _gaq = _gaq || [];
+				_gaq.push(["_setAccount", "UA-15984839-3"]);
+				_gaq.push(["_trackPageview"]);
+				(function() {
+					var ga = document.createElement("script"); ga.type = "text/javascript"; ga.async = true;
+					ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+					var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);
+				})();
+				
+				(function(window) {
+					var domReady = function($) {
+						var filetypes = /\.(zip|exe|dmg|pdf|doc*|xls*|ppt*|mp3|jpg|themepack|wmv|mp4|mov|flv)$/i;
+						$("a").filter(function() { return !$(this).data("notrack"); }).each(function() {
+							var href = $(this).attr("href");
+							if(!href)
+								return;
+							if(href.substr(0, 4) == "aim:") {
+								$(this).click(function() {
+									var url = href.replace("aim:", "");
+									_gaq.push(["_trackEvent", "Download", "Click-aim", url]);
+								});
+								return;		
+							}
+
+							if(href.substr(0, 7) == "mailto:") {
+								$(this).click(function() {
+									var emailAddr = href.replace("mailto:", "");
+									_gaq.push(["_trackEvent", "Email", "Click", emailAddr]);
+								});
+								return;
+							}
+
+							if(!href.match(/^https?\:/))
+								return;
+
+							if(href.match(filetypes)) {
+								$(this).click(function() {
+									var extParts = href.split(".");
+									var ext = extParts[extParts.length - 1];
+									_gaq.push(["_trackEvent", "Download", "Click-" + ext, href]);
+
+									if($(this).attr("target") == "_blank")
+										return;
+									setTimeout(function() { location.href = href }, 250);
+									return false;
+								});
+								return;
+							}
+							
+							if(href.indexOf(document.domain) >= 0)
+								return;
+
+							$(this).click(function() {
+								var link = href.replace(/^https?\:\/\//, "");
+								_gaq.push(["_trackEvent", "External", "Click", link]);
+								if($(this).attr("target") == "_blank")
+									return;
+								setTimeout(function() { location.href = href }, 250);
+								return false;
+							});
+						});
+					};
+
+					if(!window.jQuery || typeof(window.jQuery) != "function") {
+						(function() {
+							var jq = document.createElement("script"); jq.type = "text/javascript";
+							jq.src = "http://media.rockstargames.com/js/jquery/jquery-1.4.4.min.js";
+							var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(jq, s);
+						})();
+						
+						var ljq;
+						var _ljqi = 0;
+						(ljq = function() {
+							if(_ljqi > 20)
+								return;
+							if(window.jQuery && typeof(window.jQuery) == "function")
+								return window.jQuery(document).ready(domReady);
+							_ljqi++;
+							setTimeout(ljq, 250);
+						})();
+					} else {
+						window.jQuery(document).ready(domReady);
+					}
+				})(window);
+			</script>
+<!-- End Header Analytics (UA-15984839-3) -->
+</head>
+
+<body>
+
+				<!--
+				Start of DoubleClick Floodlight Tag: Please do not remove.*?--
+				<script type="text/javascript">
+					var axel = Math.random() + "";
+					var a = axel * 10000000000000;
+					document.write('<iframe style="position:absolute;left:-10000px;top:-10000px" src="http://fls.doubleclick.net/activityi;src=3055121;type=rocks806;cat=rocks465;ord=' + a + '?" width="1" height="1" frameborder="0"></iframe>');
+				</script>
+				<noscript>
+					<iframe style="position:absolute;left:-10000px;top:-10000px" src="http://fls.doubleclick.net/activityi;src=3055121;type=rocks806;cat=rocks465;ord=1?" width="1" height="1" frameborder="0"></iframe>
+				</noscript>
+				<!-- End of DoubleClick Floodlight Tag: Please do not remove --><table width="734" border="0" cellspacing="0" cellpadding="0">
+  <tbody><tr align="left" valign="top">
+    <td width="347"><a href="http://www.ammunation.net"><img src="images/ammunation_logo.jpg" width="347" height="110" border="0"></a></td>
+    <td width="240"><img src="images/guns4funandmap.jpg" width="240" height="110"></td>
+    <td width="147" align="right"><table width="140" height="85" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="right" valign="top">
+          <td height="57" colspan="2"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="137" height="57">
+              <param name="movie" value="finalcountdown.swf">
+              <param name="quality" value="high">
+              <embed src="finalcountdown.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="137" height="57">
+          </object></td>
+        </tr>
+        <tr align="center" valign="middle">
+          <td width="46"><img src="IMGS/shopping_carts.jpg" width="20" height="17"></td>
+          <td width="94" align="right" valign="middle"><span class="bodyText">Contains 0 Items</span></td>
+        </tr>
+      </tbody></table>
+        <a href="/cdn-cgi/l/email-protection#b0d9ded6dff0d1ddddc5ded1c4d9dfde9eded5c4">contact us </a></td>
+  </tr>
+  <tr align="left" valign="top">
+    <td colspan="3"><img src="images/shim.gif" width="744" height="10"></td>
+  </tr>
+</tbody></table>
+<table width="744" border="0" cellspacing="0" cellpadding="0">
+  <tbody><tr>
+    <td width="192" align="left" valign="top"><img src="images/shim.gif" width="192" height="1"></td>
+    <td width="552" colspan="4" rowspan="6" align="left" valign="top"><img src="images/y2k_strongest_ad.jpg" width="552" height="182"></td>
+  </tr>
+  <tr>
+    <td align="left" valign="top"><span class="boldText">Search</span></td>
+  </tr>
+  <tr>
+    <td align="left" valign="top"><input name="SEARCH" type="text" id="SEARCH" size="20" maxlength="12">
+        <input name="Button" type="button" id="Button" value="OK">
+        <br></td>
+  </tr>
+  <tr>
+    <td align="left" valign="top"><span class="boldText">Select Weapon Type </span></td>
+  </tr>
+  <tr>
+    <td align="left" valign="top"><select name="menu1" onchange="MM_jumpMenu('parent',this,0)">
+        <option>Select Weapon</option>
+        <option value="#">Melee</option>
+        <option value="#">Hand Guns</option>
+        <option value="#">Shotgun</option>
+        <option value="#">Assault</option>
+        <option value="#">Heavy Metal</option>
+        <option value="#">Projectile</option>
+    </select></td>
+  </tr>
+  <tr>
+    <td align="left" valign="top"><table width="173" height="54" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr>
+          <td width="30"><br>
+          </td>
+          <td width="143"><a href="#">Your Shopping CaRT</a></td>
+        </tr>
+        <tr>
+          <td align="center" valign="middle"><img src="IMGS/shopping_cart1.jpg" width="20" height="17"></td>
+          <td><span class="bodyText">Contains 0 Items<br>
+          </span><span class="bodyText">Sub Total: $0.00 </span></td>
+        </tr>
+    </tbody></table></td>
+  </tr>
+</tbody></table>
+<table width="742" border="0" cellspacing="0" cellpadding="0">
+  <tbody><tr>
+    <td colspan="5"><img src="IMGS/shim2.gif" width="744" height="10"></td>
+  </tr>
+  <tr>
+    <td width="190" rowspan="3" align="left" valign="top"><table width="190" height="1019" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr>
+          <td width="190" height="433"><span class="bodyText"><a href="#">GRENADES</a><br>
+                <br>
+                <a href="#">PISTOLS</a><br>
+                <br>
+                <a href="#">SHOTGUN </a><br>
+                <br>
+                <a href="#">S.P.A.S. 12</a><br>
+                <br>
+                <a href="#">STUBBY SHOTGUN</a><br>
+                <br>
+                <a href="#">MICRO SMG</a><br>
+                <br>
+                <a href="#">TEC- 9</a><br>
+                <br>
+                <a href="#">MAC</a><br>
+                <br>
+                <a href="#">MP</a><br>
+                <a href="#"><br>
+            SNIPER RIFLE<br>
+                </a><br>
+                <a href="#">AK</a><br>
+                <br>
+                <a href="#">ROCKET LAUNCHER </a><br>
+                <br>
+                <a href="#">M4 RIFLE</a><br>
+                <br>
+                <a href="#">FLAME THROWER</a><br>
+                <a href="#"><br>
+          MINIGUN</a></span></td>
+        </tr>
+        <tr>
+          <td height="176" align="center" valign="middle"><img src="images/family_safety.jpg" width="176" height="176" border="0"></td>
+        </tr>
+        <tr>
+          <td height="409" align="center" valign="bottom"><img src="IMGS/bestbuy.jpg" width="176" height="80"><br>
+		  <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="175" height="96" id="ammunationplayer" align="middle">
+<param name="allowScriptAccess" value="sameDomain">
+<param name="movie" value="ammunationplayer.swf">
+<param name="quality" value="high">
+<param name="bgcolor" value="#ffffff">
+<embed src="ammunationplayer.swf" quality="high" bgcolor="#ffffff" width="175" height="96" name="ammunationplayer" align="middle" allowscriptaccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">
+</object>
+		  
+		  
+		         <br>
+          <img src="images/ammocammo.jpg" width="176" height="107"><br>
+          <img src="IMGS/babegun.jpg" alt="BabeGun!!" width="176" height="117"></td>
+        </tr>
+      </tbody></table>
+    </td>
+    <td width="552" colspan="4" align="left" valign="top"><table width="552" border="2" cellpadding="0" cellspacing="0" bordercolor="#000000">
+      <tbody><tr>
+        <td> </td>
+        <td><a href="javascript:;" onmouseup="MM_openBrWindow('pistol.html','AMMUNATION','width=250,height=250')"><img src="IMGS/error.jpg" width="105" height="105" border="0"> </a><a href="javascript:;" onmouseup="MM_openBrWindow('pistol.html','AMMUNATION','width=250,height=250')"><img src="IMGS/y2kimage.jpg" width="256" height="34" border="0"></a></td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td align="left" valign="top"><a href="javascript:;" onmouseup="MM_openBrWindow('pistol.html','AMMUNATION','width=250,height=250')"><img src="IMGS/Bullet.jpg" width="20" height="20" border="0"></a></td>
+        <td rowspan="2" align="left" valign="top"><span class="style29 style63"><span class="style66"><font face="Arial">/// Important Announcement \\\ </font></span></span><font face="Arial"><span class="style20 style67"><strong><font size="2"><font face="Arial"><font size="+0"></font></font></font><font size="2"><font face="Arial"><font size="+0"><br>
+                    <span class="style71">W</span></font></font></font></strong></span><span class="style71"><strong><font face="Arial"><font size="2"><font size="+0">e</font></font></font></strong><span class="style31"><strong><font face="Arial"><font size="2"><font size="+0"> <em>APOLOGIZE</em> if you are having difficulty<br>
+browsing the Ammu-nation.net website or purchasing any</font></font></font></strong></span></span> <span class="style20 style71"><strong><font face="Arial"><font size="2"><font size="+0"> goods. </font></font></font></strong></span><span class="style71"><strong><font face="Arial"><font size="2"><font size="+0"><br>
+</font></font></font></strong><span class="style31"><strong><font face="Arial"><font size="2"><font size="+0">Please do not panic.  Unfortunately a </font></font><span class="style70">'server error'</span><font size="2"><font size="+0"></font></font><font size="2"><font size="+0"> has locked all files and frozen up our php code.<br>
+</font></font></font></strong><font face="Arial"><span class="style44" 931381200-31082005=""><em>< We are working tirelessly day<br>
+and</em></span></font></span></span> <span class="style20 style71"><font face="Arial"><span class="style44" 931381200-31082005=""><em> night to fix this<br>
+problem and <br>
+should have it sorted soon - please be patient ></em></span></font></span><span class="style20"><font face="Arial"></font><font face="Arial"><br>
+</font></span></font></td>
+        <td rowspan="2" align="left" valign="top"><a href="javascript:;" onmouseup="MM_openBrWindow('pistol.html','AMMUNATION','width=250,height=250')"><img src="IMGS/Bullet.jpg" width="20" height="20" border="0"></a></td>
+      </tr>
+      <tr>
+        <td> </td>
+        </tr>
+      <tr>
+        <td><a href="javascript:;" onmouseup="MM_openBrWindow('pistol.html','AMMUNATION','width=250,height=250')"><img src="IMGS/Bullet.jpg" width="20" height="20" border="0"></a></td>
+        <td colspan="2"> </td>
+        </tr>
+    </tbody></table>      
+      </td>
+  </tr>
+  <tr>
+    <td colspan="4"><img src="IMGS/shims.gif" width="552" height="10"></td>
+  </tr>
+  <tr>
+    <td height="724" colspan="4" align="left" valign="top"><table width="552" border="0" cellspacing="5" cellpadding="4">
+      <tbody><tr align="left" valign="top">
+        <td width="105"><a href="javascript:;" onmouseup="MM_openBrWindow('pistol.html','AMMUNATION','width=250,height=250')"><img src="images/colt45_sml.jpg" width="105" height="105" border="0"></a></td>
+        <td width="113"><span class="style49"><strong>Pistol</strong><br>
+            <strong>$240</strong>.<span class="style44">00</span></span><span class="style50"><span class="style40"><br>
+            </span><span class="style44">Item #: 1450029</span></span><span class="style44 style53"><br>
+            <span class="style45"><span class="style58">In stock, ships within 5-7 business days.</span><br>
+            </span></span><span class="style52"><u><a href="#">[Add to Cart]</a></u></span></td>
+        <td><a href="javascript:;" onmouseup="MM_openBrWindow('microSMG.html','AMMUNATION','width=250,height=250')"><img src="images/microSMG_sml.jpg" width="105" height="105" border="0"></a></td>
+        <td><span class="style49"><strong>Micro SMG </strong><br>
+            <strong>$600</strong>.<span class="style44">00</span></span><span class="style50"><span class="style40"><br>
+            </span><span class="style44">Item #: 7850029 </span></span><span class="style51"><br>
+            <span class="style45"><span class="style47">In stock, ships within 5-7 business days.</span><br>
+            </span></span><span class="style52"><u><a href="#">[Add to Cart]</a></u></span></td>
+        </tr>
+      <tr align="left" valign="top">
+        <td><a href="javascript:;" onmouseup="MM_openBrWindow('AK.html','AMMUNATION','width=250,height=250')"><img src="images/AK_sml.jpg" width="105" height="105" border="0"></a></td>
+        <td><span class="style49"><strong>AK</strong><br>
+            <strong>$4200</strong>.<span class="style44">00</span></span><span class="style50"><span class="style40"><br>
+            </span><span class="style44">Item #: 6901002</span></span><span class="style51"><br>
+            <span class="style45"><span class="style47">In stock, ships within 5-7 business days.<br>
+            <span class="style52"><u><a href="#">[Add to Cart]</a></u></span>
+            </span></span></span></td>
+        <td><a href="javascript:;" onmouseup="MM_openBrWindow('sniper.html','AMMUNATION','width=250,height=250')"><img src="images/sniper_sml.jpg" width="105" height="105" border="0"></a></td>
+        <td><span class="style49"><strong>Sniper Rifle </strong><br>
+            <strong>$6000</strong>.<span class="style44">00</span></span><span class="style50"><span class="style40"><br>
+            </span><span class="style44"><span class="style53">Item #: 6901298</span></span></span><span class="style51"><br>
+            <span class="style45"><span class="style47">In stock, ships within 5-7 business days.</span><br>
+            </span></span><span class="style52"><u><a href="#">[Add to Cart]</a></u></span></td>
+        </tr>
+      <tr align="left" valign="top">
+        <td><a href="javascript:;" onmouseup="MM_openBrWindow('grenade.html','AMMUNATION','width=250,height=250')"><img src="images/grenade_sml.jpg" width="105" height="105" border="0"></a></td>
+        <td><span class="style51"><span class="style46"><strong>Grenades <span class="style47">(8 pack) </span></strong></span><br>
+            <span class="style46"><strong>$240</strong></span>.00<br>
+Item #: 1450029<br>
+<span class="style45"><span class="style47">In stock, ships within 5-7 business days.</span><br>
+</span></span><span class="style52"><u><a href="#">[Add to Cart]</a></u></span></td>
+        <td align="center" valign="middle" bgcolor="#F7F7F7"><span class="style22"><span class="style23">NO IMAGE<br>
+AVAILABLE</span></span></td>
+        <td><span class="style51"><strong><span class="style46">Body Armour </span><br>
+        </strong><span class="style57">$240</span>.00<br>
+Item #:4561005<br>
+<span class="style45"><span class="style47">In stock, ships within 1-2 weeks.</span><br>
+</span><span class="style55"><u><a href="#">[Add to Cart]</a></u></span></span></td>
+        </tr>
+      <tr align="left" valign="top">
+        <td><a href="javascript:;" onmouseup="MM_openBrWindow('rocketlauncher.html','AMMUNATION','width=250,height=250')"><img src="images/rocketlauncher_sml.jpg" width="105" height="105" border="0"></a></td>
+        <td><span class="style31"><span class="style44"><strong><span class="style46">Rocket Launcher </span><br>
+        </strong><span class="style57">$9000</span>.00<br>
+Item #: 6912578<br>
+<span class="style58">< Currently Unavailable > </span><br>
+<span class="style55"><u><a href="#">[Pre-order]</a></u></span></span></span></td>
+        <td><a href="javascript:;" onmouseup="MM_openBrWindow('shotgun.html','AMMUNATION','width=250,height=250')"><img src="images/shotgun_sml.jpg" width="105" height="105" border="0"></a></td>
+        <td><span class="style60"><strong><span class="style46">Shotgun</span><br>
+        </strong><span class="style57">$1500</span>.<span class="style44">00</span><br>
+        <span class="style44">Item #: 690100298</span><br>
+        <span class="style45">In stock, next day delivery. <br>
+        </span><span class="style55"><u><a href="#">[Add to Cart]</a></u></span></span></td>
+      </tr>
+      <tr align="left" valign="top">
+        <td><a href="javascript:;" onmouseup="MM_openBrWindow('M4rifle.html','AMMUNATION','width=250,height=250')"><img src="images/M4rifle_sml.jpg" width="105" height="105" border="0"></a></td>
+        <td><span class="style60"><strong><span class="style46">M4 Rifle </span><br>
+              <span class="style46">$5400</span></strong>.<span class="style44">00</span><br>
+              <span class="style44">Item #: 1439851 </span><br>
+              <span class="style45">In stock, ships within 5-7 business days.<br>
+              <span class="style52"><u><a href="#">[Add to Cart]</a></u></span>              </span></span></td>
+        <td width="111" height="48" class="style51"><span class="style57">Minigun</span><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong> <strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><span class="style62">ON SALE! </span></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong><br>
+          </strong></strong><s><span class="style46">$120000</span>.00</s><strong><br>
+          <span class="style72"><span class="style46">$10,000</span>.00</span></strong></strong></strong></strong><span class="style67"><br>
+          Item #: 690100298<br>
+          <span class="style52"><u><a href="#">[TRY]</a></u></span><br>
+          <span class="style52"><u><a href="#">[Add to Cart]</a></u></span>          </span></strong></strong></strong></strong></strong></strong></strong></strong></td>
+        <td width="166" align="right"><img src="images/special_offer.gif" width="92" height="116"></td>
+      </tr>
+      <tr align="left" valign="top">
+        <td><a href="javascript:;" onmouseup="MM_openBrWindow('flamethrower.html','AMMUNATION','width=250,height=250')"><img src="images/flamethrower_sml.jpg" width="105" height="105" border="0"></a></td>
+        <td><span class="style60"><strong><span class="style46">Flamethrower</span><br>
+        </strong><span class="style57">$5500</span>.<span class="style44">00</span><br>
+        <span class="style44">Item #: 0998743 </span><br>
+        <span class="style45">In stock, ships within 5-7 business days.<br>
+        </span><span class="style55"><u><a href="#">[Add to Cart]</a></u></span></span></td>
+        <td height="89" colspan="2" bgcolor="#F7F7F7"><a href="javascript:;" onmouseup="MM_openBrWindow('minigun.html','AMMUNATION','width=250,height=250')"><img src="images/minigun_special.jpg" width="210" height="105" border="0"></a></td>
+      </tr>
+    </tbody></table></td>
+  </tr>
+</tbody></table>
+<table width="745" border="0" cellspacing="0" cellpadding="0">
+  <tbody><tr align="left" valign="top">
+    <td width="176" align="center" valign="middle"><img src="images/ammo2gojansale.jpg" width="176" height="162" border="0"></td>
+    <td width="10"><img src="images/shim.gif" width="10" height="10"></td>
+    <td width="559"><table width="552" height="212" border="0" cellpadding="0" cellspacing="0">
+      <tbody><tr align="left" valign="top">
+        <td width="410"><img src="images/mainframe_ad.jpg" width="410" height="202"></td>
+        <td width="10"><img src="images/shim.gif" width="10" height="10"></td>
+        <td width="132"><img src="images/burgershot_ad.jpg" width="139" height="202"></td>
+      </tr>
+      <tr align="left" valign="top">
+        <td height="10" colspan="3"><img src="images/shim.gif" width="10" height="10"></td>
+      </tr>
+    </tbody></table></td>
+  </tr>
+  <tr align="left" valign="top">
+    <td colspan="3"><img src="IMGS/shims.gif" width="744" height="10"></td>
+  </tr>
+  <tr align="left" valign="top">
+    <td rowspan="2" valign="middle"><span class="style60">AMMUNATION.NET<br>
+        <a href="#"> <span class="__cf_email__" data-cfemail="8ac3c4ccc5cacbc7c7dfc4cbdec3c5c4a4e4effe">[email protected]</span> </a></span></td>
+    <td rowspan="2"> </td>
+    <td><table width="552" height="142" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+          <td width="268" height="132"><img src="images/heavyweapons_ad.jpg" width="274" height="132"></td>
+          <td width="10"><img src="images/shim.gif" width="10" height="10"></td>
+          <td width="268"><img src="IMGS/heavyweaponsDeux_ad.jpg" alt="Deux" width="268" height="132"></td>
+        </tr>
+        <tr align="left" valign="top">
+          <td height="10" colspan="3"><img src="images/shim.gif" width="10" height="10"></td>
+        </tr>
+    </tbody></table></td>
+  </tr>
+  <tr>
+    <td height="19" align="right" valign="top"><table width="300" border="0" cellspacing="0" cellpadding="0">
+      <tbody><tr>
+        <td width="210" align="right"><span class="style3">You are visitor number:</span></td>
+        <td width="90" align="right"><img src="images/visitor_number.jpg" width="90" height="21"></td>
+      </tr>
+    </tbody></table></td>
+  </tr>
+</tbody></table>
+<br>
+<p> </p>
+<script data-cfasync="false" src="js/email-decode.min.js"></script>
+
+</body></html>
