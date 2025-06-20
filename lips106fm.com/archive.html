@@ -1,5 +1,14 @@
 <html><head>
 <meta charset="utf-8">
+
+<script>
+    window.RufflePlayer = window.RufflePlayer || {};
+    window.RufflePlayer.config = {
+        "autoplay": "on",
+        "unmuteOverlay": "hidden",
+    };
+</script>
+
 <title>LIPS106FM.COM: THE OFFICIAL SITE OF LIPS106FM.COM</title>
 
 <style type="text/css">
@@ -131,115 +140,26 @@ getRandomSong();
 
 			</script>
 
-<!-- Header Analytics (UA-15984839-3) 
-			<script type="text/javascript">
-				var _gaq = _gaq || [];
-				_gaq.push(["_setAccount", "UA-15984839-3"]);
-				_gaq.push(["_trackPageview"]);
-				(function() {
-					var ga = document.createElement("script"); ga.type = "text/javascript"; ga.async = true;
-					ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
-					var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);
-				})();
-				
-				(function(window) {
-					var domReady = function($) {
-						var filetypes = /\.(zip|exe|dmg|pdf|doc*|xls*|ppt*|mp3|jpg|themepack|wmv|mp4|mov|flv)$/i;
-						$("a").filter(function() { return !$(this).data("notrack"); }).each(function() {
-							var href = $(this).attr("href");
-							if(!href)
-								return;
-							if(href.substr(0, 4) == "aim:") {
-								$(this).click(function() {
-									var url = href.replace("aim:", "");
-									_gaq.push(["_trackEvent", "Download", "Click-aim", url]);
-								});
-								return;		
-							}
 
-							if(href.substr(0, 7) == "mailto:") {
-								$(this).click(function() {
-									var emailAddr = href.replace("mailto:", "");
-									_gaq.push(["_trackEvent", "Email", "Click", emailAddr]);
-								});
-								return;
-							}
-
-							if(!href.match(/^https?\:/))
-								return;
-
-							if(href.match(filetypes)) {
-								$(this).click(function() {
-									var extParts = href.split(".");
-									var ext = extParts[extParts.length - 1];
-									_gaq.push(["_trackEvent", "Download", "Click-" + ext, href]);
-
-									if($(this).attr("target") == "_blank")
-										return;
-									setTimeout(function() { location.href = href }, 250);
-									return false;
-								});
-								return;
-							}
-							
-							if(href.indexOf(document.domain) >= 0)
-								return;
-
-							$(this).click(function() {
-								var link = href.replace(/^https?\:\/\//, "");
-								_gaq.push(["_trackEvent", "External", "Click", link]);
-								if($(this).attr("target") == "_blank")
-									return;
-								setTimeout(function() { location.href = href }, 250);
-								return false;
-							});
-						});
-					};
-
-					if(!window.jQuery || typeof(window.jQuery) != "function") {
-						(function() {
-							var jq = document.createElement("script"); jq.type = "text/javascript";
-							jq.src = "http://media.rockstargames.com/js/jquery/jquery-1.4.4.min.js";
-							var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(jq, s);
-						})();
-						
-						var ljq;
-						var _ljqi = 0;
-						(ljq = function() {
-							if(_ljqi > 20)
-								return;
-							if(window.jQuery && typeof(window.jQuery) == "function")
-								return window.jQuery(document).ready(domReady);
-							_ljqi++;
-							setTimeout(ljq, 250);
-						})();
-					} else {
-						window.jQuery(document).ready(domReady);
-					}
-				})(window);
-			</script>
-<!-- End Header Analytics (UA-15984839-3) -->
 </head>
 
-<body onload="WM_preloadImages('images/archivedButton_on.gif')">
-
-				<!--
-				Start of DoubleClick Floodlight Tag: Please do not remove.*?--
-				<script type="text/javascript">
-					var axel = Math.random() + "";
-					var a = axel * 10000000000000;
-					document.write('<iframe style="position:absolute;left:-10000px;top:-10000px" src="http://fls.doubleclick.net/activityi;src=3055121;type=rocks806;cat=rocks465;ord=' + a + '?" width="1" height="1" frameborder="0"></iframe>');
-				</script>
-				<noscript>
-					<iframe style="position:absolute;left:-10000px;top:-10000px" src="http://fls.doubleclick.net/activityi;src=3055121;type=rocks806;cat=rocks465;ord=1?" width="1" height="1" frameborder="0"></iframe>
-				</noscript>
-				<!-- End of DoubleClick Floodlight Tag: Please do not remove --><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="1" height="1" id="lips106fm" align="middle">
-<param name="allowScriptAccess" value="sameDomain">
-<param name="movie" value="lips106fm.swf">
-<param name="quality" value="high">
-<param name="bgcolor" value="#000000">
-<embed src="lips106fm.swf" quality="high" bgcolor="#000000" width="1" height="1" name="lips106fm" align="middle" allowscriptaccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">
-</object>
+<body onload="WM_preloadImages('images/archivedButton_on.gif')">				
+    <object
+        classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+        width="1"
+        height="1"
+		>
+        <param name="movie" value="lips106fm.swf">
+        <param name="quality" value="high">
+        <param name="BGCOLOR" value="#00000000">
+        <embed 
+            src="lips106fm.swf" 
+            quality="high"  
+            width="1" 
+            height="1" 
+            type="application/x-shockwave-flash"
+        >
+    </object>
 <center>
 <table width="800" border="0" cellpadding="0" cellspacing="0">
 	<tbody><tr>
@@ -306,7 +226,7 @@ getRandomSong();
 								</td>
 							</tr>
 							<tr>
-								<td class="archivedButton" align="left"><a href="webLIPS.ram" onmouseover="WM_imageSwap('archivedButton1', 'images/archivedButton_on.gif');" onmouseout="WM_imageSwap('archivedButton1', 'images/archivedButton_off.gif');"><img src="images/archivedButton_off.gif" width="195" height="35" border="0" name="archivedButton1"></a></td>
+								<td class="archivedButton" align="left"><a href="webLIPS.rm" onmouseover="WM_imageSwap('archivedButton1', 'images/archivedButton_on.gif');" onmouseout="WM_imageSwap('archivedButton1', 'images/archivedButton_off.gif');"><img src="images/archivedButton_off.gif" width="195" height="35" border="0" name="archivedButton1"></a></td>
 							</tr>
 						</tbody></table>
 					</td>
@@ -334,7 +254,7 @@ Backed by a robo-electro smash track that's sure to light up club floors everywh
 <!--								<td class="archivedButton" align="left"><a href="http://63.236.94.167/uploads/lips106/Nina%20Barry%20-%20Bassmati
 c.asx" onmouseover="WM_imageSwap('archivedButton0', 'images/archivedButton_on.gif');" onmouseout="WM_imageSwap('archivedButton0', 'images/archivedButton_off.gif');"><img src="images/archivedButton_off.gif" width="195" height="35" border="0" name="archivedButton0"></a></td> -->
 
-<td class="archivedButton" align="left"><a href="NinaBarry_BASSMATIC.ram" onmouseover="WM_imageSwap('archivedButton0', 'images/archivedButton_on.gif');" onmouseout="WM_imageSwap('archivedButton0', 'images/archivedButton_off.gif');"><img src="images/archivedButton_off.gif" width="195" height="35" border="0" name="archivedButton0"></a></td>
+<td class="archivedButton" align="left"><a href="NinaBarry_BASSMATIC.rm" onmouseover="WM_imageSwap('archivedButton0', 'images/archivedButton_on.gif');" onmouseout="WM_imageSwap('archivedButton0', 'images/archivedButton_off.gif');"><img src="images/archivedButton_off.gif" width="195" height="35" border="0" name="archivedButton0"></a></td>
 
 							</tr>
 							<tr>
@@ -347,7 +267,7 @@ c.asx" onmouseover="WM_imageSwap('archivedButton0', 'images/archivedButton_on.gi
 								</td>
 							</tr>
 							<tr>
-								<td class="archivedButton" align="left"><a href="SunshineShine_MINEuntilMONDAY.ram" onmouseover="WM_imageSwap('archivedButton2', 'images/archivedButton_on.gif');" onmouseout="WM_imageSwap('archivedButton2', 'images/archivedButton_off.gif');"><img src="images/archivedButton_off.gif" width="195" height="35" border="0" name="archivedButton2"></a></td>
+								<td class="archivedButton" align="left"><a href="SunshineShine_MINEuntilMONDAY.rm" onmouseover="WM_imageSwap('archivedButton2', 'images/archivedButton_on.gif');" onmouseout="WM_imageSwap('archivedButton2', 'images/archivedButton_off.gif');"><img src="images/archivedButton_off.gif" width="195" height="35" border="0" name="archivedButton2"></a></td>
 							</tr>
 						</tbody></table>
 					</td>
