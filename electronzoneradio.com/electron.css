@@ -1,0 +1,31 @@
+BODY {
+	margin-top: 0px;
+	margin-left: 0px;
+}
+
+.blueBack {
+	background-color: #00009d;
+}
+
+.tossersBody {
+	background-color: #000000;
+	color: #00ff00;
+	font: normal 11px/15px Verdana, san-serif;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+.fruitsBody {
+	background-color: #ffccff;
+	color: #0095B6;
+	font: normal 12px/15px Arial, san-serif;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+.leftnavContent {
+	background-color: #e6e6e6;
+	font: normal 11px/14px Verdana, san-serif;
+	padding-left: 10px;
+	padding-top: 5px;
+}
