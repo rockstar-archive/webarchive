@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wddxPacket version="1.0">
+<header/>
+<data>
+<struct>
+<var name="registry">
+	<array length="24">
+		<string>walton</string>
+		<string>rancher</string>
+		<string>banshee</string>
+		<string>virgo</string>
+		<string>stretch</string>
+		<string>regina</string>
+		<string>freeway</string>
+		<string>voodoo</string>
+		<string>infernus</string>
+		<string>blistacompact</string>
+		<string>speeder</string>
+		<string>pcj600</string>
+		<string>washington</string>
+		<string>ambassador</string>
+		<string>hermes</string>
+		<string>romeros</string>
+		<string>admiral</string>
+		<string>maverick</string>
+		<string>tropic</string>
+		<string>marquis</string>
+		<string>golfcart</string>
+		<string>sentinel</string>
+		<string>moonbeam</string>
+		<string>stinger</string>
+	</array>
+</var>
+<var name="walton">
+	<array length="5">
+		<number>1</number>
+		<string>Walton</string>
+		<string>walton</string>
+		<string/>
+		<string>a</string>
+	</array>
+</var>
+<var name="rancher">
+	<array length="5">
+		<number>1</number>
+		<string>Rancher</string>
+		<string>rancher</string>
+		<string/>
+		<string>b</string>
+	</array>
+</var>
+<var name="banshee">
+	<array length="5">
+		<number>1</number>
+		<string>Banshee</string>
+		<string>banshee</string>
+		<string/>
+		<string>c</string>
+	</array>
+</var>
+<var name="virgo">
+	<array length="5">
+		<number>1</number>
+		<string>Virgo</string>
+		<string>virgo</string>
+		<string/>
+		<string>a</string>
+	</array>
+</var>
+<var name="stretch">
+	<array length="5">
+		<number>1</number>
+		<string>Stretch Limo</string>
+		<string>stretch</string>
+		<string/>
+		<string>b</string>
+	</array>
+</var>
+<var name="regina">
+	<array length="5">
+		<number>1</number>
+		<string>Regina</string>
+		<string>regina</string>
+		<string/>
+		<string>c</string>
+	</array>
+</var>
+<var name="freeway">
+	<array length="5">
+		<number>1</number>
+		<string>Freeway</string>
+		<string>freeway</string>
+		<string/>
+		<string>a</string>
+	</array>
+</var>
+<var name="voodoo">
+	<array length="5">
+		<number>1</number>
+		<string>Voodoo</string>
+		<string>voodoo</string>
+		<string/>
+		<string>b</string>
+	</array>
+</var>
+<var name="infernus">
+	<array length="5">
+		<number>1</number>
+		<string>Infernus</string>
+		<string>infernus</string>
+		<string/>
+		<string>c</string>
+	</array>
+</var>
+<var name="blistacompact">
+	<array length="5">
+		<number>1</number>
+		<string>Blista Compact</string>
+		<string>blistacompact</string>
+		<string/>
+		<string>a</string>
+	</array>
+</var>
+<var name="speeder">
+	<array length="5">
+		<number>1</number>
+		<string>Speeder</string>
+		<string>speeder</string>
+		<string/>
+		<string>b</string>
+	</array>
+</var>
+<var name="pcj600">
+	<array length="5">
+		<number>1</number>
+		<string>PCJ-600</string>
+		<string>pcj600</string>
+		<string/>
+		<string>c</string>
+	</array>
+</var>
+<var name="washington">
+	<array length="5">
+		<number>1</number>
+		<string>Washington</string>
+		<string>washington</string>
+		<string/>
+		<string>a</string>
+	</array>
+</var>
+<var name="ambassador">
+	<array length="5">
+		<number>1</number>
+		<string>Ambassador</string>
+		<string>ambassador</string>
+		<string/>
+		<string>b</string>
+	</array>
+</var>
+<var name="hermes">
+	<array length="5">
+		<number>1</number>
+		<string>Hermes</string>
+		<string>hermes</string>
+		<string/>
+		<string>c</string>
+	</array>
+</var>
+<var name="romeros">
+	<array length="5">
+		<number>1</number>
+		<string>Romero's</string>
+		<string>romeros</string>
+		<string/>
+		<string>a</string>
+	</array>
+</var>
+<var name="admiral">
+	<array length="5">
+		<number>1</number>
+		<string>Admiral</string>
+		<string>admiral</string>
+		<string/>
+		<string>a</string>
+	</array>
+</var>
+<var name="maverick">
+	<array length="5">
+		<number>1</number>
+		<string>Maverick</string>
+		<string>maverick</string>
+		<string/>
+		<string>b</string>
+	</array>
+</var>
+<var name="tropic">
+	<array length="5">
+		<number>1</number>
+		<string>Tropic</string>
+		<string>tropic</string>
+		<string/>
+		<string>c</string>
+	</array>
+</var>
+<var name="marquis">
+	<array length="5">
+		<number>1</number>
+		<string>Marquis</string>
+		<string>marquis</string>
+		<string/>
+		<string>a</string>
+	</array>
+</var>
+<var name="golfcart">
+	<array length="5">
+		<number>1</number>
+		<string>Caddy</string>
+		<string>golfcart</string>
+		<string/>
+		<string>b</string>
+	</array>
+</var>
+<var name="sentinel">
+	<array length="5">
+		<number>1</number>
+		<string>Sentinel XS</string>
+		<string>sentinel</string>
+		<string/>
+		<string>a</string>
+	</array>
+</var>
+<var name="moonbeam">
+	<array length="5">
+		<number>1</number>
+		<string>Moonbeam</string>
+		<string>moonbeam</string>
+		<string/>
+		<string>b</string>
+	</array>
+</var>
+<var name="stinger">
+	<array length="5">
+		<number>1</number>
+		<string>Stinger</string>
+		<string>stinger</string>
+		<string/>
+		<string>a</string>
+	</array>
+</var>
+</struct></data><script/></wddxPacket>
