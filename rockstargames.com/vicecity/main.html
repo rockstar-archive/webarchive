@@ -1,0 +1,752 @@
+<html>
+<head>
+
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="javascript" src="flashdetection.js"></script>
+<script src="iefix.js" type="text/javascript"></script>
+<script language="JavaScript1.2">
+<!--
+
+var flashDetection = new FlashDetection();
+
+// Generate random number for color choice
+var rnumb=Math.floor(Math.random()*6);
+var colorArray = new Array("B3FBE3","B3E6FB","FFFFFF","FFC9D9","FBFCC8","DCB9D0");
+var color = colorArray[rnumb];
+//var color = "DCB9D0";
+document.bgColor = "#"+color;
+//document.bgColor = "#DCB9D0";
+preLoadImages(color);
+
+
+function preLoadImages(color) {
+	// top menu images
+	info = new Image();
+	info.src = "images/"+color+"/menu_info.gif";
+	news = new Image();
+	news.src = "images/"+color+"/menu_news.gif";
+	screens = new Image();
+	screens.src = "images/"+color+"/menu_screens.gif";
+	movies = new Image();
+	movies.src = "images/"+color+"/menu_movies.gif";
+	pc = new Image();
+	pc.src = "images/"+color+"/menu_pc.gif";
+	buynow = new Image();
+	buynow.src = "images/"+color+"/menu_buynow.gif";
+
+	// left menu images
+	logo = new Image();
+	logo.src = "images/"+color+"/logo_VC.gif";
+	flash_w = new Image();
+	flash_w.src = "images/"+color+"/button_flash_w.gif";
+	flash_b = new Image();
+	flash_b.src = "images/"+color+"/button_flash_b.gif";
+	html_w = new Image();
+	html_w.src = "images/"+color+"/button_html_w.gif";
+	html_b = new Image();
+	html_b.src = "images/"+color+"/button_html_b.gif";
+	
+	// bottom logos
+	ps = new Image();
+	ps.src = "images/logo_ps.gif";
+	ps2 = new Image();
+	ps2.src = "images/"+color+"/logo_ps2.gif";
+	xbox = new Image();
+	xbox.src = "images/logo_xbox.gif";	
+	rstar = new Image();
+	rstar.src = "images/logo_rockstar.gif";
+	rstar_north = new Image();
+	rstar_north.src = "images/logo_rocknorth.gif";
+	pccd = new Image();
+	pccd.src = "images/logo_pccd.gif";
+	legal = new Image();
+	legal.src = "images/"+color+"/legal.gif";
+	esrb = new Image();
+	esrb.src = "images/logo_esrb.gif";
+	vcpc_text = new Image();
+	vcpc_text.src = "images/"+color+"/vcpc_text.gif";
+}
+
+function launchModule() {
+	window.open("http://www.rockstargames.com/grandtheftauto/xbox-module.html", "module", "width=750, height=380, location=0, menubar=0, resizable=0, scrollbars=0, status=1, titlebar=1, toolbar=0");
+}
+
+
+function load_page(which_form) { 
+	which_shop = which_form.modules.options[which_form.modules.selectedIndex].value;
+	if (which_shop != "") window.open("http://www.take2games.com/rockstar/vice/buy_tracker.php?shop="+which_shop);
+}
+
+function resizeWin(file, newLoc, newWidth, newHeight) {
+	newWin = open(file,newLoc,"scrollbars=no,resizable=no,status=no,height=" + newHeight + ",width=" + newWidth);
+}
+
+function resizeWin1(file, newLoc, newWidth, newHeight) {
+	newWin = open(file,newLoc,"scrollbars=yes,toolbar=yes,menubar=yes,resizable=no,status=yes,height=" + newHeight + ",width=" + newWidth);
+}
+
+function popUp(myFile, myName, myWidth, myHeight) {
+	var image = window.open(myFile, myName ,"width=" + myWidth + ",height=" + myHeight + ",status=no,toolbar=no,directories=no,scrollbars=no,location=no,resizable=no,menubar=no")
+}
+
+function popUpScreens(URL) {
+	day = new Date();
+	id = day.getTime();
+	eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=640,height=448');");
+}
+
+function toggleVisibility(layerName, layerStat) {		
+	toggleAllOff();
+	if (document.all) document.all[layerName].style.visibility = layerStat;
+	else document.getElementById(layerName).style.visibility = layerStat;
+	if (layerName == "infoLayer") {
+		InitialiseScrollableArea();
+	}
+	if (layerName == "newsLayer") {
+		InitialiseScrollableArea();
+		InitialiseNewsScrollableArea();
+	}
+	if (layerName == "screensLayer") {
+		InitialiseScrollableArea();
+		InitialiseScreensScrollableArea();
+	}
+}
+
+function toggleAllOff() {
+	var layerArray = new Array("flashLayer","infoLayer","newsLayer","screensLayer","movieLayer","buynowLayer","divContent","divNewsContent","divScreensContent");
+		for (x=0; x<9; x++) { 
+		thisLayer = layerArray[x];
+		if (document.all) document.all[thisLayer].style.visibility = "hidden";
+		else document.getElementById(thisLayer).style.visibility = "hidden";
+	} 
+}
+
+function killLogos() {
+	if (document.all) {
+		document.all['allLogos'].style.visibility="hidden";
+		document.all['rockstarLogo'].style.visibility="visible";
+	}
+	else {
+		document.getElementById('allLogos').style.visibility="hidden";
+		document.getElementById('rockstarLogo').style.visibility="visible";
+	}
+}
+
+// begin absolutely positioned scrollable area object scripts 
+/*
+Extension developed by David G. Miles (www.z3roadster.net/dreamweaver)
+Original Scrollable Area code developed by Thomas Brattli 
+To add more shock to your site, visit www.DHTML Shock.com
+*/
+
+function lib_bwcheck(){ //Browsercheck (needed)
+	this.ver=navigator.appVersion
+	this.agent=navigator.userAgent
+	this.dom=document.getElementById?1:0
+	this.opera5=(navigator.userAgent.indexOf("Opera")>-1 && document.getElementById)?1:0
+	this.ie5=(this.ver.indexOf("MSIE 5")>-1 && this.dom && !this.opera5)?1:0; 
+	this.ie6=(this.ver.indexOf("MSIE 6")>-1 && this.dom && !this.opera5)?1:0;
+	this.ie4=(document.all && !this.dom && !this.opera5)?1:0;
+	this.ie=this.ie4||this.ie5||this.ie6
+	this.mac=this.agent.indexOf("Mac")>-1
+	this.ns6=(this.dom && parseInt(this.ver) >= 5) ?1:0; 
+	this.ns4=(document.layers && !this.dom)?1:0;
+	this.bw=(this.ie6 || this.ie5 || this.ie4 || this.ns4 || this.ns6 || this.opera5)
+	return this
+}
+var bw=lib_bwcheck()
+
+var speed=50 
+ 
+var loop, timer 
+ 
+function ConstructObject(obj,nest){ 
+    nest=(!nest) ? '':'document.'+nest+'.' 
+    this.el=bw.dom?document.getElementById(obj):bw.ie4?document.all[obj]:bw.ns4?eval(nest+'document.'+obj):0; 
+    this.css=bw.dom?document.getElementById(obj).style:bw.ie4?document.all[obj].style:bw.ns4?eval(nest+'document.'+obj):0; 
+    this.scrollHeight=bw.ns4?this.css.document.height:this.el.offsetHeight 
+    this.clipHeight=bw.ns4?this.css.clip.height:this.el.offsetHeight 
+    this.up=MoveAreaUp;this.down=MoveAreaDown; 
+    this.MoveArea=MoveArea; this.x; this.y; 
+    this.obj = obj + "Object" 
+    eval(this.obj + "=this") 
+    return this 
+} 
+function MoveArea(x,y){ 
+    this.x=x;this.y=y 
+    this.css.left=this.x 
+    this.css.top=this.y 
+} 
+function MoveAreaDown(move){ 
+	if(this.y>-this.scrollHeight+objContainer.clipHeight){ 
+    this.MoveArea(0,this.y-move) 
+    if(loop) setTimeout(this.obj+".down("+move+")",speed) 
+	} 
+}
+function MoveAreaUp(move){ 
+	if(this.y<0){ 
+    this.MoveArea(0,this.y-move) ;
+    if(loop) setTimeout(this.obj+".up("+move+")",speed) 
+	} 
+} 
+function PerformScroll(speed){ 
+	if(initialised){ 
+		loop=true; 
+		if(speed>0) objScroller.down(speed) 
+		else objScroller.up(speed) 
+	} 
+} 
+function CeaseScroll(){ 
+    loop=false 
+    if(timer) clearTimeout(timer) 
+} 
+var initialised; 
+function InitialiseScrollableArea(){ 
+    objContainer=new ConstructObject('divContainer') 
+    objScroller=new ConstructObject('divContent','divContainer') 
+    objScroller.MoveArea(0,0) 
+    objContainer.css.visibility='visible'
+    objScroller.css.visibility='visible'
+    initialised=true; 
+} 
+var newsInitialised; 
+function InitialiseNewsScrollableArea(){ 
+    objContainer=new ConstructObject('divNewsContainer') 
+    objScroller=new ConstructObject('divNewsContent','divNewsContainer') 
+    objScroller.MoveArea(0,0) 
+    objContainer.css.visibility='visible'
+	objScroller.css.visibility='visible'
+    newsIinitialised=true; 
+}
+var screensInitialised; 
+function InitialiseScreensScrollableArea(){ 
+    objContainer=new ConstructObject('divScreensContainer') 
+    objScroller=new ConstructObject('divScreensContent','divScreensContainer') 
+    objScroller.MoveArea(0,0) 
+    objContainer.css.visibility='visible'
+	objScroller.css.visibility='visible'
+    screensIinitialised=true; 
+} 
+// end absolutely positioned scrollable area object scripts 
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+//-->
+</script>
+
+<style type="text/css">  
+.content{font-size:10px;font-family:Verdana,Geneva;line-height:12px;text-align:justify;color:#ffffff;}
+.moviecontent{font-size:10px;font-family:Verdana,Geneva;line-height:12px;color:#ffffff;}
+#divUpControl{position:absolute; width:222; left:20; top:60; z-index:1;} 
+#divDownControl{position:absolute; width:222; left:20; top:365; z-index:1;} 
+#divContainer{position:absolute; width:220; height:295; overflow:hidden; top:70; left:20; clip:rect(0,220,295,0); visibility:hidden} 
+#divContent{position:absolute; top:0; left:0;font-size:11px;font-family:Verdana;line-height:18px;text-align:justify;color:#ffffff;} 
+
+#divUpNewsControl{position:absolute; width:369; left:20; top:50; z-index:1;} 
+#divDownNewsControl{position:absolute; width:369; left:20; top:265; z-index:1;} 
+#divNewsContainer{position:absolute; width:369; height:206; overflow:hidden; top:60; left:20; clip:rect(0,369,206,0); visibility:hidden} 
+#divNewsContent{position:absolute; top:0; left:0;font-size:11px;font-family:Verdana;line-height:18px;text-align:justify;color:#333333;}
+#divMailingList{position:absolute; top:350; left:20;font-size:10px;font-family:Verdana;line-height:18px;text-align:justify;color:#333333;}
+
+#divUpScreensControl{position:absolute; width:20; left:360; top:118; z-index:1;} 
+#divDownScreensControl{position:absolute; width:250; left:360; top:366; z-index:1;} 
+#divScreensContainer{position:absolute; width:280; height:235; overflow:hidden; top:130; left:350; clip:rect(0,280,295,0); visibility:hidden} 
+#divScreensContent{position:absolute; top:0; left:0;font-size:11px;font-family:Verdana;line-height:18px;text-align:justify;color:#ffffff;} 
+</style>
+</head>
+
+<body bgcolor="#B3E6FB" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" text="#FFFFFF" alink="#FFFFFF" vlink="#FFFFFF" link="#FFFFFF">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" height="80%">
+  <tr>
+    <td width="20%" height="20%">&nbsp;</td>
+    <td width="65%" height="20%" valign="bottom"> 
+	
+<!------------------------ HTML MENU ------------------------------------>
+
+      <table border="0" cellpadding="0" cellspacing="0" width="670">
+        <tr>
+<script language="javascript">
+<!--
+document.bgColor = "#"+color;
+document.writeln("<td width=127 valign=bottom align=center><a href=# onClick=javascript:killLogos();javascript:toggleVisibility('infoLayer','visible');><img name=info src=images/"+color+"/menu_info.gif alt=info border=0></a></td>");
+document.writeln("<td width=117 valign=bottom align=center><a href=# onClick=javascript:killLogos();javascript:toggleVisibility('newsLayer','visible');><img name=news src=images/"+color+"/menu_news.gif alt=news border=0></a></td>");
+document.writeln("<td width=117 valign=bottom align=center><a href=# onClick=javascript:killLogos();javascript:toggleVisibility('screensLayer','visible');><img name=screens src=images/"+color+"/menu_screens.gif alt=screens border=0></a></td>");
+document.writeln("<td width=117 valign=bottom align=center><a href=# onClick=javascript:killLogos();javascript:toggleVisibility('movieLayer','visible');><img name=movies src=images/"+color+"/menu_movies.gif alt=movies border=0></a></td>");
+document.writeln("<td width=90 valign=bottom align=center><a href='javascript:launchModule();'><img name=xbox src=images/"+color+"/menu_xbox.gif alt='XBOX version' border=0 hspace=5></a></td>");
+document.writeln("<td width=90 valign=bottom align=center><a href='pc/index.htm' target='_blank'><img name=pc src=images/"+color+"/menu_pc.gif alt='PC version' border=0 hspace=5></a></td>");
+document.writeln("<td width=117 valign=bottom align=center><a href=# onClick=javascript:killLogos();javascript:toggleVisibility('buynowLayer','visible');><img name=buynow src=images/"+color+"/menu_buynow.gif alt=buynow border=0></a></td>");
+-->
+</script>		  
+        </tr>
+        <tr>
+          <td><img height="0" border="0" src="images/spacer.gif"></td>
+        </tr>
+      </table>
+
+
+    </td>
+  </tr>
+  <tr>
+  
+<!------------------------ LEFT HTML MENU ------------------------------------>
+    
+    <td align="right" valign="top" height="413"><img src="images/spacer.gif" height="10"> 
+      <table border="0" cellpadding="0" cellspacing="0">
+     <tr>
+<script language="javascript">
+<!--
+document.writeln("<td><img name=logo_VC src=images/"+color+"/logo_VC.gif width=161 height=260 alt=vc_logo border=0></td>");
+document.writeln("</tr>");
+document.writeln("<tr>");
+document.writeln("<td><a href=javascript:; onClick=javascript:toggleVisibility('flashLayer','visible'); onMouseOut=MM_swapImgRestore() onMouseOver=MM_swapImage('Image1','','images/"+color+"/button_flash_w.gif',1)><img src=images/"+color+"/button_flash_b.gif width=161 height=30 border=0 name=Image1></a></td>");
+document.writeln("</tr>");
+document.writeln("<tr>");
+document.writeln("<td><img name=or src=images/"+color+"/or.gif width=161 height=16></td>");
+document.writeln("</tr>");
+document.writeln("<tr>");
+document.writeln("<td><a href=javascript:; onClick=javascript:toggleVisibility('infoLayer','visible'); onMouseOut=MM_swapImgRestore() onMouseOver=MM_swapImage('Image2','','images/"+color+"/button_html_w.gif',1)><img src=images/"+color+"/button_html_b.gif width=161 height=30 border=0 name=Image2></a></td>");
+-->
+</script>
+	  </tr>
+	</table>
+    </td>
+    <td valign="top" height="413"> 
+      <table width="662" height="412" bgcolor="#FFFFFF" cellpadding="1" border="1" bordercolorlight="#000000" bordercolordark="#000000" bordercolor="#000000"><tr><td valign="top">
+  
+<!------------------------ FLASH LAYER ------------------------------------>  
+  
+<script language="JavaScript1.2">
+	if (flashDetection.isMinimumVersion(6)) {
+	theDudeAbidesMain();
+	}
+	else {
+	document.writeln("<DIV ID=flashLayer STYLE=position:absolute;width:650px;height:400px;z-index:10;visibility:hidden;background:#004F7B;border-width:1px;border-color:#000000;border-style:solid>");
+	document.writeln("</DIV>");
+	}
+</script>
+<!------------------------ MOVIE LAYER ------------------------------------>
+	
+<div id="movieLayer" style="position:absolute; width: 650px; height: 400px; z-index: 3; visibility: hidden; background:#004F7B;border-width: 1px; border-color:#000000; border-style:solid">
+<table border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td><img src="images/movies/movies1.jpg" width="422" height="187" alt="" border="0"></td>
+		<td><img src="images/movies/movies2.jpg" width="191" height="187" alt="" border="0"></td>
+	</tr>
+</table>
+<table border="0" cellpadding="3" cellspacing="0">
+	<tr>
+		<td rowspan="7"><img src="images/spacer.gif" width="10" height="1" alt="" border="0"></td>
+		<td><img src="images/spacer.gif" width="20" height="1" alt="" border="0"></td>
+</tr>
+	<tr><td height="40">&nbsp;</td></tr>
+	<tr>
+		<td class="moviecontent" width="225"><b>OCTOBER TRAILER <font color="#ffff00">(new)</font></b></td>
+		<td class="moviecontent" width="225"><b>SEPTEMBER TRAILER</b></td>
+		<td class="moviecontent" width="225"><b>AUGUST TRAILER</b></td>
+	</tr>
+	<tr>
+		<td class="moviecontent">
+		<a style="text-decoration:none;color:#FFFFFF" href="javascript:;" onclick="popUp('trailerlarge_ph3.html','_blank','480','380');">HIGH QUALITY<br>
+		480 x 360<br>
+		24MB QUICKTIME</a>
+		</td>
+		<td class="moviecontent">
+		<a style="text-decoration:none;color:#FFFFFF" href="javascript:;" onclick="popUp('trailerlarge_ph2.html','_blank','480','380');">HIGH QUALITY<br>
+		480 x 360<br>
+		23MB QUICKTIME</a>
+		</td>
+		<td class="moviecontent">
+		<a style="text-decoration:none;color:#FFFFFF" href="javascript:;" onclick="popUp('trailerlarge.html','_blank','480','380');">HIGH QUALITY<br>
+		480 x 360<br>
+		25MB QUICKTIME</a>
+		</td>
+	</tr>
+	<tr>
+		<td class="moviecontent">
+		<a style="text-decoration:none;color:#FFFFFF" href="javascript:;" onclick="popUp('trailersmall_ph3.html','_blank','320','260');">MEDIUM QUALITY<br>
+		320 x 240<br>
+		15MB QUICKTIME</a></td>
+		<td class="moviecontent">
+		<a style="text-decoration:none;color:#FFFFFF" href="javascript:;" onclick="popUp('trailersmall_ph2.html','_blank','320','260');">MEDIUM QUALITY<br>
+		320 x 240<br>
+		14MB QUICKTIME</a></td>
+		<td class="moviecontent">
+		<a style="text-decoration:none;color:#FFFFFF" href="javascript:;" onclick="popUp('trailersmall.html','_blank','320','260');">MEDIUM QUALITY<br>
+		320 x 240<br>
+		12MB QUICKTIME</a></td>
+	</tr>
+</table>
+</div>
+
+<!------------------------ INFO LAYER ------------------------------------>
+<script language="JavaScript1.2">
+<!--
+if (!flashDetection.isMinimumVersion(6)) {
+document.writeln("<DIV ID=infoLayer STYLE=position:absolute;width:650px;height:400px;z-index:2;visibility:visible;background:#ffffff;background-image:URL(images/info/bg01.jpg)>");
+}
+else document.writeln("<DIV ID=infoLayer STYLE=position:absolute;width:650px;height:400px;z-index:2;visibility:hidden;background:#ffffff;background-image:URL(images/info/bg01.jpg)>");
+
+-->
+</script>
+<div id="divUpControl" align="center"> <a href="javascript:;" onmouseover="PerformScroll(-7)" onmouseout="CeaseScroll()"><img src="images/info/scrollup.gif" width="222" height="11" alt="" border="0"></a></div>
+<div id="divDownControl" align="center"> <a href="javascript:;" onmouseover="PerformScroll(7)" onmouseout="CeaseScroll()"><img src="images/info/scrolldown.gif" width="222" height="11" alt="" border="0"></a></div>
+<div id="divContainer"> 
+	<div id="divContent">
+		<p>Grand Theft Auto: Vice City</p>
+		<p>Welcome to Vice City. Welcome to the 1980s. </p>
+		<p>Having just made it back onto the streets of Liberty City after a long stretch in maximum security, Tommy Vercetti is sent to Vice City by his old boss, Sonny Forelli.   They were understandably nervous about his re-appearance in Liberty City, so a trip down south seemed like a good idea.  But all does not go smoothly upon his arrival in the glamorous, hedonistic metropolis of Vice City.  He's set up and is left with no money and no merchandise.  Sonny wants his money back, but the biker gangs, Cuban gangsters, and corrupt politicians stand in his way. Most of Vice City seems to want Tommy dead.  His only answer is to fight back and take over the city himself.</p>
+		<p>From the decade of big hair, excess and pastel suits comes a story of one man's rise to the top of the criminal pile as Grand Theft Auto returns to the PlayStation®2 computer entertainment system this October. Vice City is a huge urban sprawl ranging from the beach to the swamps and the glitz to the ghetto, and is the most varied, complete and alive digital city ever created.  Combining non-linear gameplay with a character driven narrative, you arrive in a town brimming with delights and degradation and are given the opportunity to take it over as you choose.</p>
+		<p>As a major gateway to South America and the Caribbean and attracting migrants, Vice City is brimming with diverse characters, so there's a friend for everyone.  It is a sociable place and the new guy in town is sure to meet all manner of friendly people in the sunshine capital of America.  Athletes, pop stars, real estate developers, politicians, trailer trash, everyone is moving to Vice City to find out what makes it the number one growth city in America. But, as Tommy quickly finds out, trust is still the rarest of commodities.</p>
+		<p>Vice City offers vehicular pleasures to suit every taste. For the speed enthusiast, there's high-performance cars and motorbikes. For the sportsman, a powerboat or a golf buggy lets you enjoy the great outdoors.  For those that need that sense of freedom and escape, why not charter a helicopter and see the beauty of Vice City from the air?</p>
+		<p>As the party capital of America, you would expect your ears to be seduced by a host of sultry melodies and pumping beats, but the city is truly rocking. You'll be AMAZED as you sweep through Vice City's FM dial. If you are feeling like trouble, you can tune into some driving rock, or some crucial electro, or maybe you want to slow down with some sweet soul, and there will always be some great romantic anthems if you want to really take your mind off things. </p>
+		<p>For the action man, or outdoors type, there's tons of fun things to do and adventures to be had… guaranteed.  For the secretive or creepy type, Vice City is full of surprises, a place where you'll constantly be surprised by the vivacious, fun-loving types who live there and the things you can discover.</p>
+		<p>Grand Theft Auto: Vice City is the most diverse and ambitious piece of interactive entertainment yet created. The game is developed by Rockstar North and published by Rockstar Games.</p>
+		<br>
+	</div>
+</div>
+<!-- end absolutely positioned scrollable area object --> 
+</div>
+
+<!------------------------ NEWS LAYER ------------------------------------>
+
+<div id="newsLayer" style="position:absolute; width: 650px; height: 400px; z-index: 2; visibility: hidden;background-color:#B3E6FB;">
+	<table border="0" cellpadding="0" cellspacing="0" bgcolor="#B3E6FB">
+	<tr>
+		<td colspan="2"><img src="images/news/top01.gif" width="650" height="10" alt="" border="0"></td>
+	</tr>
+	<tr>
+		<td valign="top" width="374"><img src="images/news/title.gif" width="49" height="11" alt="" border="0" hspace="20" vspace="20"><br><img src="images/spacer.gif" width="418" height="1" alt="" border="0"></td>
+		<td><img src="images/news/mid01.jpg" width="232" height="276" alt="" border="0"></td>
+	</tr>
+	<tr>
+		<td colspan="2"><img src="images/news/bot01.jpg" width="650" height="114" alt="" border="0"></td>
+	</tr>
+	</table>
+
+	<!-- begin absolutely positioned scrollable area object--> 
+	<div id="divUpNewsControl" align="center"> <a href="javascript:;" onmouseover="PerformScroll(-7)" onmouseout="CeaseScroll()"><img src="images/news/scrollup.gif" width="370" height="11" alt="" border="0"></a></div>
+	<div id="divDownNewsControl" align="center"> <a href="javascript:;" onmouseover="PerformScroll(7)" onmouseout="CeaseScroll()"><img src="images/news/scrolldown.gif" width="370" height="11" alt="" border="0"></a></div>
+	<div id="divNewsContainer"> 
+	<div id="divNewsContent">
+	
+<p>May 13 - The glorious, deluxe PC edition of Grand Theft Auto: Vice City is now in stores.</p>
+
+<p>Skinning, customizable radio station, game replays, fully-optimized graphics and audio, and all of the epic gameplay experience that made Vice City a classic on the PlayStation®2.  Gamespy scores the game a 93 out of 100 in the first review posted online, saying "...as we near the halfway point of 2003, Vice City is the most fun I've had playing any PC game so far this year..."</p>
+
+<p>Head to <a style="color:#333333;" href="http://www.rockstargames.com/vicecity/pc" target="_blank">www.rockstargames.com/vicecity/pc</a> for retailer options as well as an exclusive downloadable player skin and all-new trailer.</p>
+
+<br>
+
+<p>April 15 - Grand Theft Auto: Vice City PC Site Launch</p>
+
+<p>The official Grand Theft Auto site has been updated to now include a dedicated PC section with screenshots, system specs, preorder and webring links, and more details about the Grand Theft Auto: Vice City on the PC.</p>
+
+<p>Go to <a style="color:#333333;" href="http://www.rockstargames.com/vicecity/pc" target="_blank">www.rockstargames.com/vicecity/pc</a> for more information.</p>
+
+<br>
+	
+<p>February 14 - Grand Theft Auto: Vice City Coming to the PC</p>
+
+<p>Today, Rockstar Games announced that the PC version of the global blockbuster, Grand Theft Auto: Vice City, is set to hit retail shelves in North America on May 14th and in Europe on May 16th. The PC version will have enhanced features including improved graphics and sound, additional PC controls, as well as several options for players to customize the game. Stay tuned for more details and for the launch of the PC-version dedicated area of the official Vice City website.</p>
+
+<br>
+
+<p>February 4 - Grand Theft Auto: Vice City - 2002 Game Of The Year Awards</p>
+
+<p>We are very pleased to report that a number of media institutions have seen fit to honor Grand Theft Auto: Vice City in their yearly "Game of the Year" awards. Here is a selection:</p>
+
+<p>* Game Informer, January 2003. GAME OF 2002. "[Grand Theft Auto: Vice City] took a premise that blew everyone away, and expanded it to ludicrous proportions… a scale of game we never thought would be achieved."</p>
+
+<p>* PSM, February 2003. GAME OF THE YEAR. "The depth and gameplay variety is through the roof… Vice City is a gaming experience that will have us playing well into 2003."</p>
+
+<p>* Entertainment Weekly, December 4 2002. BEST VIDEOGAME OF 2002. "The reason 'Vice City' blows every other game away isn't that it's a driving, shooting, action, or simulation game, but that it's all four combined into a criminally stylish package... a visit to Vice City is sure to keep you out all night."</p>
+
+<p>* IGN.com, January 21, 2003. BEST PS2 GAME OF THE YEAR (Editor's Choice and Reader's Choice). "…more mini-games, a greater, more in-depth story featuring a perfectly voice acted character… an invigorating, impressively selected soundtrack… Perhaps the addition of motorcycles is the icing on the cake, or maybe it was the way players can buy property, investing themselves in further in the story. However, you look at it, it's the most impressive game on PS2 in 2002."</p>
+
+<p>* GameSpot.com, December 26, 2002. GAME OF THE YEAR ON PLAYSTATION 2. "…everything in Vice City seems to come together in a way that almost feels impossible, like games simply shouldn't be this good."</p>
+
+<p>We thank them and all the fans who have already helped Grand Theft Auto: Vice City become the top-selling game of 2002 by a landslide.</p>
+  
+<br>
+
+<p>February 3 - Vice City Soundtrack Reviews And Greatest Hits Disc</p>
+
+<p>Turns out the critics seem to have enjoyed the Vice City Official Soundtracks CDs practically as much as the game itself. Read on for some selections of praise.</p>
+
+<p>New Musical Express, December 7 2002. Review score: 10/10. "If this amazing music from the first half of the 80's is a foreign country to you, or a country you visited but can't really remember, then, dude, this totally awesome box set is your one-way ticket to paradise."</p>
+
+<p>Rolling Stone, December 12 2002. "Extravagant enough to reflect the excesses of the 1980s… Each volume (also sold separately) comes with DJ patter, commercials and parody music that totally evoke the decadent decade in which the game is set."</p>
+
+<p>Entertainment Weekly, November 22 2002. Review score: A. "…this collection of music has more hits than a Mob boss. V-Rock thrashes out with Iron Maiden's '2 Minutes to Midnight.' Legendary radio pirate Mr. Magic drops scratchtastic tunes from Kurtis Blow and Whodini. And Radio Espantoso manages to mambo mucho with Mongo Santamaria and Tito Puente. Also, every disc includes a Vice City cheat code -- which makes this life of Vice sound pretty darn good"</p>
+
+<p>PSM, January 2003. BEST SOUNDTRACK 2002. "Vice City's soundtrack must have been a daunting effort to assemble. The work was worth it, though - it fit the game's… setting perfectly, and surprisingly featured a lot of hits from the period that other game makers might not have found cliché enough."</p>
+
+<p>Game Informer, January 2003. BEST VIDEO GAME SOUNDTRACK OF 2002. "This soundtrack not only serves to immerse you into the eighties, but more importantly to bring video games some credibility as an entertainment medium equal to that of TV and motion pictures."</p>
+
+<p>Gamespy.com, December 26, 2002. BEST MUSIC 2002. "Rockstar Games continues to push the bounds of what a game can be with Grand Theft Auto. The game's soundtrack similarly raises the bar for video game soundtracks."</p>
+
+<p>IGN.com, December 20 2002. "… the quintessential seven CD soundtrack… has burned a comet-like trail into the gaming consciousness… The result, a cross-media blockbuster box set… is a wide-ranging swath of musical one-hit wonders and real gems from the 1980s that hits on all cylinders." </p>
+
+<p>Also available in stores now, the Greatest Hits single OST CD disc containing what we've reckoned to be the very best tracks across all of Vice City's airwaves. Visit the <a style="color:#333333;" href="http://www.sonymusicstore.com/store/catalog/MerchandiseDetails.jsp?merchId=6111" target="_blank"><u>Sony Music Store</u></a> or the music retailer of your choice.</p>
+  
+<br>
+
+<p>January 7 - Official Vice City Desktops Update: Winamp Skin &amp; Screensavers</p>
+
+<p>As a special holiday treat from your friends at Rockstar, we have added some new items for download at the official Vice City site <a style="color:#333333;" href="http://www.rockstargames.com/vicecity/desktops" target="_blank"><u>www.rockstargames.com/vicecity/desktops</u></a>.</p>
+
+<p>First and foremost is the appearance of the Official Vice City Winamp skin. Modeled after the experience of cruising picturesque Ocean Drive behind the wheel of an '86 Banshee, the Vice City Winamp skin is really the only dignified way of enjoying your favorite music.</p>
+
+<p>Also available are three brand new screensavers, dedicated to Vice City's slicksters, temptresses, and good ol' boys.</p>
+
+<p><a style="color:#333333;" href="http://www.rockstargames.com/vicecity/desktops" target="_blank"><u>www.rockstargames.com/vicecity/desktops</u></a></p>
+
+<br>
+  
+<p>January 7 - Vicecityradio.com ConnecteD Area Updated</p>
+
+<p>The ConnecteD areas of the <a style="color:#333333;" href="http://www.vicecityradio.com/" target="_blank"><u>www.vicecityradio.com</u></a> website have been updated with some exclusive new content as well as an incredible new cheat code for owners of all 7 soundtrack CDs. Use any or all of your soundtrack CDs to access brand new QuickTime movie clips of some insane stunt bonuses you probably haven't seen before and more. Cheaters, enjoy a new grand finale cheat code - accessible in the BOX SET / CONNECTED section of the Vice City Radio website. Follow the instructions and unlock what may be the coolest cheat in the entire Vice City code repertoire.</p>
+
+<br>
+  
+<p>November 22 - Grand Theft Auto: Vice City Reviews</p>
+
+<p>The reviews are in and we are pleased to announce that Grand Theft Auto: Vice City has gotten a host of perfect scores from the most reputable of outlets. Without more trumpeting, here are the details.</p> 
+
+<p>GAME INFORMER, December 2002 Game of the Month<br>
+10 / 10 (perfect score)</p>
+
+<p>ELECTRONIC GAMING MONTHLY, December 2002  - Platinum Editor's Choice Award<br>
+10 / 10 / 10 (perfect score)</p>
+
+<p>OPM, December 2002<br>
+***** (perfect score)</p>
+
+<p>USA TODAY, November 8, 2002<br>
+**** (perfect score)</p>
+
+<br>
+	
+<p>November 22 - Vice City Desktops</p>
+
+<p>The first set of official Vice City desktops are now available at <a style="color:#333333;" target="_blank" href="http://www.rockstargames.com/vicecity/desktops">www.rockstargames.com/vicecity/desktops</a>. Finally something to adorn your desktop during many idle hours spent away from your computer and very close to your TV set.  Featuring desktops in honor of such beloved local characters as Lance Vance, Ken Rosenberg, Phil Cassidy, Auntie Poulet, Love Fist and many others.</p>
+
+<p>Available in 800x600, 1024x768 and 1280x1024 sizes.</p>
+
+<p>Pick them up at: <a style="color:#333333;" target="_blank" href="http://www.rockstargames.com/vicecity/desktops">www.rockstargames.com/vicecity/desktops</a>.</p>
+<br>
+
+<p>November 8 - Grand Theft Auto: Vice City Available Throughout Europe</p>
+
+<p>Welcome, Willkommen, Bienvenidos, Bonjour to the 1980s.</p>
+
+<p>Grand Theft Auto: Vice City hit shelves and many PlayStation 2’s today throughout Europe. Experience the 1980s all over again in the sunny American metropolis aptly named Vice City. The town is brimming with delights and degradation, and most importantly, the opportunity to take it over. Enjoy!</p>
+<br>
+<p>November 5, 2002</p>	
+
+<p>Grand Theft Auto: Vice City hit North American shelves last week and has since been turning heads of gamers and critics everywhere. Here's a small selection of critical response.</a></p>
+<p>"Grand Theft Auto III is a national obsession. Vice City borders on something more: art." - <a style="color:#333333;" target="_blank" href="http://www.time.com/time/magazine/article/0,9171,1101021104-384808,00.html">Time Magazine</a>
+<p>"Two minutes after walking into the room, our jaws hit the floor and stayed there." - PlayStation Magazine
+<p>"It's everything you've been waiting for, and everything you don't expect." - Official PlayStation Magazine
+<p>Platinum Editor’s Choice award: "peerless, one-of-a-kind gaming experience... an instant classic." - <a style="color:#333333;" target="_blank" href="http://www.gamers.com/game/1086542">Electronic Gaming Monthly</a>
+<p>"The most sought-after game of the year." - Entertainment Weekly</p>
+
+	
+<br>
+<p>October 29, 2002</p>
+
+<p>Grand Theft Auto: Vice City is in stores now!</p>
+
+<br>
+<p>October 22, 2002</p>
+<p>Only one week left until Grand Theft Auto: Vice City hits shelves.  In the meantime, check out ongoing coverage on <a style="color:#333333;" href="http://ps2.ign.com/objects/482/482089.html" target="_blank">IGN.com</a>, including in-depth features on vehicles, soundtrack, interior design, insane stunt bonuses and much more.  And <a style="color:#333333;" href="http://gamespot.com/gamespot/filters/products/0,11114,561545,00.html" target="_blank">Gamespot.com</a> for detailed behind-the-scenes interviews, features on Vice City's talk radio stations and more...</p>
+
+<br>
+<p>October 11, 2002</p>
+<p>The Grand Theft Auto Vice City OST collection can now be preordered at <a style="color:#333333;" target="_blank" href="http://www.vicecityradio.com/">www.vicecityradio.com</a>.  Order any or all of the 7 soundtrack discs or order the limited-edition Box Set collectors' edition to get them all at once.  Each CD contains a special access code to the ConnecteD area of <a style="color:#333333;" target="_blank" href="http://www.vicecityradio.com/">www.vicecityradio.com</a>, enabling you to download unique cheat codes, as well as other exclusive Vice City content.</p>
+
+
+<br>
+<p>September 17, 2002</p>
+<p>Lazlow, Toni and Fernando confirmed to appear on Vice City's radio dial.  Was revealed on <a style="color:#333333;" target="_blank" href="http://ps2.ign.com/articles/371/371227p1.html">IGN</a> yesterday that Lazlow will host Vice City's rock station, V-Rock; Toni will host pop station, Flash FM; and Fernando will host emotive anthems station, Emotion 98.3.</p>
+
+<br>
+<p>September 9, 2002</p>
+
+<p>Grand Theft Auto: Vice City Soundtrack</p>
+<p>Rockstar Games and Sony Music Entertainment proudly announce a landmark collaboration to release the soundtrack for the highly anticipated Grand Theft Auto: Vice City.  Rockstar Games and Sony Music have joined forces to release seven simultaneous soundtrack albums on October 29th concurrent with the launch of Grand Theft Auto: Vice City for the PlayStation&reg2; computer entertainment system in the United States. The soundtracks will be released on the Epic Records label.</p>
+<p>The Grand Theft Auto: Vice City soundtrack albums will be the definitive 80's music collection, with each album containing musical tracks from one of the numerous radio stations featured in Grand Theft Auto: Vice City. Each album will replicate a station from the in-game 1980's radio FM dial, ranging from Heavy Metal and Soul to Hip-Hop and Pop Ballads. Players will once again have the ability to tune the radio station in every car that they carjack to one of many stations of their choice.  The radio stations in Grand Theft Auto: Vice City will feature the largest selection of music ever assembled for a video game with over eighty staggering tracks from
+artists such as Judas Priest, Blondie, Flock of Seagulls, Kool and the Gang, Hall and Oates, Grandmaster Flash, Cutting Crew and many, many more that span the entire musical spectrum of the period.</p>
+
+<br>
+<p>August 27, 2002</p>
+<p>Grand Theft Auto: Vice City is going to be released for the PlayStation&reg2; computer entertainment system on October 29, 2002.</p>
+	<br>
+	</div>
+	</div>
+	<!-- end absolutely positioned scrollable area object -->
+	<div id="divMailingList">
+<a style="color:#333333;" href="mailto:gta-subscribe-request@listserv.rockstargames.com">Grand Theft Auto mailing list</a><br>
+<a style="color:#333333;" href="mailto:all-games-subscribe-request@listserv.rockstargames.com">Rockstar Games mailing list</a>
+</div>
+</div>
+
+<!------------------------ SCREENS LAYER ------------------------------------>
+<div id="screensLayer" style="position:absolute;width:650px;height:400px;z-index:2;visibility:hidden;background:#ffffff;background-image:URL(images/screens/bg02.jpg);">
+<div id="divUpScreensControl" align="center"> <a href="javascript:;" onmouseover="PerformScroll(-7)" onmouseout="CeaseScroll()"><img src="images/screens/scrollup.gif" width="260" height="11" alt="" border="0"></a></div>
+<div id="divDownScreensControl" align="center"> <a href="javascript:;" onmouseover="PerformScroll(7)" onmouseout="CeaseScroll()"><img src="images/screens/scrolldown.gif" width="260" height="11" alt="" border="0"></a></div>
+<div id="divScreensContainer"> 
+  <div id="divScreensContent">
+
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td align="right" valign="bottom">
+	<table border="0" cellspacing="10" cellpadding="0">
+		<tr>
+			<td><a href="javascript:popUpScreens ('screenD01.html')"><img src="images/screens/thumbD01.gif" width="80" height="56" alt="" border="0"></a></td>
+			<td><a href="javascript:popUpScreens ('screenD02.html')"><img src="images/screens/thumbD02.gif" width="80" height="56" alt="" border="0"></a></td>
+			<td><a href="javascript:popUpScreens ('screenD03.html')"><img src="images/screens/thumbD03.gif" width="80" height="56" alt="" border="0"></a></td>
+		</tr>
+		<tr>
+			<td><a href="javascript:popUpScreens ('screenD04.html')"><img src="images/screens/thumbD04.gif" width="80" height="56" alt="" border="0"></a></td>
+			<td><a href="javascript:popUpScreens ('screenD05.html')"><img src="images/screens/thumbD05.gif" width="80" height="56" alt="" border="0"></a></td>
+			<td><a href="javascript:popUpScreens ('screenD06.html')"><img src="images/screens/thumbD06.gif" width="80" height="56" alt="" border="0"></a></td>
+		</tr>
+
+		<tr>
+			<td><a href="javascript:popUpScreens ('screenC01.html')"><img src="images/screens/thumbC01.gif" width="80" height="56" alt="" border="0"></a></td>
+			<td><a href="javascript:popUpScreens ('screenC02.html')"><img src="images/screens/thumbC02.gif" width="80" height="56" alt="" border="0"></a></td>
+			<td><a href="javascript:popUpScreens ('screenC03.html')"><img src="images/screens/thumbC03.gif" width="80" height="56" alt="" border="0"></a></td>
+		</tr>
+		<tr>
+			<td><a href="javascript:popUpScreens ('screenC04.html')"><img src="images/screens/thumbC04.gif" width="80" height="56" alt="" border="0"></a></td>
+			<td><a href="javascript:popUpScreens ('screenC05.html')"><img src="images/screens/thumbC05.gif" width="80" height="56" alt="" border="0"></a></td>
+			<td><a href="javascript:popUpScreens ('screen01.html')"><img src="images/screens/thumb01.gif" width="80" height="56" alt="" border="0"></a></td>
+		</tr>
+		<tr>
+			<td><a href="javascript:popUpScreens ('screen02.html')"><img src="images/screens/thumb02.gif" width="80" height="56" alt="" border="0"></a></td>
+			<td><a href="javascript:popUpScreens ('screen03.html')"><img src="images/screens/thumb03.gif" width="80" height="56" alt="" border="0"></a></td>
+			<td><a href="javascript:popUpScreens ('screen04.html')"><img src="images/screens/thumb04.gif" width="80" height="56" alt="" border="0"></a></td>
+		</tr>
+		<tr>
+			<td><a href="javascript:popUpScreens ('screen05.html')"><img src="images/screens/thumb05.gif" width="80" height="56" alt="" border="0"></a></td>
+			<td><a href="javascript:popUpScreens ('screen06.html')"><img src="images/screens/thumb06.gif" width="80" height="56" alt="" border="0"></a></td>
+			<td><a href="javascript:popUpScreens ('screen07.html')"><img src="images/screens/thumb07.gif" width="80" height="56" alt="" border="0"></a></td>
+		</tr>
+		<tr>
+			<td><a href="javascript:popUpScreens ('screen08.html')"><img src="images/screens/thumb08.gif" width="80" height="56" alt="" border="0"></a></td>
+			<td><a href="javascript:popUpScreens ('screen09.html')"><img src="images/screens/thumb09.gif" width="80" height="56" alt="" border="0"></a></td>
+			<td><a href="javascript:popUpScreens ('screen10.html')"><img src="images/screens/thumb10.gif" width="80" height="56" alt="" border="0"></a></td>
+		</tr>
+		<tr>
+			<td><a href="javascript:popUpScreens ('screen11.html')"><img src="images/screens/thumb11.gif" width="80" height="56" alt="" border="0"></a></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+</td></tr></table>
+</div>
+</div>
+</div>
+
+<!------------------------ BUYNOW LAYER ------------------------------------>
+
+<div id="buynowLayer" style="position:absolute; width: 650px; z-index: 3; visibility: hidden; background:#ffffff;">
+<table border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td><img src="images/buyitnow/title.jpg" width="270" height="61" alt="" border="0"><br><img src="images/buyitnow/box.jpg" width="270" height="257" alt="" border="0"></td>
+		<td><img src="images/buyitnow/mansion.jpg" width="380" height="318" alt="" border="0"></td>
+	</tr>
+	<tr><td colspan="2" align="center">
+		<img src="images/spacer.gif" width="1" height="10" alt="" border="0">
+		<table border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" align="center">
+			<tr>
+<form>
+				<td align="center"><img src="images/buyitnow/order.gif" width="235" height="28" alt="" border="0" vspace="10"><br>
+	<select name="modules" onchange="load_page(this.form)" style="font-family:Tahoma,Geneva;font-size:10px;background:#ffffff;color:#000000;">
+	<option value="">RETAILER LISTING</option>
+	<option value="">---------------------</option>
+	<option value="1">ROCKSTAR WAREHOUSE</option>
+	<option value="2">BEST BUY</option>	
+	<option value="3">EB GAMES</option>
+	<option value="4">FUTURE SHOP</option>
+	<option value="5">GAMEFIXX</option>
+	<option value="6">GAMESTOP</option>
+<!--	<option value="7">SAM GOODY</option>	 -->
+	<option value="8">TOYS R US</option>
+	<option value="9">WALMART</option>
+	<option value="10">(UK) GAME</option>	
+	<option value="11">(UK) GAMEPLAY</option>
+	</select>
+				</td>
+</form>
+			</tr>
+		</table>
+	</td></tr>
+</table>
+</div>		
+	
+	
+</td></tr></table>
+    </td>
+  </tr>
+<tr valign="top">
+    <td valign="top">&nbsp;</td>
+    <td valign="top"> 
+      <div id="allLogos" style="position:absolute; width: 650px; z-index: 3; visibility: visible;">
+	<table border="0" cellpadding="0" cellspacing="0" width="665">
+	<tr valign="top"><td colspan="7"><img src="images/spacer.gif" height="15"></td></tr>
+	<tr valign="top">
+<script language="javascript">
+<!--
+document.writeln("<td><a href=http://www.rockstarnorth.com/ target=_blank><img name=rstar_north src=images/logo_rocknorth.gif width=48 height=44 alt=Rockstar border=0 hspace=10></a></td>");
+document.writeln("<td><a href=http://www.playstation.com/ target=_blank><img name=ps src=images/logo_ps.gif width=49 height=44 alt=Playstation border=0 hspace=5></a></td>");
+document.writeln("<td><a href=http://www.playstation2.com/ target=_blank><img name=ps2 src=images/"+color+"/logo_ps2.gif width=105 height=21 alt=Playstation2 border=0 vspace=10 hpsace=5></a></td>");
+document.writeln("<td><a href=http://www.xbox.com/ target=_blank><img name=xbox src=images/logo_xbox.gif width=100 height=31 alt=XBox border=0 vspace=2></a></td>");
+document.writeln("<td><a href='pc/index.htm' target='_blank');><img name=pccd src=images/logo_pccd.gif width=42 height=42 alt=PCCD border=0 hspace=5></a></td>");
+document.writeln("<td><a href=http://www.esrb.org/ target=_blank><img nane=esrb src=images/logo_esrb.gif width=38 height=53 alt='Violence, Strong Language, Blood and Gore, Strong Sexual Content' border=0 hspace=6></a></td>");
+document.writeln("<td align=center><a href=http://www.rockstargames.com/ target=_blank><img name=rstar src=images/logo_rockstar.gif width=46 height=44 alt=Rockstar border=0 hspace=1></a></td></tr>");
+document.writeln("<tr><td colspan=7><img name=legal src=images/"+color+"/legal.gif width=429 height=57 alt=Legal border=0></td>");
+if (!flashDetection.isMinimumVersion(6)) toggleVisibility("infoLayer","visible");
+-->
+</script>
+	</tr>
+	</table>
+</div>
+<div id="rockstarLogo" style="position:absolute; width: 650px; z-index: 3; visibility: hidden;">
+	<table border="0" cellpadding="0" cellspacing="0" width="655">
+	<tr><td><img src="images/spacer.gif" height="15"></td></tr>
+	<tr valign="top">
+<script language="javascript">
+<!--
+document.writeln("<td align='left'><a href='javascript:launchModule()'><img name='vcxbox_text' src='images/"+color+"/vcxbox_text.gif' width=298 height=44 alt='XBOX version' border=0></a></td>");
+-->
+</script>
+		<td align="right"><a href="http://www.rockstargames.com/" target="_blank"><img src="images/logo_rockstar.gif" width="46" height="44" alt="" border="0"></a></td>
+	</tr>
+	</table>
+</div>
+</td></tr></table>
+</body>
+</html>

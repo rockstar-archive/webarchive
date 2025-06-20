@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+
+	<title>GRAND THEFT AUTO VICE CITY</title>
+<style type="text/css">  
+#divUpControl{position:absolute; width:222; left:20; top:60; z-index:1;} 
+#divDownControl{position:absolute; width:222; left:20; top:365; z-index:1;} 
+#divContainer{position:absolute; width:220; height:295; overflow:hidden; top:70; left:20; clip:rect(0,220,295,0); visibility:hidden} 
+#divContent{position:absolute; top:0; left:0;font-size:11px;font-family:Verdana;line-height:18px;text-align:justify;color:#ffffff;} 
+</style>
+<script language="JavaScript">// begin absolutely positioned scrollable area object scripts 
+/*
+Extension developed by David G. Miles (www.z3roadster.net/dreamweaver)
+Original Scrollable Area code developed by Thomas Brattli 
+To add more shock to your site, visit www.DHTML Shock.com
+*/
+function lib_bwcheck(){ //Browsercheck (needed)
+	this.ver=navigator.appVersion
+	this.agent=navigator.userAgent
+	this.dom=document.getElementById?1:0
+	this.opera5=(navigator.userAgent.indexOf("Opera")>-1 && document.getElementById)?1:0
+	this.ie5=(this.ver.indexOf("MSIE 5")>-1 && this.dom && !this.opera5)?1:0; 
+	this.ie6=(this.ver.indexOf("MSIE 6")>-1 && this.dom && !this.opera5)?1:0;
+	this.ie4=(document.all && !this.dom && !this.opera5)?1:0;
+	this.ie=this.ie4||this.ie5||this.ie6
+	this.mac=this.agent.indexOf("Mac")>-1
+	this.ns6=(this.dom && parseInt(this.ver) >= 5) ?1:0; 
+	this.ns4=(document.layers && !this.dom)?1:0;
+	this.bw=(this.ie6 || this.ie5 || this.ie4 || this.ns4 || this.ns6 || this.opera5)
+	return this
+}
+var bw=lib_bwcheck()
+
+var speed=50 
+ 
+var loop, timer 
+ 
+function ConstructObject(obj,nest){ 
+    nest=(!nest) ? '':'document.'+nest+'.' 
+    this.el=bw.dom?document.getElementById(obj):bw.ie4?document.all[obj]:bw.ns4?eval(nest+'document.'+obj):0; 
+    this.css=bw.dom?document.getElementById(obj).style:bw.ie4?document.all[obj].style:bw.ns4?eval(nest+'document.'+obj):0; 
+    this.scrollHeight=bw.ns4?this.css.document.height:this.el.offsetHeight 
+    this.clipHeight=bw.ns4?this.css.clip.height:this.el.offsetHeight 
+    this.up=MoveAreaUp;this.down=MoveAreaDown; 
+    this.MoveArea=MoveArea; this.x; this.y; 
+    this.obj = obj + "Object" 
+    eval(this.obj + "=this") 
+    return this 
+} 
+function MoveArea(x,y){ 
+    this.x=x;this.y=y 
+    this.css.left=this.x 
+    this.css.top=this.y 
+} 
+ 
+function MoveAreaDown(move){ 
+	if(this.y>-this.scrollHeight+objContainer.clipHeight){ 
+    this.MoveArea(0,this.y-move) 
+    if(loop) setTimeout(this.obj+".down("+move+")",speed) 
+	} 
+} 
+function MoveAreaUp(move){ 
+	if(this.y<0){ 
+    this.MoveArea(0,this.y-move) 
+    if(loop) setTimeout(this.obj+".up("+move+")",speed) 
+	} 
+} 
+ 
+function PerformScroll(speed){ 
+	if(initialised){ 
+		loop=true; 
+		if(speed>0) objScroller.down(speed) 
+		else objScroller.up(speed) 
+	} 
+} 
+ 
+function CeaseScroll(){ 
+    loop=false 
+    if(timer) clearTimeout(timer) 
+} 
+var initialised; 
+function InitialiseScrollableArea(){ 
+    objContainer=new ConstructObject('divContainer') 
+    objScroller=new ConstructObject('divContent','divContainer') 
+    objScroller.MoveArea(0,0) 
+    objContainer.css.visibility='visible' 
+    initialised=true; 
+} 
+// end absolutely positioned scrollable area object scripts 
+
+window.focus(); 
+
+
+</script>	
+	
+
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff" onload="InitialiseScrollableArea()" background="images/info/bg01.jpg">
+ 
+
+</body>
+<!-- begin absolutely positioned scrollable area object--> 
+<div id="divUpControl" align="center"> <a href="javascript:;" onmouseover="PerformScroll(-7)" onmouseout="CeaseScroll()"><img src="images/info/scrollup.gif" width="222" height="11" alt="" border="0"></a></div>
+<div id="divDownControl" align="center"> <a href="javascript:;" onmouseover="PerformScroll(7)" onmouseout="CeaseScroll()"><img src="images/info/scrolldown.gif" width="222" height="11" alt="" border="0"></a></div>
+<div id="divContainer"> 
+  <div id="divContent">
+<p>Grand Theft Auto: Vice City</p>
+
+<p>Welcome to Vice City. Welcome to the 1980s. </p>
+
+<p>Having just made it back onto the streets of Liberty City after a long stretch in maximum security, Tommy Vercetti is sent to Vice City by his old boss, Sonny Forelli.   They were understandably nervous about his re-appearance in Liberty City, so a trip down south seemed like a good idea.  But all does not go smoothly upon his arrival in the glamorous, hedonistic metropolis of Vice City.  He's set up and is left with no money and no merchandise.  Sonny wants his money back, but the biker gangs, Cuban gangsters, and corrupt politicians stand in his way. Most of Vice City seems to want Tommy dead.  His only answer is to fight back and take over the city himself.</p>
+
+<p>From the decade of big hair, excess and pastel suits comes a story of one man's rise to the top of the criminal pile. Vice City is a huge urban sprawl ranging from the beach to the swamps and the glitz to the ghetto, and is the most varied, complete and alive digital city ever created. Combining non-linear gameplay with a character driven narrative, you arrive in a town brimming with delights and degradation and are given the opportunity to take it over as you choose.</p>
+
+<p>As a major gateway to South America and the Caribbean and attracting migrants, Vice City is brimming with diverse characters, so there's a friend for everyone.  It is a sociable place and the new guy in town is sure to meet all manner of friendly people in the sunshine capital of America.  Athletes, pop stars, real estate developers, politicians, trailer trash, everyone is moving to Vice City to find out what makes it the number one growth city in America. But, as Tommy quickly finds out, trust is still the rarest of commodities.</p>
+
+<p>Vice City offers vehicular pleasures to suit every taste. For the speed enthusiast, there's high-performance cars and motorbikes. For the sportsman, a powerboat or a golf buggy lets you enjoy the great outdoors.  For those that need that sense of freedom and escape, why not charter a helicopter and see the beauty of Vice City from the air?</p>
+
+<p>As the party capital of America, you would expect your ears to be seduced by a host of sultry melodies and pumping beats, but the city is truly rocking. You'll be AMAZED as you sweep through Vice City's FM dial. If you are feeling like trouble, you can tune into some driving rock, or some crucial electro, or maybe you want to slow down with some sweet soul, and there will always be some great romantic anthems if you want to really take your mind off things. </p>
+
+<p>For the action man, or outdoors type, there's tons of fun things to do and adventures to be had� guaranteed.  For the secretive or creepy type, Vice City is full of surprises, a place where you'll constantly be surprised by the vivacious, fun-loving types who live there and the things you can discover.</p>
+
+<p>Developed by Rockstar North and published by Rockstar Games, Grand Theft Auto: Vice City is available for PlayStation&reg;2, Xbox, PC and Macintosh.</p>
+
+<br>
+</div>
+</div>
+<!-- end absolutely positioned scrollable area object --> 
+
+</html>
