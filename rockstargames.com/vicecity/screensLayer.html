@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+
+	<title>GRAND THEFT AUTO VICE CITY</title>
+<style type="text/css">  
+#divUpControl{position:absolute; width:20; left:360; top:118; z-index:1;} 
+#divDownControl{position:absolute; width:250; left:360; top:366; z-index:1;} 
+#divContainer{position:absolute; width:280; height:235; overflow:hidden; top:130; left:350; clip:rect(0,280,295,0); visibility:hidden} 
+#divContent{position:absolute; top:0; left:0;font-size:11px;font-family:Verdana;line-height:18px;text-align:justify;color:#ffffff;} 
+</style>
+
+<script language="JavaScript">// begin absolutely positioned scrollable area object scripts 
+/*
+Extension developed by David G. Miles (www.z3roadster.net/dreamweaver)
+Original Scrollable Area code developed by Thomas Brattli 
+To add more shock to your site, visit www.DHTML Shock.com
+*/
+function lib_bwcheck(){ //Browsercheck (needed)
+	this.ver=navigator.appVersion
+	this.agent=navigator.userAgent
+	this.dom=document.getElementById?1:0
+	this.opera5=(navigator.userAgent.indexOf("Opera")>-1 && document.getElementById)?1:0
+	this.ie5=(this.ver.indexOf("MSIE 5")>-1 && this.dom && !this.opera5)?1:0; 
+	this.ie6=(this.ver.indexOf("MSIE 6")>-1 && this.dom && !this.opera5)?1:0;
+	this.ie4=(document.all && !this.dom && !this.opera5)?1:0;
+	this.ie=this.ie4||this.ie5||this.ie6
+	this.mac=this.agent.indexOf("Mac")>-1
+	this.ns6=(this.dom && parseInt(this.ver) >= 5) ?1:0; 
+	this.ns4=(document.layers && !this.dom)?1:0;
+	this.bw=(this.ie6 || this.ie5 || this.ie4 || this.ns4 || this.ns6 || this.opera5)
+	return this
+}
+var bw=lib_bwcheck()
+
+var speed=50 
+ 
+var loop, timer 
+ 
+function ConstructObject(obj,nest){ 
+    nest=(!nest) ? '':'document.'+nest+'.' 
+    this.el=bw.dom?document.getElementById(obj):bw.ie4?document.all[obj]:bw.ns4?eval(nest+'document.'+obj):0; 
+    this.css=bw.dom?document.getElementById(obj).style:bw.ie4?document.all[obj].style:bw.ns4?eval(nest+'document.'+obj):0; 
+    this.scrollHeight=bw.ns4?this.css.document.height:this.el.offsetHeight 
+    this.clipHeight=bw.ns4?this.css.clip.height:this.el.offsetHeight 
+    this.up=MoveAreaUp;this.down=MoveAreaDown; 
+    this.MoveArea=MoveArea; this.x; this.y; 
+    this.obj = obj + "Object" 
+    eval(this.obj + "=this") 
+    return this 
+} 
+function MoveArea(x,y){ 
+    this.x=x;this.y=y 
+    this.css.left=this.x 
+    this.css.top=this.y 
+} 
+ 
+function MoveAreaDown(move){ 
+	if(this.y>-this.scrollHeight+objContainer.clipHeight){ 
+    this.MoveArea(0,this.y-move) 
+    if(loop) setTimeout(this.obj+".down("+move+")",speed) 
+	} 
+} 
+function MoveAreaUp(move){ 
+	if(this.y<0){ 
+    this.MoveArea(0,this.y-move) 
+    if(loop) setTimeout(this.obj+".up("+move+")",speed) 
+	} 
+} 
+ 
+function PerformScroll(speed){ 
+	if(initialised){ 
+		loop=true; 
+		if(speed>0) objScroller.down(speed) 
+		else objScroller.up(speed) 
+	} 
+} 
+ 
+function CeaseScroll(){ 
+    loop=false 
+    if(timer) clearTimeout(timer) 
+} 
+var initialised; 
+function InitialiseScrollableArea(){ 
+    objContainer=new ConstructObject('divContainer') 
+    objScroller=new ConstructObject('divContent','divContainer') 
+    objScroller.MoveArea(0,0) 
+    objContainer.css.visibility='visible' 
+    initialised=true; 
+} 
+// end absolutely positioned scrollable area object scripts 
+
+</script>	
+
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+function popUpScreens(URL) {
+day = new Date();
+id = day.getTime();
+eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=640,height=448');");
+}
+
+window.focus();
+
+// End -->
+</script>
+
+</head>
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff" onLoad="InitialiseScrollableArea()" background="images/screens/bg02.jpg">
+
+			<!-- begin absolutely positioned scrollable area object--> 
+<div id="divUpControl" align="center"> <a href="javascript:;" onMouseOver="PerformScroll(-7)" onMouseOut="CeaseScroll()"><img src="images/screens/scrollup.gif" width="260" height="11" alt="" border="0"></a></div>
+<div id="divDownControl" align="center"> <a href="javascript:;" onMouseOver="PerformScroll(7)" onMouseOut="CeaseScroll()"><img src="images/screens/scrolldown.gif" width="260" height="11" alt="" border="0"></a></div>
+<div id="divContainer"> 
+  <div id="divContent">
+
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td align="right" valign="bottom">
+	<table border="0" cellspacing="10" cellpadding="0">
+		<tr>
+			<td><a href="javascript:popUpScreens ('screenD01.html')"><img src="images/screens/thumbD01.gif" width="80" height="56" alt="" border="0"></a></td>
+			<td><a href="javascript:popUpScreens ('screenD02.html')"><img src="images/screens/thumbD02.gif" width="80" height="56" alt="" border="0"></a></td>
+			<td><a href="javascript:popUpScreens ('screenD03.html')"><img src="images/screens/thumbD03.gif" width="80" height="56" alt="" border="0"></a></td>
+		</tr>
+		<tr>
+			<td><a href="javascript:popUpScreens ('screenD04.html')"><img src="images/screens/thumbD04.gif" width="80" height="56" alt="" border="0"></a></td>
+			<td><a href="javascript:popUpScreens ('screenD05.html')"><img src="images/screens/thumbD05.gif" width="80" height="56" alt="" border="0"></a></td>
+			<td><a href="javascript:popUpScreens ('screenD06.html')"><img src="images/screens/thumbD06.gif" width="80" height="56" alt="" border="0"></a></td>
+		</tr>
+
+		<tr>
+			<td><a href="javascript:popUpScreens ('screenC01.html')"><img src="images/screens/thumbC01.gif" width="80" height="56" alt="" border="0"></a></td>
+			<td><a href="javascript:popUpScreens ('screenC02.html')"><img src="images/screens/thumbC02.gif" width="80" height="56" alt="" border="0"></a></td>
+			<td><a href="javascript:popUpScreens ('screenC03.html')"><img src="images/screens/thumbC03.gif" width="80" height="56" alt="" border="0"></a></td>
+		</tr>
+		<tr>
+			<td><a href="javascript:popUpScreens ('screenC04.html')"><img src="images/screens/thumbC04.gif" width="80" height="56" alt="" border="0"></a></td>
+			<td><a href="javascript:popUpScreens ('screenC05.html')"><img src="images/screens/thumbC05.gif" width="80" height="56" alt="" border="0"></a></td>
+			<td><a href="javascript:popUpScreens ('screen01.html')"><img src="images/screens/thumb01.gif" width="80" height="56" alt="" border="0"></a></td>
+		</tr>
+		<tr>
+			<td><a href="javascript:popUpScreens ('screen02.html')"><img src="images/screens/thumb02.gif" width="80" height="56" alt="" border="0"></a></td>
+			<td><a href="javascript:popUpScreens ('screen03.html')"><img src="images/screens/thumb03.gif" width="80" height="56" alt="" border="0"></a></td>
+			<td><a href="javascript:popUpScreens ('screen04.html')"><img src="images/screens/thumb04.gif" width="80" height="56" alt="" border="0"></a></td>
+		</tr>
+		<tr>
+			<td><a href="javascript:popUpScreens ('screen05.html')"><img src="images/screens/thumb05.gif" width="80" height="56" alt="" border="0"></a></td>
+			<td><a href="javascript:popUpScreens ('screen06.html')"><img src="images/screens/thumb06.gif" width="80" height="56" alt="" border="0"></a></td>
+			<td><a href="javascript:popUpScreens ('screen07.html')"><img src="images/screens/thumb07.gif" width="80" height="56" alt="" border="0"></a></td>
+		</tr>
+		<tr>
+			<td><a href="javascript:popUpScreens ('screen08.html')"><img src="images/screens/thumb08.gif" width="80" height="56" alt="" border="0"></a></td>
+			<td><a href="javascript:popUpScreens ('screen09.html')"><img src="images/screens/thumb09.gif" width="80" height="56" alt="" border="0"></a></td>
+			<td><a href="javascript:popUpScreens ('screen10.html')"><img src="images/screens/thumb10.gif" width="80" height="56" alt="" border="0"></a></td>
+		</tr>
+		<tr>
+			<td><a href="javascript:popUpScreens ('screen11.html')"><img src="images/screens/thumb11.gif" width="80" height="56" alt="" border="0"></a></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+</td></tr></table>
+</div>
+</div>
+<!-- end absolutely positioned scrollable area object --> 
+</body>
+</html>
+

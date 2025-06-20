@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wddxPacket version="1.0">
+<header/>
+<data>
+<struct>
+<var name="registry">
+	<array length="15">
+		<string>python</string>
+		<string>rocketlauncher</string>
+		<string>m60</string>
+		<string>katana</string>
+		<string>ruger</string>
+		<string>uzi</string>
+		<string>sniper</string>
+		<string>mac10</string>
+		<string>stubbyshotgun</string>
+		<string>chromeshotgun</string>
+		<string>spas12shotgun</string>
+		<string>flamethrower</string>
+		<string>tec9</string>
+		<string>brassknuckles</string>
+		<string>teargas</string>
+	</array>
+</var>
+<var name="python">
+	<array length="4">
+		<number>1</number>
+		<string>Python</string>
+		<string>python</string>
+		<string>Python text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit</string>
+	</array>
+</var>
+<var name="rocketlauncher">
+	<array length="4">
+		<number>1</number>
+		<string>Rocket Launcher</string>
+		<string>rocketlauncher</string>
+		<string>Rocket Launcher text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit</string>
+	</array>
+</var>
+<var name="m60">
+	<array length="4">
+		<number>1</number>
+		<string>M60</string>
+		<string>m60</string>
+		<string>M60 text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit</string>
+	</array>
+</var>
+<var name="katana">
+	<array length="4">
+		<number>1</number>
+		<string>Katana</string>
+		<string>katana</string>
+		<string>Katana text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit</string>
+		<number>0</number>
+	</array>
+</var>
+<var name="ruger">
+	<array length="4">
+		<number>1</number>
+		<string>Ruger</string>
+		<string>ruger</string>
+		<string>Ruger text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit</string>
+	</array>
+</var>
+<var name="uzi">
+	<array length="4">
+		<number>1</number>
+		<string>Uzi</string>
+		<string>uzi</string>
+		<string>Uzi text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit</string>
+	</array>
+</var>
+<var name="sniper">
+	<array length="4">
+		<number>1</number>
+		<string>Sniper</string>
+		<string>sniper</string>
+		<string>Sniper text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit</string>
+	</array>
+</var>
+<var name="mac10">
+	<array length="4">
+		<number>1</number>
+		<string>Mac 10</string>
+		<string>mac10</string>
+		<string>Mac 10 text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit</string>
+	</array>
+</var>
+<var name="stubbyshotgun">
+	<array length="4">
+		<number>1</number>
+		<string>Stubby Shotgun</string>
+		<string>stubbyshotgun</string>
+		<string>Stubby Shotgun text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit</string>
+	</array>
+</var>
+<var name="chromeshotgun">
+	<array length="4">
+		<number>1</number>
+		<string>Chrome Shotgun</string>
+		<string>chromeshotgun</string>
+		<string>Chrome Shotgun text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit</string>
+	</array>
+</var>
+<var name="spas12shotgun">
+	<array length="4">
+		<number>1</number>
+		<string>Spas 12 Shotgun</string>
+		<string>spas12shotgun</string>
+		<string>Spas 12 Shotgun text. Lorem ipsum dolor sit amet, consectetuer adipiscing elit</string>
+	</array>
+</var>
+<var name="flamethrower">
+	<array length="4">
+		<number>1</number>
+		<string>Flame Thrower</string>
+		<string>flamethrower</string>
+		<string/>
+	</array>
+</var>
+<var name="tec9">
+	<array length="4">
+		<number>1</number>
+		<string>Tec9</string>
+		<string>tec9</string>
+		<string/>
+	</array>
+</var>
+<var name="brassknuckles">
+	<array length="4">
+		<number>1</number>
+		<string>Brass Knuckles</string>
+		<string>brassknuckles</string>
+		<string/>
+	</array>
+</var>
+<var name="teargas">
+	<array length="4">
+		<number>1</number>
+		<string>Tear Gas</string>
+		<string>teargas</string>
+		<string/>
+	</array>
+</var>
+</struct></data><script/></wddxPacket>
