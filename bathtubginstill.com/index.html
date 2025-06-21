@@ -4,27 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Old Horsey: The Original Bathtub Gin Still</title>
-
-    <!-- Load Ruffle -->
-    <script type="text/javascript" src="js/ruffle.js"></script>
-
-    <script>
-        window.RufflePlayer = window.RufflePlayer || {};
-        window.RufflePlayer.config = {
-            autoplay: "on",
-            unmuteOverlay: "hidden",
-            backgroundColor: null,
-            wmode: "window",
-            letterbox: "fullscreen",
-            warnOnUnsupportedContent: false,
-            contextMenu: true,
-            showSwfDownload: true,
-            upgradeToHttps: window.location.protocol === "https:",
-            logLevel: "debug",
-            scale: "showAll",
-            quality: "high"
-        };
-    </script>
+<script src="js/ruffle.js"></script>
+<script>
+  window.RufflePlayer = window.RufflePlayer || {};
+  window.RufflePlayer.config = {
+    "autoplay": "on",
+    "unmuteOverlay": "hidden",
+    "splashScreen": false,
+  };
+</script>
 
     <style>
         body {
@@ -41,18 +29,18 @@
 </head>
 
 <body>
-    <div id="flash-container"></div>
-
-    <script>
-        window.addEventListener("load", () => {
-            const ruffle = window.RufflePlayer.newest();
-            const player = ruffle.createPlayer();
-            player.style.width = "800px";
-            player.style.height = "840px";
-            document.getElementById("flash-container").appendChild(player);
-            player.load("bathtub.swf");
-        });
-    </script>
+  <div id="flash-container" style="width: 800px; height: 840px; margin: auto;">
+    <object
+        width="800"
+        height="840"
+        data="bathtub.swf"
+        type="application/x-shockwave-flash"
+    >
+      <param name="movie" value="bathtub.swf">
+      <param name="quality" value="high">
+    </object>
+  </div>
 </body>
+
 
 </html>
