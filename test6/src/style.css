@@ -1,0 +1,200 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  width: 100vw;
+  min-height: 100svh;
+  overflow-x: hidden;
+  overflow: hidden; /* prevent horizontal scrolling initially */
+}
+
+.container {
+  min-height: 100svh;
+  position: relative;
+  background: linear-gradient(
+    223.17deg,
+    rgb(28, 24, 41) 0%,
+    rgb(27, 24, 40) 8.61%,
+    rgb(25, 23, 36) 17.21%,
+    rgb(22, 21, 32) 25.82%,
+    rgb(20, 19, 28) 34.42%,
+    rgb(18, 18, 24) 43.03%,
+    rgb(17, 17, 23) 51.63%
+  );
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-main-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  transform: scale(1.25);
+  background-image: url("/public/logo_white.svg");
+  background-size: 1000vh;
+  background-position: 50% 41.7%;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  padding-bottom: 200px;
+}
+
+.hero-main-image {
+  width: 100%;
+  height: 100vh;
+  /* transform: scale(1.25); */
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+}
+
+.hero-main-logo {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  object-fit: cover;
+}
+
+.hero-text-logo-container {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  object-fit: cover;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-text-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-image: url("/gta_logo_purple.webp");
+  background-repeat: no-repeat;
+  background-position: 50% 41.7%;
+  background-size: 28vh;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  padding-bottom: 200px;
+  height: 100vh;
+  position: absolute;
+  inset: 0;
+}
+
+/* Scroll Indicator Styles */
+.scroll-indicator {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 34px;
+  height: 14px;
+  z-index: 10;
+}
+
+.scroll-indicator svg {
+  color: #ffb0c4;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-text {
+  color: #ffb0c4;
+  text-align: center;
+  text-transform: uppercase;
+  background-image: radial-gradient(
+    circle at 50% 200vh,
+    rgba(255, 214, 135, 0) 0,
+    rgba(157, 47, 106, 0.5) 90vh,
+    rgba(157, 47, 106, 0.8) 120vh,
+    rgba(32, 31, 66, 0) 150vh
+  );
+  -webkit-text-fill-color: transparent;
+  font-size: 4.5rem;
+  background-clip: text;
+  width: 100%;
+  line-height: 0.9;
+  margin-top: 55%;
+}
+
+.hero-2-container {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  inset: 0;
+  /* z-index: -1; */
+  opacity: 0;
+  object-fit: cover;
+  background-image: radial-gradient(
+    circle at 50% 200vh,
+    rgba(255, 214, 135, 0) 0,
+    rgba(157, 47, 106, 0.5) 90vh,
+    rgba(157, 47, 106, 0.8) 120vh,
+    rgba(32, 31, 66, 0) 150vh
+  );
+  -webkit-text-fill-color: transparent;
+  font-size: 6rem;
+  background-clip: text;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  padding: 0 2rem; /* mobile */
+  visibility: hidden;
+}
+
+.hero-2-container p {
+  max-width: 90%;
+  font-size: 1rem;
+}
+
+.hero-2-container h3 {
+  font-size: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+  .hero-text {
+    font-size: 6rem;
+  }
+
+  .scroll-indicator {
+    bottom: 30px;
+  }
+
+  .hero-2-container {
+    margin: 0 auto;
+    max-width: 60%;
+    padding: 0;
+  }
+
+  .hero-2-container p {
+    max-width: 90%;
+    font-size: 2rem;
+  }
+
+  .hero-2-container h3 {
+    font-size: 3.5rem;
+  }
+}
