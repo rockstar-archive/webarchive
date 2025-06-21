@@ -1,23 +1,29 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+
+<script src="js/ruffle.js"></script>
 <script>
-    window.RufflePlayer = window.RufflePlayer || {};
-    window.RufflePlayer.config = {
-        "autoplay": "on",
-        "unmuteOverlay": "hidden",
-        "splashScreen": false,
-    };
+  window.RufflePlayer = window.RufflePlayer || {};
+  window.RufflePlayer.config = {
+    "autoplay": "on",
+    "unmuteOverlay": "hidden",
+    "splashScreen": false,
+  };
 </script>
-<script type="text/javascript" src="js/ruffle.js"></script>
 
 <html>
 
 
 <body bgcolor="#3D003F" marginheight="0" marginwidth="0" leftmargin="0" topmargin="0">
-
-    <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="600" height="300">
-        <param name="quality" value="high">
-        <param name="bgcolor" value="#3B709B">
-        <embed src="dormatron.swf" quality="high" bgcolor="#3B709B" width="600" height="300" type="application/x-shockwave-flash">
+    <object
+        width="600"
+        height="300"
+        data="dormatron.swf"
+        type="application/x-shockwave-flash"
+    >
+      <param name="movie" value="dormatron.swf">
+      <param name="quality" value="high">
+      <param name="bgcolor" value="#3B709B">
     </object>
 </body>
 
