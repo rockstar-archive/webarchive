@@ -1,7 +1,13 @@
 <!DOCTYPE html><html><head>
-<!-- Start Added by RockstarMuseum -->
-<script src="js/rmLoader.js"></script>
-<!-- End Added by RockstarMuseum -->
+<script src="js/ruffle.js"></script>
+<script>
+  window.RufflePlayer = window.RufflePlayer || {};
+  window.RufflePlayer.config = {
+    "autoplay": "on",
+    "unmuteOverlay": "hidden",
+    "splashScreen": false,
+  };
+</script>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <title>Crow Fest '98</title>
 <style type="text/css">
@@ -214,11 +220,21 @@ The information available on this website is by no means the property of the Cro
     <td height="14" colspan="3"> </td>
   </tr>
   <tr align="left" valign="top" bgcolor="#103120">
-    <td colspan="3"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="20" height="20">
+    <td colspan="3"><object
+        classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+        width="20"
+        height="20"
+    >
         <param name="movie" value="audio.swf">
         <param name="quality" value="high">
-        <param name="BGCOLOR" value="#103120">
-        <embed src="audio.swf" width="20" height="20" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" bgcolor="#103120">
+        <param name="BGCOLOR" value="#00000000">
+        <embed 
+            src="audio.swf" 
+            quality="high"  
+            width="20" 
+            height="20" 
+            type="application/x-shockwave-flash"
+        >
     </object></td>
   </tr>
 </tbody></table>
