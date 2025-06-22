@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <style>
+        body {
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+
+        .flash-container {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+
+        object, embed {
+            display: block;
+        }
+    </style>
+    <script>
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.RufflePlayer.config = {
+            "autoplay": "on",
+            "unmuteOverlay": "hidden",
+            "splashScreen": false
+        };
+    </script>
+    <script type="text/javascript" src="../js/ruffle.js"></script>
+</head>
+<body>
+    <h1>These are old archived advertisements Rockstar Games used to promote <em>Bully</em> on the web.</h1>
+
+    <div class="flash-container">
+        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
+            <param name="quality" value="high">
+            <param name="bgcolor" value="#000000">
+            <embed src="Bully PC Ad 300x250_no_video_edit.swf" quality="high" bgcolor="#3B709B" width="300" height="250" type="application/x-shockwave-flash">
+        </object>
+
+        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
+            <param name="quality" value="high">
+            <param name="bgcolor" value="#000000">
+            <embed src="Bully_PC_300x250_video_102808_r01.swf" quality="high" bgcolor="#3B709B" width="300" height="250" type="application/x-shockwave-flash">
+        </object>
+
+        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
+            <param name="quality" value="high">
+            <param name="bgcolor" value="#000000">
+            <embed src="300x250_NEW_10.23.08.swf" quality="high" bgcolor="#3B709B" width="300" height="250" type="application/x-shockwave-flash">
+        </object>
+    </div>
+</body>
+</html>
