@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <title>GTA IV TLAD - Flash Advertisements</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        body {
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: black;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.4); /* optional: soft white shadow */
+        }
+
+        .flash-container {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        object, embed {
+            display: block;
+        }
+    </style>
+    <script>
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.RufflePlayer.config = {
+            "autoplay": "on",
+            "unmuteOverlay": "hidden",
+            "splashScreen": false
+        };
+    </script>
+    <script type="text/javascript" src="../js/ruffle.js"></script>
+</head>
+<body>
+    <div class="content-wrapper">
+        <h1>These are old archived advertisements Rockstar Games used to promote <em>Grand Theft Auto IV: The Lost and Damned</em> on the web.</h1>
+
+        <div class="flash-container">
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
+                <param name="quality" value="high">
+                <param name="bgcolor" value="#000000">
+                <embed src="TLAD_Trad_300x250_EN_TL_ALL_0_AD.swf" quality="high" bgcolor="#FFFFFF" width="300" height="250" type="application/x-shockwave-flash">
+            </object>
+
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
+                <param name="quality" value="high">
+                <param name="bgcolor" value="#000000">
+                <embed src="SC_lostandDamnedB.swf" quality="high" bgcolor="#FFFFFF" width="958" height="300" type="application/x-shockwave-flash">
+            </object>
+        </div>
+    </div>
+</body>
+</html>
