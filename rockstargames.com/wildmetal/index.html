@@ -1,0 +1,120 @@
+
+<!--created by Oyster Partners Limited-->
+<!--www.oyster.co.uk -->
+<!-- [January] 2000 -->
+<!--Production:  by [C.P], [January] 2000 -->
+<!--Design:  by [J.P], [January] 2000 -->
+<!--Programming: by [C.P], [January] 2000 -->
+
+<html>
+
+<head>
+
+	<title>Wild Metal Country Frameset</title>
+	
+<!-- Header Analytics (UA-15984839-3) -->
+			<script type="text/javascript">
+				var _gaq = _gaq || [];
+				_gaq.push(["_setAccount", "UA-15984839-3"]);
+				_gaq.push(["_trackPageview"]);
+				(function() {
+					var ga = document.createElement("script"); ga.type = "text/javascript"; ga.async = true;
+					ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+					var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);
+				})();
+				
+				(function(window) {
+					var domReady = function($) {
+						var filetypes = /\.(zip|exe|dmg|pdf|doc*|xls*|ppt*|mp3|jpg|themepack|wmv|mp4|mov|flv)$/i;
+						$("a").filter(function() { return !$(this).data("notrack"); }).each(function() {
+							var href = $(this).attr("href");
+							if(!href)
+								return;
+							if(href.substr(0, 4) == "aim:") {
+								$(this).click(function() {
+									var url = href.replace("aim:", "");
+									_gaq.push(["_trackEvent", "Download", "Click-aim", url]);
+								});
+								return;		
+							}
+
+							if(href.substr(0, 7) == "mailto:") {
+								$(this).click(function() {
+									var emailAddr = href.replace("mailto:", "");
+									_gaq.push(["_trackEvent", "Email", "Click", emailAddr]);
+								});
+								return;
+							}
+
+							if(!href.match(/^https?\:/))
+								return;
+
+							if(href.match(filetypes)) {
+								$(this).click(function() {
+									var extParts = href.split(".");
+									var ext = extParts[extParts.length - 1];
+									_gaq.push(["_trackEvent", "Download", "Click-" + ext, href]);
+
+									if($(this).attr("target") == "_blank")
+										return;
+									setTimeout(function() { location.href = href }, 250);
+									return false;
+								});
+								return;
+							}
+							
+							if(href.indexOf(document.domain) >= 0)
+								return;
+
+							$(this).click(function() {
+								var link = href.replace(/^https?\:\/\//, "");
+								_gaq.push(["_trackEvent", "External", "Click", link]);
+								if($(this).attr("target") == "_blank")
+									return;
+								setTimeout(function() { location.href = href }, 250);
+								return false;
+							});
+						});
+					};
+
+					if(!window.jQuery || typeof(window.jQuery) != "function") {
+						(function() {
+							var jq = document.createElement("script"); jq.type = "text/javascript";
+							jq.src = "http://media.rockstargames.com/js/jquery/jquery-1.4.4.min.js";
+							var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(jq, s);
+						})();
+						
+						var ljq;
+						var _ljqi = 0;
+						(ljq = function() {
+							if(_ljqi > 20)
+								return;
+							if(window.jQuery && typeof(window.jQuery) == "function")
+								return window.jQuery(document).ready(domReady);
+							_ljqi++;
+							setTimeout(ljq, 250);
+						})();
+					} else {
+						window.jQuery(document).ready(domReady);
+					}
+				})(window);
+			</script>
+<!-- End Header Analytics (UA-15984839-3) -->
+</head>
+
+<!-- frames -->
+<frameset  rows="*,315,*" marginwidth="0" marginheight="0" scrolling="no" frameborder="no" noresize border=0 frameborder="0" framespacing="0" >
+    <frame name="black" src="black.html"  marginwidth="0" marginheight="0" scrolling="no" frameborder="no" noresize frameborder="0" framespacing="0">
+	
+    <frameset  cols="*,600,*" marginwidth="0" marginheight="0" scrolling="no" frameborder="no" noresize border=0 frameborder="0" framespacing="0" >
+	
+        <frame name="black" src="black.html" border=0 marginwidth=0 marginheight=0 scrolling=no frameborder=no frameborder=0  framespacing=0 noresize>
+        <frame name="main" src="frameset.html"  border=0 marginwidth=0 marginheight=0 scrolling=auto frameborder=no frameborder=0  framespacing=0 noresize>
+        <frame name="black" src="black.html" border=0 marginwidth=0 marginheight=0 scrolling=no frameborder=no frameborder=0  framespacing=0 noresize>
+		
+    </frameset>
+	
+    <frame name="black" src="bottom.html" marginwidth="0" marginheight="0" scrolling="no" frameborder="no" noresize frameborder="0">
+</frameset>
+
+</html>

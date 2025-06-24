@@ -1,0 +1,307 @@
+
+<!--created by Oyster Partners Limited-->
+<!--www.oyster.co.uk -->
+<!-- [January] 2000 -->
+<!--Production:  by [C.P], [January] 2000 -->
+<!--Design:  by [J.P], [January] 2000 -->
+<!--Programming: by [C.P], [January] 2000 -->
+
+<html>
+<head>
+	<title>Navigation</title>
+	
+<style type="text/javascript">
+with (tags.body)
+{
+	if (navigator.appName == "Netscape")
+	{
+		marginLeft = "-8pt";
+		marginTop = "-8pt";
+	}
+}
+</style>	
+
+<script language="JavaScript">
+
+<!--
+
+var animShown = false;
+
+ if(document.images) dynamic = "YES"
+ 
+        oneoff = new Image();
+        oneoff.src = "images/nav/one_off.gif";     
+        oneon = new Image();
+        oneon.src = "images/nav/animation_on.gif"; 
+		onetext = new Image();
+        onetext.src = "images/nav/one_text.gif"; 
+		
+		twooff = new Image();
+        twooff.src = "images/nav/two_off.gif";     
+        twoon = new Image();
+        twoon.src = "images/nav/animation_on.gif"; 
+		twotext = new Image();
+        twotext.src = "images/nav/two_text.gif";
+		
+		threeoff = new Image();
+        threeoff.src = "images/nav/three_off.gif";     
+        threeon = new Image();
+        threeon.src = "images/nav/animation_on.gif"; 
+		threetext = new Image();
+        threetext.src = "images/nav/three_text.gif";
+		
+		fouroff = new Image();
+        fouroff.src = "images/nav/four_off.gif";     
+        fouron = new Image();
+        fouron.src = "images/nav/animation_on.gif"; 
+		fourtext = new Image();
+        fourtext.src = "images/nav/four_text.gif";
+		
+		fiveoff = new Image();
+        fiveoff.src = "images/nav/five_off.gif";     
+        fiveon = new Image();
+        fiveon.src = "images/nav/animation_on.gif"; 
+		fivetext = new Image();
+        fivetext.src = "images/nav/five_text.gif";
+		
+		sixoff = new Image();
+        sixoff.src = "images/nav/six_off.gif";     
+        sixon = new Image();
+        sixon.src = "images/nav/animation_on.gif"; 
+		sixtext = new Image();
+        sixtext.src = "images/nav/six_text.gif";
+		
+		sevenoff = new Image();
+        sevenoff.src = "images/nav/seven_off.gif";     
+        sevenon = new Image();
+        sevenon.src = "images/nav/animation_on.gif"; 
+		seventext = new Image();
+        seventext.src = "images/nav/seven_text.gif";
+		
+		eightoff = new Image();
+        eightoff.src = "images/nav/eight_off.gif";     
+        eighton = new Image();
+        eighton.src = "images/nav/animation_on.gif"; 
+		eighttext = new Image();
+        eighttext.src = "images/nav/eight_text.gif";
+
+function imgInact(imgName) {
+      if (dynamic== "YES") {
+      document[imgName].src = eval(imgName + "off.src");
+	  document.text.src = "images/blank.gif";
+      }
+    }
+
+
+function imgAct(imgName1,imgName2) {
+      if (dynamic== "YES") {
+      document[imgName1].src = eval(imgName1 + "on.src");	
+      document.text.src = eval(imgName1 + "text.src");
+	  }
+    }
+
+function showAnim(){
+	if(document.images){
+		if(animShown != true){
+			document.anim1.src = "images/nav/rollover1_off.gif";
+			document.anim2.src = "images/nav/metal2.gif";
+			animShown = true;
+		}else{
+			document.anim1.src = "images/nav/rollover1_on.gif";
+			document.anim2.src = "images/blank.gif";
+			animShown = false;
+		}
+	}	
+}
+	
+// -->
+
+</script>
+
+
+<!-- Header Analytics (UA-15984839-3) -->
+			<script type="text/javascript">
+				var _gaq = _gaq || [];
+				_gaq.push(["_setAccount", "UA-15984839-3"]);
+				_gaq.push(["_trackPageview"]);
+				(function() {
+					var ga = document.createElement("script"); ga.type = "text/javascript"; ga.async = true;
+					ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+					var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);
+				})();
+				
+				(function(window) {
+					var domReady = function($) {
+						var filetypes = /\.(zip|exe|dmg|pdf|doc*|xls*|ppt*|mp3|jpg|themepack|wmv|mp4|mov|flv)$/i;
+						$("a").filter(function() { return !$(this).data("notrack"); }).each(function() {
+							var href = $(this).attr("href");
+							if(!href)
+								return;
+							if(href.substr(0, 4) == "aim:") {
+								$(this).click(function() {
+									var url = href.replace("aim:", "");
+									_gaq.push(["_trackEvent", "Download", "Click-aim", url]);
+								});
+								return;		
+							}
+
+							if(href.substr(0, 7) == "mailto:") {
+								$(this).click(function() {
+									var emailAddr = href.replace("mailto:", "");
+									_gaq.push(["_trackEvent", "Email", "Click", emailAddr]);
+								});
+								return;
+							}
+
+							if(!href.match(/^https?\:/))
+								return;
+
+							if(href.match(filetypes)) {
+								$(this).click(function() {
+									var extParts = href.split(".");
+									var ext = extParts[extParts.length - 1];
+									_gaq.push(["_trackEvent", "Download", "Click-" + ext, href]);
+
+									if($(this).attr("target") == "_blank")
+										return;
+									setTimeout(function() { location.href = href }, 250);
+									return false;
+								});
+								return;
+							}
+							
+							if(href.indexOf(document.domain) >= 0)
+								return;
+
+							$(this).click(function() {
+								var link = href.replace(/^https?\:\/\//, "");
+								_gaq.push(["_trackEvent", "External", "Click", link]);
+								if($(this).attr("target") == "_blank")
+									return;
+								setTimeout(function() { location.href = href }, 250);
+								return false;
+							});
+						});
+					};
+
+					if(!window.jQuery || typeof(window.jQuery) != "function") {
+						(function() {
+							var jq = document.createElement("script"); jq.type = "text/javascript";
+							jq.src = "http://media.rockstargames.com/js/jquery/jquery-1.4.4.min.js";
+							var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(jq, s);
+						})();
+						
+						var ljq;
+						var _ljqi = 0;
+						(ljq = function() {
+							if(_ljqi > 20)
+								return;
+							if(window.jQuery && typeof(window.jQuery) == "function")
+								return window.jQuery(document).ready(domReady);
+							_ljqi++;
+							setTimeout(ljq, 250);
+						})();
+					} else {
+						window.jQuery(document).ready(domReady);
+					}
+				})(window);
+			</script>
+<!-- End Header Analytics (UA-15984839-3) -->
+</head>
+
+<body bgcolor="#000000" background="images/nav/background.gif" topmargin=0 leftmargin=0>
+
+				<!--
+				Start of DoubleClick Floodlight Tag: Please do not remove
+				Activity name of this tag: Rockstar Games Homepage
+				URL of the webpage where the tag is expected to be placed: http://www.rockstargames.com/
+				This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+				Creation Date: 02/01/2011
+				-->
+				<script type="text/javascript">
+					var axel = Math.random() + "";
+					var a = axel * 10000000000000;
+					document.write('<iframe style="position:absolute;left:-10000px;top:-10000px" src="http://fls.doubleclick.net/activityi;src=3055121;type=rocks806;cat=rocks465;ord=' + a + '?" width="1" height="1" frameborder="0"></iframe>');
+				</script>
+				<noscript>
+					<iframe style="position:absolute;left:-10000px;top:-10000px" src="http://fls.doubleclick.net/activityi;src=3055121;type=rocks806;cat=rocks465;ord=1?" width="1" height="1" frameborder="0"></iframe>
+				</noscript>
+				<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+<table cellpadding=0 cellspacing=0 border=0 width=235>
+
+<tr>
+<td align=left valign=left rowspan=13><img src="images/blank.gif" width=14 height=135 alt="" border="0"></td>
+<td align=left valign=left><img src="images/blank.gif" width=50 height=22 alt="" border="0"></td>
+<td align=left valign=left><img src="images/blank.gif" width=48 height=22 alt="" border="0"></td>
+<td align=left valign=left><img src="images/blank.gif" width=16 height=22 alt="" border="0"></td>
+<td align=left valign=left><img src="images/blank.gif" width=36 height=22 alt="" border="0"></td>
+<td align=left valign=left><img src="images/blank.gif" width=44 height=22 alt="" border="0"></td>
+<td align=left valign=left><img src="images/blank.gif" width=27 height=22 alt="" border="0"></td>
+</tr>
+
+<tr>
+<td align=left valign=left colspan=4><img src="images/blank.gif" width=150 height=20 alt="" border="0" name="anim2"></td>
+<td align=left valign=left colspan=2><img src="images/blank.gif" width=71 height=20 alt="" border="0"></td>
+</tr>
+
+<tr>
+<td align=left valign=left colspan=2><a href="javascript:showAnim();" onfocus="blur()"><img src="images/nav/wildmetal_btn.gif" width=98 height=33 alt="" border="0"></a></td>
+<td align=left valign=left colspan=4><img src="images/blank.gif" width=123 height=33 alt="" border="0"></td>
+</tr>
+
+<tr>
+<td align=left valign=left colspan=6><img src="images/blank.gif" width=221 height=13 alt="" border="0"></td>
+</tr>
+
+<tr>
+<td align=left valign=left rowspan=2><img src="images/nav/rollover1_on.gif" width=50 height=50 alt="" border="0" name="anim1"></td>
+<td align=left valign=left colspan=5><img src="images/blank.gif" width=171 height=26 alt="" border="0"></td>
+</tr>
+
+<tr>
+<td align=left valign=left><img src="images/blank.gif" width=48 height=24 alt="" border="0"></td>
+<td align=left valign=left><a href="javaScript:parent.change2('machineconquer/machineconquer_top.html', 'machineconquer/machineconquer_bottom.html')" onfocus="blur()" onMouseOver="imgAct('one');" onMouseOut="imgInact('one');"><img src="images/nav/one_off.gif" width=16 height=24 alt="" border="0" name="one"></a></td>
+<td align=left valign=left colspan=3><img src="images/blank.gif" width=107 height=24 alt="" border="0"></td>
+</tr>
+
+<tr>
+<td align=left valign=left colspan=2 rowspan=7><img src="images/blank.gif" width=98 height=177 alt="" border="0"></td>
+<td align=left valign=left colspan=3><a href="javaScript:parent.change2('photosurveillance/photosurveillance_top.html', 'photosurveillance/photosurveillance_bottom.html')" onfocus="blur()" onMouseOver="imgAct('two');" onMouseOut="imgInact('two');"><img src="images/nav/two_off.gif" width=16 height=24 alt="" border="0"  name="two"></td>
+<td align=left valign=left><img src="images/blank.gif" width=107 height=24 alt="" border="0"></a></td>
+</tr>
+
+<tr>
+<td align=left valign=left><a href="javaScript:parent.change2('videosurveillance/videosurveillance_top.html', 'videosurveillance/videosurveillance_bottom.html')" onfocus="blur()" onMouseOver="imgAct('three');" onMouseOut="imgInact('three');"><img src="images/nav/three_off.gif" width=16 height=24 alt="" border="0" name="three"></a></td>
+<td align=left valign=left rowspan=6><img src="images/blank.gif" width=36 height=153 alt="" border="0"></td>
+<td align=left valign=left rowspan=5><img src="images/blank.gif" width=44 height=122 alt="" border="0" name="text"></td>
+<td align=left valign=left rowspan=6><img src="images/blank.gif" width=27 height=153 alt="" border="0"></td>
+</tr>
+
+<tr>
+<td align=left valign=left><a href="javaScript:parent.change2('spec_features/spec_features_top.html', 'spec_features/spec_features_bottom.html')" onfocus="blur()" onMouseOver="imgAct('four');" onMouseOut="imgInact('four');"><img src="images/nav/four_off.gif" width=16 height=26 alt="" border="0" name="four"></a></td>
+</tr>
+
+<tr>
+<td align=left valign=left><a href="javaScript:parent.change2('choosevehicle/choosevehicle_top.html', 'choosevehicle/choosevehicle_bottom.html')" onfocus="blur()" onMouseOver="imgAct('five');" onMouseOut="imgInact('five');"><img src="images/nav/five_off.gif" width=16 height=24 alt="" border="0" name="five"></a></td>
+</tr>
+
+<tr>
+<td align=left valign=left><a href="javaScript:parent.change2('chooseweapon/chooseweapon_top.html', 'chooseweapon/chooseweapon_bottom.html')" onfocus="blur()" onMouseOver="imgAct('six');" onMouseOut="imgInact('six');"><img src="images/nav/six_off.gif" width=16 height=24 alt="" border="0" name="six"></a></td>
+</tr>
+
+<tr>
+<td align=left valign=left><a href="javaScript:parent.change2('chooseenemy/chooseenemy_top.html', 'chooseenemy/chooseenemy_bottom.html')" onfocus="blur()" onMouseOver="imgAct('seven');" onMouseOut="imgInact('seven');"><img src="images/nav/seven_off.gif" width=16 height=24 alt="" border="0" name="seven"></a></td>
+</tr>
+
+<tr>
+<td align=left valign=left><a href="javaScript:parent.change2('tactics/tactics_top.html', 'tactics/tactics_bottom.html')" onMouseOver="imgAct('eight');" onfocus="blur()" onMouseOut="imgInact('eight');"><img src="images/nav/eight_off.gif" width=16 height=24 alt="" border="0" name="eight"></a></td>
+<td align=left valign=left><img src="images/blank.gif" width=44 height=31 alt="" border="0"></td>
+</tr>
+
+</table>
+<table border="0" cellpadding="0">
+<tr><td align="left" valign="top"><a href="http://www.esrb.org/" target="esrb"><img src="http://www.rockstargames.com/esrb/images/T.gif" alt="Animated Violence" width="38" height="57" border="0"></a></td></tr>
+</table>
+
+</body>
+</html>

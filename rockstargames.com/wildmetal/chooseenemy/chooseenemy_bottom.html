@@ -1,0 +1,259 @@
+
+<!--created by Oyster Partners Limited-->
+<!--www.oyster.co.uk -->
+<!-- [January] 2000 -->
+<!--Production:  by [C.P], [January] 2000 -->
+<!--Design:  by [J.P], [January] 2000 -->
+<!--Programming: by [C.P], [January] 2000 -->
+
+<html>
+<head>
+	<title>Choose your enemy bottom</title>
+	
+<style type="text/javascript">
+with (tags.body)
+{
+	if (navigator.appName == "Netscape")
+	{
+		marginLeft = "-8pt";
+		marginTop = "-8pt";
+	}
+}
+</style>	
+	
+<script language="JavaScript">
+<!--
+browser = navigator.appName;
+version = parseInt(navigator.appVersion);
+    if ((browser == "Netscape" && version >= 3) || 
+        (browser == "Microsoft Internet Explorer" && version >= 4)) dynamic = "YES";
+    else dynamic = "NO";
+
+var defaultLeft = "../images/chooseenemy/emptyleft.gif";
+var defaultBottom = "../images/chooseenemy/emptybottom.gif";
+var selected = "none";
+
+function imgInact(imgName) 
+{
+    if (dynamic== "YES") 
+    {
+	if (imgName != selected)
+	{
+    	document.images[imgName].src = eval(imgName + "off.src");
+		document.images["left"].src = defaultLeft;
+		document.images["bottom"].src = defaultBottom;
+	}
+    }
+}
+
+function imgAct(imgName) 
+{
+    if (dynamic== "YES") 
+    {		
+        document.images[imgName].src = eval(imgName + "on.src");
+        document.images["left"].src = eval(imgName + "left.src");
+		document.images["bottom"].src = eval(imgName + "bottom.src");
+		
+    }
+}
+
+function setDefault(imgName)
+{
+    if (dynamic== "YES") 
+    {		
+	if (selected != "none")
+	    document.images[selected].src = eval(selected + "off.src");
+		selected = imgName;
+		defaultLeft = eval(imgName + "left.src");
+		defaultBottom = eval(imgName + "bottom.src");
+    }
+}
+
+// -->
+</script>	
+
+<script src="rollover.js"></script>
+
+<!-- Header Analytics (UA-15984839-3) -->
+			<script type="text/javascript">
+				var _gaq = _gaq || [];
+				_gaq.push(["_setAccount", "UA-15984839-3"]);
+				_gaq.push(["_trackPageview"]);
+				(function() {
+					var ga = document.createElement("script"); ga.type = "text/javascript"; ga.async = true;
+					ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+					var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);
+				})();
+				
+				(function(window) {
+					var domReady = function($) {
+						var filetypes = /\.(zip|exe|dmg|pdf|doc*|xls*|ppt*|mp3|jpg|themepack|wmv|mp4|mov|flv)$/i;
+						$("a").filter(function() { return !$(this).data("notrack"); }).each(function() {
+							var href = $(this).attr("href");
+							if(!href)
+								return;
+							if(href.substr(0, 4) == "aim:") {
+								$(this).click(function() {
+									var url = href.replace("aim:", "");
+									_gaq.push(["_trackEvent", "Download", "Click-aim", url]);
+								});
+								return;		
+							}
+
+							if(href.substr(0, 7) == "mailto:") {
+								$(this).click(function() {
+									var emailAddr = href.replace("mailto:", "");
+									_gaq.push(["_trackEvent", "Email", "Click", emailAddr]);
+								});
+								return;
+							}
+
+							if(!href.match(/^https?\:/))
+								return;
+
+							if(href.match(filetypes)) {
+								$(this).click(function() {
+									var extParts = href.split(".");
+									var ext = extParts[extParts.length - 1];
+									_gaq.push(["_trackEvent", "Download", "Click-" + ext, href]);
+
+									if($(this).attr("target") == "_blank")
+										return;
+									setTimeout(function() { location.href = href }, 250);
+									return false;
+								});
+								return;
+							}
+							
+							if(href.indexOf(document.domain) >= 0)
+								return;
+
+							$(this).click(function() {
+								var link = href.replace(/^https?\:\/\//, "");
+								_gaq.push(["_trackEvent", "External", "Click", link]);
+								if($(this).attr("target") == "_blank")
+									return;
+								setTimeout(function() { location.href = href }, 250);
+								return false;
+							});
+						});
+					};
+
+					if(!window.jQuery || typeof(window.jQuery) != "function") {
+						(function() {
+							var jq = document.createElement("script"); jq.type = "text/javascript";
+							jq.src = "http://media.rockstargames.com/js/jquery/jquery-1.4.4.min.js";
+							var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(jq, s);
+						})();
+						
+						var ljq;
+						var _ljqi = 0;
+						(ljq = function() {
+							if(_ljqi > 20)
+								return;
+							if(window.jQuery && typeof(window.jQuery) == "function")
+								return window.jQuery(document).ready(domReady);
+							_ljqi++;
+							setTimeout(ljq, 250);
+						})();
+					} else {
+						window.jQuery(document).ready(domReady);
+					}
+				})(window);
+			</script>
+<!-- End Header Analytics (UA-15984839-3) -->
+</head>
+
+<body bgcolor="#000000" topmargin=0 leftmargin=0>
+
+				<!--
+				Start of DoubleClick Floodlight Tag: Please do not remove
+				Activity name of this tag: Rockstar Games Homepage
+				URL of the webpage where the tag is expected to be placed: http://www.rockstargames.com/
+				This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+				Creation Date: 02/01/2011
+				-->
+				<script type="text/javascript">
+					var axel = Math.random() + "";
+					var a = axel * 10000000000000;
+					document.write('<iframe style="position:absolute;left:-10000px;top:-10000px" src="http://fls.doubleclick.net/activityi;src=3055121;type=rocks806;cat=rocks465;ord=' + a + '?" width="1" height="1" frameborder="0"></iframe>');
+				</script>
+				<noscript>
+					<iframe style="position:absolute;left:-10000px;top:-10000px" src="http://fls.doubleclick.net/activityi;src=3055121;type=rocks806;cat=rocks465;ord=1?" width="1" height="1" frameborder="0"></iframe>
+				</noscript>
+				<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+<table cellpadding=0 cellspacing=0 border=0>
+
+<tr>
+<td align=left valign=top rowspan=3><img src="../images/blank.gif" width=12 height=235 alt="" border="0"></td>
+<td align=left valign=top colspan=3><img src="../images/blank.gif" width=313 height=15 alt="" border="0"></td>
+<td align=left valign=top rowspan=3><img src="../images/blank.gif" width=15 height=235 alt="" border="0"></td>
+</tr>
+
+<tr>
+<td align=left valign=top rowspan=2><img src="../images/chooseenemy/emptyleft.gif" width=191 height=220 alt="" border="0" name="left"></td>
+<td align=left valign=top rowspan=2><img src="../images/blank.gif" width=10 height=220 alt="" border="0"></td>
+<td align=left valign=top>
+
+<table cellpadding=0 cellspacing=0 border=0>
+
+<tr>
+<td align=left valign=top><a href="#" onfocus="blur()" onMouseOver="imgAct('one')" onMouseOut="imgInact('one')" onClick="setDefault('one')"><img src="../images/chooseenemy/one_off.gif" width=22 height=22 alt="" border="0" name="one"></a></td>
+<td align=left valign=top><a href="#" onfocus="blur()" onMouseOver="imgAct('two')" onMouseOut="imgInact('two')" onClick="setDefault('two')"><img src="../images/chooseenemy/two_off.gif" width=22 height=22 alt="" border="0" name="two"></a></td>
+<td align=left valign=top><a href="#" onfocus="blur()" onMouseOver="imgAct('three')" onMouseOut="imgInact('three')" onClick="setDefault('three')"><img src="../images/chooseenemy/three_off.gif" width=23 height=22 alt="" border="0" name="three"></a></td>
+<td align=left valign=top><a href="#" onfocus="blur()" onMouseOver="imgAct('four')" onMouseOut="imgInact('four')" onClick="setDefault('four')"><img src="../images/chooseenemy/four_off.gif" width=23 height=22 alt="" border="0" name="four"></a></td>
+<td align=left valign=top><a href="#" onfocus="blur()" onMouseOver="imgAct('five')" onMouseOut="imgInact('five')" onClick="setDefault('five')"><img src="../images/chooseenemy/five_off.gif" width=21 height=22 alt="" border="0" name="five"></a></td>
+</tr>
+
+<tr>
+<td align=left valign=top><a href="#" onfocus="blur()" onMouseOver="imgAct('six')" onMouseOut="imgInact('six')" onClick="setDefault('six')"><img src="../images/chooseenemy/six_off.gif" width=22 height=23 alt="" border="0" name="six"></a></td>
+<td align=left valign=top><a href="#" onfocus="blur()" onMouseOver="imgAct('seven')" onMouseOut="imgInact('seven')" onClick="setDefault('seven')"><img src="../images/chooseenemy/seven_off.gif" width=23 height=23 alt="" border="0" name="seven"></a></td>
+<td align=left valign=top><a href="#" onfocus="blur()" onMouseOver="imgAct('eight')" onMouseOut="imgInact('eight')" onClick="setDefault('eight')"><img src="../images/chooseenemy/eight_off.gif" width=23 height=23 alt="" border="0" name="eight"></a></td>
+<td align=left valign=top><a href="#" onfocus="blur()" onMouseOver="imgAct('nine')" onMouseOut="imgInact('nine')" onClick="setDefault('nine')"><img src="../images/chooseenemy/nine_off.gif" width=23 height=23 alt="" border="0" name="nine"></a></td>
+<td align=left valign=top><a href="#" onfocus="blur()" onMouseOver="imgAct('ten')" onMouseOut="imgInact('ten')" onClick="setDefault('ten')"><img src="../images/chooseenemy/ten_off.gif" width=21 height=23 alt="" border="0" name="ten"></a></td>
+</tr>
+
+<tr>
+<td align=left valign=top><a href="#" onfocus="blur()" onMouseOver="imgAct('eleven')" onMouseOut="imgInact('eleven')" onClick="setDefault('eleven')"><img src="../images/chooseenemy/eleven_off.gif" width=22 height=23 alt="" border="0" name="eleven"></a></td>
+<td align=left valign=top><a href="#" onfocus="blur()" onMouseOver="imgAct('twelwe')" onMouseOut="imgInact('twelwe')" onClick="setDefault('twelwe')"><img src="../images/chooseenemy/twelwe_off.gif" width=23 height=23 alt="" border="0" name="twelwe"></a></td>
+<td align=left valign=top><a href="#" onfocus="blur()" onMouseOver="imgAct('thirteen')" onMouseOut="imgInact('thirteen')" onClick="setDefault('thirteen')"><img src="../images/chooseenemy/thirteen_off.gif" width=23 height=23 alt="" border="0" name="thirteen"></a></td>
+<td align=left valign=top><a href="#" onfocus="blur()" onMouseOver="imgAct('fourteen')" onMouseOut="imgInact('fourteen')" onClick="setDefault('fourteen')"><img src="../images/chooseenemy/fourteen_off.gif" width=23 height=23 alt="" border="0" name="fourteen"></a></td>
+<td align=left valign=top><a href="#" onfocus="blur()" onMouseOver="imgAct('fifteen')" onMouseOut="imgInact('fifteen')" onClick="setDefault('fifteen')"><img src="../images/chooseenemy/fifteen_off.gif" width=21 height=23 alt="" border="0" name="fifteen"></a></td>
+</tr>
+
+<tr>
+<td align=left valign=top><a href="#" onfocus="blur()" onMouseOver="imgAct('sixteen')" onMouseOut="imgInact('sixteen')" onClick="setDefault('sixteen')"><img src="../images/chooseenemy/sixteen_off.gif" width=22 height=23 alt="" border="0" name="sixteen"></a></td>
+<td align=left valign=top><a href="#" onfocus="blur()" onMouseOver="imgAct('seventeen')" onMouseOut="imgInact('seventeen')" onClick="setDefault('seventeen')"><img src="../images/chooseenemy/seventeen_off.gif" width=23 height=23 alt="" border="0" name="seventeen"></a></td>
+<td align=left valign=top><a href="#" onfocus="blur()" onMouseOver="imgAct('eighteen')" onMouseOut="imgInact('eighteen')" onClick="setDefault('eighteen')"><img src="../images/chooseenemy/eighteen_off.gif" width=23 height=23 alt="" border="0" name="eighteen"></a></td>
+<td align=left valign=top><a href="#" onfocus="blur()" onMouseOver="imgAct('nineteen')" onMouseOut="imgInact('nineteen')" onClick="setDefault('nineteen')"><img src="../images/chooseenemy/nineteen_off.gif" width=23 height=23 alt="" border="0" name="nineteen"></a></td>
+<td align=left valign=top><a href="#" onfocus="blur()" onMouseOver="imgAct('twenty')" onMouseOut="imgInact('twenty')" onClick="setDefault('twenty')"><img src="../images/chooseenemy/twenty_off.gif" width=21 height=23 alt="" border="0" name="twenty"></a></td>
+</tr>
+
+<tr>
+<td align=left valign=top><a href="#" onfocus="blur()" onMouseOver="imgAct('twentyone')" onMouseOut="imgInact('twentyone')" onClick="setDefault('twentyone')"><img src="../images/chooseenemy/twentyone_off.gif" width=22 height=21 alt="" border="0" name="twentyone"></a></td>
+<td align=left valign=top><a href="#" onfocus="blur()" onMouseOver="imgAct('twentytwo')" onMouseOut="imgInact('twentytwo')" onClick="setDefault('twentytwo')"><img src="../images/chooseenemy/twentytwo_off.gif" width=23 height=21 alt="" border="0" name="twentytwo"></a></td>
+<td align=left valign=top><a href="#" onfocus="blur()" onMouseOver="imgAct('twentythree')" onMouseOut="imgInact('twentythree')" onClick="setDefault('twentythree')"><img src="../images/chooseenemy/twentythree_off.gif" width=23 height=21 alt="" border="0" name="twentythree"></a></td>
+<td align=left valign=top><img src="../images/chooseenemy/twentyfour.gif" width=23 height=21 alt="" border="0"></td>
+<td align=left valign=top><img src="../images/chooseenemy/twentyfive.gif" width=21 height=21 alt="" border="0"></td>
+</tr>
+
+<tr>
+<td align=left valign=top colspan=5><img src="../images/blank.gif" width=112 height=8 alt="" border="0"></td>
+</tr>
+
+
+
+</table>
+
+</td>
+</tr>
+
+<tr>
+<td align=left valign=top><img src="../images/chooseenemy/emptybottom.gif" width=112 height=100 alt="" border="0" name="bottom"></td>
+</tr>
+
+</table>
+
+
+</body>
+</html>

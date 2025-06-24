@@ -1,0 +1,217 @@
+
+<!--created by Oyster Partners Limited-->
+<!--www.oyster.co.uk -->
+<!-- [January] 2000 -->
+<!--Production:  by [C.P], [January] 2000 -->
+<!--Design:  by [J.P], [January] 2000 -->
+<!--Programming: by [C.P], [January] 2000 -->
+
+<html>
+<head>
+	<title>Choose your vehicle Roadrunner</title>
+	
+<style type="text/javascript">
+with (tags.body)
+{
+	if (navigator.appName == "Netscape")
+	{
+		marginLeft = "-8pt";
+		marginTop = "-8pt";
+	}
+}
+</style>	
+	
+<script language="JavaScript">
+<!--
+browser = navigator.appName;
+version = parseInt(navigator.appVersion);
+    if ((browser == "Netscape" && version >= 3) || 
+        (browser == "Microsoft Internet Explorer" && version >= 4)) dynamic = "YES";
+    else dynamic = "NO";
+
+    if (dynamic== "YES") 
+    {
+	
+        rhinooff = new Image();
+        rhinooff.src = "../images/choosevehicle/rhino_off.gif";     
+        rhinoon = new Image();
+        rhinoon.src = "../images/choosevehicle/rhino_on.gif"; 
+
+		mantaoff = new Image();
+        mantaoff.src = "../images/choosevehicle/manta_off.gif";     
+        mantaon = new Image();
+        mantaon.src = "../images/choosevehicle/manta_on.gif"; 
+		
+		bulldogoff = new Image();
+        bulldogoff.src = "../images/choosevehicle/bulldog_off.gif";     
+        bulldogon = new Image();
+        bulldogon.src = "../images/choosevehicle/bulldog_on.gif"; 
+		
+		cheetahoff = new Image();
+        cheetahoff.src = "../images/choosevehicle/cheetah_off.gif";     
+        cheetahon = new Image();
+        cheetahon.src = "../images/choosevehicle/cheetah_on.gif"; 
+		
+		
+    }
+
+function imgInact(imgName) 
+{
+    if (dynamic== "YES") 
+    {
+        document[imgName].src = eval(imgName + "off.src");
+    }
+}
+
+function imgAct(imgName) 
+{
+    if (dynamic== "YES") 
+    {
+        document[imgName].src = eval(imgName + "on.src");
+    }
+}
+
+// -->
+</script>
+
+<!-- Header Analytics (UA-15984839-3) -->
+			<script type="text/javascript">
+				var _gaq = _gaq || [];
+				_gaq.push(["_setAccount", "UA-15984839-3"]);
+				_gaq.push(["_trackPageview"]);
+				(function() {
+					var ga = document.createElement("script"); ga.type = "text/javascript"; ga.async = true;
+					ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+					var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);
+				})();
+				
+				(function(window) {
+					var domReady = function($) {
+						var filetypes = /\.(zip|exe|dmg|pdf|doc*|xls*|ppt*|mp3|jpg|themepack|wmv|mp4|mov|flv)$/i;
+						$("a").filter(function() { return !$(this).data("notrack"); }).each(function() {
+							var href = $(this).attr("href");
+							if(!href)
+								return;
+							if(href.substr(0, 4) == "aim:") {
+								$(this).click(function() {
+									var url = href.replace("aim:", "");
+									_gaq.push(["_trackEvent", "Download", "Click-aim", url]);
+								});
+								return;		
+							}
+
+							if(href.substr(0, 7) == "mailto:") {
+								$(this).click(function() {
+									var emailAddr = href.replace("mailto:", "");
+									_gaq.push(["_trackEvent", "Email", "Click", emailAddr]);
+								});
+								return;
+							}
+
+							if(!href.match(/^https?\:/))
+								return;
+
+							if(href.match(filetypes)) {
+								$(this).click(function() {
+									var extParts = href.split(".");
+									var ext = extParts[extParts.length - 1];
+									_gaq.push(["_trackEvent", "Download", "Click-" + ext, href]);
+
+									if($(this).attr("target") == "_blank")
+										return;
+									setTimeout(function() { location.href = href }, 250);
+									return false;
+								});
+								return;
+							}
+							
+							if(href.indexOf(document.domain) >= 0)
+								return;
+
+							$(this).click(function() {
+								var link = href.replace(/^https?\:\/\//, "");
+								_gaq.push(["_trackEvent", "External", "Click", link]);
+								if($(this).attr("target") == "_blank")
+									return;
+								setTimeout(function() { location.href = href }, 250);
+								return false;
+							});
+						});
+					};
+
+					if(!window.jQuery || typeof(window.jQuery) != "function") {
+						(function() {
+							var jq = document.createElement("script"); jq.type = "text/javascript";
+							jq.src = "http://media.rockstargames.com/js/jquery/jquery-1.4.4.min.js";
+							var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(jq, s);
+						})();
+						
+						var ljq;
+						var _ljqi = 0;
+						(ljq = function() {
+							if(_ljqi > 20)
+								return;
+							if(window.jQuery && typeof(window.jQuery) == "function")
+								return window.jQuery(document).ready(domReady);
+							_ljqi++;
+							setTimeout(ljq, 250);
+						})();
+					} else {
+						window.jQuery(document).ready(domReady);
+					}
+				})(window);
+			</script>
+<!-- End Header Analytics (UA-15984839-3) -->
+</head>
+
+<body bgcolor="#000000" topmargin=0 leftmargin=0>
+
+				<!--
+				Start of DoubleClick Floodlight Tag: Please do not remove
+				Activity name of this tag: Rockstar Games Homepage
+				URL of the webpage where the tag is expected to be placed: http://www.rockstargames.com/
+				This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+				Creation Date: 02/01/2011
+				-->
+				<script type="text/javascript">
+					var axel = Math.random() + "";
+					var a = axel * 10000000000000;
+					document.write('<iframe style="position:absolute;left:-10000px;top:-10000px" src="http://fls.doubleclick.net/activityi;src=3055121;type=rocks806;cat=rocks465;ord=' + a + '?" width="1" height="1" frameborder="0"></iframe>');
+				</script>
+				<noscript>
+					<iframe style="position:absolute;left:-10000px;top:-10000px" src="http://fls.doubleclick.net/activityi;src=3055121;type=rocks806;cat=rocks465;ord=1?" width="1" height="1" frameborder="0"></iframe>
+				</noscript>
+				<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+<br><br>
+
+<table cellpadding=0 cellspacing=0 border=0 width=295>
+
+<tr>
+<td align=left valign=top><img src="../images/blank.gif" width=40 height=63 alt="" border="0"></td>
+<td align=left valign=top><a href="rhino.html" onMouseOver="imgAct('rhino')" onMouseOut="imgInact('rhino')"><img src="../images/choosevehicle/rhino_off.gif" width=51 height=63 alt="" border="0" name="rhino"></a></td>
+<td align=left valign=top><img src="../images/choosevehicle/roadrunner_on.gif" width=51 height=63 alt="" border="0"></td>
+<td align=left valign=top><a href="manta.html" onMouseOver="imgAct('manta')" onMouseOut="imgInact('manta')"><img src="../images/choosevehicle/manta_off.gif" width=51 height=63 alt="" border="0" name="manta"></a></td>
+<td align=left valign=top><a href="bulldog.html" onMouseOver="imgAct('bulldog')" onMouseOut="imgInact('bulldog')"><img src="../images/choosevehicle/bulldog_off.gif" width=51 height=63 alt="" border="0" name="bulldog"></a></td>
+<td align=left valign=top><a href="cheetah.html" onMouseOver="imgAct('cheetah')" onMouseOut="imgInact('cheetah')"><img src="../images/choosevehicle/cheetah_off.gif" width=51 height=63 alt="" border="0" name="cheetah"></a></td>
+</tr>
+
+<tr>
+<td align=left valign=top><img src="../images/blank.gif" width=40 height=63 alt="" border="0"></td>
+<td align=left valign=top colspan=5>
+<p>
+<font color="#00ffff" size="2" face="helvetica, arial, verdana">
+<b>Roadrunner</b></font>
+
+<p>
+<font color="#ffffff" size="1" face="helvetica, arial, verdana">
+The Roadrunner is a bizzare vehicle which uses anti-gravity technology to
+balance on a heavy metallic sphere making this machine tricky to master.
+
+</font></td>
+</tr>
+
+</table>
+
+
+</body>
+</html>
