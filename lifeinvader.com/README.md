@@ -10,9 +10,9 @@ Also, big thank you to "MGgames100" for providing us with copies of all company 
 
 Thank you to **EVERYONE** who made videos on this page or even just uploaded a picture of a post. This helped us a lot in puzzling the pieces together.
 
-## Website: https://the-rg-archive.github.io/webarchive/lifeinvader.com
+## Website: https://rockstar-archive.github.io/webarchive/lifeinvader.com
 
-## Download: https://download-directory.github.io?url=https://github.com/The-RG-Archive/webarchive/tree/main/lifeinvader.com
+## Download: https://download-directory.github.io?url=https://github.com/rockstar-archive/webarchive/tree/main/lifeinvader.com
 
 ## About this project:
 This website was remade on the basis of "MGgames100" copies of all company websites, Wayback Machine code, Wiki pages, and most importantly, YouTube videos exploring the website and its pages.  

@@ -2,9 +2,9 @@
 
 # Grand Theft Auto Website
 
-## Website: https://the-rg-archive.github.io/webarchive/rockstargames.com/gta
+## Website: https://rockstar-archive.github.io/webarchive/rockstargames.com/gta
 
-## Download: https://download-directory.github.io?url=https://github.com/The-RG-Archive/webarchive/tree/main/rockstargames.com/gta
+## Download: https://download-directory.github.io?url=https://github.com/rockstar-archive/webarchive/tree/main/rockstargames.com/gta
 
 A archive of the original rockstargames.com/gta website contained previews demos of gta 1 and a lot off cool stuff to explore.
 

@@ -1,3 +1,3 @@
 # webarchive
-Archives of Rockstar Websites for the-rg-archive.github.io
+Archives of Rockstar Websites for rockstar-archive.github.io
 

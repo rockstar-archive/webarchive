@@ -1,4 +1,4 @@
 # darrenwebb.com
-## Website: https://the-rg-archive.github.io/webarchive/darrenwebb.com
+## Website: https://rockstar-archive.github.io/webarchive/darrenwebb.com
 
-## Download: https://download-directory.github.io?url=https://github.com/The-RG-Archive/webarchive/tree/main/darrenwebb.com
+## Download: https://download-directory.github.io?url=https://github.com/rockstar-archive/webarchive/tree/main/darrenwebb.com
