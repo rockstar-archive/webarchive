@@ -4,15 +4,7 @@
 <title>Rockstar Games: Grand Theft Auto Vice City</title>
 <meta name="DESCRIPTION" content="Rockstar Games Presents Grand Theft Auto: Vice City for Sony PlayStation 2 and PC">
 <meta name="KEYWORDS" content="rockstar, games, Grand Theft Auto, Grand, Theft, Auto, GTA, VC, Vice, City, 1980's, 80's, Blondie, Judas, Priest, Cutting, Crew, old-skool, oldskool, old, skool, school, new, wave, hair, band, mafia, scarface, Playstation, Playstation2, 2, PS2, PC, videogame, videogames, video, game">
- <script>
-  window.RufflePlayer = window.RufflePlayer || {};
-  window.RufflePlayer.config = {
-    "autoplay": "on",
-    "unmuteOverlay": "hidden",
-    "splashScreen": false,
-  };
-</script>
-    <script type="text/javascript" src="../js/ruffle.js"></script>
+
 
 <script language="javascript" src="flashdetection.js"></script>
 <!-- <script type="text/javascript" src="http://www.rockstargames.com/js/webtrends.js"></script> -->
@@ -24,13 +16,19 @@ var flashDetection = new FlashDetection();
 var page = "";
 
 if (!flashDetection.isMinimumVersion(6)) {
+	// ORIGINAL CODE
+	/*
+
 	var userResult = window.confirm('Viewing this site requires the Flash 6 plugin or higher. Which we haven\'t detected on your system. Click on OK to get it.');
 	if (userResult == true) {
-			location.href ("http://www.macromedia.com/go/getflashplayer/");
+			location.href ("http://www.macromedia.com/go/getflashplayer/");		
 	}
 	else {
 		page = "main.html";
 	}
+		
+	*/
+	page = "flashLayer.html";
 }
 else {
 	if ((document.all) && (navigator.userAgent.indexOf('Mac') == -1)) page = "main.html";
