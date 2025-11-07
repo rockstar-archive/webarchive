@@ -1,11 +1,11 @@
-// therockstararchive Loader (universal SWF path–aware version)
+// therockstararchive Loader — universal Flash path fixer (final version)
 
 (function() {
     const pageURL = new URL(window.location.href);
     const basePath = pageURL.href.substring(0, pageURL.href.lastIndexOf('/') + 1);
     console.log("Detected HTML base path:", basePath);
 
-    // Ruffle configuration must exist before it loads
+    // Set up Ruffle configuration before it loads
     window.RufflePlayer = window.RufflePlayer || {};
     window.RufflePlayer.config = {
         "publicPath": undefined,
@@ -29,20 +29,59 @@
         "splashScreen": false,
     };
 
-    // Function to fix SWF paths before Ruffle loads
-    function fixSWFPaths() {
-        document.querySelectorAll('embed, object').forEach(el => {
-            let attr = el.tagName.toLowerCase() === 'object' ? 'data' : 'src';
-            let value = el.getAttribute(attr);
-            if (value && /\.swf$/i.test(value) && !/^(https?:)?\/\//i.test(value)) {
-                const fixed = new URL(value.replace(/^\//, ''), basePath).href;
-                el.setAttribute(attr, fixed);
-                console.log(`Rewrote ${attr} → ${fixed}`);
+    // Normalize a SWF path so /front/front.swf → basePath + front/front.swf
+    function resolveSWFPath(original) {
+        if (!original) return original;
+        // If it’s already absolute (http/https), leave it alone
+        if (/^(https?:)?\/\//i.test(original)) return original;
+
+        // Remove any leading slash so we treat it as relative to HTML folder
+        let relative = original.replace(/^\/+/, '');
+        const resolved = new URL(relative, basePath).href;
+        return resolved;
+    }
+
+    function fixAllSWFPaths() {
+        // --- Handle <embed src="..."> ---
+        document.querySelectorAll('embed').forEach(embed => {
+            let src = embed.getAttribute('src');
+            if (src && /\.swf$/i.test(src)) {
+                const fixed = resolveSWFPath(src);
+                if (fixed !== src) {
+                    embed.setAttribute('src', fixed);
+                    console.log("Fixed <embed> src:", fixed);
+                }
             }
+        });
+
+        // --- Handle <object data="..."> (not used here but just in case) ---
+        document.querySelectorAll('object').forEach(obj => {
+            let data = obj.getAttribute('data');
+            if (data && /\.swf$/i.test(data)) {
+                const fixed = resolveSWFPath(data);
+                if (fixed !== data) {
+                    obj.setAttribute('data', fixed);
+                    console.log("Fixed <object> data:", fixed);
+                }
+            }
+
+            // --- Handle <param name="movie" value="..."> ---
+            obj.querySelectorAll('param[name]').forEach(param => {
+                const name = param.getAttribute('name').toLowerCase();
+                if (name === 'movie') {
+                    const val = param.getAttribute('value');
+                    if (val && /\.swf$/i.test(val)) {
+                        const fixed = resolveSWFPath(val);
+                        if (fixed !== val) {
+                            param.setAttribute('value', fixed);
+                            console.log("Fixed <param name='movie'>:", fixed);
+                        }
+                    }
+                }
+            });
         });
     }
 
-    // Replace MOV/WMV embeds with download links
     function patchOldVideoEmbeds() {
         document.querySelectorAll('embed').forEach(embed => {
             const src = embed.getAttribute('src');
@@ -60,14 +99,13 @@
         });
     }
 
-    // Wait for DOM, fix embeds, then load Ruffle
+    // Run fixes before loading Ruffle
     document.addEventListener('DOMContentLoaded', function() {
         patchOldVideoEmbeds();
-        fixSWFPaths();
+        fixAllSWFPaths();
 
-        // Load Ruffle only AFTER SWF paths are fixed
         if (!window.location.href.includes("noruffle")) {
-            var script = document.createElement("script");
+            const script = document.createElement("script");
             script.type = "text/javascript";
             script.src = "https://unpkg.com/@ruffle-rs/ruffle";
             document.head.appendChild(script);
