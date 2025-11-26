@@ -1,7 +1,7 @@
 // therockstararchive Loader — fully fixed for GTA LCS SWFs
 (function() {
     // Folder where all BradyGames SWFs live
-    const SWF_BASE = 'webarchive/bradygames.com/content/downloads/connected/gtalcs/swf/';
+    const SWF_BASE = '/webarchive/bradygames.com/content/downloads/connected/gtalcs/swf/';
 
     // Set up Ruffle configuration BEFORE it loads
     window.RufflePlayer = window.RufflePlayer || {};
