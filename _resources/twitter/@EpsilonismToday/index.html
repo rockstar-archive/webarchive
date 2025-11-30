@@ -1,10 +1,11 @@
-
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Epsilon Program (EpsilonismToday) on Twitter</title>
+
+ <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 
     <style id="user-style-EpsilonismToday-bg-img">
       body.user-style-EpsilonismToday {
@@ -146,28 +147,44 @@
         color: #657786;
       }
     </style>
+
+    <script>
+      // JavaScript to make links clickable and handle hashtags
+      document.addEventListener('DOMContentLoaded', function () {
+        const tweets = document.querySelectorAll('.tweet .text');
+
+        // Convert URLs to clickable links
+        tweets.forEach(tweet => {
+          tweet.innerHTML = tweet.innerHTML.replace(
+            /(\bhttps?:\/\/\S+\b)/g, 
+            '<a href="$1" target="_blank">$1</a>'
+          );
+
+          // Convert hashtags to clickable links
+          tweet.innerHTML = tweet.innerHTML.replace(
+            /#(\w+)/g, 
+            '<a href="https://twitter.com/hashtag/$1" target="_blank">#$1</a>'
+          );
+        });
+      });
+    </script>
   </head>
 
   <body class="user-style-EpsilonismToday">
-
     <div class="container">
-
+      <!-- Your Profile Section Here -->
       <section class="profile">
         <div class="banner"></div>
-
         <div class="meta">
           <div class="avatar">
             <img src="images/3334sw7qyn0o7oo1jayg_400x400.jpeg" alt="Profile picture">
           </div>
-
           <div class="info" style="margin-left: 100px;">
             <h1>Epsilon Program</h1>
             <p class="handle">@EpsilonismToday</p>
             <p class="bio">
               What's happening right now in American religion.<br />
-              <a href="http://www.epsilonprogram.com/" target="_blank">
-                http://www.epsilonprogram.com/
-              </a>
+              <a href="http://www.epsilonprogram.com/" target="_blank">http://www.epsilonprogram.com/</a>
             </p>
 
             <div class="stats">
@@ -178,6 +195,7 @@
           </div>
         </div>
       </section>
+
 
       <main class="main" id="mainColumn">
         <div id="tweetsList">
@@ -244,7 +262,7 @@
         </div>
         <div class="body">
             <div class="meta"><strong>Epsilon Program</strong> <span>@EpsilonismToday · 2013-09-13 23:29:08</span></div>
-            <div class="text">More goals revealed #moretruths http://t.co/kR4aZb7d52</div>
+            <div class="text">More goals revealed #moretruths http://bit.ly/ZDNAyi</div>
             <div class="likes-reposts">
                 <span>17 Reposts</span> | <span>51 Likes</span>
             </div>
@@ -258,7 +276,7 @@
         </div>
         <div class="body">
             <div class="meta"><strong>Epsilon Program</strong> <span>@EpsilonismToday · 2013-09-10 02:54:22</span></div>
-            <div class="text">Be even more complete. Like our screensaver. http://t.co/kR4aZb7d52 #spiritualupdate</div>
+            <div class="text">Be even more complete. Like our screensaver. http://bit.ly/ZDNAyi #spiritualupdate</div>
             <div class="likes-reposts">
                 <span>20 Reposts</span> | <span>36 Likes</span>
             </div>
@@ -286,7 +304,7 @@
         </div>
         <div class="body">
             <div class="meta"><strong>Epsilon Program</strong> <span>@EpsilonismToday · 2013-09-05 19:28:49</span></div>
-            <div class="text">Hello, non-people at http://t.co/VUkbcJLMVV – get a life – we are NOT a cult.</div>
+            <div class="text">Hello, non-people at Cultstoppers.com – get a life – we are NOT a cult.</div>
             <div class="likes-reposts">
                 <span>65 Reposts</span> | <span>75 Likes</span>
             </div>
@@ -328,7 +346,7 @@
         </div>
         <div class="body">
             <div class="meta"><strong>Epsilon Program</strong> <span>@EpsilonismToday · 2013-08-26 20:30:09</span></div>
-            <div class="text">More spirituality in our revolutionary screensaver now! #moretruths http://t.co/kR4aZb7d52</div>
+            <div class="text">More spirituality in our revolutionary screensaver now! #moretruths http://bit.ly/ZDNAyi</div>
             <div class="likes-reposts">
                 <span>19 Reposts</span> | <span>17 Likes</span>
             </div>
@@ -342,7 +360,7 @@
         </div>
         <div class="body">
             <div class="meta"><strong>Epsilon Program</strong> <span>@EpsilonismToday · 2013-08-20 21:46:44</span></div>
-            <div class="text">The tract SHALL BE written on Titanium. The screensaver is written on your monitor. http://t.co/kR4aZb7d52 #spiritualupdate</div>
+            <div class="text">The tract SHALL BE written on Titanium. The screensaver is written on your monitor. http://bit.ly/ZDNAyi #spiritualupdate</div>
             <div class="likes-reposts">
                 <span>22 Reposts</span> | <span>23 Likes</span>
             </div>
@@ -356,7 +374,7 @@
         </div>
         <div class="body">
             <div class="meta"><strong>Epsilon Program</strong> <span>@EpsilonismToday · 2013-08-14 21:48:30</span></div>
-            <div class="text">Be even better. Like our screensaver: http://t.co/kR4aZb7d52 #morethruths</div>
+            <div class="text">Be even better. Like our screensaver: http://bit.ly/ZDNAyi #morethruths</div>
             <div class="likes-reposts">
                 <span>16 Reposts</span> | <span>21 Likes</span>
             </div>
@@ -370,7 +388,7 @@
         </div>
         <div class="body">
             <div class="meta"><strong>Epsilon Program</strong> <span>@EpsilonismToday · 2013-08-05 17:11:28</span></div>
-            <div class="text">Learn your truth now in the screensaver updated http://t.co/kR4aZb7d52  #spiritualupdate</div>
+            <div class="text">Learn your truth now in the screensaver updated http://bit.ly/ZDNAyi  #spiritualupdate</div>
             <div class="likes-reposts">
                 <span>11 Reposts</span> | <span>16 Likes</span>
             </div>
@@ -384,7 +402,7 @@
         </div>
         <div class="body">
             <div class="meta"><strong>Epsilon Program</strong> <span>@EpsilonismToday · 2013-07-31 23:53:55</span></div>
-            <div class="text">It's bite sized spritituality for busy modern lives! Screensaver updated: http://t.co/kR4aZb7d52 #moretruths</div>
+            <div class="text">It's bite sized spritituality for busy modern lives! Screensaver updated: http://bit.ly/ZDNAyi #moretruths</div>
             <div class="likes-reposts">
                 <span>15 Reposts</span> | <span>20 Likes</span>
             </div>
@@ -398,7 +416,7 @@
         </div>
         <div class="body">
             <div class="meta"><strong>Epsilon Program</strong> <span>@EpsilonismToday · 2013-07-30 16:17:14</span></div>
-            <div class="text">Learn more by downloading the screensaver here right now. http://t.co/kR4aZb7d52 #tools!</div>
+            <div class="text">Learn more by downloading the screensaver here right now. http://bit.ly/ZDNAyi #tools!</div>
             <div class="likes-reposts">
                 <span>17 Reposts</span> | <span>20 Likes</span>
             </div>
@@ -426,7 +444,7 @@
         </div>
         <div class="body">
             <div class="meta"><strong>Epsilon Program</strong> <span>@EpsilonismToday · 2013-07-23 17:50:04</span></div>
-            <div class="text">Answers to important questions - screensaver updated now http://t.co/kR4aZb7d52 #spiritualupdate</div>
+            <div class="text">Answers to important questions - screensaver updated now http://bit.ly/ZDNAyi #spiritualupdate</div>
             <div class="likes-reposts">
                 <span>8 Reposts</span> | <span>17 Likes</span>
             </div>
@@ -720,7 +738,7 @@
         </div>
         <div class="body">
             <div class="meta"><strong>Epsilon Program</strong> <span>@EpsilonismToday · 2013-06-27 17:51:55</span></div>
-            <div class="text">Download the Epsilon screensaver now - with updates http://t.co/kR4aZb7d52 #moretruths</div>
+            <div class="text">Download the Epsilon screensaver now - with updates http://bit.ly/ZDNAyi #moretruths</div>
             <div class="likes-reposts">
                 <span>13 Reposts</span> | <span>16 Likes</span>
             </div>
@@ -748,7 +766,7 @@
         </div>
         <div class="body">
             <div class="meta"><strong>Epsilon Program</strong> <span>@EpsilonismToday · 2013-06-19 17:03:16</span></div>
-            <div class="text">Check screensaver for more answers http://t.co/kR4aZb7d52 #spiritualupdate</div>
+            <div class="text">Check screensaver for more answers http://bit.ly/ZDNAyi #spiritualupdate</div>
             <div class="likes-reposts">
                 <span>9 Reposts</span> | <span>11 Likes</span>
             </div>
@@ -790,7 +808,7 @@
         </div>
         <div class="body">
             <div class="meta"><strong>Epsilon Program</strong> <span>@EpsilonismToday · 2013-06-13 00:07:12</span></div>
-            <div class="text">More spiritual revelations in screensaver update http://t.co/kR4aZb7d52 #moretruths</div>
+            <div class="text">More spiritual revelations in screensaver update http://bit.ly/ZDNAyi #moretruths</div>
             <div class="likes-reposts">
                 <span>11 Reposts</span> | <span>11 Likes</span>
             </div>
@@ -804,7 +822,7 @@
         </div>
         <div class="body">
             <div class="meta"><strong>Epsilon Program</strong> <span>@EpsilonismToday · 2013-06-04 16:48:01</span></div>
-            <div class="text">Yes - you're learning fast - screensaver updated http://t.co/kR4aZb7d52 #moretruths</div>
+            <div class="text">Yes - you're learning fast - screensaver updated http://bit.ly/ZDNAyi #moretruths</div>
             <div class="likes-reposts">
                 <span>13 Reposts</span> | <span>14 Likes</span>
             </div>
@@ -818,7 +836,7 @@
         </div>
         <div class="body">
             <div class="meta"><strong>Epsilon Program</strong> <span>@EpsilonismToday · 2013-05-30 17:54:03</span></div>
-            <div class="text">Download the screensaver now and you'll learn even more http://t.co/kR4aZb7d52 #spiritualupdate</div>
+            <div class="text">Download the screensaver now and you'll learn even more http://bit.ly/ZDNAyi #spiritualupdate</div>
             <div class="likes-reposts">
                 <span>19 Reposts</span> | <span>15 Likes</span>
             </div>
@@ -944,7 +962,7 @@
         </div>
         <div class="body">
             <div class="meta"><strong>Epsilon Program</strong> <span>@EpsilonismToday · 2013-05-20 17:23:42</span></div>
-            <div class="text">More Goals! Screensaver updated now #spiritualupdate http://t.co/kR4aZb7d52</div>
+            <div class="text">More Goals! Screensaver updated now #spiritualupdate http://bit.ly/ZDNAyi</div>
             <div class="likes-reposts">
                 <span>18 Reposts</span> | <span>10 Likes</span>
             </div>
@@ -972,7 +990,7 @@
         </div>
         <div class="body">
             <div class="meta"><strong>Epsilon Program</strong> <span>@EpsilonismToday · 2013-05-16 21:24:48</span></div>
-            <div class="text">All shall be known... But for now, we've updated our screensaver. #moretruths http://t.co/kR4aZb7d52</div>
+            <div class="text">All shall be known... But for now, we've updated our screensaver. #moretruths http://bit.ly/ZDNAyi</div>
             <div class="likes-reposts">
                 <span>15 Reposts</span> | <span>12 Likes</span>
             </div>
@@ -2215,15 +2233,16 @@
       </main>
 
     </div>
+    
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const tweets = document.querySelectorAll('.tweet .text');
+    tweets.forEach(tweet => {
+      tweet.innerHTML = tweet.innerHTML.replace(/#(\w+)/g, '<a href="https://twitter.com/hashtag/$1" target="_blank">#$1</a>');
+    });
+  });
+</script>
 
-    <script>
-      function linkify(text) {
-        text = text.replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank">$1</a>');
-        text = text.replace(/(bit\.ly\/[^\s]+)/g, '<a href="https://$1" target="_blank">$1</a>');
-        text = text.replace(/#(\w+)/g, '<a href="https://twitter.com/hashtag/$1" target="_blank">#$1</a>');
-        return text;
-      }
-    </script>
 
 <footer style="background-color: transparent; padding: 10px; text-align: center; font-size: 12px; color: #666;">
     <p>This website is not affiliated with Take-Two Interactive, Twitter, or any of their subsidiaries. All trademarks and copyrights related to the content on this site are owned by Take-Two Interactive, Twitter, or their respective owners.</p>
