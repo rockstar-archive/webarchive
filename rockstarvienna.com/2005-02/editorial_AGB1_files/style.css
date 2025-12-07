@@ -1,0 +1,149 @@
+
+
+
+
+
+/*
+     FILE ARCHIVED ON 15:07:33 Dec 4, 2004 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 4:31:38 May 28, 2011.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+body
+{
+	font-family:	tahoma, geneva, arial, san-serif; 
+	font-size:		1;
+	background:		#E2EBF3; 
+	color:			#476076;
+}
+
+a
+{
+	color:			#476076;
+}
+
+a:visited
+{
+	color:			#476076;
+}
+
+a:active
+{
+	color:			#776245;
+}
+
+table.main
+{
+	background:		#BBD2E6; 
+	border:			#ffffff 10px solid;
+	width:			602px;
+	margin:			0px;
+	padding:		0px;
+}
+
+img
+{
+	border:			none 0px;
+}
+
+td.leftside
+{
+	font-size:		xx-small;
+	vertical-align:	top;
+}
+
+td.rightside
+{
+	width:			303px;
+	font-size:		xx-small;
+	vertical-align:	top;
+	padding-top:	20px;
+	padding-bottom:	20px;
+	padding-right:	10px
+}
+
+td.rightsidetop
+{
+	width:			303px;
+	font-size:		xx-small;
+	vertical-align:	top;
+	padding-bottom:	20px;
+	padding-right:	10px
+}
+
+.bgwhite
+{
+	background:		#ffffff; 
+}
+
+
+table.jobform
+{
+	width:			582px;
+	border:			0px;
+}
+
+td.navigator
+{
+	text-align:		right;
+	background:		#ffffff; 
+}
+td.right
+{
+	text-align:		right;
+}
+
+div.jobformdescription
+{
+	border:			1px solid #476076;
+	padding:		10px;
+
+}
+
+
+
+td.jobform
+{
+	text-align:		left;
+	vertical-align:	top;
+	font-size:		xx-small;
+	padding-top:		10px;
+}
+
+td.simple
+{
+	text-align:		left;
+	vertical-align:	top;
+	font-size:		xx-small;
+}
+
+td.simplebold
+{
+	text-align:		left;
+	vertical-align:	top;
+	font-size:		xx-small;
+	font-weight:		bold;
+}
+
+li
+{
+	margin-top:		7px;
+}
+
+hr
+{
+	color:			#476076;	
+}
+
+p.list 
+{ 
+	text-indent:		-18px;
+	margin-left:		15px;
+}
+
+input.narrow
+{
+	width:				80px;
+}
