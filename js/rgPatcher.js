@@ -1,4 +1,4 @@
-// therockstararchive Loader — universal Flash path fixer (final version)
+// rockstararchive Loader — universal Flash path fixer (final version)
 
 (function() {
     const pageURL = new URL(window.location.href);
