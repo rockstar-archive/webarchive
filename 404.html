@@ -4,425 +4,560 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Rockstar Games Archive - Error 404</title>
+    <title>The Rockstar Archive - Error 404</title>
     <link rel="icon" type="image/webp" href="https://rockstar-archive.github.io/images/favicon.webp">
 </head>
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+    body {
+    background-image: url("https://rockstar-archive.github.io/images/bg.webp");
+    background-attachment: fixed;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+
+
+
+
+
+.holder {
+    background-color: white;
+    align-items: center;
+
+
+    width: 100%;
+
+
+
+}
+
+.content {
+
+    align-items: center;
+
+
+    width: 80%;
+
+
+}
+
+
+pd {
+    color: rgb(189, 189, 189);
+    text-shadow: 3px 3px 5px black;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    padding: 14px 16px;
+    overflow: hidden;
+    height: 120px;
+    padding-right: 10%;
+    padding-left: 11%;
+
+}
+
+.bottom {
+    height: 30px;
+    width: 100%;
+    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(255, 255, 255, 1)), to(rgba(255, 255, 255, 0)));
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    background-image: -o-linear-gradient(top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(0, 0, 0, 0));
+    background-repeat: repeat-x;
+}
+
+/* Style the links inside the navigation bar */
+.topnav .topbtn {
+    margin: 10px;
+    border-radius: 10px;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    opacity: 80%;
+    float: right;
+    margin-top: 70px;
+
+    transition: 0.3s;
+
+}
+
+.topnav .topbtnACTIVE {
+    margin: 10px;
+    border-radius: 10px;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    opacity: 80%;
+    float: right;
+    margin-top: 70px;
+
+    background-color: #ffffff;
+    color: black;
+    opacity: 60%;
+    transition: 0.3s;
+    transform: scale(1.18);
+    box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 255);
+    transform: translateY(-3px);
+}
+
+.pagelogo1 {
+
+    border-radius: 10px;
+    color: #ffffff;
+    float: left;
+    padding: 4px 7px;
+
+
+
+
+    transition: 0.3s;
+
+}
+
+
+
+/* Change the color of links on hover */
+.topnav .topbtn:hover {
+
+    background-color: #ffffff;
+    color: black;
+    opacity: 60%;
+    transition: 0.3s;
+    transform: scale(1.18);
+    box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 255);
+    transform: translateY(-3px);
+
+}
+
+.pagelogo1:hover {
+    background-color: #ffffff32;
+    color: black;
+
+    transition: 0.3s;
+    transform: scale(1.03);
+    box-shadow: 0 20px 36px 0 rgba(0, 0, 0, 255);
+
+}
+
+
+fa fa-moon-o {
+    font-size: 24px;
+    color: white;
+}
+
+
+/*@media (prefers-color-scheme: dark) {*/
+.holder {
+    background-color: #202020;
+}
+
+.content {
+    color: white;
+}
+
+.bottom {
+    height: 40px;
+    width: 100%;
+    background-image: -moz-linear-gradient(top, rgb(32, 32, 32), rgba(32, 32, 32, 0));
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(32, 32, 32, 1)), to(rgba(32, 32, 32, 0)));
+    background-image: -webkit-linear-gradient(top, rgba(32, 32, 32, 1), rgba(32, 32, 32, 0));
+    background-image: -o-linear-gradient(top, rgba(32, 32, 32, 1), rgba(32, 32, 32, 0));
+    background-image: linear-gradient(to bottom, rgba(32, 32, 32, 1), rgba(0, 0, 0, 0));
+    background-repeat: repeat-x;
+}
+
+.rockstaricon1 {
+    color: white;
+}
+
+/*}*/
+
+
+
+
+.card {
+
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.5);
+    transition: 0.2s;
+    width: 250px;
+    height: 400px;
+    background-color: rgb(42, 42, 42);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0px 30px 42px 0 rgba(0, 0, 0, 1);
+    background-color: rgb(53, 53, 53);
+    transition: 0.2s;
+    transform: scale(1.05);
+
+}
+
+/* Add some padding inside the card container */
+.card .cocococo {
+    padding: 0px 16px;
+}
+
+
+.card .blurred-img {
+
+    width: 250px;
+    height: 250px;
+    background-size: contain;
+
+    /* you need to match the shadow color to your background or image border for the desired effect*/
+    /*box-shadow: 0 0 8px 8px rgba(42, 42, 42, 255) inset;*/
+    transition: 0.2s;
+    overflow: hidden;
+
+}
+
+.card:hover .blurred-img {
+
+    box-shadow: 0 0 2px 2px rgb(53, 53, 53) inset;
+    transition: 0.2s;
+    transform: scale(0.97);
+    transform-origin: 50% 50%;
+
+
+
+}
+
+.goodbtn {
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: white;
+    color: black;
+    padding: 14px 16px;
+    transition: 0.3s;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 255);
+}
+
+.goodbtn:hover {
+
+    border-radius: 20px;
+    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+    background-size: 100% 100%;
+    color: rgb(255, 255, 255);
+
+    transition: 0.3s;
+    transform-origin: 50% 50%;
+    box-shadow: 7px 7px 10px 0 rgba(0, 0, 0, 255);
+    background-repeat: repeat-x;
+    background: linear-gradient(to right,
+            #e42828,
+            #fe8616,
+            #ffbf35,
+            #76ff45,
+            #426bff,
+            #e42828);
+    animation: rainbow 10s linear infinite;
+    background-size: 200% 100% !important;
+    text-shadow: 2px 2px 2px black;
+    transform: scale(1.2);
+    transform: translateY(-3px);
+}
+
+.colorbar {
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    height: 5px;
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+}
+
+
+@keyframes rainbow {
+    0% {
+        background-position: 0;
     }
 
-    body {
-        background-image: url("https://rockstar-archive.github.io/images/bg.webp");
-        background-attachment: fixed;
-        background-size: cover;
-        background-position: center;
-        font-family: "Poppins", sans-serif;
-        color: white;
-        min-height: 100vh;
+    100% {
+        background-position: 800% 0;
+    }
+}
+
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+}
+
+.betascreen {
+    box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 255);
+    transition: 0.3s;
+}
+
+.betascreen:hover {
+    box-shadow: 20px 20px 30px 0 rgba(0, 0, 0, 255);
+    transition: 0.3s;
+    transform: scale(1.03);
+}
+
+.pagelogoimg {
+    width: 400px;
+    height: 100px;
+}
+
+@media screen and (max-width: 1039px) {
+    .topnav {
+        height: auto;
+        padding: 10px;
         display: flex;
         flex-direction: column;
-    }
-
-    .holder {
-        background-color: #202020;
-        width: 100%;
-        flex: 1;
-        position: relative;
-    }
-
-    .content {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-        width: 90%;
-    }
-
-
-    header {
-        background-image: url("https://rockstar-archive.github.io/images/bg.webp");
-        background-attachment: fixed;
-        background-size: cover;
-        background-position: center;
-        backdrop-filter: blur(10px);
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        padding: 10px 5%;
-    }
-
-    .topnav {
-        display: flex;
-        justify-content: space-between;
         align-items: center;
-        flex-wrap: wrap;
-        gap: 20px;
-        padding: 10px 0;
     }
 
-    .nav-links {
-        display: flex;
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
+    .topnav .topbtn,
+    .topnav .topbtnACTIVE {
+        float: none;
+        margin-top: 5px;
+        width: 80%;
+        text-align: center;
     }
 
-    .pagelogo {
-        display: block;
-        transition: transform 0.3s ease;
-    }
+    .topnav .topbtnACTIVE {
 
-    .pagelogo:hover {
-        transform: scale(1.05);
-    }
-
-    .pagelogoimg {
-        width: 300px;
-        height: 75px;
-        object-fit: contain;
-    }
-
-
-    .topbtn,
-    .topbtnACTIVE {
         border-radius: 10px;
         color: #ffffff;
         text-align: center;
-        padding: 12px 20px;
+        padding: 14px 16px;
         text-decoration: none;
-        font-size: 16px;
-        font-weight: 500;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        position: relative;
-        overflow: hidden;
-    }
+        font-size: 17px;
+        opacity: 80%;
+        float: right;
 
-    .topbtn {
-        background: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-    }
 
-    .topbtn:hover {
-        background: rgba(255, 255, 255, 0.2);
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    }
-
-    .topbtnACTIVE {
-        background: white;
+        background-color: #ffffff;
         color: black;
+        opacity: 60%;
+        transition: 0.3s;
+        transform: scale(1.18);
+        box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 255);
         transform: translateY(-3px);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-        font-weight: 600;
     }
 
-
-    .hero {
-        text-align: center;
-        padding: 40px 20px;
+    .pagelogo1 {
+        float: none;
+        margin-bottom: 10px;
     }
 
-    .hero h1 {
-        font-size: 3.5rem;
-        margin-bottom: 20px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    .pagelogoimg {
+        width: 280px;
+        height: 70px;
     }
 
-    .hero h1 img {
-        height: 1em;
-        vertical-align: middle;
-        margin-left: 10px;
+    .content {
+        width: 95%;
     }
-
-    .lead {
-        font-size: 1.2rem;
-        color: #e0e0e0;
-        margin-bottom: 30px;
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-
-    .cta-buttons {
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .goodbtn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        border-radius: 12px;
-        background: white;
-        color: black;
-        padding: 15px 30px;
-        text-decoration: none;
-        font-family: 'Courier New', Courier, monospace;
-        font-weight: bold;
-        font-size: 1.1rem;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        transition: all 0.3s ease;
-        border: none;
-        cursor: pointer;
-        min-width: 200px;
-    }
-
-    .goodbtn:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-        background: linear-gradient(45deg, #ff2400, #e81d1d, #e8b71d);
-        color: white;
-        animation: gradientShift 3s ease infinite;
-    }
-
-    .discord-btn {
-        background: #5865F2;
-        color: white;
-    }
-
-
-    .daily-feature {
-        text-align: center;
-        padding: 40px 0;
-    }
-
-    .daily-feature h2 {
-        font-size: 2.5rem;
-        margin-bottom: 30px;
-        color: #fff;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
-
-    .betascreen {
-        max-width: 800px;
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        transition: all 0.3s ease;
-        cursor: pointer;
-    }
-
-    .betascreen:hover {
-        transform: scale(1.02);
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
-    }
-
-    figcaption {
-        margin-top: 15px;
-        font-style: italic;
-        color: #aaa;
-        font-size: 1.1rem;
-    }
-
-
-    .colorbar {
-        height: 5px;
-        width: 100%;
-        background: linear-gradient(90deg,
-                red 0%,
-                orange 16.66%,
-                yellow 33.33%,
-                green 50%,
-                blue 66.66%,
-                indigo 83.33%,
-                violet 100%,
-                red 100%);
-        background-size: 200% 100%;
-        position: fixed;
-        animation: gradientShift 10s ease infinite;
-        z-index: 100000;
-    }
-
-
-    @keyframes gradientShift {
-        0% {
-            background-position: 200% 0;
-        }
-
-        100% {
-            background-position: -200% 0;
-        }
-    }
-
-
-    footer {
-        background: rgba(0, 0, 0, 0.9);
-        padding: 40px 20px;
-        margin-top: auto;
-    }
-
-    .footer-content {
-        max-width: 800px;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    .disclaimer {
-        color: #aaa;
-        font-size: 0.9rem;
-        line-height: 1.6;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-    }
-
-    /* Utility Classes */
-    .site-notice {
-        margin: 20px 0;
-        padding: 10px;
-        background: rgba(255, 0, 0, 0.1);
-        border-radius: 5px;
-    }
-
-    .credit {
-        text-align: center;
-        margin-top: 40px;
-        color: #888;
-        font-size: 0.9rem;
-    }
-
-
-    @media screen and (max-width: 768px) {
-        .hero h1 {
-            font-size: 2.5rem;
-        }
-
-        .pagelogoimg {
-            width: 200px;
-            height: 50px;
-        }
-
-        .topnav {
-            flex-direction: column;
-            padding: 10px;
-        }
-
-        .nav-links {
-            width: 100%;
-            justify-content: center;
-        }
-
-        .topbtn,
-        .topbtnACTIVE {
-            padding: 10px 15px;
-            font-size: 14px;
-        }
-
-        .goodbtn {
-            min-width: 150px;
-            padding: 12px 20px;
-            font-size: 1rem;
-        }
-
-        .content {
-            padding: 10px;
-            width: 95%;
-        }
-    }
-
-    @media screen and (max-width: 480px) {
-        .hero h1 {
-            font-size: 2rem;
-        }
-
-        .lead {
-            font-size: 1rem;
-        }
-
-        .cta-buttons {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .goodbtn {
-            width: 100%;
-            max-width: 250px;
-        }
-    }
-
-
 
     .card {
-
-        /* Add shadows to create the "card" effect */
-        box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.5);
-        transition: 0.2s;
-        width: 250px;
-        height: 335px;
-        background-color: rgb(42, 42, 42);
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        overflow: hidden;
-        align-items: center;
-    }
-
-    .card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
-        background: rgb(53, 53, 53);
+        width: 90%;
+        height: auto;
+        margin-bottom: 20px;
     }
 
     .card .blurred-img {
         width: 100%;
-        height: 250px;
-        object-fit: cover;
-        transition: transform 0.3s ease;
+        height: auto;
     }
 
-    .card:hover .blurred-img {
-        transform: scale(1.05);
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .goodbtn {
+        border-radius: 5px;
+        color: #ffffff;
+        background-color: white;
+        color: black;
+        padding: 4px 6px;
+        transition: 0.3s;
+        text-decoration: none;
+        font-family: 'Courier New', Courier, monospace;
+        box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 255);
+    }
+
+}
+
+    .colorbar {
+        background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+        height: 5px;
+        width: 100%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+
     }
 
 
-    .topbtn:focus,
-    .topbtnACTIVE:focus,
-    .goodbtn:focus {
-        outline: 2px solid #4d90fe;
-        outline-offset: 2px;
-    }
-
-
-    @media print {
-
-        .topnav,
-        .cta-buttons,
-        .site-notice {
-            display: none;
+    @keyframes rainbow {
+        0% {
+            background-position: 0;
         }
 
-        body {
-            background: white;
-            color: black;
-        }
-
-        .holder {
-            background: white;
+        100% {
+            background-position: 800% 0;
         }
     }
+
+    h1 {
+        font-size: 2.5em;
+        text-align: center;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: white;
+    }
+
+    /* Style The Dropdown Button */
+    .dropbtn {
+
+        border-radius: 10px;
+        background-color: #ffffff00;
+        color: #ffffff;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        opacity: 80%;
+        float: right;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+
+        float: right;
+        margin-top: 70px;
+        transition: 0.3s;
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+        overflow: hidden;
+        border-radius: 10px;
+        margin-top: 53px;
+        visibility: hidden;
+        position: absolute;
+        background-color: #f9f9f9b3;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        color: black;
+        padding: 0px 16px;
+        text-decoration: none;
+        display: block;
+        transition: 0.15s;
+        opacity: 0;
+
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {
+
+        background-color: #f1f1f1;
+        transition: 0.3s;
+
+    }
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+        visibility: visible;
+        opacity: 1;
+        transition: 0.4s;
+        transform: translateY(5px);
+        box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .dropdown:hover .dropdown-content a {
+        opacity: 1;
+        padding: 12px 16px;
+    }
+
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:hover .dropbtn {
+        border-radius: 10px;
+        background-color: #ffffff;
+        color: black;
+        opacity: 60%;
+        transform: scale(1.18);
+        box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 255);
+        transform: translateY(-3px);
+        transition: 0.3s;
+    }
+
+    .asciirok {
+        background: linear-gradient(to right,
+                #202020,
+                #202020,
+                #202020,
+                #000000,
+                #000000,
+                #000000,
+                #000000,
+                #000000,
+                #202020,
+                #202020,
+                #202020);
+    }
+
+    /*.text404{
+         background-image: url(images/betaScreens/gta3/betaimgiii10.webp);
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: rgba(0,0,0,0);
+    }*/
 </style>
 
 <body>
 
 
-    <header>
+    <br>
 
-        <div class="topnav">
-            <a class="pagelogo" href="index.html" aria-label="Home">
-                <img class="pagelogoimg" src="https://rockstar-archive.github.io/images/logolp.webp" alt="Rockstar Games Archive Logo">
-            </a>
-            <nav class="nav-links">
-                <a class="topbtn" href="index.html" aria-current="page">Home</a>
-                <a class="topbtn" href="archive.html">Archive</a>
-                <a class="topbtn" href="news.html">News</a>
-                <a class="topbtn" href="credits.html">Credits</a>
-                <!--<a class="topbtn" id="themeToggle" aria-label="Toggle theme"><i class="fa fa-moon-o"></i></a>-->
-            </nav>
-        </div>
-    </header>
+    <div class="topnav">
+        <a class="topbtn" href="https://rockstar-archive.github.io/credits.html">Credits</a>
+        <a class="topbtn" href="https://rockstar-archive.github.io/news.html">News</a>
+        <a class="topbtn" href="https://rockstar-archive.github.io/archive.html">Archive</a>
+        <!--<div class="dropdown">
+			<a class="dropbtnACTIVE">Archive</a>
+			<div class="dropdown-content">
+				<a href="websites.html">Website Archives</a>
+				<a href="demos.html">Build/Demo Archives</a>
+				<a href="https://mega.nz/folder/kKEERRAI#C5SI_SxvKwVg6KKt1GnaLw/folder/gHEjjDyK">Article Archive</a>
+				<a href="https://mega.nz/folder/kKEERRAI#C5SI_SxvKwVg6KKt1GnaLw">MEGA Archives</a>
+				<a href="https://archive.org/details/@the_gta_archive">Archive.org Archives</a>
+				<a href="https://github.com/rockstar-archive">GitHub</a>
+				<a href="https://discord.gg/5tfGz7sQuh">Discord Server</a>
+			</div>
+		</div>-->
+        <a class="topbtn" href="https://rockstar-archive.github.io/">Home</a>
+        <!--<a class="topbtn" id="themeToggle"><i class="fa fa-moon-o"></i></a>-->
+      <a href="https://rockstar-archive.github.io/"><div class="pagelogo1"><img 
+class="pagelogoimg "src="https://raw.githubusercontent.com/rockstar-archive/rockstar-archive.github.io/a2b143733e7cc7ed518a73570f75dfb14ba99903/images/logolp.webp" alt=""></a></div>
+    </div>
+    </div>
 
 
     <div class="holder">
@@ -431,10 +566,10 @@
 
         <center>
             <div class="content">
-                <br><br><br>
-                <h1 class="text404" style="font-size:80px; margin: 0; padding: 0;">Error 404</h1>
-                <br><br>
                 <br>
+                <h1 class="text404" style="font-size:80px; margin: 0; padding: 0;">Error 404</h1>
+                <br>
+
 
 
 
