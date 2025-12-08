@@ -12,7 +12,7 @@ let flashPatch = true;
         "polyfills": true,
         "autoplay": "on",
         "unmuteOverlay": "hidden",
-        "backgroundColor": null,
+        "backgroundColor": BLACK,
         "wmode": "window",
         "letterbox": "fullscreen",
         "warnOnUnsupportedContent": false,
@@ -26,7 +26,7 @@ let flashPatch = true;
         "scale": "showAll",
         "forceScale": false,
         "quality": "high",
-        "splashScreen": false,
+        "splashScreen": true,
     };
 
     // Normalize a SWF path so /front/front.swf → basePath + front/front.swf
