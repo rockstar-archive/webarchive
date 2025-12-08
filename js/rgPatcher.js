@@ -1,5 +1,5 @@
 // rockstararchive Loader — universal Flash path fixer (final version)
-
+let flashPatch = true;
 (function() {
     const pageURL = new URL(window.location.href);
     const basePath = pageURL.href.substring(0, pageURL.href.lastIndexOf('/') + 1);
