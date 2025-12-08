@@ -1,5 +1,5 @@
 // rockstararchive Loader — universal Flash path fixer (final version)
-
+let flashPatch = true;
 (function() {
     const pageURL = new URL(window.location.href);
     const basePath = pageURL.href.substring(0, pageURL.href.lastIndexOf('/') + 1);
@@ -12,7 +12,7 @@
         "polyfills": true,
         "autoplay": "on",
         "unmuteOverlay": "hidden",
-        "backgroundColor": null,
+        "backgroundColor": BLACK,
         "wmode": "window",
         "letterbox": "fullscreen",
         "warnOnUnsupportedContent": false,
@@ -26,7 +26,7 @@
         "scale": "showAll",
         "forceScale": false,
         "quality": "high",
-        "splashScreen": false,
+        "splashScreen": true,
     };
 
     // Normalize a SWF path so /front/front.swf → basePath + front/front.swf
