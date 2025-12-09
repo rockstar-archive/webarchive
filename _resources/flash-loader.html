@@ -4,7 +4,6 @@
 <meta charset="utf-8">
 <title>Flash Loader</title>
 
-<!-- Load your patcher -->
 <script src="../js/rgPatcher.js"></script>
 
 <style>
@@ -60,7 +59,7 @@
 const params = new URLSearchParams(window.location.search);
 let swf = params.get("LOADSWF");
 
-// Fix: also detect malformed ?LOADSWF<url> (missing '=')
+
 if (!swf) {
     const raw = window.location.search;
     const match = raw.match(/LOADSWF(https?:[^&]+)/i);
