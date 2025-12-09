@@ -60,6 +60,13 @@
 const params = new URLSearchParams(window.location.search);
 let swf = params.get("LOADSWF");
 
+// Fix: also detect malformed ?LOADSWF<url> (missing '=')
+if (!swf) {
+    const raw = window.location.search;
+    const match = raw.match(/LOADSWF(https?:[^&]+)/i);
+    if (match) swf = match[1];
+}
+
 if (!swf) {
     document.getElementById("input-box").style.display = "flex";
 } else {
