@@ -1,46 +1,109 @@
 <!DOCTYPE html>
+
 <html>
+
 <head>
+
 <meta charset="utf-8">
-<title>SWF Loader</title>
+
+<title>Flash Loader</title>
+
+
 
 <!-- Ruffle -->
+
 <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
 
+
+
 <style>
-    body { background: #111; color: #fff; margin: 0; }
-    #player-container { width: 100vw; height: 100vh; }
+
+    html, body {
+
+        margin: 0;
+
+        padding: 0;
+
+        height: 100%;
+
+        background: #000;
+
+        color: white;
+
+        font-family: sans-serif;
+
+    }
+
+    #player-container {
+
+        width: 100%;
+
+        height: 100%;
+
+    }
+
 </style>
 
 </head>
+
 <body>
+
+
 
 <div id="player-container"></div>
 
+
+
 <script>
-(function() {
+
+(function () {
+
     const url = window.location.href;
 
-    // Detect your custom marker
     const marker = "!LOADSWF!";
 
+
+
+    // Check if the URL contains your marker
+
     if (url.includes(marker)) {
-        // Extract everything after !LOADSWF!
+
+        // Extract the SWF URL after !LOADSWF!
+
         const swf = url.split(marker)[1];
 
-        // Load Ruffle
+
+
+        // Create Ruffle player
+
         const ruffle = window.RufflePlayer.newest();
+
         const player = ruffle.createPlayer();
+
+
+
         document.getElementById("player-container").appendChild(player);
 
-        // Load the SWF file
         player.load(swf);
+
+
+
     } else {
-        // Optional: show a message if no SWF was requested
-        document.body.innerHTML += "<p>No SWF specified.</p>";
+
+        // Optional fallback message
+
+        document.body.innerHTML = "<h2>No SWF specified.</h2>";
+
     }
+
 })();
+
 </script>
 
+
+
 </body>
+
 </html>
+
+ChatGPT kann Fehler machen. Überp
