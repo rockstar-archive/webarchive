@@ -1,109 +1,99 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-
 <meta charset="utf-8">
-
 <title>Flash Loader</title>
 
-
-
-<!-- Ruffle -->
-
-<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
-
-
+<!-- Load your patcher -->
+<script src="../js/rgPatcher.js"></script>
 
 <style>
-
     html, body {
-
         margin: 0;
-
         padding: 0;
-
-        height: 100%;
-
-        background: #000;
-
-        color: white;
-
-        font-family: sans-serif;
-
-    }
-
-    #player-container {
-
         width: 100%;
-
         height: 100%;
-
+        overflow: hidden;
+        background: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+        font-family: Arial, sans-serif;
     }
-
+    #player-container {
+        width: 100vw;
+        height: 100vh;
+    }
+    #input-box {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 300px;
+        text-align: center;
+    }
+    input {
+        padding: 8px;
+        border-radius: 5px;
+        border: none;
+    }
+    button {
+        padding: 8px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+    }
 </style>
-
 </head>
-
 <body>
 
+<div id="player-container" style="display:none;"></div>
 
-
-<div id="player-container"></div>
-
-
+<div id="input-box" style="display:none;">
+    <h2>Enter SWF URL</h2>
+    <input type="text" id="swfInput" placeholder="https://example.com/file.swf">
+    <button onclick="loadFromTextbox()">Load SWF</button>
+</div>
 
 <script>
+const params = new URLSearchParams(window.location.search);
+let swf = params.get("LOADSWF");
 
-(function () {
+if (!swf) {
+    document.getElementById("input-box").style.display = "flex";
+} else {
+    startRuffle(swf);
+}
 
-    const url = window.location.href;
+function loadFromTextbox() {
+    const url = document.getElementById("swfInput").value.trim();
+    if (url) startRuffle(url);
+}
 
-    const marker = "!LOADSWF!";
+function startRuffle(swfUrl) {
+    document.getElementById("input-box").style.display = "none";
+    document.getElementById("player-container").style.display = "block";
 
+    function waitForRuffle() {
+        if (window.RufflePlayer && window.RufflePlayer.newest) {
+            const ruffle = window.RufflePlayer.newest();
+            const player = ruffle.createPlayer();
 
+            player.style.width = "100%";
+            player.style.height = "100%";
 
-    // Check if the URL contains your marker
+            document.getElementById("player-container").appendChild(player);
 
-    if (url.includes(marker)) {
-
-        // Extract the SWF URL after !LOADSWF!
-
-        const swf = url.split(marker)[1];
-
-
-
-        // Create Ruffle player
-
-        const ruffle = window.RufflePlayer.newest();
-
-        const player = ruffle.createPlayer();
-
-
-
-        document.getElementById("player-container").appendChild(player);
-
-        player.load(swf);
-
-
-
-    } else {
-
-        // Optional fallback message
-
-        document.body.innerHTML = "<h2>No SWF specified.</h2>";
-
+            player.load(swfUrl);
+        } else {
+            setTimeout(waitForRuffle, 50);
+        }
     }
 
-})();
-
+    waitForRuffle();
+}
 </script>
 
-
-
 </body>
-
 </html>
-
-ChatGPT kann Fehler machen. Überp
