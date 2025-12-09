@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>SWF Loader</title>
+
+<!-- Ruffle -->
+<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+
+<style>
+    body { background: #111; color: #fff; margin: 0; }
+    #player-container { width: 100vw; height: 100vh; }
+</style>
+
+</head>
+<body>
+
+<div id="player-container"></div>
+
+<script>
+(function() {
+    const url = window.location.href;
+
+    // Detect your custom marker
+    const marker = "!LOADSWF!";
+
+    if (url.includes(marker)) {
+        // Extract everything after !LOADSWF!
+        const swf = url.split(marker)[1];
+
+        // Load Ruffle
+        const ruffle = window.RufflePlayer.newest();
+        const player = ruffle.createPlayer();
+        document.getElementById("player-container").appendChild(player);
+
+        // Load the SWF file
+        player.load(swf);
+    } else {
+        // Optional: show a message if no SWF was requested
+        document.body.innerHTML += "<p>No SWF specified.</p>";
+    }
+})();
+</script>
+
+</body>
+</html>
