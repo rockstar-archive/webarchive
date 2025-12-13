@@ -1,0 +1,351 @@
+﻿<html>
+<head>
+<title>VEHICLE LIST</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css"> 
+<!--
+#divUpControl{position:absolute; width:23; left:408; top:130; z-index:1;} 
+#divDownControl{position:absolute; width:23; left:408; top:350; z-index:2;} 
+#divContainer{position:absolute; width:350; height:236; overflow:hidden; top:130; left:73; clip:rect(0,350,295,0); visibility:visible;} 
+#divContent{position:absolute;top:0;left:0;font-size:11px;font-family:Verdana;line-height:14px;color:#ffffff;} 
+td {font-size:10px;font-family:Verdana;line-height:12px;text-align:justify;color:#ffffff;} 
+strong {font-size:10px;font-family:Verdana;line-height:12px;text-align:justify;color:#FB9904;} 
+a {font-size:10px;font-family:Verdana;line-height:12px;text-align:justify;color:#FB9904;text-decoration:none} 
+a:hover {font-size:10px;font-family:Verdana;line-height:12px;text-align:justify;color:#FFFFFF;text-decoration:none} 
+-->
+</style>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+	InitialiseScrollableArea();
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+function lib_bwcheck(){ //Browsercheck (needed)
+	this.ver=navigator.appVersion
+	this.agent=navigator.userAgent
+	this.dom=document.getElementById?1:0
+	this.opera5=(navigator.userAgent.indexOf("Opera")>-1 && document.getElementById)?1:0
+	this.ie5=(this.ver.indexOf("MSIE 5")>-1 && this.dom && !this.opera5)?1:0; 
+	this.ie6=(this.ver.indexOf("MSIE 6")>-1 && this.dom && !this.opera5)?1:0;
+	this.ie4=(document.all && !this.dom && !this.opera5)?1:0;
+	this.ie=this.ie4||this.ie5||this.ie6
+	this.mac=this.agent.indexOf("Mac")>-1
+	this.ns6=(this.dom && parseInt(this.ver) >= 5) ?1:0; 
+	this.ns4=(document.layers && !this.dom)?1:0;
+	this.bw=(this.ie6 || this.ie5 || this.ie4 || this.ns4 || this.ns6 || this.opera5)
+	return this
+}
+var bw=lib_bwcheck()
+
+var speed=50 
+ 
+var loop, timer 
+ 
+function ConstructObject(obj,nest){ 
+    nest=(!nest) ? '':'document.'+nest+'.' 
+    this.el=bw.dom?document.getElementById(obj):bw.ie4?document.all[obj]:bw.ns4?eval(nest+'document.'+obj):0; 
+    this.css=bw.dom?document.getElementById(obj).style:bw.ie4?document.all[obj].style:bw.ns4?eval(nest+'document.'+obj):0; 
+    this.scrollHeight=bw.ns4?this.css.document.height:this.el.offsetHeight 
+    this.clipHeight=bw.ns4?this.css.clip.height:this.el.offsetHeight 
+    this.up=MoveAreaUp;this.down=MoveAreaDown; 
+    this.MoveArea=MoveArea; this.x; this.y; 
+    this.obj = obj + "Object" 
+    eval(this.obj + "=this") 
+    return this 
+} 
+function MoveArea(x,y){ 
+    this.x=x;this.y=y 
+    this.css.left=this.x 
+    this.css.top=this.y 
+} 
+function MoveAreaDown(move){ 
+	if(this.y>-this.scrollHeight+objContainer.clipHeight){ 
+    this.MoveArea(0,this.y-move) 
+    if(loop) setTimeout(this.obj+".down("+move+")",speed) 
+	} 
+}
+function MoveAreaUp(move){ 
+	if(this.y<0){ 
+    this.MoveArea(0,this.y-move) 
+    if(loop) setTimeout(this.obj+".up("+move+")",speed) 
+	} 
+} 
+function PerformScroll(speed){ 
+//	if(initialised){ 
+		loop=true; 
+		if(speed>0) objScroller.down(speed) 
+		else objScroller.up(speed) 
+//	} 
+} 
+function CeaseScroll(){ 
+    loop=false 
+    if(timer) clearTimeout(timer) 
+} 
+var initialised; 
+function InitialiseScrollableArea(){ 
+    objContainer=new ConstructObject('divContainer') 
+    objScroller=new ConstructObject('divContent','divContainer') 
+    objScroller.MoveArea(0,0) 
+    objContainer.css.visibility='visible'
+    objScroller.css.visibility='visible'
+    initialised=true; 
+} 
+//-->
+</script>
+
+</head>
+
+<body bgcolor="#000000" background="pop_image/info_bg.jpg" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="MM_preloadImages('pop_image/fullcustom_o.gif','pop_image/back_o.gif')">
+
+				<table border="0" cellpadding="70" cellspacing="0">
+  <tr>
+    <td><table width="360" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td colspan="2"><img src="image/spacer.gif" width="25" height="15"></td>
+      </tr>
+      <tr>
+        <td colspan="2"><img src="pop_image/title_fullvehicle.gif" width="230" height="18" style="padding-bottom:3px;"><br> * For new vehicles featured in the REMIX release, <a href="remix.2" target="_blank" style="color:#ffffff;text-decoration:underline;">click here</a>  </td>
+      </tr>
+      <tr>
+        <td colspan="2"><img src="image/spacer.gif" width="360" height="275"></td>
+      </tr>
+      <tr>
+        <td><a href="info.html" target="_self" onMouseOver="MM_swapImage('Image1','','pop_image/back_o.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="pop_image/back.gif" name="Image1" width="162" height="11" border="0" id="Image1"></a></td>
+        <td rowspan="2" align="right" valign="top"><a href="aboutdub.html" target="_self"><img src="pop_image/aboutdub.gif" width="108" height="31" border="0"></a></td>
+      </tr>
+      <tr>
+        <td><a href="fullcustom.html" target="_self" onMouseOver="MM_swapImage('Image2','','pop_image/fullcustom_o.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="pop_image/fullcustom.gif" name="Image2" width="203" height="11" vspace="8" border="0" id="Image2"></a></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</body>
+</html>
+
+ <div id="divUpControl" style=""> <a href="javascript:;" onMouseOver="PerformScroll(-7)" onMouseOut="CeaseScroll()"><img src="image/arrowup.jpg" width="23" height="28" alt="" border="0"></a></div>
+<div id="divDownControl"> <a href="javascript:;" onMouseOver="PerformScroll(7)" onMouseOut="CeaseScroll()"><img src="image/arrowdown.jpg" width="23" height="28" alt="" border="0"></a></div>
+<div id="divContainer"> 
+	<div id="divContent">
+<table border="0" cellspacing="0" cellpadding="3" width="300">
+  <tr>
+    <td width="100"><a href="http://www.aprilia.com" target="_blank"><img src="image/fullvehiclelist_aprilia.gif" width="95" height="65" border="0"></a></td>
+    <td colspan="2" width="100%"><strong><a href="http://www.aprilia.com" target="_blank">Aprilia<br> (www.aprilia.com)</a></strong><BR>Mille Factory</td>
+  </tr>
+  <tr>
+    <td colspan="3"><img src="image/line.gif" width="335" height="1"></td>
+  </tr>
+  <tr>
+    <td width="100"><a href="http://www.cadillac.com" target="_blank"><img src="image/fullvehiclelist_cadillac.gif" width="95" height="65" border="0"></a></td>
+    <td colspan="2" width="250"><strong><a href="http://www.cadillac.com" target="_blank">Cadillac (GM)<br> (www.cadillac.com)</a></strong><br>Sixteen<BR>
+      Cien<BR>
+      CTS-V<BR>
+      Escalade<BR>
+    Escalade EXT</td>
+  </tr>
+    <tr>
+    <td colspan="3"><img src="image/line.gif" width="335" height="1"></td>
+  </tr>
+  <tr>
+    <td width="100"><a href="http://www.chevrolet.com/" target="_blank"><img src="image/fullvehiclelist_chevy.gif" width="95" height="65" border="0"></a></td>
+    <td colspan="2"><strong><a href="http://www.chevrolet.com" target="_blank">Chevy (GM)<br>(www.chevrolet.com)</a></strong><br>1949 Fleetline<BR>
+      1957 Chevy Bel Air<BR>
+      1964 Chevy Impala<BR>
+      1968 Corvette<BR>
+1969 Camaro Z28<BR>
+1970 El Camino SS<BR>
+1978 Monte Carlo<BR>
+      1981 Camaro Z28 <BR>
+      1996 Impala SS <BR>
+      Silverado SS <BR>
+    Corvette Z06</td>
+  </tr>
+    <tr>
+    <td colspan="3"><img src="image/line.gif" width="335" height="1"></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.chrysler.com" target="_blank"><img src="image/fullvehiclelist_chrysler.gif" width="95" height="65" border="0"></a></td>
+    <td colspan="2"><strong><a href="http://www.chrysler.com" target="_blank">Chrysler
+	<br>(www.chrysler.com)</a></strong><br>300c <BR>
+    ME Four-Twelve</td>
+  </tr>
+    <tr>
+    <td colspan="3"><img src="image/line.gif" width="335" height="1"></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.dodge.com" target="_blank"><img src="image/fullvehiclelist_dodge.gif" width="95" height="65" border="0"></a></td>
+    <td colspan="2"><strong><a href="http://www.dodge.com" target="_blank">Dodge<br> (www.dodge.com)</a></strong><br>1969 Charger R/T <BR>
+      Charger R/T <BR>
+      Neon SRT4 <BR>
+      Ram SRT10 <BR>
+      Viper GTS-R</td>
+  </tr>
+    <tr>
+    <td colspan="3"><img src="image/line.gif" width="335" height="1"></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.ducati.com/" target="_blank"><img src="image/fullvehiclelist_ducati.gif" width="95" height="65" border="0"></a></td>
+    <td colspan="2"><strong><a href="http://www.ducati.com" target="_blank">Ducati<br>(www.ducati.com)</a></strong><br>2004 SS1000<BR>
+      999R<BR>
+    2004 Monster S4R</td>
+  </tr>
+    <tr>
+    <td colspan="3"><img src="image/line.gif" width="335" height="1"></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.gemballa.com/" target="_blank"><img src="image/fullvehiclelist_gemballa.gif" width="95" height="65" border="0"></a></td>
+    <td colspan="2"><strong><a href="http://www.gemballa.com" target="_blank">Gemballa<br>(www.gemballa.com)</a></strong><br>Turbo Coupe </td>
+  </tr>
+    <tr>
+    <td colspan="3"><img src="image/line.gif" width="335" height="1"></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.gm.com/" target="_blank"><img src="image/fullvehiclelist_gm.gif" width="95" height="65" border="0"></a></td>
+    <td colspan="2"><strong><a href="http://www.gm.com" target="_blank">GM<br>(www.gm.com)</a></strong><br>H1 <BR>
+    H2</td>
+  </tr>
+    <tr>
+    <td colspan="3"><img src="image/line.gif" width="335" height="1"></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.hotmatchcustomcycles.com/" target="_blank"><img src="image/fullvehiclelist_hotmatch.gif" width="95" height="65" border="0"></a></td>
+    <td colspan="2"><strong><a href="http://www.hotmatchcustomcycles.com" target="_blank">Hotmatch<br>(www.hotmatchcustomcycles.com)</a></strong><br>Cuevito <BR>
+      D'elegance <BR>
+    Skully </td>
+  </tr>
+    <tr>
+    <td colspan="3"><img src="image/line.gif" width="335" height="1"></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.kawasaki.com/index2.asp" target="_blank"><img src="image/fullvehiclelist_kawasaki.gif" width="95" height="65" border="0"></a></td>
+    <td colspan="2"><strong><a href="http://www.kawasaki.com/index2.asp" target="_blank">Kawasaki<br>(www.kawasaki.com)</a></strong><br>Ninja ZX 12R <BR>
+    Police 1000</td>
+  </tr>
+    <tr>
+    <td colspan="3"><img src="image/line.gif" width="335" height="1"></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.lamborghini.com/"><img src="image/fullvehiclelist_lamborghini.gif" width="95" height="65" border="0"></a></td>
+    <td colspan="2"><strong><a href="http://www.lamborghini.com" target="_blank">Lamborghini<br>(www.lamborghini.com)</a></strong><br>Gallardo<BR>
+    Murcielago</td>
+  </tr>
+    <tr>
+    <td colspan="3"><img src="image/line.gif" width="335" height="1"></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.lexus.com/" target="_blank"><img src="image/fullvehiclelist_lexus.gif" width="95" height="65" border="0"></a></td>
+    <td colspan="2"><strong><a href="http://www.lexus.com" target="_blank">Lexus<br>(www.lexus.com)</a></strong><br>GS430<BR>
+      IS300<BR>
+    SC430</td>
+  </tr>
+    <tr>
+    <td colspan="3"><img src="image/line.gif" width="335" height="1"></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.lotuscars.com/" target="_blank"><img src="image/fullvehiclelist_lotus.gif" width="95" height="65" border="0"></a></td>
+    <td colspan="2"><strong><a href="http://www.lotuscars.com" target="_blank">Lotus<br>(www.lotuscars.com)</a></strong><br>Elise <BR>
+    Esprit</td>
+  </tr>
+   <tr>
+    <td colspan="3"><img src="image/line.gif" width="335" height="1"></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.mclarencars.com/" target="_blank"><img src="image/fullvehiclelist_maclaren.gif" width="95" height="65" border="0"></a></td>
+    <td colspan="2"><strong><a href="http://www.mclarencars.com" target="_blank">McLaren<br>(www.mclarencars.com)</a></strong><br>1995 F1 LM</td>
+  </tr>
+    <tr>
+    <td colspan="3"><img src="image/line.gif" width="335" height="1"></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.mercedes-benz.com" target="_blank"><img src="image/fullvehiclelist_mercedes.gif" width="95" height="65" border="0"></a></td>
+    <td colspan="2"><strong><a href="http://www.mercedes-benz.com" target="_blank">Mercedes<br>(www.mercedes-benz.com)</a></strong><br>CL55 AMG <BR>
+      CL500 <BR>
+      CLK-GTR <BR>
+    G55 AMG<br>
+	G500 <BR>
+      SL55 AMG <BR>
+      SL500 <BR>
+    SLR McLaren</td>
+  </tr>
+    <tr>
+    <td colspan="3"><img src="image/line.gif" width="335" height="1"></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.mitsubishi-motors.com/" target="_blank"><img src="image/fullvehiclelist_mitsubishi.gif" width="95" height="65" border="0"></a></td>
+    <td colspan="2"><strong><a href="http://www.mitsubishi-motors.com" target="_blank">Mitsubishi<br>(www.mitsubishi-motors.com)</a></strong><br>Eclipse<BR>
+    Lancer Evolution VIII</td>
+  </tr>
+    <tr>
+    <td colspan="3"><img src="image/line.gif" width="335" height="1"></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.mitsubishi-motors.com/" target="_blank"><img src="image/fullvehiclelist_nissan.gif" width="95" height="65" border="0"></a></td>
+    <td colspan="2"><strong><a href="http://www.nissanusa.com" target="_blank">Nissan<br>(www.nissanusa.com)</a></strong><br>350Z <BR>
+    2002 Skyline GT-R R34 V-spec</td>
+  </tr>
+    <tr>
+    <td colspan="3"><img src="image/line.gif" width="335" height="1"></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.pontiac.com/" target="_blank"><img src="image/fullvehiclelist_pontiac.gif" width="95" height="65" border="0"></a></td>
+    <td colspan="2"><strong><a href="http://www.pontiac.com" target="_blank">Pontiac (GM)<br>(www.pontiac.com)</a></strong><br>1968 GTO<BR>
+    1970 GTO "The Judge"</td>
+  </tr>
+    <tr>
+    <td colspan="3"><img src="image/line.gif" width="335" height="1"></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.saleen.com/" target="_blank"><img src="image/fullvehiclelist_saleen.gif" width="95" height="65" border="0"></a></td>
+    <td colspan="2"><strong><a href="http://www.saleen.com" target="_blank">Saleen<br>(www.saleen.com)</a></strong><br>S7<BR>
+    SR</td>
+  </tr>
+    <tr>
+    <td colspan="3"><img src="image/line.gif" width="335" height="1"></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.toyota.com/"><img src="image/fullvehiclelist_toyota.gif" width="95" height="65" border="0"></a></td>
+    <td colspan="2"><strong><a href="http://www.toyota.com" target="_blank">Toyota<br>(www.toyota.com)</a></strong><br>1998 Supra</td>
+  </tr>
+    <tr>
+    <td colspan="3"><img src="image/line.gif" width="335" height="1"></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.volkswagen.com" target="_blank"><img src="image/fullvehiclelist_vw.gif" width="95" height="65" border="0"></a></td>
+    <td colspan="2"><strong><a href="http://www.volkswagen.com" target="_blank">Volkswagen<br>(www.volkswagen.com)</a></strong><br>Golf R32 <BR>
+      Jetta <BR>
+    Phaeton</td>
+  </tr>
+    <tr>
+    <td colspan="3"><img src="image/line.gif" width="335" height="1"></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.westcoastchoppers.com" target="_blank"><img src="image/fullvehiclelist_wcchoppers.gif" width="95" height="65" border="0"></a></td>
+    <td colspan="2"><strong><a href="http://www.westcoastchoppers.com" target="_blank">West Coast Choppers<br>(www.westcoastchoppers.com)</a></strong><br>CFL <BR>
+      El Diablo Rigid <BR>
+    El Diablo Soft Tail </td>
+  </tr>
+</table>
+
+	</div>
+</div>

@@ -1,0 +1,354 @@
+﻿<html>
+<head>
+<title>Midnight Club 3: DUB Edition - NEWS</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css"> 
+<!--
+#divUpControl{position:absolute; width:23; left:408; top:130; z-index:1;} 
+#divDownControl{position:absolute; width:23; left:408; top:320; z-index:2;} 
+#divContainer{position:absolute; width:330; height:236; overflow:hidden; top:136; left:73; clip:rect(0,330,210,0); visibility:visible;} 
+#divContent{position:absolute;top:0;left:0;font-size:11px;font-family:Verdana;line-height:14px;text-align:justify;color:#ffffff;} 
+a {font-size:11px;font-family:Verdana;line-height:14px;text-align:justify;color:#ffffff;} 
+strong {font-size:11px;font-family:Verdana;line-height:14px;text-align:justify;color:#FB9904;} 
+-->
+</style>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+
+function lib_bwcheck(){ //Browsercheck (needed)
+	this.ver=navigator.appVersion
+	this.agent=navigator.userAgent
+	this.dom=document.getElementById?1:0
+	this.opera5=(navigator.userAgent.indexOf("Opera")>-1 && document.getElementById)?1:0
+	this.ie5=(this.ver.indexOf("MSIE 5")>-1 && this.dom && !this.opera5)?1:0; 
+	this.ie6=(this.ver.indexOf("MSIE 6")>-1 && this.dom && !this.opera5)?1:0;
+	this.ie4=(document.all && !this.dom && !this.opera5)?1:0;
+	this.ie=this.ie4||this.ie5||this.ie6
+	this.mac=this.agent.indexOf("Mac")>-1
+	this.ns6=(this.dom && parseInt(this.ver) >= 5) ?1:0; 
+	this.ns4=(document.layers && !this.dom)?1:0;
+	this.bw=(this.ie6 || this.ie5 || this.ie4 || this.ns4 || this.ns6 || this.opera5)
+	return this
+}
+var bw=lib_bwcheck()
+
+var speed=50 
+ 
+var loop, timer 
+ 
+function ConstructObject(obj,nest){ 
+    nest=(!nest) ? '':'document.'+nest+'.' 
+    this.el=bw.dom?document.getElementById(obj):bw.ie4?document.all[obj]:bw.ns4?eval(nest+'document.'+obj):0; 
+    this.css=bw.dom?document.getElementById(obj).style:bw.ie4?document.all[obj].style:bw.ns4?eval(nest+'document.'+obj):0; 
+    this.scrollHeight=bw.ns4?this.css.document.height:this.el.offsetHeight 
+    this.clipHeight=bw.ns4?this.css.clip.height:this.el.offsetHeight 
+    this.up=MoveAreaUp;this.down=MoveAreaDown; 
+    this.MoveArea=MoveArea; this.x; this.y; 
+    this.obj = obj + "Object" 
+    eval(this.obj + "=this") 
+    return this 
+} 
+function MoveArea(x,y){ 
+    this.x=x;this.y=y 
+    this.css.left=this.x 
+    this.css.top=this.y 
+} 
+function MoveAreaDown(move){ 
+	if(this.y>-this.scrollHeight+objContainer.clipHeight){ 
+    this.MoveArea(0,this.y-move) 
+    if(loop) setTimeout(this.obj+".down("+move+")",speed) 
+	} 
+}
+function MoveAreaUp(move){ 
+	if(this.y<0){ 
+    this.MoveArea(0,this.y-move) 
+    if(loop) setTimeout(this.obj+".up("+move+")",speed) 
+	} 
+} 
+function PerformScroll(speed){ 
+//	if(initialised){ 
+		loop=true; 
+		if(speed>0) objScroller.down(speed) 
+		else objScroller.up(speed) 
+//	} 
+} 
+function CeaseScroll(){ 
+    loop=false 
+    if(timer) clearTimeout(timer) 
+} 
+var initialised; 
+function InitialiseScrollableArea(){ 
+    objContainer=new ConstructObject('divContainer') 
+    objScroller=new ConstructObject('divContent','divContainer') 
+    objScroller.MoveArea(0,0) 
+    objContainer.css.visibility='visible'
+    objScroller.css.visibility='visible'
+    initialised=true; 
+}
+
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+
+//-->
+</script>
+
+</head>
+
+<body bgcolor="#000000" background="pop_image/news_bg.jpg" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="InitialiseScrollableArea();">
+
+				</body>
+</html>
+
+<div id="divUpControl" style=""> <a href="javascript:;" onMouseOver="PerformScroll(-7)" onMouseOut="CeaseScroll()"><img src="image/arrowup.jpg" width="23" height="28" alt="" border="0"></a></div>
+<div id="divDownControl"> <a href="javascript:;" onMouseOver="PerformScroll(7)" onMouseOut="CeaseScroll()"><img src="image/arrowdown.jpg" width="23" height="28" alt="" border="0"></a></div>
+<div id="divContainer"> 
+	<div id="divContent">
+	
+<strong>March 13, 2006</strong>
+ <br><br>
+Midnight Club 3: DUB Edition REMIX In Stores Now
+ <br><br>
+Midnight Club 3: DUB Edition REMIX is in stores today, with more of everything that made the original release the most critically acclaimed street racing console title ever.  Two dozen new licensed vehicles from top manufacturers, an all new fourth city - Tokyo, full compatibility with original Midnight Club 3 saves, and more... all for $19.99 MSRP.
+<br><br>
+Check out the official <a href="remix.3" target="_blank">REMIX mini-site</a> for all new updates, including complete soundtrack information and video clips of some of the games hottest new rides, along with <a href="javascript:;" onClick="MM_openBrWindow('buynow.html','buynow','width=540,height=400')">BUY NOW</a> links to the <a href="http://www.rockstargames.com/warehouse" target="_blank">Rockstar Warehouse</a> and other major online retailers.
+<br><br>
+	
+<strong>February 15, 2006</strong>
+ <br><br>
+Midnight Club 3: DUB Edition REMIX Official Site Launch & Trailer
+ <br><br>
+Check out the all-new Midnight Club 3: DUB Edition REMIX <a href="remix.3" target="_blank">official minisite</a> for all the details on the upcoming release for PlayStation&reg;2 computer entertainment system and Xbox&reg;, including descriptions of the new features, a full vehicle list and the debut of the official REMIX trailer.
+<br><br>
+
+<strong>February 3, 2006</strong>
+<br><br>
+Midnight Club 3: DUB Edition REMIX
+<br><br>
+This March, an all new super charged version of Midnight Club 3 will be hitting the streets.  Midnight Club 3: DUB Edition REMIX, released as part of the PlayStation&#174;2 Greatest Hits program and the Xbox&#174; Platinum Hits collection, will be available on March 13th for only $19.99.<br><br>
+In addition to all the cities, cars, music and gameplay that made the original version last year's top selling and most critically-acclaimed street racer, Midnight Club 3: DUB Edition REMIX features 24 new licensed vehicles, a whole new city (Tokyo), new music and more.  Stay tuned for the official REMIX minisite, launching very soon at <a href="http://www.rockstargames.com/midnightclub3" target="_blank">www.rockstargames.com/midnightclub3</a>.<br><br>
+
+<strong>June 28, 2005</strong>
+<br><br>
+Midnight Club 3: DUB Edition puts the fastest ride ever in the palm of your hand. The #1 racing game in America is out now on the PSP<sup><span style="font-size:8px">TM</span></sup> (PlayStation&#174;Portable) system. The new PSP system trailer is now available in the <a href="javascript:;" onClick="MM_openBrWindow('trailers/trailers.html','trailers','width=570,height=460')">TRAILERS</a> section, and a selection of new PSP system screens can now be seen in the <a href="javascript:;" onClick="MM_openBrWindow('screens/psp_01.html','screens','width=740,height=570')">SCREENS</a> section. Check out the <a href="javascript:;" onClick="MM_openBrWindow('buynow.html','buynow','width=540,height=400')">BUY NOW</a> page to order your copy today.<br><br> 
+
+<strong>June 1, 2005</strong>
+<br><br>
+Midnight Club 3 is coming to the PSP<sup><span style="font-size:8px">TM</span></sup> (PlayStation&#174;Portable) system on June 28th, 2005. Four more brand new PSP system screens can now be seen in the <a href="javascript:;" onClick="MM_openBrWindow('screens/ps2_1.html','screens','width=740,height=570')">SCREENS</a> section. Make sure to check out the <a href="javascript:;" onClick="MM_openBrWindow('buynow.html','buynow','width=540,height=400')">BUY NOW</a> page for preorder information.<br><br> 
+
+<strong>May 17, 2005</strong>
+<br><br>
+The first PSP (PlayStation&#174;Portable) system screens are now available in the <a href="javascript:;" onClick="MM_openBrWindow('screens/ps2_1.html','screens','width=740,height=570')">SCREENS</a> section. Midnight Club 3: DUB Edition is coming soon to the PSP<sup><span style="font-size:8px">TM</span></sup> system.<br><br>
+
+<strong>April 29, 2005</strong>
+<br><br>
+The critical word on Midnight Club 3: DUB Edition continues to pour in...<br><br>
+
+<b>GAMESPY   4.5/5</b><br>
+"Rockstar's latest racer takes the tuner scene to a whole new level.<br><br>
+
+Rockstar San Diego knows how to make a great racer. Its Midnight Club series has always been an edgy, fast line of racer... and Midnight Club 3: DUB Edition is the best yet. The import tuner-style of racing is the theme here, and it's safe to say that DUB nails this better than... those other would-be tuner games.<br><br>
+
+The robust online multiplayer game is fleshed out with new modes of play, flawless eight-player action, stat tracking, new PS2 buddy lists, and a cool user-created club feature. The level of detail and sheer size of the open-ended city environment is a credit to Rockstar's development team. The vehicles are no slouches either, with an intricate level of detail for all the custom parts and upgrades. You really get the sense that Rockstar was very passionate about making a game that looks and plays great.<br><br>
+
+DUB is one of the finest racers to hit the market in recent memory, and it's certainly the king of the tuner racer scene, without a doubt. It's a blast that'll keep you coming back both online and individually, taking up a good chunk of your precious game-playing time."<br><br>
+
+<b>IGN    9.2/10, EDITORS' CHOICE AWARD</b><br>
+"...incredibly stylistic, long-lasting, and deep. <br><br>
+
+Developed in San Diego where the tuner scene is highly visible even to the ignorant, Midnight Club 3: DUB Edition is rooted deep in the mod subculture and never gives up faith or sells out to commercialism. The intertwined message of stellar gameplay and entrenched culture gives the game a feeling of authenticity sorely lacking in similar racers. MC3 is at once the same beast that MC2 was, yet far deeper, broader, and richer in presentation and culture. An arcade game by nature, it builds its core gameplay around intensity.<br><br>
+
+Midnight Club 3: DUB Edition is an insanely fast, chaotic, and progressive racing game..."<br><br>
+
+<b>PSM 9.5/10</b><br>
+"Racing games... just don't get any more fun.<br><br>
+
+...not only has everything that made MC2 so great the superbly-designed open cities, great control, cool gameplay twists, and an amazing sense of speed been improved, but the whole experience is ratcheted up another notch with real cars, customization, and even more clever gameplay additions.<br><br>
+
+It's not just that MC3 has real cars this time around: it's the number and variety of them; everything from the classic muscle of a '69 Camaro to modern import tuners to SUVs and luxury sedans. Toss in window-rattling choppers along with crazy-fast super-bikes and you have a huge variety of ways to race through the game's bigger, prettier, more lively cities: San Diego, Atlanta, and Detroit.<br><br>
+
+... with the blistering sense of speed, loads of shortcuts, and 'I can see my house from here' jumps, no game does arcade racing better.<br><br>
+
+... this is, without a doubt, the single best arcade racer on (the PlayStation&#174;2). Thankfully, it doesn't end just when it starts to get really good. It's a big game that just keeps getting better."<br><br>
+
+
+
+
+<strong>April 12, 2005</strong>
+<br><br>
+9.5, 9.25 out of 10 - Midnight Club 3: DUB Edition Is Game Informer's Highest Scoring Racing Game Ever on PlayStation&reg;2 & Xbox&reg;. 
+<br><br>
+"...this is really the complete racing package. There wasn't one moment during my time
+with this game that I wasn't engaged and having fun. Ultimately, that's the mark of
+a great title in any genre."<br><br>
+
+"Few games have ever delivered a sense of speed like Midnight Club 3 does."<br><br>
+
+"... the level of satisfaction that is achieved by personalizing your car is immeasurable. They may be just cars, but you'll love them like you would your very own children. The great thing is, this is only a small fraction of the game. The racing roars with adrenaline pumping excitement. It's faster than you could possibly imagine...<br>
+Midnight Club 3 delivers on every front in a big, big way."<br><br>
+
+
+<strong>April 12, 2005</strong>
+<br><br>
+Midnight Club 3: DUB Edition - OUT NOW 
+<br><br>
+The day has come.  Midnight Club 3 is in stores now.<br><br>
+Three giant living, breathing, open cities to tear up - Atlanta, Detroit and San Diego.<br>
+Over 60 licensed vehicles spanning practically every conceivable car class -<br>
+exotic sports cars, concept cars, SUVs, trucks, sport bikes, choppers, import tuners, classic muscle cars, luxury coupes and sedans.<br><br>
+
+Unprecedented vehicle customization - fully personalize your ride with custom wheels, tires, body kits, nitrous, exhaust fittings, and so much more.<br><br>
+
+Up to 8 player online action with enhanced features and over 10 gameplay modes - <br>
+take on challengers from around the world solo or form a racing Club to collectively dominate the racing circuit.<br><br>
+
+Stellar, handpicked in-game soundtrack featuring 80 big joints - the finest in hip-hop, rock, drum & bass, dancehall, and techno.<br><br>
+
+THE FASTEST RACING GAME EVER.<br><br>
+
+In honor of game release, we have updated the official Midnight Club 3: DUB Edition website -<br>
+Now featuring... the all-new TRAILER #4 in the <a href="javascript:;" onClick="MM_openBrWindow('trailers/trailers.html','trailers','width=570,height=460')">TRAILERS</a> section, have one last look at Midnight Club 3 in action before you're off to the store...<br>
+An updated round of PlayStation 2 and Xbox screenshots in the <a href="javascript:;" onClick="MM_openBrWindow('screens/ps2_1.html','screens','width=740,height=570')">SCREENS</a> section.<br>
+Plus a brand new set of screensavers now posted in the <a href="downloads.html" target="_blank">DOWNLOADS</a> section.<br><br>
+
+
+<strong>April 12, 2005</strong>
+<br><br>
+Sweepstakes #3 Is Live - Win a Customized Aprilia RSV 1000 Sportbike
+<br><br>
+Check out the official site's <a href="contests/index.html" target="_blank">CONTESTS</a> section for all the details on the third and final sweepstakes - your chance to win a brand new, customized Aprilia RSV 1000 R Factory - courtesy of Rockstar, Game Informer & GameStop. 
+<br><br><br>
+
+
+<strong>April 5, 2005</strong>
+<br><br>
+Game Informer Online Preview
+<br><br>
+The folks at Game Informer Online recently got their hands on Midnight Club 3: DUB Edition...<br><br>
+"It's hard to put into the words the sheer amount of customization that's available in the game, and Rockstar manages to pull both the performance and visual features together into one of the best garage' type features seen in a racing game yet.<br><br>
+
+While so much of the racing experience in Midnight Club 3: DUB Edition is a jaw-dropping good time, it's also important to know that the game is sporting some of the best visuals ever seen in a racing game. Period.<br><br>
+
+Never before has a game given players such a raw feeling of speed and power and coupled with the innovative and enjoyable race modes and online functionality, it's not hard to wager that Midnight Club 3: DUB Edition may go down as being the best tuner racer on home consoles. They've taken their time and have made us wait, but so far the wait has been entirely worth it.<br><br>
+
+While many companies have tried, and often failed, to tap into the world of tuner racing, Rockstar manages to get pretty much everything right; intense racing speed and action, tons of cars and customization options, and beautiful visuals. So, even if you're not a devoted gear head, or even a racing fan for that matter, you'll definitely want to look into getting DUB'd come April."<br><br>
+
+<strong>April 5, 2005</strong>
+<br><br>
+Win a Chrysler 300C courtesy of Rockstar, Atlantic Records & BET
+<br><br>
+The second of three official Midnight Club 3: DUB Edition sweepstakes offering a chance to win a vehicle as featured in the game is now open in the <a href="contests/index.html" target="_blank">CONTESTS</a> section. Rockstar, and partners Atlantic Records and BET, present The Midnight Club 3 Fat Joe Win My Ride Sweepstakes - a chance to win the shiny black, dubbed out and fully customized Chrysler 300C flaunted by Fat Joe in the video for his latest smash "So Much More". Look out for Fat Joe's new album All or Nothing dropping May 24th 2005.  <a href="http://www.fat-joe.com/" target="_blank">www.fat-joe.com</a><br><br>
+Enter now - and stay tuned for info on our third sweepstakes, launching very soon. 
+<br><br><br>
+
+
+<strong>April 5, 2005</strong>
+<br><br>
+Online Play Details Revealed
+<br><br>
+Midnight Club 3: DUB Edition includes all the best online features from Midnight Club 2, plus several new innovations, including "Clubs" where you and your friends can form your own team to collectively disgrace the competition - as well as a slew of all new great gameplay modes. Check out the new <a href="https://museum.rockstarnexus.com/websites/2011-05/games/midnightclub3/onlineplay/" target="_blank">Online Play</a> section for all the details on online features and gameplay modes.
+<br><br><br>
+
+<strong>April 5, 2005</strong>
+<br><br>
+Exotics/Concept Floor
+<br><br>
+The last floor of the <a href="home.html" target="_blank">flash site's garage</a> is now unlocked, featuring four rare rides for you to customize, along with new screeshots and movies. Be the first to hear about all future updates by subscribing to the <a href="http://www.rockstargames.com/subscribe">Rockstar Games mailing list</a>.
+<br><br><br>
+
+<strong>March 24, 2005</strong>
+<br><br>
+More Hands-On Previews
+<br><br>
+With just three weeks left until release, glowing previews of Midnight Club 3: DUB Edition continue to pour in:<br><br>
+IGN.COM, March 10 2005:<br>
+"...Rockstar Games will deliver one of the slickest, fastest, and most intense arcade racing experiences on any system anywhere - 
+Midnight Club 3: DUB Edition.<br>
+Yes, that's a big fat boast ...but what of it?<br>
+If we see a game we like, and it rocks us hard, why not share the feeling?<br>
+...it's abundantly clear that Midnight Club 3: DUB Edition is a killer racer." <br><br>
+
+GAME INFORMER, April 2005:<br>
+"...DUB Edition is giving gamers an unprecedented level of customization options. With the involvement of DUB Magazine, we expected the customization to be expansive, but once we got down to the nitty-gritty_ the level of detail was more than we could have imagined... we can safely say that this title looks to combine the best of the genre into one comprehensive package... this game runs faster and looks better than ever, and now rivals any game on the market." <br><br>
+
+ELECTRONIC GAMING MONTHLY, April 2005:<br>
+"...a glorious tribute to the art of taking fast cars and making them into flashy cars... this customization makes Midnight Club 3 one of the most versatile racers around - you can either play it by the book or use it to build that block-rockin' sky-blue Corvette you drew in your notebook during grade school."
+<br><br><br>
+
+<strong>March 24, 2005</strong>
+<br><br>
+Vehicle Sweepstakes
+<br><br>
+Rockstar is giving you three chances to win a new vehicle as featured in Midnight Club 3: DUB Edition. <br>
+For the first of three high-stakes sweeps, visit the <a href="contests/index.html" target="_blank">CONTESTS</a> page where you can now enter to win a shiny new dubbed-out and kitted-up Chrysler 300C - courtesy of Rockstar, Chrysler and contest host sponsor Pepsi. Check back for the other sweeps, launching very soon.
+<br><br><br>
+
+<strong>March 24, 2005</strong>
+<br><br>
+In-Game Soundtrack Details
+<br><br>
+Midnight Club 3: DUB Edition will feature one of the most pounding in-game soundtracks ever assembled. Tear through Atlanta, Detroit and San Diego to the tune of 80-plus hand-picked hits spanning the finest of hip-hop, rock, and dancehall - from acts like Atlantic Records' JOINT CHIEFS recording artists TI, Fat Joe, Trick Daddy, Twista, and Fabolous - as well as music from The Game, Baby, Queens of the Stone Age, Idlewild, and Nine Inch Nails - just to name a few. Plus the very best of techno and drum & bass from reputed labels, Underground Resistance, Submerge, and Moving Shadow.<br>
+A few select songs from the in-game soundtrack are featured now in the official <a href="home.html" target="_blank">Flash site</a>. 
+<br><br><br>
+
+<strong>March 24, 2005</strong>
+<br><br>
+Sedans floor unlocked
+<br><br>
+<a href="home.html" target="_blank">Enter the garage</a> and make your way to the third floor for exclusive new screenshots, movies, info and of course customization glimpses of four extravagant sedans from Mercedes, Cadillac, Chrysler, and Volkswagen.
+<br><br><br>
+
+
+
+<strong>March 10, 2005</strong>
+<br><br>
+Hands-On Previews
+<br><br>
+With the game release drawing near, the gaming press takes Midnight Club 3: DUB Edition for a spin.<br><br>
+IGN.COM, February 25 2005:<br>
+"Midnight Club 3 offers the distinct qualities that make all of Rockstar's games unique -- it's rich with street flamboyance and urban character, deep with distinct gameplay attributes, and in this case, a whopping sense of speed and handling like no other racer."<br><br>
+
+OFFICIAL XBOX MAGAZINE, March 2005:<br>
+"Midnight Club 3 already has a screaming-fast sense of speed... The car models themselves sparkle with pretty highlights and sharp details. When April rolls around, Rockstar's latest should be the new top pick to satisfy your need for speed."<br><br>
+
+PSM, March 2005:<br>
+"In MC3, the sense of speed is, in a word, incredible. You'll find yourself weaving through traffic at harrowing speeds, evading cops, and finding the shortest path to the finish line. The series signature jumps and ludicrous sense of speed make their return, making for an even crazier racing experience."
+<br><br><br>
+
+<strong>March 10, 2005</strong>
+<br><br>
+Flash site update: Bikes/Choppers floor unlocked
+<br><br>
+<a href="home.html" target="_blank">Enter the garage</a> and proceed to the top floor to check out the four featured bikes and choppers on display. Explore the customization options for each bike, and then go street level to watch the movie clips of them in action. Another must-see is the all-new, intense TRAILER #3, now featured in the <a href="javascript:;" onClick="MM_openBrWindow('trailers/trailers.html','trailers','width=570,height=460')">TRAILERS</a> section. Plus, a selection of newly added screenshots in the <a href="javascript:;" onClick="MM_openBrWindow('screens/ps2_1.html','screens','width=740,height=570')">SCREENS</a> section.
+<br><br><br>
+
+<strong>February 10, 2005</strong>
+<br><br>
+Classic/Muscle Car floor unlocked
+<br><br>
+The <a href="home.html" target="_blank">Flash site</a> has been updated with the addition of the Classic/Muscle car floor, featuring the following revered vintage rides: the 1968 Pontiac GTO, the 1969 Chevrolet Camaro, the 1964 Chevrolet Impala & the 1968 Chevrolet Corvette. New movie clips and screenshots are available as well.
+<br><br><br>
+<strong>January 10, 2005</strong>
+<br><br>
+Midnight Club 3: DUB Edition is coming to the PSP<sup><span style="font-size:8px">TM</span></sup>
+<br><br>
+Rockstar Games is proud to announce Midnight Club 3: DUB Edition for the highly anticipated PSP<sup><span style="font-size:8px">TM</span></sup> handheld system. Midnight Club 3: DUB Edition is being developed by Rockstar Leeds in conjunction with Rockstar San Diego and is expected to be available near the launch of the PSP<sup><span style="font-size:8px">TM</span></sup> handheld system in North America and Europe.  Look for PSP version info and media coming soon to this site.
+<br><br><br>
+<strong>January 5, 2005</strong>
+<br><br>
+The Midnight Club 3: DUB Edition Site Launch is here.
+<br><br>
+Enter the <a href="home.html" target="_blank">official Flash site</a> to explore the Midnight Club 3: DUB Edition garage.  Browse and customize a selection of vehicles on the SUVs/Trucks and Import Tuners garage floors.  Or take them out to the streets for a selection of movie clips of each vehicle in action.  Plus screenshots and more.  Leading up to game release we will be revealing more car classes' floors including luxury sedans, classic muscle cars, bikes, and concept cars.
+<br><br><br>
+<strong>January 5, 2005</strong>
+<br><br>
+DUB Magazine Issue #22 Cover Story
+<br><br>
+Check out Issue #22 of DUB Magazine on newsstands now, featuring an in-depth Midnight Club 3: DUB Edition cover-story.  DUB speaks firsthand about the painstaking effort spent ensuring Midnight Club 3's unparalleled depth of customization. 
+<br><br>
+<br><br>
+	</div>
+</div>

@@ -1,0 +1,170 @@
+﻿
+<html>
+<head>
+<title>BUY NOW</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css"> 
+<!--
+a {font-size:11px;font-family:Verdana;line-height:14px;text-align:justify;color:#ffffff;} 
+#divUpControl{position:absolute; width:23; left:408; top:150; z-index:1;} 
+#divDownControl{position:absolute; width:23; left:408; top:330; z-index:2;} 
+#divContainer{position:absolute; width:395; height:350; overflow:hidden; top:155; left:73; clip:rect(0,395,350,0); visibility:visible;} 
+#divContent{position:absolute; height:350; top:0;left:0;font-size:11px;font-family:Verdana;line-height:14px;text-align:justify;color:#ffffff;} 
+strong {font-size:11px;font-family:Verdana;line-height:14px;text-align:justify;color:#FB9904;} 
+-->
+</style>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+
+function lib_bwcheck(){ //Browsercheck (needed)
+	this.ver=navigator.appVersion
+	this.agent=navigator.userAgent
+	this.dom=document.getElementById?1:0
+	this.opera5=(navigator.userAgent.indexOf("Opera")>-1 && document.getElementById)?1:0
+	this.ie5=(this.ver.indexOf("MSIE 5")>-1 && this.dom && !this.opera5)?1:0; 
+	this.ie6=(this.ver.indexOf("MSIE 6")>-1 && this.dom && !this.opera5)?1:0;
+	this.ie4=(document.all && !this.dom && !this.opera5)?1:0;
+	this.ie=this.ie4||this.ie5||this.ie6
+	this.mac=this.agent.indexOf("Mac")>-1
+	this.ns6=(this.dom && parseInt(this.ver) >= 5) ?1:0; 
+	this.ns4=(document.layers && !this.dom)?1:0;
+	this.bw=(this.ie6 || this.ie5 || this.ie4 || this.ns4 || this.ns6 || this.opera5)
+	return this
+}
+var bw=lib_bwcheck()
+
+var speed=50 
+ 
+var loop, timer 
+ 
+function ConstructObject(obj,nest){ 
+    nest=(!nest) ? '':'document.'+nest+'.' 
+    this.el=bw.dom?document.getElementById(obj):bw.ie4?document.all[obj]:bw.ns4?eval(nest+'document.'+obj):0; 
+    this.css=bw.dom?document.getElementById(obj).style:bw.ie4?document.all[obj].style:bw.ns4?eval(nest+'document.'+obj):0; 
+    this.scrollHeight=bw.ns4?this.css.document.height:this.el.offsetHeight 
+    this.clipHeight=bw.ns4?this.css.clip.height:this.el.offsetHeight 
+    this.up=MoveAreaUp;this.down=MoveAreaDown; 
+    this.MoveArea=MoveArea; this.x; this.y; 
+    this.obj = obj + "Object" 
+    eval(this.obj + "=this") 
+    return this 
+} 
+function MoveArea(x,y){ 
+    this.x=x;this.y=y 
+    this.css.left=this.x 
+    this.css.top=this.y 
+} 
+function MoveAreaDown(move){ 
+	if(this.y>-this.scrollHeight+objContainer.clipHeight){ 
+    this.MoveArea(0,this.y-move) 
+    if(loop) setTimeout(this.obj+".down("+move+")",speed) 
+	} 
+}
+function MoveAreaUp(move){ 
+	if(this.y<0){ 
+    this.MoveArea(0,this.y-move) 
+    if(loop) setTimeout(this.obj+".up("+move+")",speed) 
+	} 
+} 
+function PerformScroll(speed){ 
+//	if(initialised){ 
+		loop=true; 
+		if(speed>0) objScroller.down(speed) 
+		else objScroller.up(speed) 
+//	} 
+} 
+function CeaseScroll(){ 
+    loop=false 
+    if(timer) clearTimeout(timer) 
+} 
+var initialised; 
+function InitialiseScrollableArea(){ 
+    objContainer=new ConstructObject('divContainer') 
+    objScroller=new ConstructObject('divContent','divContainer') 
+    objScroller.MoveArea(0,0) 
+    objContainer.css.visibility='visible'
+    objScroller.css.visibility='visible'
+    initialised=true; 
+} 
+
+//-->
+</script>
+
+</head>
+
+<body bgcolor="#000000" background="pop_image/buynow_bg_540_2.jpg" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="InitialiseScrollableArea();">
+
+				</body>
+</html>
+
+<!-- <div id="divUpControl" style=""> <a href="javascript:;" onMouseOver="PerformScroll(-7)" onMouseOut="CeaseScroll()"><img src="image/arrowup.jpg " width="23" height="28" alt="" border="0"></a></div>
+<div id="divDownControl"> <a href="javascript:;" onMouseOver="PerformScroll(7)" onMouseOut="CeaseScroll()"><img src="image/arrowdown.jpg" width="23" height="28" alt="" border="0"></a></div> -->
+
+<div id="divContainer"> 
+<div id="divContent">
+<table width="395" cellpadding="0" cellspacing="0" border="0">
+
+<tr height="20">
+<td><strong>PlayStation&reg;2</strong></td>
+<td><strong>Xbox&reg;</strong></td>
+<td><strong>PSP&#8482;</strong></td>
+</tr>
+
+
+
+
+
+
+
+<tr height="16">
+<td><a href="http://store.yahoo.com/rockstarwarehouse/micl3dubedre.html" target="_blank">Rockstar Warehouse </a></td>
+<td><a href="http://store.yahoo.com/rockstarwarehouse/micl3dubedre1.html" target="_blank">Rockstar Warehouse</a> </td>
+<td><a href="http://store.yahoo.com/rockstarwarehouse/micl3dubedps.html" target="_blank">Rockstar Warehouse</a></td>
+</tr>
+
+<tr height="16">
+<td><a href="http://www.ebgames.com/ebx/product/260972.asp" target="_blank">EB Games </a></td>
+<td><a href="http://www.ebgames.com/ebx/product/260970.asp" target="_blank">EB Games</a> </td>
+<td><a href="http://www.bestbuy.com/site/olspage.jsp?id=1107956834267&skuId=7044012&type=product" target="_blank">Best Buy</a></td>
+</tr>
+
+<tr height="16">
+<td><a href="http://www.gamestop.com/product.asp?product%5Fid=281471" target="_blank">GameStop </a></td>
+<td><a href="http://www.gamestop.com/product.asp?product%5Fid=210943" target="_blank">GameStop </a> </td>
+<td><a href="http://www.ebgames.com/ebx/product/255467.asp" target="_blank">EB Games</a></td>
+</tr>
+<tr height="16">
+<td><a href="https://www.amazon.com/exec/obidos/tg/detail/-/B000EMJA3M/qid=1141147346/sr=1-5/ref=sr_1_5/102-1642089-2712101?v=glance&s=toys&m=A3UN6WX5RRO2AG" target="_blank">Toys 'R' Us </a></td>
+<td><a href="https://www.amazon.com/exec/obidos/tg/detail/-/B000EMJA3C/qid=1141147346/sr=1-6/ref=sr_1_6/102-4017744-6363337?v=glance&s=toys&m=A3UN6WX5RRO2AG" target="_blank">Toys 'R' Us </a></td>
+<td><a href="http://www.gamestop.com/product.asp?product%5Fid=190126" target="_blank">GameStop</a></td>
+</tr>
+<tr height="16">
+<td><a href="http://www.bestbuy.com/site/olspage.jsp?skuId=7731868&type=product&id=1140392418689" target="_blank">Best Buy </a></td>
+<td><a href="http://www.bestbuy.com/site/olspage.jsp?skuId=7731877&type=product&id=1140392418740" target="_blank">Best Buy </a></td>
+<td><a href="https://www.amazon.com/exec/obidos/tg/detail/-/B0007VDF2C/qid=1109610520/sr=1-8/ref=sr_1_8/002-8759020-4001622?v=glance&s=toys&m=A3UN6WX5RRO2AG" target="_blank">Toys 'R' Us</a> </td>
+</tr>
+<tr height="16">
+<td><a href="http://shop.fye.com/product.aspx?sku=202384765&loc=50292" target="_blank">FYE </a></td>
+<td><a href="http://shop.fye.com/product.aspx?sku=202384768&loc=50292" target="_blank">FYE </a></td>
+
+</tr>
+<tr height="16">
+<td><a href="https://www.amazon.co.uk/exec/obidos/ASIN/B000EPBINO/qid%3D1141147367/sr%3D8-9/ref%3Dsr%5F8%5Fxs%5Fap%5Fi9%5Fxgl/203-5792807-4263155" target="_blank">Amazon (UK) </a></td>
+<td><a href="https://www.amazon.co.uk/exec/obidos/ASIN/B000ETX9N2/qid=1141926049/sr=8-10/ref=sr_8_xs_ap_i10_xgl/202-1620937-0217455" target="_blank">Amazon (UK) </a></td>
+
+</tr>
+<tr height="16">
+<td><a href="http://shop.game.net/ViewProduct.aspx?cat=9&mid=328302" target="_blank">Game (UK) </a></td>
+<td></td>
+
+</tr>
+
+
+</tr>
+</table>
+
+
+<br><br>
+	
+	</div>
+</div>
