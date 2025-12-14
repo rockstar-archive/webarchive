@@ -1,0 +1,1 @@
+These jpg files were renamed to lowercase as GitHub pages does not like it that the html wants them lowercase.
