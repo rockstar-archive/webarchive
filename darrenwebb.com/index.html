@@ -1,13 +1,94 @@
+<html>
+<head>
+
 <title>DARRENWEBB.COM</title>
+
+<script language="javascript">
+<!--
+// Cookie life
+DaysToLive = 2;
+
+function GetCookie(name) {
+	var cookiecontent = '0';
+	if(document.cookie.length > 0) {
+		var cookiename = name + '=';
+		var cookiebegin = document.cookie.indexOf(cookiename);
+		var cookieend = 0;
+		if(cookiebegin > -1) {
+			cookiebegin += cookiename.length;
+			cookieend = document.cookie.indexOf(";",cookiebegin);
+			if(cookieend < cookiebegin) { cookieend = document.cookie.length; }
+			cookiecontent = document.cookie.substring(cookiebegin,cookieend);
+		}
+	}
+	var value = parseInt(cookiecontent);
+	PutCookie(name,value);
+	return value;
+}
+
+function PutCookie(n,v) {
+	var exp = '';
+	if(DaysToLive > 0) {
+		var now = new Date();
+		then = now.getTime() + (DaysToLive * 24 * 60 * 60 * 1000);
+		now.setTime(then);
+		exp = '; expires=' +
+		now.toGMTString();
+	}
+	document.cookie = n + "=" + v + '; path=/' + exp;
+}
+
+// Has user been here recently?  check cookie
+cookieexists = GetCookie("hitnumber2");
+
+// If cookie exists and lives in range, increment by 1 and output (see below else statement)
+if ((cookieexists > 0) && (cookieexists < 37)) {
+	rnumb = cookieexists + 1;
+} 
+
+// Else generate random hit count
+else {
+
+	// Initialize
+	var rnumb = 0;
+	var lower = 25;
+
+	// Loop until greater than 25, since range is 25 -> 37
+	while (rnumb < lower) {
+		rnumb = Math.floor(Math.random()*37);
+	}
+
+}
+
+// If the number generated is less than 10, append 0 to it for proper filename.
+if (rnumb < 10) {
+		rnumb = '0' + rnumb;
+}
+
+img = rnumb;
+
+// Set new cookie
+PutCookie("hitnumber2",img);       
+
+-->
+</script>
+
 </head>
 
 <body bgcolor="#ffffff">
  
-<img src="files/mommy.gif" width="400" height="400" hspace="10" vspace="10"><br>
+<img src="graphics/mommy.gif" width="400" height="400" hspace="10" vspace="10"><br>
 <br>
 <br>
+
 <i>This many people have looked at my little page:</i><br>
-<script type="text/javascript" src="https://counter.websiteout.com/js/7/5/433/1"></script>
+<script language="javascript">
+// Output image.
+document.write("<img src='images/004.gif' width='45' height='20'><img src='images/" + img + ".gif' width='30' height='20'>");
+
+</script>
 
 
-</body></html>
+</body>
+
+</html>
