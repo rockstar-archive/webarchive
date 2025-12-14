@@ -1,6 +1,5 @@
 document.getElementById("siteSearch").addEventListener("input", function () {
     const query = this.value.toLowerCase().trim();
-
     const sections = document.querySelectorAll(".game-section");
 
     // Reset if search is empty or too short
@@ -15,34 +14,39 @@ document.getElementById("siteSearch").addEventListener("input", function () {
     }
 
     sections.forEach(section => {
-        const title = section.querySelector(".game-info h2")?.innerText.toLowerCase() || "";
-        const year = section.querySelector(".game-year")?.innerText.toLowerCase() || "";
+        const title = section.querySelector(".game-info h2")?.textContent?.toLowerCase() || "";
+        const year = section.querySelector(".game-year")?.textContent?.toLowerCase() || "";
         const cards = section.querySelectorAll(".website-card");
 
-        let sectionMatched = false;
-        let cardMatchCount = 0;
+        // Reset section and cards first
+        section.style.display = "none";
+        cards.forEach(card => {
+            card.style.display = "none";
+        });
 
-        // ✅ 1. GAME TITLE MATCH → show full section
+        // GAME TITLE/YEAR MATCH → show full section
         if (title.includes(query) || year.includes(query)) {
-            sectionMatched = true;
             section.style.display = "block";
-
             cards.forEach(card => {
                 card.style.display = "block";
             });
-            return; // IMPORTANT: skip card filtering
+            return; // Skip card filtering
         }
 
-        // ✅ 2. Otherwise → filter cards only
+        // Otherwise → filter cards only
+        let cardMatchCount = 0;
         cards.forEach(card => {
-            const cardText = card.innerText.toLowerCase();
-            const match = cardText.includes(query);
-
-            card.style.display = match ? "block" : "none";
-            if (match) cardMatchCount++;
+            // Get all text content including child elements
+            const cardText = card.textContent?.toLowerCase() || card.innerText?.toLowerCase() || "";
+            if (cardText.includes(query)) {
+                card.style.display = "block";
+                cardMatchCount++;
+            }
         });
 
         // Show section only if at least one card matched
-        section.style.display = cardMatchCount > 0 ? "block" : "none";
+        if (cardMatchCount > 0) {
+            section.style.display = "block";
+        }
     });
 });
