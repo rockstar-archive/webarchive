@@ -1,0 +1,96 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+	<!--rockstararchive script-->
+<script type="text/javascript" src="https://rockstar-archive.github.io/webarchive/js/rgPatcher.js"></script>
+<!--rockstararchive script-->
+		<title>Rockstar Games: Grand Theft Auto IV</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <script type="text/javascript" src="js/swfobject.js"></script>
+		<script type="text/javascript" src="js/swfaddress.js"></script>
+		<script type="text/javascript" src="js/gtaiv.js"></script>
+		<script type="text/javascript" src="js/fitflash.js"></script>
+
+
+		<script type="text/javascript">
+
+			var versionUserNeeds = "8";
+			var versionUserHas = "8";
+			//var versionUserHas = swfobject.getFlashPlayerVersion().major;
+
+			if (versionUserHas < versionUserNeeds) {
+				window.location = "mobile/";
+			}
+
+		//	alert("you have flash version "+versionUserHas+"   you need flash version "+versionUserNeeds);
+
+			function resizeWin(file, newLoc, newWidth, newHeight, f) {
+				if (newWidth != 'd') {
+					newWin = open(file+"&w="+newWidth+"&h="+newHeight,newLoc,"scrollbars=no,resizable=no,status=no,height=" + newHeight + ",width=" + newWidth);
+				} else {
+					open(f);
+				}
+			}
+
+			//var flashvars = {};
+			//flashvars.configFile = "config_988534975634875684568456893456893456.xml";
+			//var params = {bgcolor:"#000000", scale:"showall", wmode:"window", salign:"tl", menu:"0"};
+			//var attributes = {id: "my_flash"};
+			//swfobject.embedSWF("gtaiv.swf", "my_flash", "100%", "100%", versionUserNeeds, "", flashvars, params, attributes);
+			FitFlash("my_flash",1000,740);
+		</script>
+
+<script type="text/javascript">
+function submitMail(url){
+window.open(url,"mywin", "scrollbars=no,menubar=no,height=334,width=503,resizable=no,toolbar=no,location=no,status=no");
+}
+
+function checkLocation () {
+  return true;
+
+  var spotlight = "#?page=bellicN&content=video0";
+  var pos = location.href.indexOf("#");
+  if (pos < 0) {
+    location.href = location.href + spotlight;
+  } else {
+    var subpage = location.href.substr(pos);
+    if (subpage == spotlight) {
+      return;
+    }
+  }
+}
+</script>
+
+		<style type="text/css">
+			/* hide from ie on mac \*/
+			html {
+				height: 100%;
+				overflow: auto;
+			}
+			
+			#my_flash {
+				height: 100%;
+			}
+			/* end hide */
+			
+			body {
+				height: 100%;
+				margin: 0px;
+				padding: 0px;
+				background-color: #000;
+			}
+		</style>
+
+	</head>
+<body bgcolor="#000000" topmargin="0" leftmargin="0" onLoad="checkLocation();">
+
+						<div id="my_flash">
+			<!--You need <a href="http://www.adobe.com/go/getflashplayer">Flash Player 8</a> and allow javascript to see the content of this site.-->
+					<object width="100%" height="100%">
+           <param name="movie" value="gtaiv.swf">
+           <embed src="gtaiv.swf" width="100%" height="100%"></embed>
+        </object>
+		</div>
+		
+
+	</body>
+</html>
