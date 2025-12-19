@@ -6,7 +6,7 @@ url = new URL(window.location.href);
 if (!window.location.href.includes("noruffle")) {
 	var script = document.createElement("script");
     script.setAttribute("type", "text/javascript");
-    script.setAttribute("src", "/ruffle.js");
+    script.setAttribute("src", "./ruffle.js");
     document.head.appendChild(script);
 	
 	//Replace old video embeds with downloads
