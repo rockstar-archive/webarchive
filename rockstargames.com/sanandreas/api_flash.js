@@ -1,15 +1,3 @@
-var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
-if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
-{
-  let window = _____WB$wombat$assign$function_____("window");
-  let self = _____WB$wombat$assign$function_____("self");
-  let document = _____WB$wombat$assign$function_____("document");
-  let location = _____WB$wombat$assign$function_____("location");
-  let top = _____WB$wombat$assign$function_____("top");
-  let parent = _____WB$wombat$assign$function_____("parent");
-  let frames = _____WB$wombat$assign$function_____("frames");
-  let opener = _____WB$wombat$assign$function_____("opener");
-
 var dom1  = (is_nav6up || is_ie5up)
 
 if (is_mac && is_ie5)
@@ -110,29 +98,35 @@ function setMeAgain(){
 	{	
 		show(aryJustNavs[s]);
 	}
+	
+
+	if (window.location) {
+
+		var parseURL = new ParseURL();
+		parseURL.parseURLString(window.location.search);
+		var parseURLArray = parseURL.getParameterArray();
+		var parseURLArrayLength = parseURL.getParameterArrayCount();
+		if ((parseURLArrayLength > 0) && (parseURLArray[0][0] == "page"))
+		{
+			thisPage =  parseURLArray[0][1];
+			if (thisPage=="info") togNav('1',thisPage);
+			if (thisPage=="news") togNav('2',thisPage);
+			if (thisPage=="screens") togNav('3',thisPage);
+			if (thisPage=="movies") togNav('4',thisPage);
+			if (thisPage=="sound") {
+				togNav('5',thisPage);		
+				if ((parseURLArrayLength > 0) && (parseURLArray[1][0] == "player")) {
+					if (parseURLArray[1][1]=="true") {
+						resizeWin('soundtrack/player2.htm','player','646','487');
+					}
+				}				
+			}
+			if (thisPage=="buy") togNav('6',thisPage);															
+
+		}
+		//alert(parseURLArray[1][1]);
+
+	}
 }
 
 //window.onload=dasinit;
-
-}
-/*
-     FILE ARCHIVED ON 08:26:24 Oct 19, 2004 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 21:01:23 Nov 30, 2020.
-     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
-
-     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
-     SECTION 108(a)(3)).
-*/
-/*
-playback timings (ms):
-  RedisCDXSource: 14.496
-  PetaboxLoader3.datanode: 474.225 (4)
-  LoadShardBlock: 913.184 (3)
-  captures_list: 977.171
-  esindex: 0.016
-  load_resource: 456.304
-  exclusion.robots.policy: 0.178
-  PetaboxLoader3.resolve: 281.844
-  CDXLines.iter: 37.384 (3)
-  exclusion.robots: 0.192
-*/

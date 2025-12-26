@@ -329,4 +329,5 @@ if (is_win&&is_ie4up)
 var is_Flash7up	=0;
 if(is_Flash && is_FlashVersion>6){
 	is_Flash7up =1;
+	
 }

@@ -1,15 +1,3 @@
-var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
-if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
-{
-  let window = _____WB$wombat$assign$function_____("window");
-  let self = _____WB$wombat$assign$function_____("self");
-  let document = _____WB$wombat$assign$function_____("document");
-  let location = _____WB$wombat$assign$function_____("location");
-  let top = _____WB$wombat$assign$function_____("top");
-  let parent = _____WB$wombat$assign$function_____("parent");
-  let frames = _____WB$wombat$assign$function_____("frames");
-  let opener = _____WB$wombat$assign$function_____("opener");
-
 /* scripts */
 //generic scripts
 function getObj(obj)
@@ -61,9 +49,9 @@ function browserHeight()
 //set globals
 var olPg="info";
 
-var aryLayers=new Array('fl','navs','info', 'news', 'screens', 'movies', 'sound', 'buy','allLogos','rockstarLogo');
-var aryJustNavs=new Array('navs','rockstarLogo','allLogos');
-var aryPgs = new Array("info","news","screens","movies","sound","buy","divBuyContent","divScreensContent","divNewsContent");
+var aryLayers=new Array('fl','navs','info', 'news', 'screens', 'movies', 'sound', 'buy','allLogos','rockstarLogo','platforms');
+var aryJustNavs=new Array('navs','rockstarLogo','allLogos','platforms');
+var aryPgs = new Array("info","news","screens","movies","sound","buy","divScreensContent","divNewsContent","divSoundContent");
 var aryNav = new Array("image/nav_text_only.gif",
 	"image/nav_info.gif",
 	"image/nav_news.gif",
@@ -80,6 +68,7 @@ var aryLNav = new Array("",
 //toggle scripts
 function togNav (newNav,newPg) {
 	//swap pages here
+	if (newPg!=olPg||newPg=='info') {
 	togPgs(newPg,olPg);
 	
 	var getNewImg=aryNav[newNav];
@@ -88,7 +77,26 @@ function togNav (newNav,newPg) {
 	//swap selected states here for top/left navs
 	document.getElementById('dasNav').src = getNewImg;
 	document.getElementById('dasLNav').src = getNewLImg;
-	
+	}
+
+}
+
+function togBuy (newBuy) {
+	if (newBuy!='buyps2') {
+	    objBuy=new ConstructObject('buyps2');
+	    objBuy.css.visibility='hidden'
+	}
+	if (newBuy!='buyxbox') {
+	    objBuy=new ConstructObject('buyxbox');
+	    objBuy.css.visibility='hidden'
+	}
+	if (newBuy!='buypc') {
+	    objBuy=new ConstructObject('buypc');
+	    objBuy.css.visibility='hidden'
+	}		
+    objBuy=new ConstructObject(newBuy);
+    objBuy.css.visibility='visible'
+//	document.getElementById('buyps2').visibility = "hidden";
 }
 
 function togLeft(newLeftNav,newTopNav){
@@ -100,6 +108,7 @@ function togLeft(newLeftNav,newTopNav){
 	document.getElementById('dasLNav').src = getNewLImg;
 }
 
+
 function togPgs(elon, eloff){
 
 	document.getElementById(elon).style.background = 'url("image/bg_'+elon+'.jpg")';
@@ -108,7 +117,7 @@ function togPgs(elon, eloff){
 
 	// initialize scrollers
 	if (elon=='buy') {
-		InitialiseBuyScrollableArea();
+		show('buyps2');
 	}
 	if (elon=='screens') {
 		InitialiseScreensScrollableArea();
@@ -116,10 +125,15 @@ function togPgs(elon, eloff){
 	if (elon=='news') {
 		InitialiseNewsScrollableArea();
 	}	
+	if (elon=='sound') {
+		InitialiseSoundScrollableArea();
+	}	
 	
 	//swap pages here
 	if (olPg=='buy') {
-		hide('divBuyContent');
+		hide('buyps2');
+		hide('buyxbox');
+		hide('buypc');				
 	}
 	//swap pages here
 	if (olPg=='screens') {
@@ -127,6 +141,9 @@ function togPgs(elon, eloff){
 	}
 	if (olPg=='news') {
 		hide('divNewsContent');
+	}
+	if (olPg=='sound') {
+		hide('divSoundContent');
 	}
 	hide(olPg);
 	show(elon);
@@ -154,7 +171,7 @@ function flOn(){
 	
 	//show flash
 	show('fl');
-	
+	hide('buyps2');
 	olPg="fl";
 }
 
@@ -190,10 +207,15 @@ function resizeWin(file, newLoc, newWidth, newHeight) {
 	newWin = open(file,newLoc,"scrollbars=no,resizable=no,status=no,height=" + newHeight + ",width=" + newWidth);
 }
 
+function launchTrailer(file, newLoc, newWidth, newHeight) {
+	newWin = open(file,newLoc,"scrollbars=no,resizable=no,status=no,height=" + newHeight + ",width=" + newWidth);
+	stopAudio();
+}
+
 //Buy now tracker
 function load_page(which_shop) { 
 	//which_shop = which_form.modules.options[which_form.modules.selectedIndex].value;
-	if (which_shop != "") window.open("https://web.archive.org/web/20041012211915/http://www.take2games.com/rockstar/sanandreas/buy_tracker.php?shop="+which_shop);
+	if (which_shop != "") window.open("http://www.take2games.com/rockstar/sanandreas/buy_tracker.php?shop="+which_shop);
 }
 
 // macromedia functions noone cares about
@@ -290,6 +312,15 @@ function CeaseScroll(){
     loop=false 
     if(timer) clearTimeout(timer) 
 } 
+var soundinitialised; 
+function InitialiseSoundScrollableArea(){ 
+    objContainer=new ConstructObject('divSoundContainer') 
+    objScroller=new ConstructObject('divSoundContent','divSoundContainer') 
+    objScroller.MoveArea(0,0) 
+    objContainer.css.visibility='visible'
+    objScroller.css.visibility='visible'
+    buyinitialised=true; 
+} 
 var buyinitialised; 
 function InitialiseBuyScrollableArea(){ 
     objContainer=new ConstructObject('divBuyContainer') 
@@ -297,7 +328,7 @@ function InitialiseBuyScrollableArea(){
     objScroller.MoveArea(0,0) 
     objContainer.css.visibility='visible'
     objScroller.css.visibility='visible'
-    buyinitialised=true; 
+    soundinitialised=true; 
 } 
 var screensinitialised; 
 function InitialiseScreensScrollableArea(){ 
@@ -318,28 +349,23 @@ function InitialiseNewsScrollableArea(){
     newsinitialised=true; 
 } 
 
-MM_preloadImages('screens/screen01_thumb.jpg','screens/screen02_thumb.jpg','screens/screen03_thumb.jpg','screens/screen04_thumb.jpg','screens/screen05_thumb.jpg','screens/screen06_thumb.jpg','screens/screen07_thumb.jpg','screens/screen08_thumb.jpg','screens/screen09_thumb.jpg','screens/screen10_thumb.jpg','image/nav_text_only.gif','image/nav_info.gif','image/nav_news.gif','image/nav_screens.gif','image/nav_movies.gif','image/nav_sound.gif','image/nav_buy.gif','image/bg_info.jpg','image/bg_news.jpg','image/bg_screens.jpg','image/bg_movies.jpg','image/bg_sound.jpg','image/bg_buy.jpg','image/gtasa_fob.jpg','image/buy_preordertitle.gif','image/buy_ebgames.gif','image/buy_gamestop.gif','image/buy_circuitcity.gif','image/buy_amazon.gif','image/buy_bestbuy.gif','image/buy_amazonuk.gif','image/buy_gamestationuk.gif','image/buy_amazonde.gif','image/buy_ebgamesde.gif','image/buy_alapagefr.gif','image/buy_fnacfr.gif','image/buy_gameswizardsau.gif','image/buy_gpstore.gif','image/buy_dvdzonebe.gif','image/buy_freerecordshopnl.gif','image/logo_rstar_north.jpg','image/logo_ps.jpg','image/logo_ps2.jpg','image/logo_esrb.gif','image/legal.jpg','image/logo_rockstar.jpg','image/buy_bottom.gif','image/screen_bottom.gif','image/info_title.gif','image/bottom.gif','image/news_title.gif','image/news_bottom.gif','image/info_title.gif','image/screenshots_title.gif','image/screen_bottom.gif','image/buynow_title.gif','image/scroll_up.jpg','image/scroll_down.jpg','image/nav_flash.gif','image/sa_logo.gif');
+function stopAudio() {
+	// Javascript Flash methods 
+	// Stop Sound
+	window.document.samain.TGotoLabel("/musicController","hold"); 
+	// Move Button Frame to Off
+//	window.document.samain.stopMusic();
+}
+
+function startAudio() {
+	// Javascript Flash methods 
+	// Stop Sound
+	window.document.samain.TGotoLabel("/musicController","musicOff"); 
+	// Move Button Frame to Off
+//	window.document.samain.stopMusic();
+}
+
+MM_preloadImages('screens/screen01_thumb.jpg','screens/screen02_thumb.jpg','screens/screen03_thumb.jpg','screens/screen04_thumb.jpg','screens/screen05_thumb.jpg','screens/screen06_thumb.jpg','screens/screen07_thumb.jpg','screens/screen08_thumb.jpg','screens/screen09_thumb.jpg','screens/screen10_thumb.jpg','screens/screen11_thumb.jpg','screens/screen12_thumb.jpg','screens/screen13_thumb.jpg','screens/screen14_thumb.jpg','screens/screen15_thumb.jpg','screens/screen16_thumb.jpg','screens/screen17_thumb.jpg','screens/screen18_thumb.jpg','screens/screen19_thumb.jpg','image/nav_text_only.gif','image/nav_info.gif','image/nav_news.gif','image/nav_screens.gif','image/nav_movies.gif','image/nav_sound.gif','image/nav_buy.gif','image/bg_info.jpg','image/bg_news.jpg','image/bg_screens.jpg','image/bg_movies.jpg','image/bg_sound.jpg','image/bg_buy.jpg','image/gtasa_fob.jpg','image/buy_preordertitle.gif','image/buy_ebgames.gif','image/buy_gamestop.gif','image/buy_circuitcity.gif','image/buy_amazon.gif','image/buy_bestbuy.gif','image/buy_amazonuk.gif','image/buy_gamestationuk.gif','image/buy_amazonde.gif','image/buy_ebgamesde.gif','image/buy_alapagefr.gif','image/buy_fnacfr.gif','image/buy_gameswizardsau.gif','image/buy_gpstore.gif','image/buy_dvdzonebe.gif','image/buy_freerecordshopnl.gif','image/logo_rstar_north.jpg','image/logo_ps.jpg','image/logo_ps2.jpg','image/M.gif','image/legal.jpg','image/logo_rockstar.jpg','image/buy_bottom.gif','image/screen_bottom.gif','image/info_title.gif','image/bottom.gif','image/news_title.gif','image/news_bottom.gif','image/info_title.gif','image/screenshots_title.gif','image/screen_bottom.gif','image/buynow_title.gif','image/scroll_up.jpg','image/scroll_down.jpg','image/nav_flash.gif','image/sa_logo.gif');
 MM_preloadImages('image/bg_info.jpg','image/bg_news.jpg','image/bg_news.jpg','image/bg_screens.jpg','image/bg_movies.jpg','image/bg_soundtrack.jpg','image/bg_buy.jpg');
 
-}
-/*
-     FILE ARCHIVED ON 21:19:15 Oct 12, 2004 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 21:00:23 Nov 30, 2020.
-     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
-
-     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
-     SECTION 108(a)(3)).
-*/
-/*
-playback timings (ms):
-  RedisCDXSource: 18.433
-  exclusion.robots.policy: 0.199
-  esindex: 0.017
-  captures_list: 993.381
-  CDXLines.iter: 24.578 (3)
-  load_resource: 621.521
-  exclusion.robots: 0.214
-  LoadShardBlock: 935.984 (3)
-  PetaboxLoader3.resolve: 403.268 (3)
-  PetaboxLoader3.datanode: 969.238 (4)
-*/
+MM_preloadImages('image/FOB_ps2.jpg','image/FOB_pc.jpg','image/FOB_xbox.jpg','image/buynow_ps2_off.gif','image/buynow_xbox_off.gif','image/buynow_pc_off.gif','image/buynow_ps2_on.gif','image/buynow_xbox_on.gif','image/buynow_pc_on.gif','image/pc_shard.gif','image/xbox_shard.gif','instores_shard.gif');

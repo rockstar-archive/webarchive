@@ -73,16 +73,24 @@ visibility:hidden;
 
 #allLogos{
 position:absolute; 
-top:680px;
-left:260px;
+top:795px;
+left:265px;
+z-index:1;
+visibility:hidden;
+}
+
+#platforms{
+position:absolute; 
+top:685px;
+left:395px;
 z-index:1;
 visibility:hidden;
 }
 
 #rockstarLogo{
-position:absolute; 
+/*position:absolute; 
 top:700px;
-left:810px;
+left:810px;*/
 z-index:1;
 visibility:hidden;
 }
