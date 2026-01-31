@@ -1,1 +1,0 @@
-(self.webpackChunklifeinvader_web=self.webpackChunklifeinvader_web||[]).push([[832],{5261:function(){},5948:function(){},2916:function(){},587:function(){},683:function(){},3596:function(){},6790:function(){},3743:function(){},5369:function(){}},function(n){var f=function(f){return n(n.s=f)};f(3596),f(2916),f(683),f(3743),f(5261),f(6790),f(5369),f(587),f(5948)}]);

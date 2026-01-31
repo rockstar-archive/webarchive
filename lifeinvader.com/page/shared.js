@@ -1,1 +1,0 @@
-(self.webpackChunklifeinvader_web=self.webpackChunklifeinvader_web||[]).push([[712],{2751:function(n,f,i){i.p=window.webpackPublicPath}},function(n){var f;f=2751,n(n.s=f)}]);
