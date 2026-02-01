@@ -1,14 +1,71 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <script>
-      const newBase = "https://NAME.SERVER.dev/webarchive";
-      const path = window.location.pathname.replace(/^\/webarchive/, "");
-      window.location.replace(newBase + path);
-    </script>
-  </head>
-  <body>
-    Redirecting…
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rockstar Games Archive — Under Construction</title>
+  <link rel="icon" type="image/webp" href="https://rockstar-archive.github.io/webarchive/images/construct.webp">
+  <link rel="icon" type="image/webp" href="https://rockstar-archive.github.io/webarchive/images/construct.webp">
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #ffffff;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #222;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 600px;
+      padding: 20px;
+    }
+
+    img {
+      margin: 20px 0;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .note {
+      margin-top: 20px;
+      font-size: 1.1em;
+      color: #555;
+    }
+
+    .signature {
+      margin-top: 30px;
+      font-style: italic;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Under Construction</h1>
+
+    <img src="https://rockstar-archive.github.io/webarchive/images/construction.gif" alt="Under Construction">
+
+    <p>
+      The Rockstar Games Archive "Webarchive" is currently unavailable.
+      We are in the process of migrating our service to a new hosting provider.
+    </p>
+
+    <p>
+      The website will be available again once the migration is complete.
+      We sincerely apologize for the inconvenience.
+    </p>
+
+    <div class="note">
+      More content will be added here soon.
+    </div>
+
+    <div class="signature">
+      — FranklinClintonDev
+    </div>
+  </div>
+</body>
 </html>
