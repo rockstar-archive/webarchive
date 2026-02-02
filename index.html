@@ -2,70 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Rockstar Games Archive — Under Construction</title>
-  <link rel="icon" type="image/webp" href="https://rockstar-archive.github.io/webarchive/images/construct.webp">
-  <link rel="icon" type="image/webp" href="https://rockstar-archive.github.io/webarchive/images/construct.webp">
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #ffffff;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #222;
-      text-align: center;
-    }
+  <title>Redirecting…</title>
 
-    .container {
-      max-width: 600px;
-      padding: 20px;
-    }
+  <!-- Instant redirect -->
+  <script>
+    const newBase = "https://rockstar-archive.h0rizon.dev/webarchive";
+    const path = window.location.pathname.replace(/^\/webarchive/, "");
+    window.location.replace(newBase + path);
+  </script>
 
-    img {
-      margin: 20px 0;
-      max-width: 100%;
-      height: auto;
-    }
-
-    .note {
-      margin-top: 20px;
-      font-size: 1.1em;
-      color: #555;
-    }
-
-    .signature {
-      margin-top: 30px;
-      font-style: italic;
-      color: #777;
-    }
-  </style>
+  <!-- Fallback if JS is disabled -->
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=https://rockstar-archive.h0rizon.dev/webarchive">
+  </noscript>
 </head>
-
 <body>
-  <div class="container">
-    <h1>Under Construction</h1>
-
-    <img src="https://rockstar-archive.github.io/webarchive/images/construction.gif" alt="Under Construction">
-
-    <p>
-      The Rockstar Games Archive "Webarchive" is currently unavailable.
-      We are in the process of migrating our service to a new hosting provider.
-    </p>
-
-    <p>
-      The website will be available again once the migration is complete.
-      We sincerely apologize for the inconvenience.
-    </p>
-
-    <div class="note">
-      More content will be added here soon.
-    </div>
-
-    <div class="signature">
-      — FranklinClintonDev
-    </div>
-  </div>
+  Redirecting to the new archive…
 </body>
 </html>
