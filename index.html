@@ -1,40 +1,22 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-  <title>Rockstar Games Archive - WIP</title>
-  <link rel="icon" type="image/webp" href="https://rockstar-archive.github.io/images/construct.webp">
+  <meta charset="UTF-8">
+  <title>Redirecting…</title>
+
+  <!-- Instant redirect -->
+  <script>
+    const newBase = "https://rockstar-archive.h0rizon.dev/webarchive";
+    const path = window.location.pathname.replace(/^\/webarchive/, "");
+    window.location.replace(newBase + path);
+  </script>
+
+  <!-- Fallback if JS is disabled -->
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=https://rockstar-archive.h0rizon.dev/webarchive">
+  </noscript>
 </head>
-<style>
-  body {
-    background-color: white;
-    display: grid;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    overflow: hidden;
-  }
-</style>
-
 <body>
-  <center>
-    <h1>THE SERVER IS CURRENTLY HAVEING ISSUES WE ARE WORKING TO RESTORE THE ARCHIVE WE APOLOGIZE FOR THE INCONVENIENCE.</h1>
-    <img src="https://rockstar-archive.github.io/images/construction.gif">
-    <p>
-    <table border="" cellpadding="5" cellspacing="5">
-      <tbody>
-        <tr>
-          <td>
-            <font size="+1">We will put something here soon. </font>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    </p>
-  </center>
+  Redirecting to the new archive…
 </body>
-
 </html>
